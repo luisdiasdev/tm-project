@@ -1,0 +1,19 @@
+WARN: set 198 says 5 items, found 4
+texture sets: 446, max index 456
+
+== SelServerScene2.bin: 22 controls, EOF exact
+   types: {'BUTTON': 5, 'EDIT': 2, 'LISTBOX': 2, 'PANEL': 7, 'TEXT': 6}
+   IDs not in ResourceControl.h: [4624]
+   texture sets used: 6 missing: none
+
+== SelCharScene2.bin: 85 controls, EOF exact
+   types: {'BUTTON': 11, 'EDIT': 3, 'LISTBOX': 1, 'PANEL': 17, 'TEXT': 53}
+   IDs not in ResourceControl.h: none
+   texture sets used: 12 missing: none
+
+== FieldScene2.bin: 709 controls, EOF exact
+   types: {'BUTTON': 170, 'EDIT': 7, 'GRID': 125, 'LISTBOX': 28, 'PANEL': 138, 'PROGRESS': 7, 'TEXT': 234}
+   IDs not in ResourceControl.h: [318, 319, 802, 803, 804, 805, 806, 807, 808, 809, 810, 811, 1857, 1862, 1863, 1864]
+   texture sets used: 118 missing: none
+
+note: -1/-2 are special texture sets; values < -2 mean abs(value).
