@@ -2220,6 +2220,8 @@ SListBoxServerItem::SListBoxServerItem(int nTextureSet, char* iStrText, unsigned
 {
 	m_pBusyProgress = 0;
 	m_nCurrent = 0;
+	m_nServerGroupIndex = -1;
+	m_nServerIndex = -1;
 	m_cCastle = cCastle;
 	m_nCurrent = nCount;
 	m_cConnected = 1;
@@ -2865,13 +2867,17 @@ SMessagePanel::SMessagePanel(const char* istrMessage, float inX, float inY, floa
 	: SPanel(-45, inX, inY, inWidth, inHeight, 0xAAFFFFFF, RENDERCTRLTYPE::RENDER_IMAGE_STRETCH)
 {
 	m_eCtrlType = CONTROL_TYPE::CTRL_TYPE_MESSAGEPANEL;
-	m_GCPanel.nTextureSetIndex = -502;
+
+	// 748 UI2 layout, recovered from client_748/WYD.exe (FUN_00403924):
+	// background set 178 (MessagePanel2), side caps sets 259/260
+	// (MessagePanelL2/R2).
+	m_GCPanel.nTextureSetIndex = -178;
 	m_dwControlID = 5638;
 
 	m_pText = new SText(-2, istrMessage, 0xFFFFFFFF, 30.0f, 1.0f, (float)(inWidth - 2.0f) - 50.0f, inHeight - 2.0f, 1, 0, 1, 1);
-	m_pText2 = new SText(-2, "", 0xFFFFFFFF, 50.0f, 24.0f, (float)(inWidth - 2.0) - 50.0f, 14.0f, 1, 0, 1, 1);
-	m_pPanelL = new SPanel(-503, -11.0f, 0.0f, 11.0f, inHeight, 0xAAFFFFFF, RENDERCTRLTYPE::RENDER_IMAGE_STRETCH);
-	m_pPanelR = new SPanel(-504, inWidth, 0.0f, 11.0f, inHeight, 0xAAFFFFFF, RENDERCTRLTYPE::RENDER_IMAGE_STRETCH);
+	m_pText2 = new SText(-2, "", 0xFFFFFFFF, 24.0f, (float)(inWidth - 2.0f) - 50.0f, 50.0f, 14.0f, 1, 0, 1, 1);
+	m_pPanelL = new SPanel(-259, -11.0f, 0.0f, 11.0f, inHeight, 0xAAFFFFFF, RENDERCTRLTYPE::RENDER_IMAGE_STRETCH);
+	m_pPanelR = new SPanel(-260, inWidth, 0.0f, 11.0f, inHeight, 0xAAFFFFFF, RENDERCTRLTYPE::RENDER_IMAGE_STRETCH);
 
 	if (m_pPanelL != nullptr)
 		AddChild(m_pPanelL);

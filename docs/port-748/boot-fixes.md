@@ -21,6 +21,26 @@ checksum at offset 56320. See `assets-and-formats.md` for the exact
 `Basedef.h`. The default MSVC alignment inserted padding, so the login packet
 did not match the 748 server. With packing, login succeeds.
 
+## Login request packet `MSG_AccountLogin`
+
+The TMSrv/DBSrv pair used for testing expects `sizeof(MSG_AccountLogin) == 116`
+with this layout:
+
+| Field | Size |
+|---|---:|
+| `MSG_STANDARD` header | 12 |
+| `AccountPass` | **12** |
+| `AccountName` | 16 |
+| `TID` / `Zero` | 52 |
+| `Version` | 4 |
+| `Force` | 4 |
+| `Mac` / `AdapterName` | 16 |
+
+The port had `AccountPass[16]` (120 bytes). TMSrv reads `AccountName` at offset
+`0x18`; with a 16-byte password it read the password tail plus name bytes and
+sent an empty account name to DBSrv, which answered "account does not exist".
+Keep the 12-byte password field.
+
 ## `curse.bin`
 
 748 is 8192 bytes = 256 records × 32 bytes. The old reader read a count then

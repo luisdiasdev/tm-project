@@ -2,13 +2,15 @@
 
 ## 1. Test character select and field entry
 
-Nothing was listening on the server ports during the port, so the verified
-surface stops at the server-select screen and its modal.
+Login now reaches TMSrv/DBSrv and the account response transitions to character
+select, but `TMSelectCharScene::InitializeScene` crashes there on 755-only
+controls (see section 2). The last verified screen is still server select.
 
 Next steps:
 
-1. Start `TMSrv`/`DBSrv` (see `../release`) or point the client at a running
-   server. `NewApp.cpp` currently hardcodes `127.0.0.1`; check
+1. Start `TMSrv`/`DBSrv` with their own `run` directories as the working
+   directory, or the account lookup fails with "Conta inexistente".
+   `NewApp.cpp` currently hardcodes `127.0.0.1`; check
    `serverlist.bin`/`sn.bin` if that is wrong.
 2. Run `client_748\TMProject_d.exe`, select the server, log in, and capture
    character select.
@@ -25,11 +27,19 @@ still reports these references that are absent from `SelCharScene2.bin`:
 |---:|---|---|
 | `4617` | message box | created at runtime; fine |
 | `4628` | IME button | 755-only; guard |
+| `1054274` | select/back panel | not in 748; guard |
+| `1544` | create-character background 2 | not in 748; guard |
+| `65885`, `65889` | delete-password panel/edit | 755-only; guard |
 | `65886`, `65887` | account-lock OK/Cancel | 755-only; guard |
-| `66433..66435` | char-select extras | not in 748; guard/disable |
+| `66128`, `66132` | account-lock panel/text | 755-only; guard |
+| `66432`, `66447` | account-lock dialog/title | 755-only; guard |
+| `66433..66435`, `66437..66446` | account-lock extras/number pad | not in 748; guard/disable |
 
-The account-lock panel path should be made conditional so a missing panel does
-not dereference null.
+`InitializeScene` currently dereferences `m_pAccountLockDlg` and
+`m_pSelbackpanel` without null checks, so entering character select crashes with
+`0xC0000005`. The account-lock and delete-password paths should be conditional;
+`m_pPWEdit`/`m_pInputPWPanel` are also null in 748 and are used by
+`OnMouseEvent`, `OnControlEvent` and the delete-character path.
 
 ## 3. Field HUD
 

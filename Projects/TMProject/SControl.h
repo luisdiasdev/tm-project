@@ -506,6 +506,8 @@ public:
     SPanel* m_pGoldBugPanel;
     SPanel* m_pAgePanel;
     int m_nCurrent;
+    int m_nServerGroupIndex;
+    int m_nServerIndex;
     char m_cConnected;
     char m_cCastle;
     char m_cGoldBug;

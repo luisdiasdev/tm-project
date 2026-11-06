@@ -84,6 +84,18 @@ Panel `4622` at `(272,236)`, 256x128. The generated frame covers
 `(272,236)`–`(571,492)`. Connect/Close end up at
 `(286,461)`/`(352,461)` (50x23). See `build-and-test.md` for click coordinates.
 
+## Login panel: Enter key and list selection
+
+- `SEditableText::OnCharEvent` forwards keys to its listener by control ID.
+  `TMSelectServerScene::OnCharEvent` therefore has to call the **748** login
+  button ID (`TMB_LOGIN_OK`, 4609), not the 755 ID (`65873`). The 755 ID made
+  Enter do nothing. The same hardcoded ID in `TMScene::OnPacketEvent` is also
+  remapped.
+- The server list can contain placeholder rows and skipped `num` values, so the
+  visible row index is not the `g_pServerList` index. Each
+  `SListBoxServerItem` now stores the group/index it was built from; Connect
+  uses those stored values instead of `GetSelectedIndex() + 1`.
+
 ## Source
 
 - Implementation: `TMSelectServerScene::InitializeUI()` (frame creation, list

@@ -556,6 +556,9 @@ int TMSelectServerScene::OnControlEvent(unsigned int idwControlID, unsigned int 
 					if (nUserCount[num] < 0)
 						pServerItem[num]->m_cConnected = 0;
 
+					pServerItem[num]->m_nServerGroupIndex = nIndexN;
+					pServerItem[num]->m_nServerIndex = num;
+
 					pServerList->AddItem(pServerItem[num]);
 				}
 				else if (m_bAdmit == 1 && num < m_nMaxGroup)
@@ -566,6 +569,9 @@ int TMSelectServerScene::OnControlEvent(unsigned int idwControlID, unsigned int 
 
 					if (nUserCount[num] < 0)
 						pServerItem[num - 1]->m_cConnected = 0;
+
+					pServerItem[num - 1]->m_nServerGroupIndex = nIndexN;
+					pServerItem[num - 1]->m_nServerIndex = num;
 
 					// TODO : review code					
 					pServerList->AddItem(pServerItem[num - 1]);
@@ -579,16 +585,20 @@ int TMSelectServerScene::OnControlEvent(unsigned int idwControlID, unsigned int 
 	break;
 	case TMB_SELSERVER_OK:
 	{
-		int nServerGroupIndex = g_nServerCountList[nIndexN - m_pNServerGroupList->GetSelectedIndex() - 1];
-		int nServerIndex = m_pNServerList->GetSelectedIndex() + 1;
-
-		SListBoxServerItem* pItem = static_cast<SListBoxServerItem*>(m_pNServerList->GetItem(nServerIndex - 1));
-		if (!pItem || nServerGroupIndex < 0 || nServerIndex < 1)
+		// The visible list can contain placeholders and skipped rows, so the
+		// list position is not the g_pServerList index. Each item carries the
+		// group/index it was built from.
+		SListBoxServerItem* pItem = static_cast<SListBoxServerItem*>(
+			m_pNServerList->GetItem(m_pNServerList->GetSelectedIndex()));
+		if (!pItem || pItem->m_nServerGroupIndex < 0 || pItem->m_nServerIndex < 1)
 		{
 			m_pMessagePanel->SetMessage(g_pMessageStringTable[24], 4000);
 			m_pMessagePanel->SetVisible(1, 1);
 			return 1;
 		}
+
+		int nServerGroupIndex = pItem->m_nServerGroupIndex;
+		int nServerIndex = pItem->m_nServerIndex;
 
 		if (pItem->m_nCurrent >= 600)
 		{
@@ -660,6 +670,10 @@ int TMSelectServerScene::OnControlEvent(unsigned int idwControlID, unsigned int 
 				return 1;
 			}
 
+			LOG_WRITELOG(
+                            "Sizeof MSG_AccountLogin: %d - Alignment: %d",
+                            sizeof(MSG_AccountLogin),
+                            std::alignment_of<MSG_AccountLogin>::value);
 
 			if (strlen(pEditID->GetText()) > 12)
 			{
@@ -794,7 +808,7 @@ int TMSelectServerScene::OnCharEvent(char iCharCode, int lParam)
 		break;
 	case VK_RETURN:
 		if (pEditPassword->IsFocused() && m_pLoginBtns[0]->m_bEnable == 1)
-			OnControlEvent(65873u, 0);
+			OnControlEvent(TMB_LOGIN_OK, 0);
 		break;
 	case VK_ESCAPE:
 		if (m_cLogin && m_cLogin != 2)

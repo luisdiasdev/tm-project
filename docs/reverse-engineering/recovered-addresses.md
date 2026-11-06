@@ -9,6 +9,7 @@ SHA-256: `b545ea104de50641e820f00b6bc54e4b2b14583ed75c7dcec06f50ba5042619c`
 | `0x4a8f14`–`0x4aad83` | `TMSelectServerScene::InitializeScene` | Loads `SelServerScene2.txt`, builds the UI2 server window, populates server groups. |
 | `0x493e70`–`0x494bff` | `TMScene::Initialize` | Creates `SMessageBox` x2, `SMessagePanel`, IME text; contains the `"Message Box"` string refs. |
 | `0x403eb8` | `SMessageBox::SMessageBox` | UI2 branch: background set 164, buttons set 165, 256x128 box. |
+| `0x403924` | `SMessagePanel::SMessagePanel` | UI2 branch: base set 178, caps 259/260, control ID 5638. |
 | `0x401466` | `SPanel` constructor | `(texSet, x, y, w, h, color, fillType)`. |
 | `0x401d03` | `SText` constructor | `(texSet, text, color, x, y, w, h, border, borderColor, type, align)`. |
 | `0x402f01` | `SButton` constructor | `(texSet, x, y, w, h, color, sound, text)`. |
@@ -73,6 +74,9 @@ buttons sets `14`/`15` at `103x21`.
 |---:|---|---|
 | 164 | `MessageBox_BG2` | `UI\MessageBox2.wyt`, 232x107 |
 | 165 | `MessageBox_Btn2` | `UI\MessageBox2.wyt`, 86x21 |
+| 178 | `MessagePanel2` | 222x24 (status/connection bar) |
+| 259 | `MessagePanelL2` | 11x24 (left cap) |
+| 260 | `MessagePanelR2` | 11x24 (right cap) |
 | 391 | `NewUI_ServerList_Top` | 143x256 |
 | 392 | `NewUI_ChannelList_TopLeft` | 40x45 |
 | 393 | `NewUI_ChannelList_TopBottom` | 33x45 |

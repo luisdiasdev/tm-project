@@ -1243,7 +1243,7 @@ int TMScene::OnPacketEvent(unsigned int dwCode, char* pSBuffer)
 				pChatList->AddItem(ipNewItem);
 		}
 
-		SControl* pLoginOK = m_pControlContainer->FindControl(65873);
+		SControl* pLoginOK = m_pControlContainer->FindControl(TMB_LOGIN_OK);
 		if (pLoginOK)
 			pLoginOK->SetEnable(1);
 		return 1;

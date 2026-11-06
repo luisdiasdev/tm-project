@@ -64,8 +64,31 @@ The old 755 code created `m_pPanelBtn1` for the OK box but never added it; the
 - Control ID and loader: `TMScene::Initialize` creates two boxes (`type 0` and
   `type 4`) via `new SMessageBox(...)` at `TMScene.cpp` lines ~98/104.
 
+## Message panel (connection/status bar)
+
+`SMessagePanel` had the same 755 asset problem: its base and side-cap plates
+used sets `502`/`503`/`504` (`newuimessage`, `newuiMessagePanelL2`,
+`newuiMessagePanelR2`), which do not exist in the 748 texture list. The message
+text still drew, but the bar behind it was empty.
+
+The 748 UI2 constructor is `FUN_00403924`. It uses:
+
+| Element | Value |
+|---|---|
+| Base | set **178** `MessagePanel2` (222x24), stretched to the panel width |
+| Left cap | set **259** `MessagePanelL2` (11x24) at `(-11, 0)` |
+| Right cap | set **260** `MessagePanelR2` (11x24) at `(width, 0)` |
+| Control ID | `5638` (`0x1606`) |
+| Text 1 | `(30, 1)`, `w-52` x `h-2` |
+| Text 2 | `(24, w-52)`, `50` x `14` (not added to the tree) |
+
+The panel itself is created by `TMScene::Initialize` at `(160, 80)`, `480x24`.
+
 ## Verification
 
 Driven by a synthetic click on the server-select Close button; the modal now
 matches the original 748 client (frame, Information caption, message, button
 plates). See `build-and-test.md`.
+
+For the message panel, clicking Connect without selecting a channel produces
+"Select server and server group." inside the restored dark bar.
