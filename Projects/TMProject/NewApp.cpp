@@ -160,7 +160,7 @@ HRESULT NewApp::Initialize(HINSTANCE hInstance, int nFull)
 		Config.Config[2] = 0;
 		Config.Config[3] = 0;
 		Config.Config[4] = -1;
-		Config.Config[5] = 57;
+		Config.Config[5] = 49;
 		Config.Config[6] = 2;
 		Config.Config[7] = 1;
 		Config.Config[8] = 1;

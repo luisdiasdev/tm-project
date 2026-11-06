@@ -23,23 +23,26 @@ did not match the 748 server. With packing, login succeeds.
 
 ## Login request packet `MSG_AccountLogin`
 
-The TMSrv/DBSrv pair used for testing expects `sizeof(MSG_AccountLogin) == 116`
-with this layout:
+`sizeof(MSG_AccountLogin)` must be **120 bytes**, matching
+`w2pp/Code/Basedef.h`, where `ACCOUNTNAME_LENGTH` and `ACCOUNTPASS_LENGTH` are
+both `16`:
 
-| Field | Size |
-|---|---:|
-| `MSG_STANDARD` header | 12 |
-| `AccountPass` | **12** |
-| `AccountName` | 16 |
-| `TID` / `Zero` | 52 |
-| `Version` | 4 |
-| `Force` | 4 |
-| `Mac` / `AdapterName` | 16 |
+| Field | Size | Offset |
+|---|---:|---:|
+| `MSG_STANDARD` header | 12 | `0x00` |
+| `AccountPass` | **16** | `0x0C` |
+| `AccountName` | 16 | `0x1C` |
+| `TID` / `Zero` | 52 | `0x2C` |
+| `Version` | 4 | `0x60` |
+| `Force` | 4 | `0x64` |
+| `Mac` / `AdapterName` | 16 | `0x68` |
 
-The port had `AccountPass[16]` (120 bytes). TMSrv reads `AccountName` at offset
-`0x18`; with a 16-byte password it read the password tail plus name bytes and
-sent an empty account name to DBSrv, which answered "account does not exist".
-Keep the 12-byte password field.
+Keep the `#pragma pack(push, 1)` wrapper and the 16-byte password field. The
+w2pp source and the current matching TMSrv/DBSrv build expect this 120-byte
+layout. An older prebuilt server read `AccountName` at offset `0x18` (116-byte
+layout) and returned "Conta inexistente"; that was a stale server binary, not
+the current w2pp protocol. Rebuild/redeploy the server pair when the struct
+changes.
 
 ## `curse.bin`
 
