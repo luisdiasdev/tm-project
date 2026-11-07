@@ -9,6 +9,22 @@ original client, and what is still missing.
 - [`port-748/remaining-work.md`](port-748/remaining-work.md) — what to do next.
 - [`port-748/pitfalls.md`](port-748/pitfalls.md) — mistakes that waste time.
 
+## UI rewrite evaluation
+
+- [`ui-rewrite/README.md`](ui-rewrite/README.md) — verdict, scores, effort.
+- [`ui-rewrite/01-current-architecture.md`](ui-rewrite/01-current-architecture.md)
+  — how the UI works today, end to end.
+- [`ui-rewrite/02-pain-points.md`](ui-rewrite/02-pain-points.md) — measured
+  failure modes.
+- [`ui-rewrite/03-proposals.md`](ui-rewrite/03-proposals.md) — framework vs
+  dynamic vs JSON/YAML.
+- [`ui-rewrite/04-refactor-plan.md`](ui-rewrite/04-refactor-plan.md) — phases,
+  effort, risks, gates.
+- [`ui-rewrite/05-target-format.md`](ui-rewrite/05-target-format.md) — JSON
+  schema, bindings, actions, tooling.
+- [`ui-rewrite/06-measurements.md`](ui-rewrite/06-measurements.md) — raw
+  numbers and reproduction.
+
 ## Reference
 
 - [`port-748/build-and-test.md`](port-748/build-and-test.md) — build, run,
