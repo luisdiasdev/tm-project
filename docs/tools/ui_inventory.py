@@ -114,6 +114,20 @@ def resolve_set(tex):
     return None
 
 
+def resolve_token(raw, constants):
+    """Map a FindControl()/comparison token to a control id.
+
+    Handles numeric literals with C++ suffixes (``66432u``), decimals, and
+    ``ResourceControl.h`` constant names.
+    """
+    token = raw
+    if re.fullmatch(r"\d+[uUlL]*", raw):
+        token = re.sub(r"[uUlL]+$", "", raw)
+    if token.isdigit():
+        return token, int(token)
+    return token, constants.get(token)
+
+
 def scan_source(path, constants):
     if not os.path.exists(path):
         return []
@@ -121,13 +135,11 @@ def scan_source(path, constants):
     refs = []
     for lineno, line in enumerate(text.splitlines(), 1):
         for m in re.finditer(r"FindControl\(\s*(\w+)\s*\)", line):
-            token = m.group(1)
-            value = int(token) if token.isdigit() else constants.get(token)
+            token, value = resolve_token(m.group(1), constants)
             if value is not None:
                 refs.append((lineno, token, value, "FindControl"))
         for m in re.finditer(r"\b(?:idwControlID|dwControlID)\s*==\s*(\w+)", line):
-            token = m.group(1)
-            value = int(token) if token.isdigit() else constants.get(token)
+            token, value = resolve_token(m.group(1), constants)
             if value is not None:
                 refs.append((lineno, token, value, "compare"))
     return refs

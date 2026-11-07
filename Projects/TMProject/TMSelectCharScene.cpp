@@ -46,9 +46,49 @@ TMSelectCharScene::TMSelectCharScene() :
 	g_pObjectManager->m_usWarGuild = -1;
 	g_pObjectManager->m_usAllyGuild = -1;
 	m_pFocused = nullptr;
+	m_pRain = nullptr;
+	m_pSnow = nullptr;
 
 	for (int i = 0; i < 4; ++i)
 		m_pHuman[i] = nullptr;
+
+	for (int i = 0; i < 4; ++i)
+		m_pSampleHuman[i] = nullptr;
+
+	for (int i = 0; i < 10; ++i)
+		m_pBtnNumDlg[i] = nullptr;
+
+	// Bind every optional control to null so a partially loaded scene or a
+	// 755-only ID cannot leave a stale pointer behind.
+	m_pBtnDelReq = nullptr;
+	m_pBtnDelCancel = nullptr;
+	m_pCreateWin = nullptr;
+	m_pAccountLockDlg = nullptr;
+	m_pAccountLockDlgTitle = nullptr;
+	m_pAccountLock = nullptr;
+	m_pAccountLockPasswd = nullptr;
+	m_pSelCharTitle = nullptr;
+	m_pNameCaption = nullptr;
+	m_pClassCaption = nullptr;
+	m_pLevelCaption = nullptr;
+	m_pCoinCaption = nullptr;
+	m_pExpCaption = nullptr;
+	m_pStrCaption = nullptr;
+	m_pIntCaption = nullptr;
+	m_pDexCaption = nullptr;
+	m_pConCaption = nullptr;
+	m_pSp1Caption = nullptr;
+	m_pSp2Caption = nullptr;
+	m_pSp3Caption = nullptr;
+	m_pSp4Caption = nullptr;
+	m_pGuildCaption = nullptr;
+	m_pStartPosCaption = nullptr;
+	m_pNewCharPanel = nullptr;
+	m_pDelCharPanel = nullptr;
+	m_pReturnSvrSelPanel = nullptr;
+	m_pKingDomFlag = nullptr;
+	m_pSelbackpanel = nullptr;
+	m_bPWPanel748 = false;
 
 	m_eSceneType = ESCENE_TYPE::ESCENE_SELCHAR;
 	m_bSelect = 1;
@@ -117,35 +157,52 @@ int TMSelectCharScene::InitializeScene()
 		if (pSelBG1)
 			pSelBG1->m_bSelectEnable = 0;
 
+		// 748 uses a generic input dialog for the delete password: panel 626,
+		// edit 627, title 630, confirm 1024, cancel 921 (the same IDs the field
+		// scene uses for its gold-input dialog). The 755 dialog
+		// (65885/65889/65886/65887) does not exist here.
 		m_pPWEdit = static_cast<SEditableText*>(m_pControlContainer->FindControl(65889u));
 		m_pInputPWPanel = static_cast<SPanel*>(m_pControlContainer->FindControl(65885u));
+		m_bPWPanel748 = 0;
+
+		if (!m_pInputPWPanel)
+		{
+			m_pInputPWPanel = static_cast<SPanel*>(m_pControlContainer->FindControl(626u));
+			m_bPWPanel748 = 1;
+		}
+
+		if (!m_pPWEdit)
+			m_pPWEdit = static_cast<SEditableText*>(m_pControlContainer->FindControl(627u));
+
+		// Account lock is 755-only; 748 has no controls for it at all.
 		m_pAccountLockDlg = static_cast<SPanel*>(m_pControlContainer->FindControl(66432u));
-
-		m_pAccountLockDlg->SetVisible(0);
-
 		m_pAccountLockDlgTitle = static_cast<SText*>(m_pControlContainer->FindControl(66447u));
-
-		m_pAccountLockDlg->SetPos(
-			((float)g_pDevice->m_dwScreenWidth * 0.5f) - (m_pAccountLockDlg->m_nWidth * 0.5f),
-			((float)g_pDevice->m_dwScreenHeight * 0.5f) - (m_pAccountLockDlg->m_nHeight * 0.5f));
+		m_pAccountLock = static_cast<SPanel*>(m_pControlContainer->FindControl(66128u));
+		m_pAccountLockPasswd = static_cast<SText*>(m_pControlContainer->FindControl(66132u));
 
 		for (int i = 0; i < 10; ++i)
 			m_pBtnNumDlg[i] = static_cast<SButton*>(m_pControlContainer->FindControl(i + 66437));
 
-		m_pAccountLock = static_cast<SPanel*>(m_pControlContainer->FindControl(66128u));
+		if (m_pAccountLockDlg)
+		{
+			m_pAccountLockDlg->SetPos(
+				((float)g_pDevice->m_dwScreenWidth * 0.5f) - (m_pAccountLockDlg->m_nWidth * 0.5f),
+				((float)g_pDevice->m_dwScreenHeight * 0.5f) - (m_pAccountLockDlg->m_nHeight * 0.5f));
 
-		m_pAccountLock->SetPos(
-			((float)g_pDevice->m_dwScreenWidth * 0.5f) - (m_pAccountLock->m_nWidth * 0.5f),
-			((float)g_pDevice->m_dwScreenHeight * 0.5f) - (m_pAccountLock->m_nHeight * 0.5f));
+			if (g_AccountLock)
+				m_pAccountLockDlg->SetVisible(0);
+			else
+				m_pAccountLockDlg->SetVisible(1);
+		}
 
-		m_pAccountLockPasswd = static_cast<SText*>(m_pControlContainer->FindControl(66132u));
+		if (m_pAccountLock)
+		{
+			m_pAccountLock->SetPos(
+				((float)g_pDevice->m_dwScreenWidth * 0.5f) - (m_pAccountLock->m_nWidth * 0.5f),
+				((float)g_pDevice->m_dwScreenHeight * 0.5f) - (m_pAccountLock->m_nHeight * 0.5f));
 
-		if (g_AccountLock)
-			m_pAccountLockDlg->SetVisible(0);
-		else
-			m_pAccountLockDlg->SetVisible(1);
-
-		m_pAccountLock->SetVisible(0);
+			m_pAccountLock->SetVisible(0);
+		}
 
 		if (m_pInputPWPanel)
 		{
@@ -199,17 +256,23 @@ int TMSelectCharScene::InitializeScene()
 
 		m_pKingDomFlag = static_cast<SPanel*>(m_pControlContainer->FindControl(1377u));
 
-		m_pInputPWPanel->SetPos(
-			(((float)g_pDevice->m_dwScreenWidth * 0.5f) - (m_pInputPWPanel->m_nWidth * 0.5f)) - 10.0f,
-			((float)g_pDevice->m_dwScreenHeight * 0.5f) - (m_pInputPWPanel->m_nHeight * 0.5f));
+		if (m_pInputPWPanel && !m_bPWPanel748)
+		{
+			m_pInputPWPanel->SetPos(
+				(((float)g_pDevice->m_dwScreenWidth * 0.5f) - (m_pInputPWPanel->m_nWidth * 0.5f)) - 10.0f,
+				((float)g_pDevice->m_dwScreenHeight * 0.5f) - (m_pInputPWPanel->m_nHeight * 0.5f));
+		}
 
 		m_pSelbackpanel = static_cast<SPanel*>(m_pControlContainer->FindControl(1054274u));
 
-		m_pSelbackpanel->SetStickLeft();
-		m_pSelbackpanel->SetStickBottom();
+		if (m_pSelbackpanel)
+		{
+			m_pSelbackpanel->SetStickLeft();
+			m_pSelbackpanel->SetStickBottom();
 
-		m_pSelbackpanel->m_nPosX += (30.0f * RenderDevice::m_fWidthRatio);
-		m_pSelbackpanel->m_nPosY -= (30.0f * RenderDevice::m_fHeightRatio);
+			m_pSelbackpanel->m_nPosX += (30.0f * RenderDevice::m_fWidthRatio);
+			m_pSelbackpanel->m_nPosY -= (30.0f * RenderDevice::m_fHeightRatio);
+		}
 
 		m_pGuildCaption = static_cast<SText*>(m_pControlContainer->FindControl(1312u));
 		m_pGuildCaption->m_dwAlignType = 1;
@@ -395,12 +458,12 @@ int TMSelectCharScene::OnControlEvent(unsigned int idwControlID, unsigned int id
 	}
 	if (idwControlID == 4617 && !idwEvent && m_pMessageBox->m_dwMessage == 65796)
 		g_pObjectManager->SetCurrentState(ObjectManager::TM_GAME_STATE::TM_SELECTSERVER_STATE);
-	if (idwControlID >= 66437 && idwControlID <= 66446)
+	if (m_pAccountLockDlgTitle && idwControlID >= 66437 && idwControlID <= 66446)
 	{
 		AddvirtualKeyNum(idwControlID - 66437);
 		return 1;
 	}
-	if (idwControlID == 66433)
+	if (m_pAccountLockDlg && idwControlID == 66433)
 	{
 		if (!g_AccountLock)
 		{
@@ -422,9 +485,9 @@ int TMSelectCharScene::OnControlEvent(unsigned int idwControlID, unsigned int id
 
 		return 1;
 	}
-	if (idwControlID == 66434)
+	if (m_pAccountLockDlg && idwControlID == 66434)
 		m_pAccountLockDlg->SetVisible(0);
-	if (idwControlID == 66435)
+	if (m_pAccountLockDlg && m_pAccountLockDlgTitle && idwControlID == 66435)
 	{
 		if (strlen(keypass) < 4)
 			return 1;
@@ -477,7 +540,7 @@ int TMSelectCharScene::OnControlEvent(unsigned int idwControlID, unsigned int id
 		return 1;
 	}
 
-	if (!g_AccountLock)
+	if (m_pAccountLockDlg && m_pAccountLockDlgTitle && !g_AccountLock)
 	{
 		m_pAccountLockDlgTitle->SetVisible(1);
 		SetvirtualKey();
@@ -709,24 +772,23 @@ int TMSelectCharScene::OnControlEvent(unsigned int idwControlID, unsigned int id
 		m_bMovingNow = 0;
 		return 1;
 	}
-	if (idwControlID == 65886)
+	if (idwControlID == 65886 || idwControlID == 1024)
 	{
-		MSG_DeleteCharacter stDelCharacter{};
-		stDelCharacter.Header.ID = 0;
-		stDelCharacter.Header.Type = MSG_DeleteCharacter_Opcode;
-		stDelCharacter.Slot = g_pObjectManager->m_cCharacterSlot;
-		sprintf(stDelCharacter.MobName, "%s", pSelChar->MobName[g_pObjectManager->m_cCharacterSlot]);
-		sprintf(stDelCharacter.Password, "%s", m_pPWEdit->GetText());
+		if (m_pPWEdit && m_pInputPWPanel)
+		{
+			RequestDeleteCharacter(m_pPWEdit->GetText());
 
-		g_pSocketManager->SendOneMessage((char*)&stDelCharacter, sizeof(stDelCharacter));
-		memset(m_pPWEdit->m_strText, 0, 4);
-		m_pInputPWPanel->SetVisible(0);
-		m_pControlContainer->SetFocusedControl(nullptr);
+			memset(m_pPWEdit->m_strText, 0, 4);
+			m_pInputPWPanel->SetVisible(0);
+			m_pControlContainer->SetFocusedControl(nullptr);
+		}
 		return 1;
 	}
-	if (idwControlID == 65887)
+	if (idwControlID == 65887 || idwControlID == 921)
 	{
-		m_pInputPWPanel->SetVisible(0);
+		if (m_pInputPWPanel)
+			m_pInputPWPanel->SetVisible(0);
+
 		m_pControlContainer->SetFocusedControl(nullptr);
 		return 1;
 	}
@@ -748,6 +810,13 @@ int TMSelectCharScene::OnControlEvent(unsigned int idwControlID, unsigned int id
 		}
 		if (m_pMessageBox->m_dwMessage == 4615 && characterSlot >= 0 && characterSlot < 4)
 		{
+			// Fallback for a build with no delete-password dialog at all.
+			if (!m_pInputPWPanel || !m_pPWEdit)
+			{
+				RequestDeleteCharacter("");
+				return 1;
+			}
+
 			m_pInputPWPanel->SetVisible(1);
 			m_pControlContainer->SetFocusedControl(m_pPWEdit);
 			return 1;
@@ -848,7 +917,7 @@ int TMSelectCharScene::OnMouseEvent(unsigned int dwFlags, unsigned int wParam, i
 	if (m_pMessageBox->IsVisible() == 1)
 		return 1;
 
-	if (m_pInputPWPanel->IsVisible() == 1)
+	if (m_pInputPWPanel && m_pInputPWPanel->IsVisible() == 1)
 		return 1;
 
 	if (m_bCriticalError == 1)
@@ -857,7 +926,8 @@ int TMSelectCharScene::OnMouseEvent(unsigned int dwFlags, unsigned int wParam, i
 	if (m_pRename && m_pRename->m_bVisible == 1)
 		return 1;
 
-	if (!g_AccountLock)
+	// 748 has no account-lock dialog; without it the account is simply unlocked.
+	if (m_pAccountLockDlg && m_pAccountLockDlgTitle && !g_AccountLock)
 	{
 		if (!m_pAccountLockDlg->IsVisible() && dwFlags == 513)
 		{
@@ -1376,7 +1446,7 @@ int TMSelectCharScene::OnPacketEvent(unsigned int dwCode, char* buf)
 			g_AccountLock = 1;
 			return 1;
 		}
-		if (g_AccountLock == 3)
+		if (g_AccountLock == 3 && m_pAccountLockDlg && m_pAccountLockDlgTitle)
 		{
 			memset(keypass, 0, sizeof(keypass));
 			memset(keypasschage, 0, sizeof(keypasschage));
@@ -1391,10 +1461,14 @@ int TMSelectCharScene::OnPacketEvent(unsigned int dwCode, char* buf)
 	return 1;
 	case 0xFDF:
 	{
-		m_pAccountLockDlg->SetVisible(1);
-		g_AccountLock = 0;
-		SetvirtualKey();
-		m_pAccountLockDlgTitle->SetText(g_UIString[236], 0);
+		// 755-only account-lock prompt; 748 has no dialog to show.
+		if (m_pAccountLockDlg && m_pAccountLockDlgTitle)
+		{
+			m_pAccountLockDlg->SetVisible(1);
+			g_AccountLock = 0;
+			SetvirtualKey();
+			m_pAccountLockDlgTitle->SetText(g_UIString[236], 0);
+		}
 	}
 	return 1;
 	case MSG_CNFNewCharacter_Opcode:
@@ -1635,7 +1709,14 @@ void TMSelectCharScene::VisibleSelectCreate(int bSelect)
 		auto pCreBG4 = m_pControlContainer->FindControl(1541u);
 		auto pCreWin = m_pControlContainer->FindControl(1542u);
 
-		pCreWin->SetPos(RenderDevice::m_fWidthRatio * 514.0f, RenderDevice::m_fHeightRatio * 35.0f);
+		// 748 has no 1537..1541 create backgrounds: panel 1542 holds the whole
+		// create UI and is shown from the class-preview click handler once a
+		// class is chosen.
+		if (pCreWin)
+		{
+			pCreWin->SetPos(RenderDevice::m_fWidthRatio * 514.0f, RenderDevice::m_fHeightRatio * 35.0f);
+			pCreWin->SetVisible(0);
+		}
 
 		if (pCreTitle)
 			pCreTitle->SetVisible(1);
@@ -1668,22 +1749,26 @@ void TMSelectCharScene::VisibleSelectCreate(int bSelect)
 		m_pNewCharPanel->SetVisible(1);
 		m_pDelCharPanel->SetVisible(1);
 
-		m_pNewCharPanel->SetPos(
-			(27.0f * RenderDevice::m_fWidthRatio) + m_pSelbackpanel->m_nPosX,
-			(13.0f * RenderDevice::m_fHeightRatio) + m_pSelbackpanel->m_nPosY);
+		if (m_pSelbackpanel)
+		{
+			m_pNewCharPanel->SetPos(
+				(27.0f * RenderDevice::m_fWidthRatio) + m_pSelbackpanel->m_nPosX,
+				(13.0f * RenderDevice::m_fHeightRatio) + m_pSelbackpanel->m_nPosY);
 
-		m_pDelCharPanel->SetPos(
-			(27.0f * RenderDevice::m_fWidthRatio) + m_pSelbackpanel->m_nPosX,
-			(39.0f * RenderDevice::m_fHeightRatio) + m_pSelbackpanel->m_nPosY);
+			m_pDelCharPanel->SetPos(
+				(27.0f * RenderDevice::m_fWidthRatio) + m_pSelbackpanel->m_nPosX,
+				(39.0f * RenderDevice::m_fHeightRatio) + m_pSelbackpanel->m_nPosY);
 
-		m_pReturnSvrSelPanel->SetPos(
-			(27.0f * RenderDevice::m_fWidthRatio) + m_pSelbackpanel->m_nPosX,
-			(64.0f * RenderDevice::m_fHeightRatio) + m_pSelbackpanel->m_nPosY);
-
-		pSelChar->SetPos(RenderDevice::m_fWidthRatio * 514.0f, RenderDevice::m_fHeightRatio * 35.0f);
+			m_pReturnSvrSelPanel->SetPos(
+				(27.0f * RenderDevice::m_fWidthRatio) + m_pSelbackpanel->m_nPosX,
+				(64.0f * RenderDevice::m_fHeightRatio) + m_pSelbackpanel->m_nPosY);
+		}
 
 		if (pSelChar)
+		{
+			pSelChar->SetPos(RenderDevice::m_fWidthRatio * 514.0f, RenderDevice::m_fHeightRatio * 35.0f);
 			pSelChar->SetVisible(0);
+		}
 
 		auto pCreTitle = m_pControlContainer->FindControl(1537u);
 		auto pCreBG1 = m_pControlContainer->FindControl(1538u);
@@ -1821,6 +1906,12 @@ void TMSelectCharScene::SetvirtualKey()
 
 void TMSelectCharScene::AddvirtualKeyNum(int num)
 {
+	if (!m_pAccountLockDlgTitle)
+		return;
+
+	if (num < 0 || num >= 10)
+		return;
+
 	int paslen = strlen(keypass);
 	char chdata[10];
 	char Passdata[11] = { 0 };
@@ -1834,6 +1925,23 @@ void TMSelectCharScene::AddvirtualKeyNum(int num)
 		strncpy(chdata, Passdata, strlen(keypass));
 		m_pAccountLockDlgTitle->SetText(chdata, 0);
 	}
+}
+
+void TMSelectCharScene::RequestDeleteCharacter(const char* szPassword)
+{
+	int nSlot = g_pObjectManager->m_cCharacterSlot;
+
+	if (nSlot < 0 || nSlot >= 4)
+		return;
+
+	MSG_DeleteCharacter stDelCharacter{};
+	stDelCharacter.Header.ID = 0;
+	stDelCharacter.Header.Type = MSG_DeleteCharacter_Opcode;
+	stDelCharacter.Slot = nSlot;
+	sprintf_s(stDelCharacter.MobName, "%s", g_pObjectManager->m_stSelCharData.MobName[nSlot]);
+	sprintf_s(stDelCharacter.Password, "%s", szPassword ? szPassword : "");
+
+	g_pSocketManager->SendOneMessage((char*)&stDelCharacter, sizeof(stDelCharacter));
 }
 
 void TMSelectCharScene::ReloadCharList(RELOAD_CHARLIST_TYPE type)

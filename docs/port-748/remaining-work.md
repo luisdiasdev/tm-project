@@ -2,9 +2,9 @@
 
 ## 1. Test character select and field entry
 
-Login now reaches TMSrv/DBSrv and the account response transitions to character
-select, but `TMSelectCharScene::InitializeScene` crashes there on 755-only
-controls (see section 2). The last verified screen is still server select.
+Login reaches TMSrv/DBSrv and the account response transitions to character
+select. Character select now initializes and is usable; field entry is still
+untested.
 
 Next steps:
 
@@ -12,34 +12,64 @@ Next steps:
    directory, or the account lookup fails with "Conta inexistente".
    `NewApp.cpp` currently hardcodes `127.0.0.1`; check
    `serverlist.bin`/`sn.bin` if that is wrong.
-2. Run `client_748\TMProject_d.exe`, select the server, log in, and capture
-   character select.
+2. Run `client_748\TMProject_d.exe`, select the **4th** server entry
+   (`World SV-…`), log in with `admin`/`admin`, and capture character select.
 3. Enter the field and capture the HUD; check `WYD.log` for new errors.
 
 Anything that crashes is a missing null guard or an unported ID; see below.
 
 ## 2. Character select
 
-`TMSelectCharScene.cpp` already uses 748 IDs for the main screen. The audit
-still reports these references that are absent from `SelCharScene2.bin`:
+Fixed: `InitializeScene` dereferenced 755-only controls. The account-lock
+dialog and the select/back panel do not exist in `SelCharScene2.bin`, and the
+delete-password dialog exists under different IDs.
 
-| ID | Meaning | Expected action |
-|---:|---|---|
-| `4617` | message box | created at runtime; fine |
-| `4628` | IME button | 755-only; guard |
-| `1054274` | select/back panel | not in 748; guard |
-| `1544` | create-character background 2 | not in 748; guard |
-| `65885`, `65889` | delete-password panel/edit | 755-only; guard |
-| `65886`, `65887` | account-lock OK/Cancel | 755-only; guard |
-| `66128`, `66132` | account-lock panel/text | 755-only; guard |
-| `66432`, `66447` | account-lock dialog/title | 755-only; guard |
-| `66433..66435`, `66437..66446` | account-lock extras/number pad | not in 748; guard/disable |
+| 755 ID | 748 ID | Handling |
+|---:|---:|---|
+| `66432`, `66447`, `66128`, `66132`, `66433..66435`, `66437..66446` | — | account lock, 755-only. The bindings stay null and every use is guarded; an account without the dialog is treated as unlocked. |
+| `65885`, `65889` | `626`, `627` | delete-password panel/edit, bound with a fallback so the 748 panel is hidden at init and keeps its `.bin` position. |
+| `65886`, `65887` | `1024`, `921` | delete-password confirm/cancel, handled by the same code as the 755 IDs. |
+| `1054274` | — | select/back panel. `VisibleSelectCreate` only repositions the Create/Delete/Exit panels when it exists; in 748 they keep their `.bin` positions. |
+| `1544` | — | create-character background 2, already guarded. |
+| `4617`, `4628` | — | message box / IME, created at runtime or 755-only; no crash. |
 
-`InitializeScene` currently dereferences `m_pAccountLockDlg` and
-`m_pSelbackpanel` without null checks, so entering character select crashes with
-`0xC0000005`. The account-lock and delete-password paths should be conditional;
-`m_pPWEdit`/`m_pInputPWPanel` are also null in 748 and are used by
-`OnMouseEvent`, `OnControlEvent` and the delete-character path.
+Note: `626/627/1024/921` are the same values the field scene uses for its
+gold-input dialog (`TMP_INPUT_GOLD` / `TME_INPUT_GOLD` / `TMB_IG_OK2` /
+`TMB_IG_CANCEL2`). In `SelCharScene2` they mean "Enter Password", so do not
+reuse the field names when editing this scene.
+
+Verified at 800x600: login → character select renders, selecting a character
+shows the info panel, Delete → Confirm opens "Enter Password", Cancel closes it.
+
+### Create-character screen
+
+`VisibleSelectCreate(0)` only toggled the 755 create backgrounds
+(`1537..1541`), which are absent from `SelCharScene2.bin`; the whole 748 create
+UI is panel `1542` (name edit `4626`, description list `5671`, Create/Cancel).
+The panel is positioned as the 755 window was and stays hidden until a class
+preview is clicked, matching the 748 flow.
+
+Clicking one of the four previews (`m_pSampleHuman`) now populates the panel:
+class name (`TMT_CREATE_CLASS` 5666), character description from
+`UI\chardesc<race>.txt` into `TMP_CREATE_CHAR_DESC` (5671), the Str/Int/Dex/Con
+values (1562..1565) and the four bar widths (5667..5670). The values are the
+per-class preview table the original client hardcodes; they are not derived from
+the server. The description list renders correctly even though the scene stores
+`5671` with width 0 — `LoadMsgText` copies the list width into each item at load
+time and the empty width is not used for clipping.
+
+Create (`TMB_CREATE_CHAR_OK` 1545, also Enter while the name edit is focused)
+validates the name and sends `MSG_NewCharacter`; the server reply drives the
+message panel (`0x11A`) or the character list refresh (`MSG_CNFNewCharacter`).
+That path depends on the server and is not verified from the client side.
+
+Still open:
+
+- At 800x600 the window at `(514, 35)` overlaps the 4th class preview; decide
+  whether to move the window or the previews.
+- While the create window is visible the scene ignores mouse clicks on the 3D
+  previews, so another class cannot be picked without cancelling first. This is
+  inherited from the 755 code; check the original 748 client before changing it.
 
 ## 3. Field HUD
 

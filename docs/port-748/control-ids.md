@@ -71,17 +71,21 @@ disabled.
 
 ## Character select
 
-`TMSelectCharScene.cpp` already mostly uses 748 IDs. The audit reports a few
-missing references, which are all dynamic or 755-only:
+`TMSelectCharScene.cpp` uses 748 IDs for the main screen. The remaining
+references absent from `SelCharScene2.bin` are dynamic or 755-only:
 
 | ID | Meaning | Status |
 |---:|---|---|
 | `4617` | message box | created at runtime by `TMScene` |
 | `4628` | IME button | 755-only |
-| `65886/65887` | account-lock OK/Cancel | 755-only |
-| `66433..66435` | char-select extras | not in 748 scene |
+| `65885/65889`, `65886/65887` | delete-password panel/edit and OK/Cancel | 755-only; the 748 dialog is `626/627` with `1024/921` |
+| `66432..66447`, `66128/66132` | account lock | 755-only; guarded, feature disabled |
+| `1054274` | select/back panel | 755-only; guarded |
 
-These paths must be null-guarded if the screens are exercised.
+`626/627/1024/921` in `SelCharScene2` are the "Enter Password" dialog, even
+though `ResourceControl.h` names those values `TMP_INPUT_GOLD`,
+`TME_INPUT_GOLD`, `TMB_IG_OK2` and `TMB_IG_CANCEL2` for the field scene. 748
+reused one generic input dialog for both.
 
 ## Audit command
 

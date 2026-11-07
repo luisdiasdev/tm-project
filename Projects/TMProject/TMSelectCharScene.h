@@ -40,6 +40,7 @@ public:
 
 private:
 	void ReloadCharList(RELOAD_CHARLIST_TYPE type);
+	void RequestDeleteCharacter(const char* szPassword);
 
 public:
 	char keybuf[10];
@@ -101,4 +102,5 @@ public:
 	int m_bSelect;
 	float m_fFocusHeight;
 	SPanel* m_pSelbackpanel;
+	bool m_bPWPanel748;
 };
