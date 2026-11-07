@@ -51,6 +51,44 @@ Restores lines whose raw bytes were replaced by U+FFFD, using
 `git show HEAD:<file>`. Run from the repo root; use `--dry-run` first.
 `TMFieldScene.cpp` should have 13 raw non-ASCII bytes on 9 lines.
 
+## `client_drive.ps1`
+
+Launches, clicks, types, captures and runs the login sequence against the 748
+client. This is the tool to use for UI checks; `capture_and_click.ps1` below is
+the older single-shot variant.
+
+```powershell
+cd tmproject
+
+# start a fresh client and grab the server-select screen
+powershell -File docs\tools\client_drive.ps1 -Action launch -Restart -Out artifacts\01-serverselect.png
+
+# server row -> channel row -> Connect -> admin/admin -> Login (waits for the UI)
+powershell -File docs\tools\client_drive.ps1 -Action login -Out artifacts\02-selchar.png
+
+# click Create, capture the result
+powershell -File docs\tools\client_drive.ps1 -Action click -X 70 -Y 233 -Out artifacts\03-create.png
+
+# type into the focused control, capture the result
+powershell -File docs\tools\client_drive.ps1 -Action type -Text "Testchar" -Out artifacts\04-typed.png
+
+powershell -File docs\tools\client_drive.ps1 -Action kill
+```
+
+- Actions: `launch`, `capture`, `click`, `type`, `login`, `kill`.
+- Defaults: `-Exe ..\client_748\TMProject_d.exe`, working directory = its folder.
+- `-X`/`-Y` are **window-relative**, so they match the captured image when the
+  window is at `(0,0)`; the client area starts ~26 px below the window top.
+- The click is held for `-HoldMilliseconds` (default 180) because the client
+  polls input per frame and a zero-length click can be missed.
+- `-Text` is a SendKeys string: `"admin{TAB}admin"`, `"{ENTER}"`, `"{ESC}"`.
+- Captures use `CopyFromScreen` over the window rect (`PrintWindow` returns
+  black for this D3D9 window), so keep the game unobstructed on top.
+- `-Action launch` waits `-WaitSeconds` (default 8) before the optional capture.
+- The login sequence uses the `admin`/`admin` test account and the 4th server
+  entry (`World SV-...`); the rows above it are placeholders. If the login panel
+  is still up after the sequence, run the reported retry click.
+
 ## `capture_and_click.ps1`
 
 ```powershell

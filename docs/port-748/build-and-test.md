@@ -31,26 +31,33 @@ The client reads `config.txt` and writes `WYD.log` in the working directory.
 `client_748\config.txt` currently uses `[WINDOW] 1`, `[RES] 3` (800x600) and
 `[CLASSIC] 0`. Note `NewApp.cpp` currently forces `g_UIVer = 2`.
 
+Test account: `admin` / `admin`. On the server list, pick the **4th** entry
+(`World SV-…`); the rows above it are "No Server." placeholders. Clicking
+Connect without selecting the channel row shows "Select server and server
+group." and stops.
+
 ## Capture the window
 
 `PrintWindow()` returns a black image for this D3D9 window. Use
 `Graphics.CopyFromScreen` over the window rect instead, after
 `SetForegroundWindow` + a short settle delay.
 
-`docs/tools/capture_and_click.ps1` does launch → wait → optional click →
-capture. Example:
+`docs/tools/client_drive.ps1` wraps launch / click / type / capture / login in
+one command:
 
 ```powershell
-powershell -File docs\tools\capture_and_click.ps1 `
-  -Exe ..\client_748\TMProject_d.exe `
-  -WorkingDir ..\client_748 `
-  -ClickX 377 -ClickY 498 `
-  -Out modal.png
+powershell -File docs\tools\client_drive.ps1 -Action launch -Restart -Out artifacts\01-serverselect.png
+powershell -File docs\tools\client_drive.ps1 -Action login  -Out artifacts\02-selchar.png
+powershell -File docs\tools\client_drive.ps1 -Action click  -X 70 -Y 233 -Out artifacts\03-create.png
 ```
 
-The script crops to the window rect, so it can include the title bar. On the
+It crops to the window rect, so captures can include the title bar. On the
 reference machine the window is `816x639` at `(0,0)`; the game client area is
-`800x600` starting roughly at `(8,31)` (26px title bar).
+`800x600` starting roughly at `(8,31)` (26px title bar). `-X`/`-Y` are
+window-relative, so they match the image when the window is at `(0,0)`.
+
+`docs/tools/capture_and_click.ps1` is the older single-shot (launch → optional
+click → capture) variant and still works.
 
 ## Clicking UI in a test
 
@@ -62,11 +69,23 @@ temporary `LOG_WRITELOG` in `TMSelectServerScene::OnControlEvent`.
 |---|---|---|
 | Server-select Close (`TMB_SELSERVER_EXIT`, 5637) | panel (272,236) + (80,225), 50x23 → (352,461)-(402,484) | `(377, 498)` |
 | Server-select Connect (`TMB_SELSERVER_OK`, 4620) | (286,461)-(336,484) | `(311, 498)` |
+| Server group row (`World SV`) | list row 1 | `(340, 330)` |
+| Channel row (4th entry) | list rows; placeholders above | `(470, 360)` |
+| Login account edit (`TME_LOGIN_ID`) | login box | `(430, 296)` |
+| Login button (`TMB_LOGIN_OK`, 4609) | (324,342)-(395,361) | `(360, 351)` |
+| Char-select Create button (panel 5654) | (30,190), 86x21 | `(70, 233)` |
+| Char-select Exit button (panel 5672) | (30,230), 86x21 | `(70, 273)` |
+| Create screen: class previews | four models on the stage | bodies around `y = 320`; e.g. `(200, 330)` |
+| Create screen: create window | shown after picking a class, at `(514,35)` | `(602, 441)` Create, `(690, 441)` Cancel |
 | Modal Confirm | box origin + (20,77), 88x21 | depends on box position |
 | Modal Cancel | box origin + (117,77), 88x21 | depends on box position |
 
 Hold the mouse button for ~150-180 ms before releasing; the client processes
 input per frame and a zero-length synthetic click can be missed.
+
+The create screen only appears after clicking one of the four class previews:
+that click is what shows panel `1542` and fills the class name, description,
+stats and bars.
 
 ## Verifying the click reached the scene
 
@@ -85,7 +104,7 @@ Remove the probe before committing.
 |---|---|
 | Login / server select | WYD II FC logo, two stone panels "Server"/"Channel", one "World 5v" row, Connect/Close. |
 | Close modal | Dark etched 256x128 frame, "Information", "Want to exit the game?", Confirm/Cancel with button art. |
-| Char select | Not yet verified end-to-end. |
+| Char select | Hall with Create/Delete/Exit; selecting a character shows the info panel (name/class/level/gold/stats) and Connect/Cancel. No password modal until a delete is confirmed. |
 | Field | Not yet verified (server required). |
 
 Compare against the original `client_748\WYD.exe` screenshots when in doubt.
