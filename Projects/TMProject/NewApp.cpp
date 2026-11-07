@@ -575,6 +575,22 @@ HRESULT NewApp::Finalize()
 	return 1;
 }
 
+// Debug helper: print the mouse position (client coordinates) once per frame.
+void NewApp::PrintMousePosition()
+{
+	if (m_hWnd == nullptr)
+		return;
+
+	POINT pt = { 0, 0 };
+	if (!GetCursorPos(&pt))
+		return;
+
+	ScreenToClient(m_hWnd, &pt);
+
+	printf("Mouse: (%d, %d)\r", pt.x, pt.y);
+	fflush(stdout);
+}
+
 DWORD NewApp::Run()
 {
 	HACCEL hAccel = LoadAccelerators(0, MAKEINTRESOURCE(IDC_TMPROJECT));
@@ -607,6 +623,8 @@ DWORD NewApp::Run()
 				m_pEventTranslator->CameraEventData();
 
 				m_pObjectManager->FrameMove(dwServerTime);
+
+				PrintMousePosition();
 
 				if (g_dwStartPlayTime != 0 && g_dwPausedTime == 0)
 				{

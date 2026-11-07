@@ -30,6 +30,7 @@ public:
     virtual DWORD Run();
     virtual void OnCreate(HWND hWnd, DWORD wParam, int lParam);
     virtual HRESULT RenderScene();
+    void PrintMousePosition();
     virtual void SetObjectManager(ObjectManager* pManager);
     virtual EventTranslator* GetEventTranslator();
 

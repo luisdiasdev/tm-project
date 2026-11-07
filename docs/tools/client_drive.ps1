@@ -97,9 +97,12 @@ $WorkingDir = (Resolve-Path $WorkingDir).Path
 $processName = [System.IO.Path]::GetFileNameWithoutExtension($Exe)
 
 # 748 login screen, 800x600, window at (0,0): see docs/port-748/build-and-test.md.
+# KEEP IN MIND Y coordinates are window-relative, not client-relative; the client area starts ~26 px below the top of the window.
+# So always add 26 to the logical client Y coordinate you get from the client debug console.
+# X coordinates are the same, but the offset is only 8 px for the borders.
 $loginUi = @{
   ServerRow  = @(340, 330)   # "World SV" group row
-  ChannelRow = @(470, 360)   # 4th entry, "World SV-..." (the others are placeholders)
+  ChannelRow = @(470, 367)   # 4th entry, "World SV-..." (rows at ~327/340/353/367)
   Connect    = @(311, 498)
   Account    = @(430, 296)
   Login      = @(360, 351)
