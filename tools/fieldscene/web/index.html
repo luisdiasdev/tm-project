@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FieldScene Inspector</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header id="topbar">
+  <div class="brand">
+    <span class="logo">FS</span>
+    <div>
+      <h1>FieldScene Inspector</h1>
+      <div id="meta" class="meta">loading...</div>
+    </div>
+  </div>
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="search id, name, text  ( / )" autocomplete="off">
+    <select id="filter" title="filter">
+      <option value="all">All controls</option>
+      <option value="problems">Problems</option>
+      <option value="orphans">Source-unreferenced</option>
+      <option value="unnamed">Unnamed ids</option>
+      <option value="referenced">Referenced</option>
+      <option value="BUTTON">Buttons</option>
+      <option value="PANEL">Panels</option>
+      <option value="TEXT">Text</option>
+      <option value="GRID">Grids</option>
+      <option value="LISTBOX">List boxes</option>
+      <option value="EDIT">Edits</option>
+      <option value="PROGRESS">Progress bars</option>
+      <option value="CHECKBOX">Check boxes</option>
+      <option value="3DOBJ">3D objects</option>
+    </select>
+    <label class="check"><input id="showOutlines" type="checkbox" checked> outlines</label>
+    <label class="check"><input id="showLabels" type="checkbox"> labels</label>
+    <button id="fitBtn" title="fit to window (F)">Fit</button>
+    <span id="viewInfo" class="view-info"></span>
+  </div>
+</header>
+
+<main>
+  <aside id="left">
+    <div class="tabs">
+      <button class="tab active" data-tab="controls">Controls</button>
+      <button class="tab" data-tab="dead">Dead refs</button>
+      <button class="tab" data-tab="problems">Problems</button>
+    </div>
+    <div id="tab-controls" class="tab-page active">
+      <div id="listCount" class="list-count"></div>
+      <div id="list" class="list"></div>
+    </div>
+    <div id="tab-dead" class="tab-page">
+      <div id="deadList" class="list"></div>
+    </div>
+    <div id="tab-problems" class="tab-page">
+      <div id="problems" class="problems"></div>
+    </div>
+  </aside>
+
+  <section id="center">
+    <canvas id="scene"></canvas>
+    <div id="tooltip" class="tooltip hidden"></div>
+    <div class="legend">
+      <span><i class="lg resolved"></i>resolved</span>
+      <span><i class="lg orphan"></i>unbound</span>
+      <span><i class="lg unnamed"></i>unnamed</span>
+      <span><i class="lg mismatch"></i>mistyped</span>
+    </div>
+    <div class="canvas-hint">wheel = zoom · drag = pan · click = inspect · F = fit</div>
+  </section>
+
+  <aside id="right">
+    <div id="inspector" class="inspector">
+      <div class="empty">Select a control or a dead reference.</div>
+    </div>
+  </aside>
+</main>
+
+<div id="loading" class="loading">
+  <div>
+    <strong>Loading FieldScene2.bin…</strong>
+    <div class="small">decoding texture sets and scanning TMFieldScene.cpp</div>
+  </div>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>
