@@ -23,6 +23,33 @@
 
 const char ClassName[4] = "WYD";
 
+#ifdef _DEBUG
+// Diagnostic helper: log a native crash (fault address + raw stack) to WYD.log,
+// which is otherwise lost when WER swallows the process.
+static LONG WINAPI CrashDumpHandler(EXCEPTION_POINTERS* ep)
+{
+	CONTEXT* pCtx = ep->ContextRecord;
+	HMODULE hModule = GetModuleHandle(nullptr);
+	LOG_WRITELOG("!! Unhandled exception code=0x%08X at %p (eip=%08X ebp=%08X esp=%08X) module=%p rva=0x%08X\r\n",
+		ep->ExceptionRecord->ExceptionCode, ep->ExceptionRecord->ExceptionAddress,
+		pCtx->Eip, pCtx->Ebp, pCtx->Esp, (void*)hModule,
+		reinterpret_cast<unsigned int>(ep->ExceptionRecord->ExceptionAddress) - reinterpret_cast<unsigned int>(hModule));
+
+	__try
+	{
+		const DWORD* pStack = reinterpret_cast<const DWORD*>(pCtx->Esp);
+		for (int i = 0; i < 160; ++i)
+			LOG_WRITELOG("   stk %02d %p: %08X\r\n", i, (void*)(pCtx->Esp + i * 4), pStack[i]);
+	}
+	__except (EXCEPTION_EXECUTE_HANDLER)
+	{
+		LOG_WRITELOG("   stack dump failed\r\n");
+	}
+
+	return EXCEPTION_EXECUTE_HANDLER;
+}
+#endif
+
 NewApp::NewApp()
 {
 	m_hWnd = 0;
@@ -83,6 +110,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 HRESULT NewApp::Initialize(HINSTANCE hInstance, int nFull)
 {
+#ifdef _DEBUG
+	SetUnhandledExceptionFilter(CrashDumpHandler);
+#endif
+
 	struct stRes
 	{
 		unsigned int dwWidth;

@@ -62,7 +62,9 @@ different control there (e.g. 65889 → 627 is valid in `FieldScene2`, but 627 i
   inventory page buttons (`67072..67080`, `67332..67334`).
 - **Unmapped scene IDs** — `FieldScene2.bin` contains 16 IDs not present in
   `ResourceControl.h`: `318, 319, 802..811, 1857, 1862, 1863, 1864`. The file is
-  correct; the header simply lacks names for them.
+  correct; the header simply lacks names for them. `318/319` are the 748
+  auto-attack buttons (sets 455/456) and `1857/1863/1864` are the 748 party
+  window, list and leave button.
 
 Controls that do not exist in 748 are now **null-guarded** in
 `TMFieldScene::InitializeScene` and `SetAutoSkillNum`. Do not re-add a random

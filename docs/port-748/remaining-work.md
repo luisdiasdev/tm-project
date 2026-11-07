@@ -1,22 +1,72 @@
 # Remaining Work
 
-## 1. Test character select and field entry
+## 1. Character select and field entry
 
-Login reaches TMSrv/DBSrv and the account response transitions to character
-select. Character select now initializes and is usable; field entry is still
-untested.
+Login reaches TMSrv/DBSrv, character select is usable and entering the world
+now works. Verified at 800x600: select `Agate`, click Connect, the field scene
+loads, the HUD renders, click-to-move and attacking a mob work.
 
-Next steps:
+To reproduce:
 
 1. Start `TMSrv`/`DBSrv` with their own `run` directories as the working
    directory, or the account lookup fails with "Conta inexistente".
    `NewApp.cpp` currently hardcodes `127.0.0.1`; check
    `serverlist.bin`/`sn.bin` if that is wrong.
 2. Run `client_748\TMProject_d.exe`, select the **4th** server entry
-   (`World SV-…`), log in with `admin`/`admin`, and capture character select.
-3. Enter the field and capture the HUD; check `WYD.log` for new errors.
+   (`World SV-…`), log in with `admin`/`admin`.
+3. Select a character and click Connect (window-relative ~`(582,416)` at
+   800x600). `WYD.log` must reach `>> Init Field Scene::End`.
 
-Anything that crashes is a missing null guard or an unported ID; see below.
+### The 0x114 crash chain (fixed)
+
+`MSG_CNFCharacterLogin` is handled by `TMSelectCharScene`, which switches to
+`TM_FIELD_STATE`; `TMFieldScene::InitializeScene()` then runs synchronously.
+The 755-only UI assumptions crashed in this order:
+
+| Crash | Cause | Fix |
+|---|---|---|
+| `m_pCCModeHpSte->SetText` | 748 has no C.C. mode dialog `66817..66824` | null-guarded; the `B_CCMODE_*` handlers are guarded too |
+| `m_pSkillSecGrid2[i]->Empty` | second skill bar `94208..94219` absent; the guard checked the array, not the element | check `m_pSkillSecGrid2[i]` |
+| `m_pGridInvList[0]->m_bDrawGrid` | inventory page grids `67072..67075` absent | per-element guard; a single grid (`TMG_INV_GRID`) is used |
+| `SGridControl::AddItem` (login carry loop) | `m_pGridInvList[Page]` null | fall back to `m_pGridInv`, 9-column cell mapping |
+| same for cargo | `m_pCargoGridList[Page]` null | fall back to `m_pCargoGrid` |
+| `OnPacketCreateMob` `m_pMyHuman` | a modal `MessageBox` in `CItemMix::BASE_ReadMixList` pumped the socket queue while init was still running | no modal for the optional file; mobs are ignored until `m_pMyHuman` exists |
+| `CItemMix::TakeItResource` / `CMission::TakeItResource` | `81921`/`81948`/`86017` absent | guards; 748 mix panel `1360` is used as fallback |
+| `Bag_View` | `m_pInvPageBtn3/4`, `m_pJPNBag_Day1/2` absent | early return; page buttons are 755-only |
+| `Affect_Main` | affect icon strips `90400`/`90369`/`475152` absent | early return after clearing `TMT_AFFECT_DESC` |
+| `FrameMove` party loop | `m_pPartyList` (`475138`) absent | guard |
+| click-to-move | `m_pChatBack` (`65943`) absent | treated as "click is not over the chat" |
+| shortcut assignment | `m_pSkillSecGrid[i]` / `[2][i]` null | guards |
+
+`Mixlist.bin` is not a 748 asset and the original `WYD.exe` has no reference to
+it, so the reader now logs and returns instead of showing a modal box. Item-mix
+recipes are therefore empty (see below).
+
+### Things that are still 755-shaped
+
+- **Inventory/cargo pages.** The runtime code still maps item positions as
+  4 pages × 15 slots (inventory) and 3 pages × 40 slots (cargo). At init the
+  unused page pointers are aliased to the single 748 grid so nothing crashes,
+  but cell placement for runtime pickups/uses is still 5-column math. Fixing it
+  needs a page/cell abstraction driven by `m_nColumnGridCount`.
+- **Party UI.** 748 uses panel `1857`, list `1863`; those are bound as a
+  fallback. There is no party button (`5742` is absent), so the window is only
+  hidden at init and `Affect_Main`'s party refresh is skipped.
+- **Affect display.** The 748 client shows affect text through
+  `TMT_AFFECT_DESC` (`12834`) and has no icon strips. `Affect_Main` currently
+  just clears the description.
+- **Item mix.** 748 has panels `1360`, `6110`, `6145`, `6481`, `6432`, `6512`
+  with a different grid layout (e.g. `1367..1372`). They are all hidden at
+  init; the 755 `CItemMix` class only knows the `81921` layout.
+- **Auto attack / C.C. buttons.** The original 748 field init looks up `318`
+  and `319` (texture sets `455 game_mauto` / `456 game_sauto`, children of the
+  skill panel `5745`) and sets them visible and pickable. `FUN_004539bc` in
+  `WYD.exe` toggles them on `A`/`D`. The port does not bind them yet and
+  `OnKeyAuto` is still a stub.
+- **HUD layout.** The bottom-centre `Att`/`Def` labels and the HP/MP bars still
+  come from the 755 `TMP_MAIN_INFO1` layout; the chat input/back panel is
+  755-only and the minimap area only shows the server/NPC name. See sections
+  below for the remaining control bindings.
 
 ## 2. Character select
 
@@ -88,12 +138,16 @@ Still open:
   that do not resolve. Most are 755-only features; a few may have 748
   equivalents under different names. Resolve those by comparing the 748 scene
   controls (type/position/parent) with the intended feature, or disable the
-  feature for 748.
+  feature for 748. The field-entry crash chain (section 1) covered the ones
+  reached on login; inventory/trade/mix/party paths still assume the 755
+  multi-page layouts.
 - The field bin contains 16 IDs without names in `ResourceControl.h`
-  (`318, 319, 802..811, 1857, 1862, 1863, 1864`). Name them in the header if
-  they matter; otherwise leave numeric.
+  (`318, 319, 802..811, 1857, 1862, 1863, 1864`). `318/319` are the 748
+  auto-attack buttons and `1857/1863/1864` the 748 party window; name them in
+  the header when they are wired up.
 - Page switching code still assumes four inventory pages / three cargo pages.
-  With the single 748 grid it should be verified or hidden.
+  The missing page grids are aliased to `TMG_INV_GRID`/`TMG_CARGO_GRID` so the
+  client does not crash, but item cell positions still use 5-column math.
 - Chat-select (`90113/90114/90128/90129`) is a 755 feature. It is guarded but
   the chat type button is gone in 748; decide whether to hide the selector.
 - Party auto, kingdom UI, item-mix pages, auto-trade, daily quest and PK were
@@ -131,5 +185,11 @@ After each UI change:
    `client_748/WYD.exe`.
 3. Click Close and capture the modal (background + button plates).
 4. Confirm `WYD.log` has no new errors.
-5. If you touched `TMFieldScene.cpp`, verify the non-UTF-8 byte count still
-   matches `HEAD` (13 bytes / 9 lines).
+5. Log in, select a character, enter the field and confirm
+   `>> Init Field Scene::End` in `WYD.log`, then move, open the inventory
+   (`i`) and attack a mob.
+6. If you touched `TMFieldScene.cpp`, verify the non-UTF-8 byte count still
+   matches `HEAD` (13 bytes / 9 lines). The file is not valid UTF-8; the
+   `'\xA8'` literal and Portuguese comments must stay as raw bytes. If an
+   editor rewrote them as U+FFFD, restore them from `HEAD` (the mapping is
+   1:1: each raw byte became `EF BF BD`).

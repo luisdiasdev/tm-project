@@ -2674,13 +2674,13 @@ void TMScene::CheckPKNonePK(int nServerIndex)
 void TMScene::LogMsgCriticalError(int Type, int ID, int nMesh, int X, int Y)
 {
 	MSG_MessageLog stLog{};
-	stLog.Header.ID = m_pMyHuman->m_dwID;
+	stLog.Header.ID = m_pMyHuman != nullptr ? m_pMyHuman->m_dwID : 0;
 	stLog.Header.Type = MSG_MessageLog_Opcode;
 
 	if(Type == 10)
 		sprintf(stLog.String, "00000000 , Load Tile Map Fail");
 	else
-		sprintf(stLog.String, "%08d , Critical Data Err Cl,%d,%d,%d,%d,%d, %d", ID,	nMesh, (int)m_pMyHuman->m_vecPosition.x, (int)m_pMyHuman->m_vecPosition.y,
+		sprintf(stLog.String, "%08d , Critical Data Err Cl,%d,%d,%d,%d,%d, %d", ID,	nMesh, m_pMyHuman != nullptr ? (int)m_pMyHuman->m_vecPosition.x : 0, m_pMyHuman != nullptr ? (int)m_pMyHuman->m_vecPosition.y : 0,
 			X,
 			Y,
 			Type);

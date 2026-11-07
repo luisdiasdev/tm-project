@@ -914,14 +914,18 @@ int TMFieldScene::InitializeScene()
 	m_pExpProgress[7] = (SProgressBar*)m_pControlContainer->FindControl(65662u);
 	m_pExpProgress[8] = (SProgressBar*)m_pControlContainer->FindControl(65663u);
 	m_pExpProgress[9] = (SProgressBar*)m_pControlContainer->FindControl(65664u);
+	// 748 has no C.C. mode dialog (66817..66824); keep the 755 bindings so a
+	// newer scene still works, but never dereference them here.
 	m_pCCModeHpSte = (SText*)m_pControlContainer->FindControl(66823u);
 	m_pCCModeMountSte = (SText*)m_pControlContainer->FindControl(66824u);
 
 	char chtmp[128]{};
 	sprintf(chtmp, "%d", g_GameAuto_hpValue);
-	m_pCCModeHpSte->SetText(chtmp, 0);
+	if (m_pCCModeHpSte)
+		m_pCCModeHpSte->SetText(chtmp, 0);
 	sprintf(chtmp, "%d", g_GameAuto_mountValue);
-	m_pCCModeMountSte->SetText(chtmp, 0);
+	if (m_pCCModeMountSte)
+		m_pCCModeMountSte->SetText(chtmp, 0);
 
 	m_pCIName = (SText*)m_pControlContainer->FindControl(TMT_CI_NAME);
 	m_pCIClass = (SText*)m_pControlContainer->FindControl(TMT_CI_CLASS);
@@ -1530,8 +1534,12 @@ int TMFieldScene::InitializeScene()
 
 	for (int i = 0; i < 4; ++i)
 	{
+		// 748 uses one inventory grid (TMG_INV_GRID), no page grids.
 		if (m_pGridInvList[i])
+		{
 			m_pGridInvList[i]->SetVisible(0);
+			m_pGridInvList[i]->m_bDrawGrid = 1;
+		}
 	}
 
 	m_pGridInv = m_pGridInvList[0];
@@ -1565,10 +1573,6 @@ int TMFieldScene::InitializeScene()
 	m_pGridShop->m_bDrawGrid = 1;
 	m_pGridShop->m_eGridType = TMEGRIDTYPE::GRID_SHOP;
 	m_pGridMantua->m_eGridType = TMEGRIDTYPE::GRID_TRADENONE;
-	m_pGridInvList[0]->m_bDrawGrid = 1;
-	m_pGridInvList[1]->m_bDrawGrid = 1;
-	m_pGridInvList[2]->m_bDrawGrid = 1;
-	m_pGridInvList[3]->m_bDrawGrid = 1;
 	m_pGridSkillMaster->m_bDrawGrid = 0;
 	m_pGridSkillMaster->m_eGridType = TMEGRIDTYPE::GRID_SKILLM;
 	m_pCargoGrid->m_bDrawGrid = 1;
@@ -1582,15 +1586,20 @@ int TMFieldScene::InitializeScene()
 	m_pShortSkillTglBtn1 = (SButton*)m_pControlContainer->FindControl(TMB_SHORTSKILL_TGL1);
 	m_pShortSkillTglBtn2 = (SButton*)m_pControlContainer->FindControl(TMB_SHORTSKILL_TGL2);
 	m_pQuick_Sloat[0] = (SGridControl*)m_pControlContainer->FindControl(66560);
-	m_pQuick_Sloat[0]->m_eGridType = TMEGRIDTYPE::GRID_QUICKSLOAT1;
+	if (m_pQuick_Sloat[0])
+		m_pQuick_Sloat[0]->m_eGridType = TMEGRIDTYPE::GRID_QUICKSLOAT1;
 	m_pQuick_Sloat[1] = (SGridControl*)m_pControlContainer->FindControl(66561);
-	m_pQuick_Sloat[1]->m_eGridType = TMEGRIDTYPE::GRID_QUICKSLOAT2;
+	if (m_pQuick_Sloat[1])
+		m_pQuick_Sloat[1]->m_eGridType = TMEGRIDTYPE::GRID_QUICKSLOAT2;
 	m_pQuick_Sloat[2] = (SGridControl*)m_pControlContainer->FindControl(66562);
-	m_pQuick_Sloat[2]->m_eGridType = TMEGRIDTYPE::GRID_QUICKSLOAT3;
+	if (m_pQuick_Sloat[2])
+		m_pQuick_Sloat[2]->m_eGridType = TMEGRIDTYPE::GRID_QUICKSLOAT3;
 	m_pQuick_Sloat[3] = (SGridControl*)m_pControlContainer->FindControl(66563);
-	m_pQuick_Sloat[3]->m_eGridType = TMEGRIDTYPE::GRID_QUICKSLOAT4;
+	if (m_pQuick_Sloat[3])
+		m_pQuick_Sloat[3]->m_eGridType = TMEGRIDTYPE::GRID_QUICKSLOAT4;
 	m_pQuick_Sloat[4] = (SGridControl*)m_pControlContainer->FindControl(66564);
-	m_pQuick_Sloat[4]->m_eGridType = TMEGRIDTYPE::GRID_QUICKSLOAT5;
+	if (m_pQuick_Sloat[4])
+		m_pQuick_Sloat[4]->m_eGridType = TMEGRIDTYPE::GRID_QUICKSLOAT5;
 	m_pShortSkillTglBtn1->SetSelected(1);
 	OnControlEvent(65646, 0);
 	m_bSkillBeltSwitch = 0;
@@ -1711,11 +1720,29 @@ int TMFieldScene::InitializeScene()
 			memcpy(pItemCarry, &pMobData->Carry[nCarryIndex], 8);
 			
 			int Page = nCarryIndex / 15;
-			if (nCarryIndex / 15 > -1 && Page < 4)
+			SGridControl* pTargetGrid = nullptr;
+			int nCellX = 0;
+			int nCellY = 0;
+
+			if (Page > -1 && Page < 4 && m_pGridInvList[Page])
 			{
-				m_pGridInvList[Page]->AddItem(new SGridControlItem(0, pItemCarry, 0.0f, 0.0f),
-					nCarryIndex % 15 % 5,
-					nCarryIndex % 15 / 5);
+				pTargetGrid = m_pGridInvList[Page];
+				nCellX = nCarryIndex % 15 % 5;
+				nCellY = nCarryIndex % 15 / 5;
+			}
+			else if (m_pGridInv)
+			{
+				// 748 has a single inventory grid (TMG_INV_GRID, 7x9).
+				pTargetGrid = m_pGridInv;
+				nCellX = nCarryIndex % m_pGridInv->m_nColumnGridCount;
+				nCellY = nCarryIndex / m_pGridInv->m_nColumnGridCount;
+			}
+
+			if (pTargetGrid && nCellX < pTargetGrid->m_nColumnGridCount && nCellY < pTargetGrid->m_nRowGridCount)
+			{
+				pTargetGrid->AddItem(new SGridControlItem(0, pItemCarry, 0.0f, 0.0f),
+					nCellX,
+					nCellY);
 			}
 			else
 				delete pItemCarry;
@@ -1731,11 +1758,29 @@ int TMFieldScene::InitializeScene()
 			memcpy(pItemCargo, &pCargo[nCargoIndex], 8);
 			
 			int Page = nCargoIndex / 40;
-			if (nCargoIndex / 40 > -1 && Page < 3)
+			SGridControl* pTargetGrid = nullptr;
+			int nCellX = 0;
+			int nCellY = 0;
+
+			if (Page > -1 && Page < 3 && m_pCargoGridList[Page])
 			{
-				m_pCargoGridList[Page]->AddItem(new SGridControlItem(0, pItemCargo, 0.0f, 0.0f),
-					nCargoIndex % 40 % 5,
-					nCargoIndex % 40 / 5);
+				pTargetGrid = m_pCargoGridList[Page];
+				nCellX = nCargoIndex % 40 % 5;
+				nCellY = nCargoIndex % 40 / 5;
+			}
+			else if (m_pCargoGrid)
+			{
+				// 748 has a single cargo grid (TMG_CARGO_GRID).
+				pTargetGrid = m_pCargoGrid;
+				nCellX = nCargoIndex % m_pCargoGrid->m_nColumnGridCount;
+				nCellY = nCargoIndex / m_pCargoGrid->m_nColumnGridCount;
+			}
+
+			if (pTargetGrid && nCellX < pTargetGrid->m_nColumnGridCount && nCellY < pTargetGrid->m_nRowGridCount)
+			{
+				pTargetGrid->AddItem(new SGridControlItem(0, pItemCargo, 0.0f, 0.0f),
+					nCellX,
+					nCellY);
 			}
 			else
 				delete pItemCargo;
@@ -1743,6 +1788,26 @@ int TMFieldScene::InitializeScene()
 	}
 
 	m_pMyHuman->m_stScore = pMobData->CurrentScore;
+
+	// 748 uses one inventory grid and one cargo grid. Alias the 755 multi-page
+	// slots to the single grid so the many page-based code paths cannot
+	// dereference a null page grid.
+	if (m_pGridInv != nullptr)
+	{
+		for (int i = 0; i < 4; ++i)
+		{
+			if (m_pGridInvList[i] == nullptr)
+				m_pGridInvList[i] = m_pGridInv;
+		}
+	}
+	if (m_pCargoGrid != nullptr)
+	{
+		for (int i = 0; i < 3; ++i)
+		{
+			if (m_pCargoGridList[i] == nullptr)
+				m_pCargoGridList[i] = m_pCargoGrid;
+		}
+	}
 
 	m_pMyHuman->SetCharHeight((float)m_pMyHuman->m_stScore.Con);
 	m_pMyHuman->SetRace(pMobData->Equip[0].sIndex);
@@ -1914,8 +1979,15 @@ int TMFieldScene::InitializeScene()
 	SPanel* pPartyPanel = (SPanel*)m_pControlContainer->FindControl(475136);
 	SText* pPartyTitle = (SText*)m_pControlContainer->FindControl(475137);
 	m_pPartyList = (SListBox*)m_pControlContainer->FindControl(475138);
-	m_pPartyPanel = (SPanel*)pPartyPanel;
 	m_pPartyBtn = (SButton*)m_pControlContainer->FindControl(5742);
+
+	// 748 party window uses 1857 (panel) / 1863 (list); 475136/475138 are 755.
+	if (pPartyPanel == nullptr)
+		pPartyPanel = (SPanel*)m_pControlContainer->FindControl(1857);
+	if (m_pPartyList == nullptr)
+		m_pPartyList = (SListBox*)m_pControlContainer->FindControl(1863);
+
+	m_pPartyPanel = (SPanel*)pPartyPanel;
 
 	if (pPartyPanel)
 	{
@@ -1924,13 +1996,22 @@ int TMFieldScene::InitializeScene()
 		pPartyPanel->m_nPosY = pPartyPanel->m_nPosY + 135.0f;
 	}
 
-	if (m_pPartyBtn)
+	if (m_pPartyBtn && pPartyPanel)
 		m_pPartyBtn->SetPos(0.0f, ((float)g_pDevice->m_dwScreenHeight - pPartyPanel->m_nHeight) - 165.0f);
 
-	if (m_pPartyBtn)
+	if (m_pPartyBtn && pPartyPanel)
 		m_pPartyBtn->m_pAltText->SetPos(m_pPartyBtn->m_pAltText->m_nPosX + 5.0f, (pPartyPanel->m_nHeight * 0.5f) - 13.0f);
 
 	OnControlEvent(5742, 0);
+
+	// 748 keeps all item-mix variants as separate top-level panels; hide the
+	// ones this build does not open at startup.
+	for (int nMixPanelID : { 6110, 6145, 6481, 6512 })
+	{
+		auto pMixPanel = (SPanel*)m_pControlContainer->FindControl(nMixPanelID);
+		if (pMixPanel)
+			pMixPanel->SetVisible(0);
+	}
 
 	m_pMsgPanel = (SPanel*)m_pControlContainer->FindControl(669);
 	m_pMsgList = (SListBox*)m_pControlContainer->FindControl(670);
@@ -3323,6 +3404,9 @@ int TMFieldScene::OnControlEvent(unsigned int idwControlID, unsigned int idwEven
 	}
 	if (idwControlID == B_CCMODE_SYSTEM)
 	{
+		if (!m_pccmode)
+			return 0;
+
 		if (m_pccmode->IsVisible())
 		{
 			m_pccmode->SetVisible(0);
@@ -3364,7 +3448,8 @@ int TMFieldScene::OnControlEvent(unsigned int idwControlID, unsigned int idwEven
 
 		sprintf_s(szText, "%d%%", g_GameAuto_mountValue);
 
-		m_pCCModeMountSte->SetText(szText, 0);
+		if (m_pCCModeMountSte)
+			m_pCCModeMountSte->SetText(szText, 0);
 
 		return 0;
 	}
@@ -3389,7 +3474,8 @@ int TMFieldScene::OnControlEvent(unsigned int idwControlID, unsigned int idwEven
 
 		sprintf_s(szText, "%d%%", g_GameAuto_hpValue);
 
-		m_pCCModeHpSte->SetText(szText, 0);
+		if (m_pCCModeHpSte)
+			m_pCCModeHpSte->SetText(szText, 0);
 		return 0;
 	}
 	if (idwControlID == B_CCMODE_DLG_MODE)
@@ -6298,7 +6384,7 @@ int TMFieldScene::OnMouseEvent(unsigned int dwFlags, unsigned int wParam, int nX
 				}
 				else if (m_pMyHuman->m_eMotion != ECHAR_MOTION::ECMOTION_SEATING && m_pMyHuman->m_eMotion != ECHAR_MOTION::ECMOTION_PUNISHING)
 				{
-					if (static_cast<float>(nX) >= (m_pChatBack->GetPos().x + 10.0f) &&
+					if ((m_pChatBack == nullptr || static_cast<float>(nX) >= (m_pChatBack->GetPos().x + 10.0f)) &&
 						abs(static_cast<int>(vec.x - m_pMyHuman->m_vecPosition.x)) < 15 &&
 						abs(static_cast<int>(vec.y - m_pMyHuman->m_vecPosition.y)) > 15)
 					{
@@ -8014,26 +8100,29 @@ int TMFieldScene::FrameMove(unsigned int dwServerTime)
 
 	FindAuto();
 
-	for (int i = 0; i < m_pPartyList->m_nNumItem; ++i)
+	if (m_pPartyList != nullptr)
 	{
-		auto pPartyItem = (SListBoxPartyItem*)m_pPartyList->m_pItemList[i];
-		auto pHuman = (TMHuman*)g_pObjectManager->GetHumanByID(pPartyItem->m_dwCharID);
-		if (pHuman)
+		for (int i = 0; i < m_pPartyList->m_nNumItem; ++i)
 		{
-			if (pHuman->m_cCancel == 1)
+			auto pPartyItem = (SListBoxPartyItem*)m_pPartyList->m_pItemList[i];
+			auto pHuman = (TMHuman*)g_pObjectManager->GetHumanByID(pPartyItem->m_dwCharID);
+			if (pHuman)
 			{
-				pPartyItem->m_GCText.dwColor = 0xFFFF0000;
-				pPartyItem->m_GCText.pFont->SetText(pPartyItem->m_GCText.strString,	pPartyItem->m_GCText.dwColor, 0);
-			}
-			else if (pPartyItem->m_nState == 2)
-			{
-				pPartyItem->m_GCText.dwColor = 0xFFAAAAFF;
-				pPartyItem->m_GCText.pFont->SetText(pPartyItem->m_GCText.strString, pPartyItem->m_GCText.dwColor, 0);
-			}
-			else if (!pPartyItem->m_nState)
-			{
-				pPartyItem->m_GCText.dwColor = 0xFFFFFFFF;
-				pPartyItem->m_GCText.pFont->SetText(pPartyItem->m_GCText.strString, pPartyItem->m_GCText.dwColor, 0);
+				if (pHuman->m_cCancel == 1)
+				{
+					pPartyItem->m_GCText.dwColor = 0xFFFF0000;
+					pPartyItem->m_GCText.pFont->SetText(pPartyItem->m_GCText.strString,	pPartyItem->m_GCText.dwColor, 0);
+				}
+				else if (pPartyItem->m_nState == 2)
+				{
+					pPartyItem->m_GCText.dwColor = 0xFFAAAAFF;
+					pPartyItem->m_GCText.pFont->SetText(pPartyItem->m_GCText.strString, pPartyItem->m_GCText.dwColor, 0);
+				}
+				else if (!pPartyItem->m_nState)
+				{
+					pPartyItem->m_GCText.dwColor = 0xFFFFFFFF;
+					pPartyItem->m_GCText.pFont->SetText(pPartyItem->m_GCText.strString, pPartyItem->m_GCText.dwColor, 0);
+				}
 			}
 		}
 	}
@@ -11041,6 +11130,7 @@ int TMFieldScene::MouseClick_NPC(int nX, int nY, D3DXVECTOR3 vec, unsigned int d
 			m_pGround->m_vecOffsetIndex.y == 16)
 		{
 			m_MissionClass.ResultItemListSet();
+		if (m_MissionClass.m_pMissionPanel)
 			SetVisibleMissionPanel(m_MissionClass.m_pMissionPanel->m_bVisible == 0);
 			return 1;
 		}
@@ -12155,8 +12245,6 @@ void TMFieldScene::SetVisibleInventory()
 			m_ItemMixClass.m_pMixPanel->SetVisible(0);
 
 		ClearMissionPannel();
-
-		m_MissionClass.m_pMissionPanel->SetVisible(0);
 
 		if (m_MissionClass.m_pMissionPanel)
 			m_MissionClass.m_pMissionPanel->SetVisible(0);
@@ -13629,7 +13717,8 @@ void TMFieldScene::UpdateScoreUI(unsigned int unFlag)
 			// Skill bar 2
 			for (int i = 0; i < 12; ++i)
 			{
-				if (!m_pSkillSecGrid2)
+				// 748 has a single skill bar; 94208..94219 do not exist.
+				if (!m_pSkillSecGrid2[i])
 					continue;
 
 				if (((1 << i) & pMobData->LearnedSkill[1]) != 1 << i)
@@ -14927,6 +15016,9 @@ void TMFieldScene::SetGuildChat(char cOn)
 
 void TMFieldScene::SetKingDomChat(char cOn)
 {
+	if (!m_pKingDomGuild)
+		return;
+
 	m_pKingDomGuild->m_bSelected = m_pKingDomGuild->m_bSelected == 0;
 	m_pKingDomGuild->Update();
 }
@@ -17087,6 +17179,8 @@ int TMFieldScene::OnKeySkill(char iCharCode, int lParam)
 	for (int i = 0; i < 24; ++i)
 	{
 		auto pGrid = m_pSkillSecGrid[i];
+		if (!pGrid)
+			continue;
 		if (PointInRect((int)g_pCursor->m_nPosX, (int)g_pCursor->m_nPosY, pGrid->m_GCPanel.nPosX, pGrid->m_GCPanel.nPosY, pGrid->m_GCPanel.nWidth * fWRatio, pGrid->m_GCPanel.nHeight * fHRatio) == 1)
 		{
 			auto pGridItem = pGrid->GetItem(0, 0);
@@ -17097,6 +17191,8 @@ int TMFieldScene::OnKeySkill(char iCharCode, int lParam)
 	for (int i = 0; i < 12; ++i)
 	{
 		auto pGrid = m_pSkillSecGrid2[i];
+		if (!pGrid)
+			continue;
 		if (PointInRect((int)g_pCursor->m_nPosX, (int)g_pCursor->m_nPosY, pGrid->m_GCPanel.nPosX, pGrid->m_GCPanel.nPosY, pGrid->m_GCPanel.nWidth * fWRatio, pGrid->m_GCPanel.nHeight * fHRatio) == 1)
 		{
 			auto pGridItem = pGrid->GetItem(0, 0);
@@ -18001,6 +18097,11 @@ int TMFieldScene::OnPacketSoundEffect(MSG_STANDARDPARM* pStd)
 int TMFieldScene::OnPacketCreateMob(MSG_STANDARD* pStd)
 {
 	if (m_pHumanContainer == nullptr)
+		return 1;
+
+	// Packets can be pumped by a modal box while InitializeScene is still
+	// running; ignore mobs until the player object exists.
+	if (m_pMyHuman == nullptr)
 		return 1;
 
 	auto pCreateMob = (MSG_CreateMob*)pStd;
@@ -19023,8 +19124,11 @@ int TMFieldScene::OnPacketCNFGetItem(MSG_CNFGetItem* pMsg)
 		sprintf(szMoney, "%10d", g_pObjectManager->m_stMobData.Coin);
 		m_pMoney1->m_cComma = 2;
 		m_pMoney1->SetText(szMoney, 0);
-		m_pMoney2->m_cComma = 2;
-		m_pMoney2->SetText(szMoney, 0);
+		if (m_pMoney2)
+		{
+			m_pMoney2->m_cComma = 2;
+			m_pMoney2->SetText(szMoney, 0);
+		}
 
 		sprintf(szMoney, "%10d", g_pObjectManager->m_stMobData.Coin - m_nBet);
 		m_pMoney3->m_cComma = 2;
@@ -22808,6 +22912,11 @@ void TMFieldScene::GetTimeString(char* szVal, int sTime, int nTime, int i)
 
 void TMFieldScene::Bag_View()
 {
+	// 755-only bag page buttons/labels; 748 has a single inventory grid.
+	if (m_pInvPageBtn3 == nullptr || m_pInvPageBtn4 == nullptr ||
+		m_pJPNBag_Day1 == nullptr || m_pJPNBag_Day2 == nullptr)
+		return;
+
 	char str[128]{};
 	if (g_pObjectManager->m_stMobData.Carry[60].sIndex == 3467)
 	{
@@ -23332,6 +23441,13 @@ int TMFieldScene::Affect_Main(unsigned int dwServerTime)
 	int nAvailCount = 0;
 	m_pAffectDesc->SetVisible(0);
 	m_pAffectDesc->SetText((char*)"", 0);
+
+	// 748 has no affect icon strips (90400/90369/475152), target-affect strip
+	// or party affect grid; the 755-only display code below would dereference
+	// null controls. Keep the description reset above and stop here.
+	if (m_pAffectIcon[0] == nullptr)
+		return 1;
+
 	bool bomb = false;
 	for (int i = 0; i < 32; ++i)
 	{
@@ -23662,7 +23778,6 @@ void TMFieldScene::SetVisibleMixPanel(int bShow)
 		ClearMixPannel();
 	}
 }
-
 void TMFieldScene::ClearMixPannel()
 {
 	for (int i = 0; i < 4; ++i)
@@ -23717,7 +23832,8 @@ void TMFieldScene::SetVisibleMissionPanel(int bShow)
 				SetVisibleInventory();
 		}
 
-		m_MissionClass.m_pMissionPanel->SetVisible(1);
+		if (m_MissionClass.m_pMissionPanel)
+			m_MissionClass.m_pMissionPanel->SetVisible(1);
 		m_pInvenPanel->SetPos(RenderDevice::m_fWidthRatio * 514.0f,
 			RenderDevice::m_fHeightRatio * 35.0f);
 
@@ -23735,11 +23851,11 @@ void TMFieldScene::SetVisibleMissionPanel(int bShow)
 			SetVisibleInventory();
 
 		g_pDevice->m_nWidthShift = 0;
-		m_MissionClass.m_pMissionPanel->SetVisible(0);
+		if (m_MissionClass.m_pMissionPanel)
+			m_MissionClass.m_pMissionPanel->SetVisible(0);
 		ClearMissionPannel();
 	}
 }
-
 void TMFieldScene::ClearMissionPannel()
 {
 	for (int i = 0; i < 4; ++i)

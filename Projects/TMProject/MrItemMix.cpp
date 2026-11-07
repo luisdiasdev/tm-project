@@ -4,6 +4,7 @@
 #include "MrItemMix.h"
 #include "TMFieldScene.h"
 #include "TMGlobal.h"
+#include "TMLog.h"
 #include "SGrid.h"
 #include "ItemEffect.h"
 #include "TMUtil.h"
@@ -61,12 +62,19 @@ void CItemMix::TakeItResource(SControlContainer* ControlContainer, unsigned shor
 	m_pControlContainer = ControlContainer;
 	m_dwID = CharID;
 	m_pMixPanel = (SPanel*)m_pControlContainer->FindControl(81921);
+	if (m_pMixPanel == nullptr)
+	{
+		// 748 uses its own combine panel id (TMP_ITEMMIX_PANEL) instead of the
+		// 755 81921 dialog; bind it so visibility toggles stay valid.
+		m_pMixPanel = (SPanel*)m_pControlContainer->FindControl(1360);
+	}
 
 	if (m_pMixPanel)
 		m_pMixPanel->SetPos(RenderDevice::m_fWidthRatio * 160.0f,
 			RenderDevice::m_fHeightRatio * 35.0f);
 
-	m_pMixPanel->SetVisible(0);
+	if (m_pMixPanel)
+		m_pMixPanel->SetVisible(0);
 	for (int i = 0; i < 24; ++i)
 	{
 		m_pGridResultItem[i] = (SGridControl*)m_pControlContainer->FindControl(i + 81924);
@@ -81,7 +89,8 @@ void CItemMix::TakeItResource(SControlContainer* ControlContainer, unsigned shor
 	}
 
 	SText* Cost = (SText*)m_pControlContainer->FindControl(81948);
-	Cost->SetTextColor(0xFF000000);
+	if (Cost)
+		Cost->SetTextColor(0xFF000000);
 
 	memset(&m_stCombineItem, 0, sizeof(m_stCombineItem));
 
@@ -1103,7 +1112,11 @@ void CItemMix::BASE_ReadMixList()
 
 	if (fp == nullptr)
 	{
-		MessageBoxA(0, "Can't read Mixlist.bin", "ERROR", 0);
+		// 748 does not ship Mixlist.bin (the original 748 client has no such
+		// file and no reference to it). The item-mix recipes are optional data;
+		// do not open a modal box here, because a modal box pumps the window
+		// queue and can deliver field packets while InitializeScene still runs.
+		LOG_WRITELOG(">> Mixlist.bin not found; item mix recipes disabled\r\n");
 		return;
 	}
 

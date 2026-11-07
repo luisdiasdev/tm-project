@@ -34,7 +34,8 @@ void CMission::TakeItResource(SControlContainer* ControlContainer, unsigned shor
         m_pMissionPanel->SetPos(RenderDevice::m_fWidthRatio * 160.0f,
             RenderDevice::m_fHeightRatio * 35.0f);
 
-    m_pMissionPanel->SetVisible(0);
+    if (m_pMissionPanel)
+        m_pMissionPanel->SetVisible(0);
 
     for (int i = 0; i < 24; ++i)
     {
@@ -50,7 +51,8 @@ void CMission::TakeItResource(SControlContainer* ControlContainer, unsigned shor
     }
 
     SText* Cost = (SText*)m_pControlContainer->FindControl(81948);
-    Cost->SetTextColor(0xFF000000);
+    if (Cost)
+        Cost->SetTextColor(0xFF000000);
 
     memset(&m_stCombineItem, 0, sizeof(m_stCombineItem));
 
