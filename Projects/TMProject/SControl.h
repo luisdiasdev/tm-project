@@ -618,6 +618,7 @@ public:
     ~SMessagePanel();
 
     void SetMessage(const char* istrMessage, unsigned int dwTime);
+    void FitWidthToText();
     void FrameMove2(stGeomList* pDrawList, TMVector2 ivParentPos, int inParentLayer, int nFlag) override;
     virtual void SetVisible(int bVisible, int bSound);
 

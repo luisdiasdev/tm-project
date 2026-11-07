@@ -768,6 +768,7 @@ void ObjectManager::SetCurrentScene(TMScene* pScene)
 		m_pPreviousScene->m_cDeleted = 1;
 		g_pCurrentScene->m_pMessagePanel->m_pText->SetText(m_pPreviousScene->m_pMessagePanel->m_pText->GetText(), 0);
 		g_pCurrentScene->m_pMessagePanel->m_pText2->SetText(m_pPreviousScene->m_pMessagePanel->m_pText2->GetText(), 0);
+		g_pCurrentScene->m_pMessagePanel->FitWidthToText();
 
 		g_pCurrentScene->m_pMessagePanel->m_bVisible = m_pPreviousScene->m_pMessagePanel->m_bVisible;
 		g_pCurrentScene->m_pMessagePanel->m_dwOldServerTime = m_pPreviousScene->m_pMessagePanel->m_dwOldServerTime;

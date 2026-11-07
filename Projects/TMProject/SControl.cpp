@@ -2900,6 +2900,44 @@ void SMessagePanel::SetMessage(const char* istrMessage, unsigned int dwTime)
 	m_dwLifeTime = dwTime;
 	m_dwOldServerTime = g_pTimerManager->GetServerTime();
 	m_pText->SetText((char*)istrMessage, 0);
+
+	FitWidthToText();
+}
+
+void SMessagePanel::FitWidthToText()
+{
+	// A long message is laid out by TMFont2 as up to three chunks drawn side by
+	// side (the 512 px font atlas caps one chunk at ~42 characters), so the
+	// rendered width is the sum of the chunk widths. Widen the bar to match it
+	// instead of letting the text run past the frame.
+	int nTextWidth = 0;
+
+	if (m_pText != nullptr)
+	{
+		for (int i = 0; i < m_pText->m_Font.m_nLineNumber; ++i)
+			nTextWidth += m_pText->m_Font.m_szStringSize[i];
+	}
+
+	constexpr float fPadding = 60.0f;   // 30 px left + 30 px right, 748 layout
+	constexpr float fMinWidth = 480.0f;
+	constexpr float fScreenWidth = 800.0f;
+
+	float fWidth = static_cast<float>(nTextWidth) + fPadding;
+
+	if (fWidth < fMinWidth)
+		fWidth = fMinWidth;
+	if (fWidth > fScreenWidth - 16.0f)
+		fWidth = fScreenWidth - 16.0f;
+
+	m_nWidth = fWidth;
+
+	if (m_pText != nullptr)
+		m_pText->m_nWidth = fWidth - 52.0f;
+	if (m_pPanelR != nullptr)
+		m_pPanelR->m_nPosX = fWidth;
+
+	// Keep the bar centred; (800 - 480) / 2 = 160, the creation position.
+	m_nPosX = (fScreenWidth - fWidth) * 0.5f;
 }
 
 void SMessagePanel::FrameMove2(stGeomList* pDrawList, TMVector2 ivParentPos, int inParentLayer, int nFlag)

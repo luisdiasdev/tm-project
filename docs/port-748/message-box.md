@@ -92,3 +92,27 @@ plates). See `build-and-test.md`.
 
 For the message panel, clicking Connect without selecting a channel produces
 "Select server and server group." inside the restored dark bar.
+
+### Long messages
+
+`TMFont2::SetText` lays a string out as up to three chunks drawn side by side,
+because a single chunk is limited by the 512 px font atlas (~42 characters). The
+bar was created at a fixed `480x24`, so anything past ~82 characters was cut:
+the old code hard-truncated `m_szString` at 82 characters, and even a full line
+ran past the right cap of the frame.
+
+Two changes:
+
+- `TMFont2::SetText` now truncates at `MAX_STRLENGTH - 1` (119 characters)
+  instead of 82/83. The three-chunk layout handles up to 42 + 42 + 35.
+- `SMessagePanel::FitWidthToText()` measures the rendered chunks
+  (`TMFont2::m_szStringSize`) after `SetText` and resizes the bar to
+  `text + 60 px`, clamped to `[480, 784]`, then re-centres it and moves the
+  right cap. `SetMessage()` calls it; `ObjectManager::SetCurrentScene()` calls it
+  after copying the previous scene's message so a carried-over message keeps the
+  right width.
+
+Short messages keep the original `480` bar, so the 748 look is unchanged.
+Verified with the 88-character server message
+`"Your name is already registered by other user, or your name includes unusable characters."`.
+

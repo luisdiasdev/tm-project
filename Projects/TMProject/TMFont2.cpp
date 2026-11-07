@@ -55,8 +55,11 @@ int TMFont2::SetText(const char* szString, unsigned int dwColor, int bCheckZero)
 	m_dwColor = dwColor;
 
 	sprintf(m_szString, "%s", szString);
-	m_szString[83] = 0;
-	m_szString[82] = 0;
+	// Keep the whole string: TMFont2 renders a long line as up to three chunks
+	// drawn side by side (a single chunk is limited by the 512 px font atlas,
+	// ~42 characters), so the old hard cut at 82 characters silently dropped
+	// the tail of long messages. MAX_STRLENGTH is enforced above.
+	m_szString[MAX_STRLENGTH - 1] = 0;
 
 	char tempbuff[256]{};
 	char* temp = tempbuff;
