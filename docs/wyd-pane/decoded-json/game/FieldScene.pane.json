@@ -1,0 +1,199 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\FieldScene.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "1"
+      },
+      {
+        "key": "Height",
+        "value": "0"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 120"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "stretch"
+      },
+      {
+        "key": "ZOrder",
+        "value": "200"
+      },
+      {
+        "key": "AllowFocus",
+        "value": "false"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Button",
+      "name": "BtnTest",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-124 5 26 25"
+        },
+        {
+          "key": "Tagname",
+          "value": "Menu"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.MenuBtn6"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "BtnTest2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-96 5 26 25"
+        },
+        {
+          "key": "Tagname",
+          "value": "Menu"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.MenuBtn6"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "BtnTest3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-124 33 26 25"
+        },
+        {
+          "key": "Tagname",
+          "value": "Menu"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.MenuBtn6"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "BtnTest4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-96 33 26 25"
+        },
+        {
+          "key": "Tagname",
+          "value": "Menu"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.MenuBtn6"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "BtnTest5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-124 61 26 26"
+        },
+        {
+          "key": "Tagname",
+          "value": "Menu"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.MenuBtn6"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "BtnTest6",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-96 61 26 26"
+        },
+        {
+          "key": "Tagname",
+          "value": "Menu"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.MenuBtn6"
+        }
+      ]
+    }
+  ]
+}

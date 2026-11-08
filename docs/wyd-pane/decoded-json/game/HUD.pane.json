@@ -1,0 +1,1473 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\HUD.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "Center"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "SIDE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "599"
+      },
+      {
+        "key": "Height",
+        "value": "87"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 120"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "stretch"
+      },
+      {
+        "key": "ZOrder",
+        "value": "900"
+      },
+      {
+        "key": "AllowFocus",
+        "value": "false"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-1 7 602 80"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.Frame"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf14",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "229 98 14 14"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "IconSlotType",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf12",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "199 98 14 14"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "IconSlotType",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "94 98 14 14"
+        },
+        {
+          "key": "IconSlotType",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf7",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "124 98 14 14"
+        },
+        {
+          "key": "IconSlotType",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf10",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "169 98 14 14"
+        },
+        {
+          "key": "IconSlotType",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf13",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "214 98 14 14"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "IconSlotType",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf11",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "184 98 14 14"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "IconSlotType",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf8",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "139 98 14 14"
+        },
+        {
+          "key": "IconSlotType",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf6",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "109 98 14 14"
+        },
+        {
+          "key": "IconSlotType",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf9",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "154 98 14 14"
+        },
+        {
+          "key": "IconSlotType",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "79 98 14 14"
+        },
+        {
+          "key": "IconSlotType",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "64 98 14 14"
+        },
+        {
+          "key": "IconSlotType",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "49 98 14 14"
+        },
+        {
+          "key": "IconSlotType",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "34 98 14 14"
+        },
+        {
+          "key": "IconSlotType",
+          "value": "5"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Skill0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "263 48 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Skill1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "287 48 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Skill2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "311 48 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Skill3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "335 48 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Skill4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "359 48 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Skill5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "383 48 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Skill6",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "407 48 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Skill7",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "431 48 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Skill8",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "455 48 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Skill9",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "479 48 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Skill10",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "263 48 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Skill11",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "287 48 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Skill12",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "311 48 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Skill13",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "335 48 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Skill14",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "359 48 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Skill15",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "383 48 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Skill16",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "407 48 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Skill17",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "431 48 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Skill18",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "455 48 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Skill19",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "479 48 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Quick0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "96 42 29 31"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Quick1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "128 42 28 31"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Quick2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "159 42 29 31"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Quick3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "190 42 28 31"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Quick4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "221 42 29 31"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "ExpLamp0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "511 40 14 13"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.ExpLamp"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "ExpLamp1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "511 54 14 13"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.ExpLamp"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "ExpLamp2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "511 68 14 13"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.ExpLamp"
+        }
+      ]
+    },
+    {
+      "type": "Gaugebar",
+      "name": "Exp0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 27 42 3"
+        },
+        {
+          "key": "BarRange",
+          "value": "0 100"
+        },
+        {
+          "key": "BarPos",
+          "value": "50"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_Hud.ExpBar"
+        }
+      ]
+    },
+    {
+      "type": "Gaugebar",
+      "name": "Exp1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "124 27 41 3"
+        },
+        {
+          "key": "BarRange",
+          "value": "0 100"
+        },
+        {
+          "key": "BarPos",
+          "value": "100"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_Hud.ExpBar"
+        }
+      ]
+    },
+    {
+      "type": "Gaugebar",
+      "name": "Exp2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "168 27 41 3"
+        },
+        {
+          "key": "BarRange",
+          "value": "0 100"
+        },
+        {
+          "key": "BarPos",
+          "value": "100"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_Hud.ExpBar"
+        }
+      ]
+    },
+    {
+      "type": "Gaugebar",
+      "name": "Exp3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "213 27 41 3"
+        },
+        {
+          "key": "BarRange",
+          "value": "0 100"
+        },
+        {
+          "key": "BarPos",
+          "value": "100"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_Hud.ExpBar"
+        }
+      ]
+    },
+    {
+      "type": "Gaugebar",
+      "name": "Exp4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "258 27 40 3"
+        },
+        {
+          "key": "BarRange",
+          "value": "0 100"
+        },
+        {
+          "key": "BarPos",
+          "value": "100"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_Hud.ExpBar"
+        }
+      ]
+    },
+    {
+      "type": "Gaugebar",
+      "name": "Exp5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "302 27 41 3"
+        },
+        {
+          "key": "BarRange",
+          "value": "0 100"
+        },
+        {
+          "key": "BarPos",
+          "value": "100"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_Hud.ExpBar"
+        }
+      ]
+    },
+    {
+      "type": "Gaugebar",
+      "name": "Exp6",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "347 27 41 3"
+        },
+        {
+          "key": "BarRange",
+          "value": "0 100"
+        },
+        {
+          "key": "BarPos",
+          "value": "100"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_Hud.ExpBar"
+        }
+      ]
+    },
+    {
+      "type": "Gaugebar",
+      "name": "Exp7",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "391 27 40 3"
+        },
+        {
+          "key": "BarRange",
+          "value": "0 100"
+        },
+        {
+          "key": "BarPos",
+          "value": "100"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_Hud.ExpBar"
+        }
+      ]
+    },
+    {
+      "type": "Gaugebar",
+      "name": "Exp8",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "436 27 40 3"
+        },
+        {
+          "key": "BarRange",
+          "value": "0 100"
+        },
+        {
+          "key": "BarPos",
+          "value": "100"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_Hud.ExpBar"
+        }
+      ]
+    },
+    {
+      "type": "Gaugebar",
+      "name": "Exp9",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "480 27 41 3"
+        },
+        {
+          "key": "BarRange",
+          "value": "0 100"
+        },
+        {
+          "key": "BarPos",
+          "value": "100"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_Hud.ExpBar"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Menu",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "540 26 44 42"
+        },
+        {
+          "key": "ToolTip",
+          "value": "uu_115"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "SkillTabText",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "522 16 19 17"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Text",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "Hold",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "261 59 53 42"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "false"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.Hold"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "BtnChar",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "331 3 29 33"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "Tagname",
+          "value": "Menu"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.MenuBtn0"
+        },
+        {
+          "key": "ToolTip",
+          "value": "uu_116"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "BtnInven",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "360 3 30 33"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "Tagname",
+          "value": "Menu"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.MenuBtn1"
+        },
+        {
+          "key": "ToolTip",
+          "value": "uu_117"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "BtnQuest",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "391 3 29 33"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "Tagname",
+          "value": "Menu"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.MenuBtn2"
+        },
+        {
+          "key": "ToolTip",
+          "value": "uu_119"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "BtnAtrade",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "419 3 29 33"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "Tagname",
+          "value": "Menu"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.MenuBtn3"
+        },
+        {
+          "key": "ToolTip",
+          "value": "uu_120"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "BtnHelp",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "448 3 30 33"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "Tagname",
+          "value": "Menu"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.MenuBtn4"
+        },
+        {
+          "key": "ToolTip",
+          "value": "uu_121"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "BtnConfig",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "478 3 29 33"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "Tagname",
+          "value": "Menu"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.MenuBtn5"
+        },
+        {
+          "key": "ToolTip",
+          "value": "uu_122"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "BtnCommu",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "507 3 29 33"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "Tagname",
+          "value": "Menu"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.MenuBtn6"
+        },
+        {
+          "key": "ToolTip",
+          "value": "uu_241"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "CCMode",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "61 3 30 32"
+        },
+        {
+          "key": "Tagname",
+          "value": "CCMode"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.CCMode0"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "CCModePo",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "91 3 29 32"
+        },
+        {
+          "key": "Tagname",
+          "value": "CCMode"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.CCMode3"
+        },
+        {
+          "key": "ToolTip",
+          "value": "uu_230"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "CCModeMo",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "120 3 30 32"
+        },
+        {
+          "key": "Tagname",
+          "value": "CCMode"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.CCMode4"
+        },
+        {
+          "key": "ToolTip",
+          "value": "uu_231"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "CCModeMove",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "150 3 29 32"
+        },
+        {
+          "key": "Tagname",
+          "value": "CCMode"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.CCModeMove0"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "PK",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "75 40 14 36"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.PKFlag"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "AutoSkill0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "264 41 21 4"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.AutoSkill"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "AutoSkill1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "288 41 21 4"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.AutoSkill"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "AutoSkill2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "311 41 22 4"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.AutoSkill"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "AutoSkill3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "336 41 21 4"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.AutoSkill"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "AutoSkill4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "360 41 21 4"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.AutoSkill"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "AutoSkill5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "384 41 21 4"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.AutoSkill"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "AutoSkill6",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "408 41 21 4"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.AutoSkill"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "AutoSkill7",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "431 41 22 4"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.AutoSkill"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "AutoSkill8",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "456 41 21 4"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.AutoSkill"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "AutoSkill9",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "480 41 21 4"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.AutoSkill"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "CCMenu",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 23 47 48"
+        },
+        {
+          "key": "ToolTip",
+          "value": "uu_234"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Debug",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "105 161 473 48"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "false"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "QuestRemainTime",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "181 5 61 18"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "false"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 255 255 50"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "BtnLock",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "301 3 30 33"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "Tagname",
+          "value": "Menu"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.MenuLockN"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "BtnCollect",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "271 3 30 33"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "Tagname",
+          "value": "Menu"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.Collect"
+        },
+        {
+          "key": "ToolTip",
+          "value": "uu_327"
+        }
+      ]
+    }
+  ]
+}

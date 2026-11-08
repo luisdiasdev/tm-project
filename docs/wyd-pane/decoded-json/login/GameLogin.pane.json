@@ -1,0 +1,315 @@
+{
+  "format": "wyd.pane",
+  "source": "login\\GameLogin.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "Center"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "Center"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "50.000000"
+      },
+      {
+        "key": "Width",
+        "value": "331"
+      },
+      {
+        "key": "Height",
+        "value": "280"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "30"
+      },
+      {
+        "key": "CaptionFont",
+        "value": "2"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 120"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "stretch"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "153 6 175 269"
+        },
+        {
+          "key": "Tagname",
+          "value": "loginserver"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Login.ServerBG2"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "1 6 152 269"
+        },
+        {
+          "key": "Tagname",
+          "value": "loginserver"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Login.ServerBG"
+        }
+      ]
+    },
+    {
+      "type": "ListView",
+      "name": "ServerListView",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "13 44 130 187"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "Tagname",
+          "value": "loginserver"
+        },
+        {
+          "key": "ItemSize",
+          "value": "128 18"
+        },
+        {
+          "key": "ItemPanel",
+          "value": "ui/panel/login/GameLoginItem.pane"
+        },
+        {
+          "key": "ScrollBarWidth",
+          "value": "0"
+        },
+        {
+          "key": "BorderWidth",
+          "value": "0"
+        },
+        {
+          "key": "Spacing",
+          "value": "0"
+        },
+        {
+          "key": "ItemSpacing",
+          "value": "0"
+        },
+        {
+          "key": "FontAlign[0]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "FontAlign[1]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "Component.Boder"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "btnSelServer",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "28 240 102 23"
+        },
+        {
+          "key": "Tagname",
+          "value": "loginserver"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "100 0 0 0"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_01"
+        }
+      ]
+    },
+    {
+      "type": "ListView",
+      "name": "ServerListView2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "162 43 154 188"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "Tagname",
+          "value": "loginserver"
+        },
+        {
+          "key": "ItemSize",
+          "value": "150 18"
+        },
+        {
+          "key": "ItemPanel",
+          "value": "ui/panel/login/GameLoginItem2.pane"
+        },
+        {
+          "key": "ScrollBarWidth",
+          "value": "0"
+        },
+        {
+          "key": "BorderWidth",
+          "value": "0"
+        },
+        {
+          "key": "Spacing",
+          "value": "0"
+        },
+        {
+          "key": "ItemSpacing",
+          "value": "0"
+        },
+        {
+          "key": "FontAlign[0]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "FontAlign[1]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "Component.Boder"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "btnExit",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "176 240 119 23"
+        },
+        {
+          "key": "Tagname",
+          "value": "loginserver"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "100 0 0 0"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_02"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "38 9 81 20"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_03"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "193 9 90 20"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_04"
+        }
+      ]
+    }
+  ]
+}

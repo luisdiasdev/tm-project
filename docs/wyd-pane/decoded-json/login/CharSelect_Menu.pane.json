@@ -1,0 +1,177 @@
+{
+  "format": "wyd.pane",
+  "source": "login\\CharSelect_Menu.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "SIDE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "30.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "-30.000000"
+      },
+      {
+        "key": "Width",
+        "value": "188"
+      },
+      {
+        "key": "Height",
+        "value": "103"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 120"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "900"
+      },
+      {
+        "key": "AllowFocus",
+        "value": "false"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 139 103"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Login.CharSel0BG"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Create",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "19 13 99 20"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_11"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Delete",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "19 41 99 20"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_13"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Back",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "19 69 99 20"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_14"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Test1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-279 5 32 31"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.Button_D"
+        },
+        {
+          "key": "Caption",
+          "value": "BUTTON"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Test2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-276 35 31 32"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.Button_D"
+        },
+        {
+          "key": "Caption",
+          "value": "BUTTON"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Test3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-278 67 32 32"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.Button_D"
+        },
+        {
+          "key": "Caption",
+          "value": "BUTTON"
+        }
+      ]
+    }
+  ]
+}

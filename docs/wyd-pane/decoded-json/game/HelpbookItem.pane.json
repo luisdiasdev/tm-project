@@ -1,0 +1,65 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\HelpbookItem.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "430"
+      },
+      {
+        "key": "Height",
+        "value": "17"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Static",
+      "name": "Msg",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "6 1 431 15"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        }
+      ]
+    }
+  ]
+}

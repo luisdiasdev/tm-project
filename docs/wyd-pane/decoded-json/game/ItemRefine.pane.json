@@ -1,0 +1,667 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\ItemRefine.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "SIDE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "-490.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "30.000000"
+      },
+      {
+        "key": "Width",
+        "value": "226"
+      },
+      {
+        "key": "Height",
+        "value": "425"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "70"
+      },
+      {
+        "key": "CaptionFont",
+        "value": "2"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 255"
+      },
+      {
+        "key": "CloseButton",
+        "value": "true"
+      },
+      {
+        "key": "CloseButtonLocation",
+        "value": "10 394 18 18"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": "[{\"Name\":\"Open\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":0,\"fParam1\":1}]},{\"Name\":\"Close\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":1,\"fParam1\":0},{\"Time\":100,\"Type\":1,\"Target\":\"Panel\",\"nParam0\":0}]}]"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "1 1 226 425"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_ItemRefine.MetBG2"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "65 395 89 24"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_ItemMix.Button4"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "40 5 147 19"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_314"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "RateString",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "20 116 52 18"
+        },
+        {
+          "key": "Tagname",
+          "value": "SetCost"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 255 255 170"
+        },
+        {
+          "key": "Font",
+          "value": "1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_312"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Refine",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "65 396 89 22"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_313"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "RateValue",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "66 116 35 18"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "SancUp",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "132 376 12 12"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI.PlusBtnN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI.PlusBtnD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.PlusBtnD"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "SancDown",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "77 376 12 12"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI_ItemRefine.MbtnO"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_ItemRefine.MbtnD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI_ItemRefine.MbtnD"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "ResultItem",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "135 61 39 39"
+        }
+      ]
+    },
+    {
+      "type": "Checkbox",
+      "name": "Auto",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "12 377 59 14"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_315"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "ResultSanc",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "105 113 49 12"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Stop",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "66 394 89 26"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_316"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "ItemName",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "45 41 138 12"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Editbox",
+      "name": "ResultSancEdit",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "92 370 36 21"
+        },
+        {
+          "key": "Enabled",
+          "value": "false"
+        },
+        {
+          "key": "DrawBox",
+          "value": "true"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "MatText0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "58 70 120 12"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "MatText1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "71 147 120 12"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "MatText2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "73 185 120 12"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "MatText3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "73 222 120 12"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "MatText4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "74 259 120 12"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "MatText5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "73 298 120 12"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Mat0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "57 62 36 36"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "MatBG2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "19 168 50 50"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_ItemRefine.Met1"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "MatBG3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "19 208 50 50"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_ItemRefine.Met1"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "MatBG4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "19 247 50 50"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_ItemRefine.Met1"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "MatBG5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "19 286 50 50"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_ItemRefine.Met1"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "MatBG6",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "19 325 50 50"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_ItemRefine.Met1"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "MatText6",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "73 335 100 12"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "MatBG1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "19 126 50 50"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_ItemRefine.Met1"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Mat1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "26 145 31 31"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Mat2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "26 182 31 31"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Mat3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "26 219 31 31"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Mat4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "26 257 31 31"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Mat5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "26 295 31 31"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Mat6",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "26 332 31 31"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "Matproc",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "98 74 25 26"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_ItemRefine.Proc"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Money",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "129 117 73 12"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    }
+  ]
+}

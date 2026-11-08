@@ -1,0 +1,1387 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\GameConfig.pane",
+  "comments": [
+    "// GameConfig.pane — final. Barras de volume = Image (bar/fill/marker); drag por polling do mouse no C++ (OnTick).",
+    "//@group UI",
+    "//@group UI",
+    "//@group UI",
+    "//@group Video",
+    "// VIDEO topo",
+    "//@group Video",
+    "//@group Video - Res",
+    "//@group Video - Res",
+    "//@group Video - Res",
+    "//@group Video - Res",
+    "//@group Video - Res",
+    "//@group Video - Res",
+    "//@group Video - Res",
+    "//@group Video - Res",
+    "//@group Video - Res",
+    "//@group Video",
+    "// VIDEO inferior",
+    "//@group Video",
+    "//@group Video",
+    "//@group Video",
+    "//@group Video",
+    "//@group Video",
+    "//@group Video",
+    "//@group Video",
+    "//@group Video",
+    "//@group Video",
+    "//@group Video",
+    "//@group Audio",
+    "// AUDIO: bar/fill/marker = Images; o C++ move fill+marker (rect computado) e arrasta o volume",
+    "//@group Audio",
+    "//RasterOp split",
+    "//@group Audio",
+    "//@group Audio",
+    "//@group Audio",
+    "//@group Audio",
+    "//@group Audio",
+    "//@group Audio",
+    "//@group Interface",
+    "// INTERFACE",
+    "//@group Interface",
+    "//@group Interface",
+    "//@group Interface",
+    "//@group Interface",
+    "//@group Interface",
+    "//@group Interface",
+    "//@group Interface",
+    "//@group Interface",
+    "//@group Interface",
+    "//@group Interface",
+    "//@group Interface",
+    "//@group Interface",
+    "//@group Interface",
+    "//@group Interface",
+    "//@group Interface"
+  ],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "Center"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "Center"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "255"
+      },
+      {
+        "key": "Height",
+        "value": "177"
+      },
+      {
+        "key": "Caption",
+        "value": "uu_343"
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 255"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "25"
+      },
+      {
+        "key": "CloseButton",
+        "value": "true"
+      },
+      {
+        "key": "CloseButtonLocation",
+        "value": "16 145 14 14"
+      },
+      {
+        "key": "ZOrder",
+        "value": "800"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 255 176"
+        },
+        {
+          "key": "Font",
+          "value": "2"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.BlankBG"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "TabVid",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 35 77 16"
+        },
+        {
+          "key": "Group",
+          "value": "radio"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI_CharInfo.TabN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_CharInfo.TabD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI_CharInfo.TabD"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_328"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "TabAud",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "92 35 75 16"
+        },
+        {
+          "key": "Group",
+          "value": "radio"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI_CharInfo.TabN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_CharInfo.TabD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI_CharInfo.TabD"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_329"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "TabIfc",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "167 35 75 16"
+        },
+        {
+          "key": "Group",
+          "value": "radio"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI_CharInfo.TabN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_CharInfo.TabD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI_CharInfo.TabD"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_330"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "vResLbl",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 55 80 10"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_331"
+        },
+        {
+          "key": "Font",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "resDrop",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 75 125 20"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "Caption",
+          "value": "1024 x 768"
+        },
+        {
+          "key": "Font",
+          "value": "1"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "resItem0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 96 68 14"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "Caption",
+          "value": "800 x 600"
+        },
+        {
+          "key": "Font",
+          "value": "1"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "resItem1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 111 68 14"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "Caption",
+          "value": "1024 x 768"
+        },
+        {
+          "key": "Font",
+          "value": "1"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "resItem2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 128 68 14"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "Caption",
+          "value": "1280 x 720"
+        },
+        {
+          "key": "Font",
+          "value": "1"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "resItem3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "96 96 68 14"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "Caption",
+          "value": "1280 x 800"
+        },
+        {
+          "key": "Font",
+          "value": "1"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "resItem4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "96 112 68 14"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "Caption",
+          "value": "1280 x 960"
+        },
+        {
+          "key": "Font",
+          "value": "1"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "resItem5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "96 128 68 14"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "Caption",
+          "value": "1280 x 1024"
+        },
+        {
+          "key": "Font",
+          "value": "1"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "resItem6",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "167 96 68 14"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "Caption",
+          "value": "1440 x 900"
+        },
+        {
+          "key": "Font",
+          "value": "1"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "resItem7",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "167 112 68 14"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "Caption",
+          "value": "1600 x 900"
+        },
+        {
+          "key": "Font",
+          "value": "1"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "resItem8",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "167 128 68 14"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "NewUI.DropdownBG"
+        },
+        {
+          "key": "Caption",
+          "value": "1600 x 1024"
+        },
+        {
+          "key": "Font",
+          "value": "1"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "vModeLbl",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 102 80 10"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_332"
+        },
+        {
+          "key": "Font",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "vEfxHdr",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "155 102 80 10"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_333"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "windowMode",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 122 16 16"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "windowModeOn",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 122 16 16"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "fsMode",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 140 16 16"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "fsModeOn",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 140 16 16"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "vWinLbl",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "46 122 80 10"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_334"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "vFsLbl",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "46 140 80 10"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_335"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "effects",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "155 122 16 16"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "effectsOn",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "155 122 16 16"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "vEfx1Lbl",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "176 122 80 10"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_336"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "aMusLbl",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 70 80 10"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_337"
+        },
+        {
+          "key": "Font",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "musFill",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "30 92 198 5"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "GPConfig.VolBarFill"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "musBar",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 90 207 10"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "GPConfig.VolBar"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "musMark",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "30 88 27 16"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "GPConfig.VolBarMark"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "aSfxLbl",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 110 80 10"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_338"
+        },
+        {
+          "key": "Font",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "sfxFill",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "30 132 198 5"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "GPConfig.VolBarFill"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "sfxBar",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 130 207 10"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "GPConfig.VolBar"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "sfxMark",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "30 127 27 16"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "GPConfig.VolBarMark"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "iLbl",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 55 80 10"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_339"
+        },
+        {
+          "key": "Font",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "helmoChk",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 75 16 16"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "helmoChkOn",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 75 16 16"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "costumeChk",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 93 16 16"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "costumeChkOn",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 93 16 16"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "mountChk",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 111 16 16"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "mountChkOn",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 111 16 16"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "iHelmoLbl",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "46 75 130 10"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_340"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "iCostumeLbl",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "46 93 130 10"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_341"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "iMountLbl",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "46 111 130 10"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_342"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "hudChk",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 129 16 16"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "hudChkOn",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 129 16 16"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "zoomChk",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "155 75 16 16"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "GPConfig.ChkOff"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "zoomChkOn",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "155 75 16 16"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "GPConfig.ChkOn"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "iHudLbl",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "46 129 130 10"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_344"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "iZoomLbl",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "176 75 130 10"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_345"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\Guild\\Guild_NoticeEdit.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "Center"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "Center"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "346"
+      },
+      {
+        "key": "Height",
+        "value": "247"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "57"
+      },
+      {
+        "key": "CaptionFont",
+        "value": "3"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 120"
+      },
+      {
+        "key": "CloseButton",
+        "value": "true"
+      },
+      {
+        "key": "CloseButtonLocation",
+        "value": "14 14 22 22"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 348 247"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Msgbox.Box1"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 342 24"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_284"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "noticeok",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "227 203 100 30"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "100 0 0 0"
+        },
+        {
+          "key": "TextureAlias",
+          "value": ""
+        },
+        {
+          "key": "Caption",
+          "value": "uu_50"
+        }
+      ]
+    },
+    {
+      "type": "ImeNotePad",
+      "name": "noticeedit",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "13 33 320 150"
+        },
+        {
+          "key": "Font",
+          "value": "2"
+        },
+        {
+          "key": "RasterOp[0]",
+          "value": "split"
+        },
+        {
+          "key": "RasterOp[1]",
+          "value": "split"
+        },
+        {
+          "key": "FontAlign[0]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "FontAlign[1]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "NewUI.WindowSub"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.Empty"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "NewUI.Button_ArrowD_N"
+        },
+        {
+          "key": "TextureAlias[3]",
+          "value": "NewUI.Button_ArrowR_N"
+        },
+        {
+          "key": "TextureAlias[4]",
+          "value": "NewUI.Empty"
+        },
+        {
+          "key": "TextureAlias[5]",
+          "value": "NewUI.Empty"
+        },
+        {
+          "key": "TextureColor.Normal[1]",
+          "value": "0 255 255 255"
+        },
+        {
+          "key": "TextureColor.MouseOver[1]",
+          "value": "128 255 255 255"
+        },
+        {
+          "key": "TextureColor.Disabled[2]",
+          "value": "255 255 255 255"
+        },
+        {
+          "key": "TextureColor.Disabled[3]",
+          "value": "255 255 255 255"
+        },
+        {
+          "key": "TextureColor.Disabled[4]",
+          "value": "255 255 255 255"
+        },
+        {
+          "key": "TextureColor.Disabled[5]",
+          "value": "255 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "cancle",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "22 203 100 30"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "100 0 0 0"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_40"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,421 @@
+{
+  "format": "wyd.pane",
+  "source": "login\\CharSelect_Create.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "SIDE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "-20.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "60.000000"
+      },
+      {
+        "key": "Width",
+        "value": "248"
+      },
+      {
+        "key": "Height",
+        "value": "419"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 120"
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 250 418"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Login.NewCharBG"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "50 6 145 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_10"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "11 56 223 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_43"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Desc",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "18 171 212 158"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "13 76 47 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_28"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "13 92 47 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_29"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "13 110 47 13"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_30"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "13 126 47 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_31"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "10 32 66 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_22"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "10 353 90 15"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_45"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Stat0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "216 76 22 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Stat1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "216 92 22 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Stat2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "216 109 22 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Stat3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "216 125 22 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Class",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "86 32 140 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Create",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "35 391 78 17"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_39"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Back",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "136 391 79 17"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_40"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "11 148 226 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_44"
+        }
+      ]
+    },
+    {
+      "type": "ImeEditbox",
+      "name": "Input",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "104 349 115 23"
+        },
+        {
+          "key": "DrawBox",
+          "value": "true"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "Stati0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "61 78 152 10"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Login.NewCharStat"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "Stati1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "61 95 152 9"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Login.NewCharStat"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "Stati2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "61 112 152 9"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Login.NewCharStat"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "Stati3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "61 128 152 9"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Login.NewCharStat"
+        }
+      ]
+    }
+  ]
+}

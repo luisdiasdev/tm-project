@@ -1,0 +1,709 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\Guild\\Guild_Info.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "30.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "30.000000"
+      },
+      {
+        "key": "Width",
+        "value": "418"
+      },
+      {
+        "key": "Height",
+        "value": "372"
+      },
+      {
+        "key": "Caption",
+        "value": "새 패널"
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 120"
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Static",
+      "name": "Info1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "12 6 119 19"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_283"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "NoticeEdit",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "342 6 64 20"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI.ButtonN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI.ButtonD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.ButtonD"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_284"
+        }
+      ]
+    },
+    {
+      "type": "ImeNotePad",
+      "name": "Notice",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "12 29 396 83"
+        },
+        {
+          "key": "Font",
+          "value": "2"
+        },
+        {
+          "key": "RasterOp[0]",
+          "value": "split"
+        },
+        {
+          "key": "RasterOp[1]",
+          "value": "split"
+        },
+        {
+          "key": "FontAlign[0]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "FontAlign[1]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "NewUI.ComboBG"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.Empty"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "NewUI.Button_ArrowD_N"
+        },
+        {
+          "key": "TextureAlias[3]",
+          "value": "NewUI.Button_ArrowR_N"
+        },
+        {
+          "key": "TextureAlias[4]",
+          "value": "NewUI.Empty"
+        },
+        {
+          "key": "TextureAlias[5]",
+          "value": "NewUI.Empty"
+        },
+        {
+          "key": "TextureColor.Normal[0]",
+          "value": "0 0 0 0"
+        },
+        {
+          "key": "TextureColor.Normal[1]",
+          "value": "0 255 255 255"
+        },
+        {
+          "key": "TextureColor.MouseOver[1]",
+          "value": "128 255 255 255"
+        },
+        {
+          "key": "TextureColor.Disabled[2]",
+          "value": "255 255 255 255"
+        },
+        {
+          "key": "TextureColor.Disabled[3]",
+          "value": "255 255 255 255"
+        },
+        {
+          "key": "TextureColor.Disabled[4]",
+          "value": "255 255 255 255"
+        },
+        {
+          "key": "TextureColor.Disabled[5]",
+          "value": "255 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 148 390 28"
+        },
+        {
+          "key": "Font",
+          "value": "2"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.WindowSub2"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "GuildName",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "155 148 250 27"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 74 222 234"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Info2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "21 148 110 27"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_285"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "14 202 390 27"
+        },
+        {
+          "key": "Tagname",
+          "value": "tagsubinfo"
+        },
+        {
+          "key": "Font",
+          "value": "2"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.WindowSub2"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 256 390 27"
+        },
+        {
+          "key": "Tagname",
+          "value": "tagsubinfo"
+        },
+        {
+          "key": "Font",
+          "value": "2"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.WindowSub2"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "MasterName",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "155 175 250 27"
+        },
+        {
+          "key": "Tagname",
+          "value": "tagsubinfo"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 74 222 234"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Info3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "21 175 110 27"
+        },
+        {
+          "key": "Tagname",
+          "value": "tagsubinfo"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_286"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "MemberCount",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "155 202 250 27"
+        },
+        {
+          "key": "Tagname",
+          "value": "tagsubinfo"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 74 222 234"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Info4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "21 202 110 27"
+        },
+        {
+          "key": "Tagname",
+          "value": "tagsubinfo"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_287"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 310 390 28"
+        },
+        {
+          "key": "Tagname",
+          "value": "tagsubinfo"
+        },
+        {
+          "key": "Font",
+          "value": "2"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.WindowSub2"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "GuildFame",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "126 229 87 27"
+        },
+        {
+          "key": "Tagname",
+          "value": "tagsubinfo"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 74 222 234"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Info5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "21 229 110 27"
+        },
+        {
+          "key": "Tagname",
+          "value": "tagsubinfo"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_288"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "CreateGuild",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "162 52 88 36"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI.ButtonN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI.ButtonD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.ButtonD"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_291"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Info6",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "21 256 110 27"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_291"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "CreateDate",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "155 256 250 27"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 74 222 234"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "NoticeDate",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "295 106 110 27"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Info7",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "21 283 110 27"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_301"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Info8",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "22 309 110 27"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_302"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "ally",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "155 283 250 27"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 74 222 234"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "war",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "155 310 250 27"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 74 222 234"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Info9",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "213 228 74 28"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_312"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "GuildInfluence",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "296 230 96 27"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 74 222 234"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    }
+  ]
+}

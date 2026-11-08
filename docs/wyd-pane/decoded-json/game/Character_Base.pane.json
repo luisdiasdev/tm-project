@@ -1,0 +1,4513 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\Character_Base.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "50.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "30.000000"
+      },
+      {
+        "key": "Width",
+        "value": "250"
+      },
+      {
+        "key": "Height",
+        "value": "425"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "30"
+      },
+      {
+        "key": "CaptionFont",
+        "value": "2"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 255"
+      },
+      {
+        "key": "CloseButton",
+        "value": "true"
+      },
+      {
+        "key": "CloseButtonLocation",
+        "value": "10 400 18 18"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "stretch"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": "[{\"Name\":\"Open\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":0,\"fParam1\":1}]},{\"Name\":\"Close\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":1,\"fParam1\":0},{\"Time\":100,\"Type\":1,\"Target\":\"Panel\",\"nParam0\":0}]}]"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 250 425"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.BG2"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "11 47 227 77"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.SubBG"
+        },
+        {
+          "key": "TextureColor",
+          "value": "204 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "10 126 113 95"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.SubBG"
+        },
+        {
+          "key": "TextureColor",
+          "value": "204 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "126 126 112 95"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.SubBG"
+        },
+        {
+          "key": "TextureColor",
+          "value": "204 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "10 223 229 77"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.SubBG"
+        },
+        {
+          "key": "TextureColor",
+          "value": "204 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "81 302 159 96"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.SubBG"
+        },
+        {
+          "key": "TextureColor",
+          "value": "204 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "126 126 112 19"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.SubTitle"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "63 53 85 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "196 53 38 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "63 70 171 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "63 87 171 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "63 104 171 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "63 129 56 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "63 147 56 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "63 164 56 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "63 183 56 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "63 202 56 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "182 146 51 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "182 165 51 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "182 184 51 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "182 203 51 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "72 226 47 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "72 244 47 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "72 262 47 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "72 281 47 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "188 226 47 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "188 244 47 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "188 262 47 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "188 281 47 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "167 307 68 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "167 324 68 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "167 341 68 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "167 358 68 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "167 375 68 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "10 401 71 17"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "82 401 137 17"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "151 54 44 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_139"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "12 148 50 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_47"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "12 130 50 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_46"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "12 105 50 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_138"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "12 88 50 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_137"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "12 71 50 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_136"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "12 54 50 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_135"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "12 185 50 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_49"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "12 166 50 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_48"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "12 203 50 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_141"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "132 147 48 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_150"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "132 166 48 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_151"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "132 185 48 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_152"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "132 203 48 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_153"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "14 227 56 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_142"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "14 245 56 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_143"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "14 263 56 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_144"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "14 282 56 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_147"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "129 227 56 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_146"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "129 245 56 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_145"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "129 263 56 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_148"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "129 282 56 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_149"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "SpecialName0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "86 308 80 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "SpecialName1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "86 325 80 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "SpecialName2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "86 343 80 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "SpecialName3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "86 360 80 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "86 377 80 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_158"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Name",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "66 54 79 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Grade",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "66 71 165 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Class",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "66 88 83 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 170 255 170"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Exp",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "64 105 82 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Level",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "198 54 33 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "ExpMax",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "150 105 82 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Con",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "64 185 40 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Dex",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "64 166 40 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Int",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "64 148 40 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Str",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "64 130 40 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "StatPoint",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "70 203 41 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Reg0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "187 148 41 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Reg1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "187 167 41 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Reg2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "187 186 41 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Reg3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "187 204 41 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "HP",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "73 227 44 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "MP",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "73 245 44 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Dam",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "73 263 44 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Def",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "73 282 44 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Move",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "189 228 44 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "MagicDam",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "189 246 44 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "AttSpd",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "189 264 44 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Cri",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "189 283 44 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Special0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "170 308 48 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Special1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "170 325 48 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Special2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "170 343 48 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Special3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "170 360 48 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "SpecialPoint",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "170 377 48 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "CPPoint",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "13 403 199 14"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "139 128 88 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_132"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "54 5 140 17"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_128"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "Flags",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "14 301 59 100"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "FakeExp",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "184 31 52 13"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Class2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "149 88 83 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "StatBtn0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "105 130 13 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI.PlusBtnN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI.PlusBtnD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.PlusBtnD"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "StatBtn1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "105 148 13 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI.PlusBtnN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI.PlusBtnD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.PlusBtnD"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "StatBtn2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "105 165 13 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI.PlusBtnN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI.PlusBtnD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.PlusBtnD"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "StatBtn3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "105 185 13 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI.PlusBtnN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI.PlusBtnD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.PlusBtnD"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "MasterBtn3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "219 362 14 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI.PlusBtnN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI.PlusBtnD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.PlusBtnD"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "MasterBtn2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "219 345 14 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI.PlusBtnN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI.PlusBtnD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.PlusBtnD"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "MasterBtn1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "219 328 14 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI.PlusBtnN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI.PlusBtnD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.PlusBtnD"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "MasterBtn0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "219 311 14 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag0"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI.PlusBtnN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI.PlusBtnD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.PlusBtnD"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Tab0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 31 80 17"
+        },
+        {
+          "key": "Group",
+          "value": "tab"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI_CharInfo.TabN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_CharInfo.TabD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI_CharInfo.TabD"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_276"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Tab1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "95 31 80 17"
+        },
+        {
+          "key": "Group",
+          "value": "tab"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI_CharInfo.TabN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_CharInfo.TabD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI_CharInfo.TabD"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_277"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-705 1326 227 19"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.SubTitle"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-703 1348 50 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_139"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-652 1347 60 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-703 1366 50 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_137"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-652 1365 172 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "SubTitle0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-672 1328 167 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Text",
+          "value": "_기본클래스"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "TAB222",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "11 47 229 351"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.SubBG"
+        },
+        {
+          "key": "TextureColor",
+          "value": "204 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "120 55 115 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "120 75 115 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "120 95 115 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "120 115 115 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "120 135 115 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "120 155 115 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "120 175 115 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 56 105 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_142"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 76 105 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_143"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 96 105 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_144"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 116 105 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_147"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 136 105 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_145"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 156 105 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_148"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 176 105 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_149"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 276 105 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_271"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 196 105 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_267"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 216 105 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_268"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 256 105 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_270"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 236 105 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_269"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 297 105 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_272"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 356 105 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_275"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 376 105 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_146"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-313 1338 60 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Sub0Lev",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-403 1340 56 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Sub0Grade",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-311 1340 56 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Sub0Class",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-403 1358 168 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 170 255 170"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-702 1321 227 19"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.SubTitle"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-700 1346 50 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_139"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-649 1342 60 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-714 1362 50 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_137"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-649 1360 70 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "SubTitle1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-669 1323 167 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Text",
+          "value": "_서브클래스"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-557 1342 60 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Sub1Lev",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-647 1344 56 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Sub1Grade",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-555 1344 56 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Sub1Class",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-647 1362 65 14"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 170 255 170"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "120 235 115 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "120 255 115 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "120 275 115 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "120 295 115 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "120 375 115 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "120 355 115 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "120 215 115 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "120 195 115 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "120 335 115 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "120 315 115 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.Cell"
+        },
+        {
+          "key": "TextureColor",
+          "value": "230 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Value0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "123 57 110 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Value15",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "123 337 110 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Value2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "123 77 110 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Value3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "123 137 110 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Value4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "123 97 110 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Value5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "123 157 110 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Value6",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "123 117 110 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Value7",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "123 177 110 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Value10",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "123 237 110 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Value8",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "123 197 110 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Value11",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "123 257 110 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Value9",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "123 217 110 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Value12",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "123 277 110 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Value16",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "123 357 110 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Value13",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "123 297 110 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Value1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "123 377 110 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Value14",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "123 317 110 13"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 317 105 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_273"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 336 105 15"
+        },
+        {
+          "key": "Tagname",
+          "value": "tag1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_274"
+        }
+      ]
+    }
+  ]
+}

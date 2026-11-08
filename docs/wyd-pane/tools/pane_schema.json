@@ -1,0 +1,324 @@
+{
+  "format": "wyd.pane.schema",
+  "version": 1,
+  "description": "Key reference for WYD .pane files. Values are parsed as strings; types are advisory. Colors are A R G B packed as 0xAARRGGBB.",
+  "value_grammars": {
+    "bool": "true | false",
+    "int": "decimal integer",
+    "float": "decimal floating point",
+    "color": "A R G B (four ints, 0..255)",
+    "alias": "TextureAlias name from the guimat",
+    "string": "rest of the line, may contain spaces",
+    "int4": "four whitespace-separated integers",
+    "int2": "two whitespace-separated integers"
+  },
+  "panel_keys": {
+    "Resource": { "type": "string", "note": "guimat path; shipped: ui/default.guimat" },
+    "AlignPanelX": { "type": "enum", "values": ["NONE", "Center", "SIDE"] },
+    "AlignPanelY": { "type": "enum", "values": ["NONE", "Center", "SIDE"] },
+    "OffsetX": { "type": "float" },
+    "OffsetY": { "type": "float" },
+    "ScreenAlign": { "type": "tokens", "values": ["left", "top", "right", "bottom"] },
+    "Area": { "type": "int4", "grammar": "x y w h" },
+    "Rect": { "type": "int4", "grammar": "l t r b" },
+    "Left": { "type": "int" },
+    "Top": { "type": "int" },
+    "Width": { "type": "int" },
+    "Height": { "type": "int" },
+    "ZOrder": { "type": "int" },
+    "Color": { "type": "color" },
+    "TextureColor": { "type": "color", "note": "alias of Color at panel level" },
+    "TextureAlias": { "type": "alias" },
+    "TextureOffset": { "type": "int4", "grammar": "x y w h" },
+    "RasterOp": { "type": "enum", "values": ["wrap", "stretch", "split", "wSplitStretch", "hStretchSplit"] },
+    "Titlebar": { "type": "bool" },
+    "TitlebarHeight": { "type": "int" },
+    "Caption": { "type": "string", "note": "literal or uu_* localization key" },
+    "CaptionFont": { "type": "int", "note": "index into guimat FontList" },
+    "CaptionColor": { "type": "color" },
+    "CaptionShadowType": { "type": "enum", "values": ["None", "Outline", "BottomRight", "Top"] },
+    "CaptionShadowColor": { "type": "color" },
+    "CloseButton": { "type": "bool" },
+    "CloseButtonLocation": { "type": "int4", "grammar": "x y w h" },
+    "AllowFocus": { "type": "bool" },
+    "PageIndex": { "type": "int" },
+    "OpenSound": { "type": "int" },
+    "CloseSound": { "type": "int" },
+    "resizeTip": {
+      "type": "tokens",
+      "values": ["top", "bottom", "left", "right", "topLeft", "topRight", "bottomLeft", "bottomRight", "all"],
+      "flags": { "top": 1, "bottom": 2, "left": 4, "right": 8, "topRight": 16, "topLeft": 32, "bottomRight": 64, "bottomLeft": 128, "all": -1 }
+    },
+    "PanelScaleType": { "type": "int", "note": "0 normal, nonzero enables scaling" },
+    "Animation": { "type": "json", "note": "inline JSON array; keep on one line" }
+  },
+  "common_element_keys": {
+    "id": { "type": "int" },
+    "name": { "type": "string", "note": "normally set by element Type(name)" },
+    "PageIndex": { "type": "int" },
+    "enabled": { "type": "bool" },
+    "visible": { "type": "bool" },
+    "MsgReceive": { "type": "bool" },
+    "default": { "type": "bool" },
+    "BelowPanel": { "type": "bool" },
+    "Area": { "type": "int4", "grammar": "l t w h" },
+    "Rect": { "type": "int4", "grammar": "l t r b" },
+    "Left": { "type": "int" },
+    "Top": { "type": "int" },
+    "Width": { "type": "int" },
+    "Height": { "type": "int" },
+    "ShadowType": { "type": "enum", "values": ["None", "Outline", "BottomRight", "Top"] },
+    "ShadowColor": { "type": "color" },
+    "RasterOp": { "type": "enum", "values": ["wrap", "stretch", "split", "wSplitStretch", "hStretchSplit"] },
+    "RasterOp[n]": { "type": "enum", "values": ["wrap", "stretch", "split", "wSplitStretch", "hStretchSplit"] },
+    "Font": { "type": "int" },
+    "Font[n]": { "type": "int" },
+    "FontAlign": { "type": "tokens", "values": ["left", "center", "right", "top", "vcenter", "bottom", "wordbreak"] },
+    "FontAlign[n]": { "type": "tokens", "values": ["left", "center", "right", "top", "vcenter", "bottom", "wordbreak"] },
+    "FontOffset": { "type": "int2", "grammar": "x y" },
+    "FontOffset[n]": { "type": "int2", "grammar": "x y" },
+    "FontColor": { "type": "color" },
+    "FontColor[n]": { "type": "color" },
+    "FontColor.Normal[n]": { "type": "color" },
+    "FontColor.Pressed[n]": { "type": "color" },
+    "FontColor.MouseOver[n]": { "type": "color" },
+    "FontColor.Disabled[n]": { "type": "color" },
+    "TextureAlias": { "type": "alias" },
+    "TextureAlias[n]": { "type": "alias" },
+    "TextureColor": { "type": "color" },
+    "TextureColor[n]": { "type": "color" },
+    "TextureColor.Normal[n]": { "type": "color" },
+    "TextureColor.Pressed[n]": { "type": "color" },
+    "TextureColor.MouseOver[n]": { "type": "color" },
+    "TextureColor.Disabled[n]": { "type": "color" },
+    "Tagname": { "type": "string" }
+  },
+  "element_types": {
+    "static": {
+      "class": "CGuiStatic",
+      "constructor": "0x48a310",
+      "draw": "0x48a130",
+      "keys": {
+        "Caption": { "type": "string" },
+        "Text": { "type": "string" },
+        "ToolTip": { "type": "string" },
+        "MultiLine": { "type": "bool" },
+        "MultiLineGap": { "type": "int" },
+        "RichText": { "type": "bool" }
+      }
+    },
+    "image": {
+      "class": "CGuiImage",
+      "constructor": "0x44a7e0",
+      "draw": "0x449c10",
+      "keys": {
+        "UseRotation": { "type": "bool" },
+        "Rotation": { "type": "float" },
+        "RotationCenter": { "type": "int2", "grammar": "x y" },
+        "ExternalImageFile": { "type": "string" },
+        "UseAni": { "type": "bool" },
+        "AniCutXPage": { "type": "int" },
+        "AniCutYPage": { "type": "int" },
+        "AnimationMinPage": { "type": "int" },
+        "AnimationMaxPage": { "type": "int" },
+        "AnimationDelay": { "type": "float" },
+        "AnimationLoopCnt": { "type": "int", "note": "-1 = infinite" },
+        "ToolTip": { "type": "string" }
+      }
+    },
+    "button": {
+      "class": "CGuiButton",
+      "constructor": "0x436910",
+      "draw": "0x436520",
+      "fallback": "static",
+      "keys": {
+        "Group": { "type": "string" },
+        "ToggleButton": { "type": "bool" },
+        "Icon": { "type": "alias" },
+        "DownTextUp": { "type": "bool" },
+        "ButtonSound": { "type": "int" }
+      }
+    },
+    "checkbox": {
+      "class": "CGuiCheckBox",
+      "constructor": "0x437920",
+      "draw": "0x437a20",
+      "fallback": "button"
+    },
+    "radiobutton": {
+      "class": "CGuiRadioButton",
+      "constructor": "0x483260",
+      "draw": "0x437a20",
+      "fallback": "checkbox"
+    },
+    "gaugebar": {
+      "class": "CGuiGaugeBar",
+      "constructor": "0x448db0",
+      "draw": "0x448900",
+      "fallback": "static",
+      "keys": {
+        "BarOutSpace": { "type": "int4", "grammar": "l t r b" },
+        "noFrame": { "type": "bool" },
+        "text_type": { "type": "enum", "values": ["rate_fraction", "rate_percent"] },
+        "BarRange": { "type": "int2", "grammar": "min max" },
+        "BarPos": { "type": "int" },
+        "text_postfix": { "type": "string" },
+        "BarDirection": { "type": "enum", "values": ["right", "left", "up", "down"] },
+        "BarSpark": { "type": "string", "grammar": "alias x y w h" },
+        "BarFlash": { "type": "string", "grammar": "alias x y w h" },
+        "BarFlashFadeoutRate": { "type": "float" },
+        "FillDrawMethod": { "type": "int" }
+      }
+    },
+    "combobox": {
+      "class": "CGuiComboBox",
+      "constructor": "0x4398f0",
+      "draw": "0x437ee0",
+      "fallback": "button",
+      "keys": {
+        "dropbox_length": { "type": "int" }
+      }
+    },
+    "slider": {
+      "class": "CGuiSlider",
+      "constructor": "0x489660",
+      "draw": "0x4899b0",
+      "keys": {
+        "range": { "type": "int2", "grammar": "min max" },
+        "value": { "type": "int" },
+        "MouseMoveLock": { "type": "bool" }
+      }
+    },
+    "editbox": {
+      "class": "CGuiEditBox",
+      "constructor": "0x4402c0",
+      "draw": "0x441e20",
+      "keys": {
+        "SelBkColor": { "type": "color" },
+        "SelColor": { "type": "color" },
+        "CaretColor": { "type": "color" },
+        "BorderWidth": { "type": "int" },
+        "Spacing": { "type": "int" },
+        "multiline": { "type": "bool" },
+        "indicator": { "type": "bool" },
+        "NumAttrib": { "type": "bool" },
+        "Range": { "type": "int" },
+        "DrawBox": { "type": "bool" },
+        "Password": { "type": "bool" }
+      }
+    },
+    "imeeditbox": {
+      "class": "CGuiImeEditBox",
+      "constructor": "0x44c3e0",
+      "draw": "0x441e20",
+      "fallback": "editbox"
+    },
+    "imenotepad": {
+      "class": "CGuiImeNotePad",
+      "constructor": "0x44eb70",
+      "draw": "0x4506c0",
+      "keys": {
+        "leftScrollbar": { "type": "bool" },
+        "TestString": { "type": "string" },
+        "borderWidth": { "type": "int" },
+        "spacing": { "type": "int" },
+        "itemSpacing": { "type": "int" },
+        "RichText": { "type": "bool" },
+        "Wrap": { "type": "bool" }
+      }
+    },
+    "imenotepadeditbox": {
+      "class": "CGuiImeNotePadEditBox",
+      "constructor": "0x453d10",
+      "draw": "0x441e20",
+      "fallback": "imeeditbox"
+    },
+    "listbox": {
+      "class": "CGuiListBox",
+      "constructor": "0x455250",
+      "draw": "0x4564e0",
+      "keys": {
+        "leftScrollbar": { "type": "bool" },
+        "ScrollBarWidth": { "type": "int" },
+        "borderWidth": { "type": "int" },
+        "spacing": { "type": "int" },
+        "itemSpacing": { "type": "int" },
+        "RichText": { "type": "bool" },
+        "DrawSelectBoxLast": { "type": "bool" },
+        "RenderMethod": { "type": "int" }
+      }
+    },
+    "listview": {
+      "class": "CGuiListView",
+      "constructor": "0x45bff0",
+      "draw": "0x458840",
+      "fallback": "listbox",
+      "keys": {
+        "itemSize": { "type": "int2", "grammar": "w h" },
+        "itemPanel": { "type": "string", "note": "path to another .pane row template" }
+      }
+    },
+    "treeview": {
+      "class": "CGuiTreeView",
+      "constructor": "0x48bbe0",
+      "draw": "0x458840",
+      "fallback": "listview"
+    },
+    "customlistview": {
+      "class": "CGuiCustomListView",
+      "constructor": "0x43dcc0",
+      "draw": "0x43ba20",
+      "fallback": "listbox",
+      "keys": {
+        "itemSize": { "type": "int2", "grammar": "w h" },
+        "itemPanel": { "type": "string" }
+      }
+    },
+    "balloonbox": {
+      "class": "CBalloonBox",
+      "constructor": "0x435990",
+      "draw": "0x48a130",
+      "fallback": "static"
+    },
+    "tooltipbox": {
+      "class": "CTooltipBox",
+      "constructor": "0x435c60",
+      "draw": "0x48a130",
+      "fallback": "balloonbox"
+    },
+    "imagefont": {
+      "class": "CGuiImageFont",
+      "constructor": "0x44b970",
+      "draw": "0x44baf0",
+      "keys": {
+        "FontHeight": { "type": "int" },
+        "Margin": { "type": "int2", "grammar": "x y" },
+        "WidthScale": { "type": "float" },
+        "FontPreAlise": { "type": "string" },
+        "TextValue": { "type": "string" }
+      }
+    },
+    "iconbutton": {
+      "class": "CGuiIconButton",
+      "constructor": "0x42abe0",
+      "draw": "0x42c550",
+      "fallback": "button",
+      "keys": {
+        "IconTexture": { "type": "alias" },
+        "IconTextureSlot": { "type": "int" },
+        "IconSlotIndex": { "type": "int" },
+        "IconSlotType": { "type": "int" }
+      }
+    },
+    "momesh": {
+      "class": "CGuiMesh",
+      "constructor": "0x46d550",
+      "draw": "0x46d480",
+      "keys": {
+        "MoFile": { "type": "string" },
+        "Thickness": { "type": "int" },
+        "ParticleSize": { "type": "int" }
+      }
+    }
+  }
+}

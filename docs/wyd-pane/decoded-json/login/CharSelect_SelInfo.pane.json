@@ -1,0 +1,777 @@
+{
+  "format": "wyd.pane",
+  "source": "login\\CharSelect_SelInfo.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "SIDE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "-20.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "40.000000"
+      },
+      {
+        "key": "Width",
+        "value": "274"
+      },
+      {
+        "key": "Height",
+        "value": "396"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 120"
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 1 271 394"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Login.SelCharBG"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "63 8 144 13"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_10"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "17 37 238 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_16"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Name",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "89 58 166 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "18 58 58 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_21"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "18 76 58 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_22"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "18 93 58 13"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_24"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "18 110 58 13"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_23"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "130 110 38 13"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_25"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "18 127 58 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_26"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "18 147 58 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_27"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 171 114 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_17"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "16 193 62 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_28"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "16 211 62 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_29"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "16 228 62 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_30"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "16 245 62 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_31"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 266 114 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_18"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "MText0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "18 291 73 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "MText1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "18 308 73 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "MText2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "18 325 73 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "MText3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "18 342 73 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "166 171 88 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_19"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Class",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "89 76 166 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "City",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "89 93 166 13"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Level",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "83 110 42 13"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Gold",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "171 110 83 13"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Exp",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "83 127 83 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Exp2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "171 127 83 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Start",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "83 147 82 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Start2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "171 147 83 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Stat0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "87 194 50 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Stat1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "87 211 50 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Stat2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "87 228 50 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Stat3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "87 245 50 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Master0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "98 291 47 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Master1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "98 308 47 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Master2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "98 325 47 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Master3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "98 342 47 14"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "Flag",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "168 191 85 164"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Connect",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "19 368 89 17"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_15"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Back",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "162 368 89 17"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_12"
+        }
+      ]
+    }
+  ]
+}

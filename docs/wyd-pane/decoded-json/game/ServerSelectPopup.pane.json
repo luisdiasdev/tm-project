@@ -1,0 +1,171 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\ServerSelectPopup.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "Center"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "Center"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "168"
+      },
+      {
+        "key": "Height",
+        "value": "273"
+      },
+      {
+        "key": "Caption",
+        "value": "설정"
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 255"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "500"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 168 273"
+        },
+        {
+          "key": "Font",
+          "value": "2"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Login.ServerBG2"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "30 4 104 20"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_203"
+        }
+      ]
+    },
+    {
+      "type": "ListView",
+      "name": "ServerListView2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "6 39 154 187"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "Tagname",
+          "value": "loginserver"
+        },
+        {
+          "key": "ItemSize",
+          "value": "150 18"
+        },
+        {
+          "key": "ItemPanel",
+          "value": "ui/panel/login/GameLoginItem2.pane"
+        },
+        {
+          "key": "ScrollBarWidth",
+          "value": "0"
+        },
+        {
+          "key": "BorderWidth",
+          "value": "0"
+        },
+        {
+          "key": "Spacing",
+          "value": "0"
+        },
+        {
+          "key": "ItemSpacing",
+          "value": "0"
+        },
+        {
+          "key": "FontAlign[0]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "FontAlign[1]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "Component.Boder"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "ServerSel",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "31 240 97 18"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_204"
+        }
+      ]
+    }
+  ]
+}

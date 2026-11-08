@@ -1,0 +1,283 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\Guild\\Guild_Create.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "Center"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "Center"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "300"
+      },
+      {
+        "key": "Height",
+        "value": "176"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "35"
+      },
+      {
+        "key": "CaptionFont",
+        "value": "3"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 120"
+      },
+      {
+        "key": "CloseButton",
+        "value": "true"
+      },
+      {
+        "key": "CloseButtonLocation",
+        "value": "14 14 22 22"
+      },
+      {
+        "key": "TextureAlias",
+        "value": "UI_Msgbox.Box1"
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "ImeEditbox",
+      "name": "Text",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "105 93 163 26"
+        },
+        {
+          "key": "DrawBox",
+          "value": "true"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 3 300 24"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_291"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "ok",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "196 137 66 21"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "100 0 0 0"
+        },
+        {
+          "key": "TextureAlias",
+          "value": ""
+        },
+        {
+          "key": "Caption",
+          "value": "uu_291"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "msg",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "105 54 163 26"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 255 183 43"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Text",
+          "value": "1000"
+        },
+        {
+          "key": "MultiLine",
+          "value": "true"
+        },
+        {
+          "key": "RichText",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "27 106 130 30"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "26 93 130 23"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_285"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "27 65 130 30"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "26 54 130 23"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_292"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "111 55 28 26"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "cancle",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "38 137 66 21"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_40"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "format": "wyd.pane",
+  "source": "emptydummy.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "-20.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "10"
+      },
+      {
+        "key": "Height",
+        "value": "10"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 225 120"
+      },
+      {
+        "key": "CaptionShadowType",
+        "value": "Outline"
+      },
+      {
+        "key": "CaptionShadowColor",
+        "value": "255 0 0 0"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "Color",
+        "value": "0 255 255 255"
+      },
+      {
+        "key": "ZOrder",
+        "value": "200"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": []
+}

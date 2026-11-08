@@ -1,0 +1,545 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\ItemTrade.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "Center"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "30.000000"
+      },
+      {
+        "key": "Width",
+        "value": "226"
+      },
+      {
+        "key": "Height",
+        "value": "377"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "70"
+      },
+      {
+        "key": "CaptionFont",
+        "value": "2"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 255"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": "[{\"Name\":\"Open\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":0,\"fParam1\":1}]},{\"Name\":\"Close\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":1,\"fParam1\":0},{\"Time\":100,\"Type\":1,\"Target\":\"Panel\",\"nParam0\":0}]}]"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 225 375"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Trade.TradeBG"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "40 5 146 17"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_177"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "MoneyMy",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "98 190 100 15"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right top"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Money",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "98 33 100 15"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right top"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "NameMy",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "11 190 75 25"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_165"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Name",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "10 33 75 25"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_165"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "12 55 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "53 55 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "95 55 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "136 55 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "178 55 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "12 99 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven6",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "53 99 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven7",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "95 99 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven8",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "136 99 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven9",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "178 99 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven10",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "12 144 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven11",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "53 144 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven12",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "95 144 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven13",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "136 144 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven14",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "178 144 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "InvenMy0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "11 213 35 37"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "InvenMy1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "53 213 35 37"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "InvenMy2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "94 213 35 37"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "InvenMy3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "135 213 35 37"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "InvenMy4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "177 213 35 37"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "InvenMy5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "11 258 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "InvenMy6",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "53 258 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "InvenMy7",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "94 258 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "InvenMy8",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "135 258 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "InvenMy9",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "177 258 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "InvenMy10",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "11 303 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "InvenMy11",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "53 303 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "InvenMy12",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "94 303 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "InvenMy13",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "135 303 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "InvenMy14",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "177 303 35 36"
+        }
+      ]
+    },
+    {
+      "type": "Checkbox",
+      "name": "Check",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "200 32 15 15"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "Checkbox",
+      "name": "CheckMy",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "200 189 15 15"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "CheckBtn",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "200 189 15 15"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.CheckBoxO"
+        }
+      ]
+    }
+  ]
+}

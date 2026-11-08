@@ -1,0 +1,105 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\chatItem.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "1"
+      },
+      {
+        "key": "Height",
+        "value": "1"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "gold",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-1 2 13 18"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "silver",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "9 2 13 18"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "bronze",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "19 2 13 18"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    }
+  ]
+}

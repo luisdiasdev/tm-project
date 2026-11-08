@@ -1,0 +1,143 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\RpsGame.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "Center"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "Center"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "253"
+      },
+      {
+        "key": "Height",
+        "value": "67"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "70"
+      },
+      {
+        "key": "CaptionFont",
+        "value": "2"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 255"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "300"
+      },
+      {
+        "key": "Animation",
+        "value": "[{\"Name\":\"Open\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":0,\"fParam1\":1}]},{\"Name\":\"Close\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":1,\"fParam1\":0},{\"Time\":100,\"Type\":1,\"Target\":\"Panel\",\"nParam0\":0}]}]"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 253 67"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Inven.RPS"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "P",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "43 16 38 39"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Inven.RPSPaper"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "S",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "106 16 39 39"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Inven.RPSScissor"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "R",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "170 16 39 39"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Inven.RPSRock"
+        }
+      ]
+    }
+  ]
+}

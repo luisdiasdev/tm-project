@@ -1,0 +1,417 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\Helpbook.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "Center"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "30.000000"
+      },
+      {
+        "key": "Width",
+        "value": "492"
+      },
+      {
+        "key": "Height",
+        "value": "447"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "30"
+      },
+      {
+        "key": "CaptionFont",
+        "value": "2"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 255"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": "[{\"Name\":\"Open\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":0,\"fParam1\":1}]},{\"Name\":\"Close\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":1,\"fParam1\":0},{\"Time\":100,\"Type\":1,\"Target\":\"Panel\",\"nParam0\":0}]}]"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 492 447"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Board.BG"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "173 5 147 15"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_87"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Close",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "194 420 103 16"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_80"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Tab0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "20 33 88 15"
+        },
+        {
+          "key": "Group",
+          "value": "tab"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_88"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Tab1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "111 33 87 15"
+        },
+        {
+          "key": "Group",
+          "value": "tab"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_91"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Tab2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "201 33 88 15"
+        },
+        {
+          "key": "Group",
+          "value": "tab"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_92"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Tab3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "292 33 88 15"
+        },
+        {
+          "key": "Group",
+          "value": "tab"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_93"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Tab4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "383 33 87 15"
+        },
+        {
+          "key": "Group",
+          "value": "tab"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_94"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Next",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "417 387 63 15"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_90"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Back",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "12 387 63 15"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_89"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "Img0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "53 88 120 247"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Help.Img0"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "Img1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "53 88 120 247"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Help.Img1"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "Img2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "53 88 120 247"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Help.Img2"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Text0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "183 96 267 26"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Text1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "183 123 267 26"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Text2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "183 150 267 26"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Text3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "183 176 267 27"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Text4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "183 203 267 27"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Text5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "183 230 267 26"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Text6",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "183 256 267 26"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Text7",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "183 283 267 26"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Text8",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "183 310 267 26"
+        }
+      ]
+    },
+    {
+      "type": "ListView",
+      "name": "List",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "39 51 443 357"
+        },
+        {
+          "key": "ItemSize",
+          "value": "431 18"
+        },
+        {
+          "key": "ItemPanel",
+          "value": "ui/Panel/game/HelpbookItem.pane"
+        },
+        {
+          "key": "BorderWidth",
+          "value": "0"
+        },
+        {
+          "key": "Spacing",
+          "value": "0"
+        },
+        {
+          "key": "ItemSpacing",
+          "value": "0"
+        },
+        {
+          "key": "FontAlign[0]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "FontAlign[1]",
+          "value": "left vcenter"
+        }
+      ]
+    }
+  ]
+}

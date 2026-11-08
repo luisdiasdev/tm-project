@@ -1,0 +1,173 @@
+{
+  "format": "wyd.pane",
+  "source": "msgbox\\msgbox.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "258"
+      },
+      {
+        "key": "Height",
+        "value": "176"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "40"
+      },
+      {
+        "key": "CaptionFont",
+        "value": "2"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 225 120"
+      },
+      {
+        "key": "CaptionShadowType",
+        "value": "Outline"
+      },
+      {
+        "key": "CaptionShadowColor",
+        "value": "255 0 0 0"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "200"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "1 0 257 175"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Msgbox.Box1"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "msg",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "26 51 205 62"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "MultiLine",
+          "value": "true"
+        },
+        {
+          "key": "RichText",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "cancel",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "147 136 78 17"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_210"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "ok",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "33 135 77 18"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_209"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "title",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "71 8 112 12"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "MultiLine",
+          "value": "true"
+        },
+        {
+          "key": "RichText",
+          "value": "true"
+        }
+      ]
+    }
+  ]
+}

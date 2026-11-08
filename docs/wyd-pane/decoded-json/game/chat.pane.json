@@ -1,0 +1,367 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\chat.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "SIDE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "-80.000000"
+      },
+      {
+        "key": "Width",
+        "value": "355"
+      },
+      {
+        "key": "Height",
+        "value": "30"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "700"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "backimg2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "83 3 267 21"
+        },
+        {
+          "key": "RasterOp",
+          "value": "wSplitStretch"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.ComboBG"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "BtnMenu",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "16 3 65 21"
+        },
+        {
+          "key": "FontOffset",
+          "value": "4 0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.EditBG"
+        },
+        {
+          "key": "Caption",
+          "value": "일반"
+        }
+      ]
+    },
+    {
+      "type": "ImeEditbox",
+      "name": "ChatEditBox",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "85 3 265 22"
+        },
+        {
+          "key": "DrawBox",
+          "value": "true"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign[0]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "FontAlign[1]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureColor",
+          "value": "200 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "TabBtn0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "17 3 62 20"
+        },
+        {
+          "key": "FontOffset[2]",
+          "value": "0 1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI.ButtonN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI.ButtonD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.ButtonD"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_251"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "TabBtn1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "80 3 62 19"
+        },
+        {
+          "key": "FontOffset[2]",
+          "value": "0 1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI.ButtonN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI.ButtonD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.ButtonD"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_245"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "TabBtn2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "143 3 63 19"
+        },
+        {
+          "key": "FontOffset[2]",
+          "value": "0 1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI.ButtonN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI.ButtonD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.ButtonD"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_250"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "TabBtn3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "207 3 63 19"
+        },
+        {
+          "key": "FontOffset[2]",
+          "value": "0 1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI.ButtonN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI.ButtonD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.ButtonD"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_246"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "TabBtn4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "271 3 62 19"
+        },
+        {
+          "key": "FontOffset[2]",
+          "value": "0 1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI.ButtonN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI.ButtonD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.ButtonD"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_248"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Size",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "1 1 13 12"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI.PlusBtnN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI.PlusBtnD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.PlusBtnD"
+        },
+        {
+          "key": "ToolTip",
+          "value": "uu_253"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Br",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "1 13 13 13"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI.PlusBtnN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI.PlusBtnD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.PlusBtnD"
+        },
+        {
+          "key": "ToolTip",
+          "value": "uu_254"
+        }
+      ]
+    }
+  ]
+}

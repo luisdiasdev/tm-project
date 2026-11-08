@@ -151,6 +151,12 @@ multi-word entries, so this is an upstream limitation, not a 748 regression.
 Without packing, the MSVC default alignment inserted padding and the login
 packet did not match the 748 server, so the client could connect but not log in.
 
+## Newer `.pane` UI (755+/2026 client)
+
+The newer client uses an encrypted UTF-16 text UI format instead of the 748
+`UI/*Scene*.bin` records. It is documented separately in
+[`../wyd-pane/README.md`](../wyd-pane/README.md).
+
 ## Other files observed but not yet audited for 748
 
 `object.bin`, `ItemList.bin`, `Itemname.bin`, `InitItem.bin`, `SkillData.bin`,

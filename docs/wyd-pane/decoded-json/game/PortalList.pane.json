@@ -1,0 +1,227 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\PortalList.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "Center"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "Center"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "331"
+      },
+      {
+        "key": "Height",
+        "value": "252"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "70"
+      },
+      {
+        "key": "CaptionFont",
+        "value": "2"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 255"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": "[{\"Name\":\"Open\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":0,\"fParam1\":1}]},{\"Name\":\"Close\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":1,\"fParam1\":0},{\"Time\":100,\"Type\":1,\"Target\":\"Panel\",\"nParam0\":0}]}]"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 330 250"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Portal.BG"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Title",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "87 6 155 15"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Ok",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "87 216 65 16"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_209"
+        }
+      ]
+    },
+    {
+      "type": "ListView",
+      "name": "List",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "13 51 301 153"
+        },
+        {
+          "key": "ItemSize",
+          "value": "300 15"
+        },
+        {
+          "key": "ItemPanel",
+          "value": "ui/Panel/game/PortalListItem.pane"
+        },
+        {
+          "key": "ScrollBarWidth",
+          "value": "0"
+        },
+        {
+          "key": "BorderWidth",
+          "value": "0"
+        },
+        {
+          "key": "Spacing",
+          "value": "0"
+        },
+        {
+          "key": "ItemSpacing",
+          "value": "0"
+        },
+        {
+          "key": "FontAlign[0]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "FontAlign[1]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "Component.Boder"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Text0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "14 35 82 15"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Text1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "103 35 142 15"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Text2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "250 35 65 15"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Close",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "175 216 65 16"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_210"
+        }
+      ]
+    }
+  ]
+}

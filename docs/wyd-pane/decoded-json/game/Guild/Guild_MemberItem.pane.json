@@ -1,0 +1,333 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\Guild\\Guild_MemberItem.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "384"
+      },
+      {
+        "key": "Height",
+        "value": "20"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 120"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "Rank",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-19 3 18 18"
+        },
+        {
+          "key": "Font",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "UserName",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 -1 70 25"
+        },
+        {
+          "key": "Font",
+          "value": "0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "가나다라마바사"
+        },
+        {
+          "key": "MultiLine",
+          "value": "true"
+        },
+        {
+          "key": "RichText",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "Kind",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-19 4 18 18"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "Font",
+          "value": "2"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Connection",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "1 2 17 18"
+        },
+        {
+          "key": "Font",
+          "value": "1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "GuildLevel",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "70 0 50 25"
+        },
+        {
+          "key": "Font",
+          "value": "0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "길드마스터"
+        },
+        {
+          "key": "MultiLine",
+          "value": "true"
+        },
+        {
+          "key": "RichText",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Joindate",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "290 0 56 25"
+        },
+        {
+          "key": "Font",
+          "value": "0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "2021-06-35"
+        },
+        {
+          "key": "MultiLine",
+          "value": "true"
+        },
+        {
+          "key": "RichText",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "Online",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "2 2 4 20"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "Offline",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "2 2 4 20"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "ConnDate",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "250 0 40 25"
+        },
+        {
+          "key": "Font",
+          "value": "0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "365일전"
+        },
+        {
+          "key": "MultiLine",
+          "value": "true"
+        },
+        {
+          "key": "RichText",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "MemberNotice",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "120 0 130 25"
+        },
+        {
+          "key": "Font",
+          "value": "0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "일이삼사오육칠팔구십일이삼사"
+        },
+        {
+          "key": "MultiLine",
+          "value": "true"
+        },
+        {
+          "key": "RichText",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "GuildInfluence",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "346 0 30 25"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "33333"
+        }
+      ]
+    }
+  ]
+}

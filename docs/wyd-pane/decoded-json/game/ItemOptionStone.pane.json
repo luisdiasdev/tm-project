@@ -1,0 +1,315 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\ItemOptionStone.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "SIDE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "-290.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "30.000000"
+      },
+      {
+        "key": "Width",
+        "value": "226"
+      },
+      {
+        "key": "Height",
+        "value": "425"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "70"
+      },
+      {
+        "key": "CaptionFont",
+        "value": "2"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 255"
+      },
+      {
+        "key": "CloseButton",
+        "value": "true"
+      },
+      {
+        "key": "CloseButtonLocation",
+        "value": "10 399 18 18"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": "[{\"Name\":\"Open\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":0,\"fParam1\":1}]},{\"Name\":\"Close\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":1,\"fParam1\":0},{\"Time\":100,\"Type\":1,\"Target\":\"Panel\",\"nParam0\":0}]}]"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 226 425"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "ItemOS.BG"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "70 369 89 24"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_ItemMix.Button4"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "40 7 147 19"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_317"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Mat0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "96 80 35 35"
+        },
+        {
+          "key": "IconSlotIndex",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Mat1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "148 170 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Mat2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "44 170 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Combine4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "69 368 89 26"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_167"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Result0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "96 297 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "Mat1Line",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "111 135 35 31"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "ItemOS.Line1"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "Mat2Line",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "81 135 34 31"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "ItemOS.Line2"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "Mat0Line",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "104 135 20 135"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "ItemOS.Line0"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "MatText0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "63 45 100 12"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_320"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "MatText2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "12 232 100 12"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_319"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "MatText3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "116 231 100 12"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_318"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Result1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "148 297 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "Mat3Line",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "155 223 23 49"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "ItemOS.Line3"
+        }
+      ]
+    }
+  ]
+}

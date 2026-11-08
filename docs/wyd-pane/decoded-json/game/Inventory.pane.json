@@ -1,0 +1,1175 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\Inventory.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "SIDE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "-50.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "30.000000"
+      },
+      {
+        "key": "Width",
+        "value": "226"
+      },
+      {
+        "key": "Height",
+        "value": "425"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "30"
+      },
+      {
+        "key": "CaptionFont",
+        "value": "2"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 255"
+      },
+      {
+        "key": "CloseButton",
+        "value": "true"
+      },
+      {
+        "key": "CloseButtonLocation",
+        "value": "10 400 18 18"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": "[{\"Name\":\"Open\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":0,\"fParam1\":1}]},{\"Name\":\"Close\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":1,\"fParam1\":0},{\"Time\":100,\"Type\":1,\"Target\":\"Panel\",\"nParam0\":0}]}]"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 226 425"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Inven.InvenBG"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "39 7 147 17"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_196"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Money",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "97 403 89 12"
+        },
+        {
+          "key": "Tagname",
+          "value": "SetCost"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 255 255 170"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        },
+        {
+          "key": "Text",
+          "value": "32,000,000,000"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Equip14",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "13 37 35 35"
+        },
+        {
+          "key": "IconSlotIndex",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Equip6",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "54 60 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Equip12",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "12 81 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Equip8",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "12 126 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Equip10",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "12 170 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Equip4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "54 121 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Equip17",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "54 170 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Equip3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "96 146 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Equip2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "96 91 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Equip1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "96 38 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Equip7",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "138 61 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Equip16",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "138 121 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Equip5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "138 170 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Equip11",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "180 170 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Equip9",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "180 126 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Equip13",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "180 81 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Equip15",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "180 37 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Delete",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "177 355 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "TabItem0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "13 354 35 35"
+        },
+        {
+          "key": "Group",
+          "value": "Tab"
+        },
+        {
+          "key": "FontOffset[0]",
+          "value": "0 4"
+        },
+        {
+          "key": "FontOffset[2]",
+          "value": "0 4"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI_Inven.BagBtnN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_Inven.BagBtnD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI_Inven.BagBtnD"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "TabItem1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "55 354 35 35"
+        },
+        {
+          "key": "Group",
+          "value": "Tab"
+        },
+        {
+          "key": "FontOffset[0]",
+          "value": "0 4"
+        },
+        {
+          "key": "FontOffset[2]",
+          "value": "0 4"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI_Inven.BagBtnN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_Inven.BagBtnD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI_Inven.BagBtnD"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "TabItem2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "95 354 35 35"
+        },
+        {
+          "key": "Group",
+          "value": "Tab"
+        },
+        {
+          "key": "FontOffset[0]",
+          "value": "0 4"
+        },
+        {
+          "key": "FontOffset[2]",
+          "value": "0 4"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI_Inven.BagBtnN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_Inven.BagBtnD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI_Inven.BagBtnD"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "TabItem3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "136 354 35 35"
+        },
+        {
+          "key": "Group",
+          "value": "Tab"
+        },
+        {
+          "key": "FontOffset[0]",
+          "value": "0 4"
+        },
+        {
+          "key": "FontOffset[2]",
+          "value": "0 4"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI_Inven.BagBtnN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_Inven.BagBtnD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI_Inven.BagBtnD"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Day0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "87 344 46 25"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "false"
+        },
+        {
+          "key": "Tagname",
+          "value": "SetCost"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 255 255 0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center top"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "14 222 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "55 222 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "95 222 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "136 222 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "177 222 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "14 264 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven6",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "55 264 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven7",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "95 264 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven8",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "136 264 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven9",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "177 264 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven10",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "14 305 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven11",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "55 305 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven12",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "95 305 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven13",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "136 305 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven14",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "177 305 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven15",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "14 222 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven16",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "55 222 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven17",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "95 222 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven18",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "136 222 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven19",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "177 222 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven20",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "14 264 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven21",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "55 264 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven22",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "95 264 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven23",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "136 264 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven24",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "177 264 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven25",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "14 305 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven26",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "55 305 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven27",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "95 305 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven28",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "136 305 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven29",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "177 305 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven30",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "14 222 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven31",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "55 222 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven32",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "95 222 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven33",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "136 222 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven34",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "177 222 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven35",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "14 264 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven36",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "55 264 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven37",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "95 264 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven38",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "136 264 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven39",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "177 264 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven40",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "14 305 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven41",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "55 305 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven42",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "95 305 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven43",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "136 305 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven44",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "177 305 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven45",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "14 222 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven46",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "55 222 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven47",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "95 222 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven48",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "136 222 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven49",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "177 222 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven50",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "14 264 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven51",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "55 264 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven52",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "95 264 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven53",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "136 264 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven54",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "177 264 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven55",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "14 305 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven56",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "55 305 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven57",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "95 305 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven58",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "136 305 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven59",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "177 305 35 35"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Day1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "133 344 46 25"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "false"
+        },
+        {
+          "key": "Tagname",
+          "value": "SetCost"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 255 255 0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center top"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "MoneyBtn",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 401 18 17"
+        }
+      ]
+    }
+  ]
+}

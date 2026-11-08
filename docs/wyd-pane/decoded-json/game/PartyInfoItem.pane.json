@@ -1,0 +1,501 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\PartyInfoItem.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "205"
+      },
+      {
+        "key": "Height",
+        "value": "21"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 120"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "AllowFocus",
+        "value": "false"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "Tier",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-28 -5 8 7"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Name",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "4 1 94 12"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Outline"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Text",
+          "value": "작두파보스가"
+        }
+      ]
+    },
+    {
+      "type": "Gaugebar",
+      "name": "HP",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 15 129 6"
+        },
+        {
+          "key": "BarRange",
+          "value": "0 100"
+        },
+        {
+          "key": "BarPos",
+          "value": "10"
+        },
+        {
+          "key": "FillDrawMethod",
+          "value": "1"
+        },
+        {
+          "key": "RasterOp[1]",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_Hud.PartyHPBar"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Lv",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "98 1 31 12"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 255 255 120"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Outline"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "Name"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "130 0 9 10"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "139 0 10 10"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "SlotBtn",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 129 21"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.DropdownSel"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "NewUI.DropdownSel_O"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "149 0 9 10"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "158 0 9 10"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "167 0 10 10"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "177 0 9 10"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect6",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "186 0 9 10"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect7",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "195 0 10 10"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect8",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "205 0 9 10"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect9",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "214 0 10 10"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect10",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "130 10 9 9"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect11",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "139 10 10 9"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect12",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "149 10 9 9"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect13",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "158 10 9 9"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect14",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "167 10 10 9"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect15",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "177 10 9 9"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect16",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "186 10 9 9"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect17",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "195 10 10 9"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect18",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "205 10 9 9"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect19",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "214 10 10 9"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect20",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "224 0 9 10"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect21",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "233 0 9 10"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect22",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "242 0 10 10"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect23",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "252 0 9 10"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect24",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "261 0 9 10"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect25",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "270 0 10 10"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect26",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "224 10 9 9"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect27",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "233 10 9 9"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect28",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "242 10 10 9"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect29",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "252 10 9 9"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect30",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "261 10 9 9"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Affect31",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "270 10 10 9"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\Collection\\Collection_Item.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "470"
+      },
+      {
+        "key": "Height",
+        "value": "75"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 120"
+      },
+      {
+        "key": "TextureAlias",
+        "value": "UI_Inven.CargoTab3D"
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 470 75"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "Collection.LI"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Item_0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "205 21 37 37"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Item_1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "249 20 37 37"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Item_2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "293 20 37 37"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Item_3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "335 21 37 37"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Item_4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "378 20 37 37"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "CollectionReward1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "10 32 155 12"
+        },
+        {
+          "key": "Font",
+          "value": "0"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        },
+        {
+          "key": "MultiLine",
+          "value": "true"
+        },
+        {
+          "key": "MultiLineGap",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "CollectionReward2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "10 42 155 12"
+        },
+        {
+          "key": "Font",
+          "value": "0"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        },
+        {
+          "key": "MultiLine",
+          "value": "true"
+        },
+        {
+          "key": "MultiLineGap",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Item_5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "421 20 37 37"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "CollectionCount",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "180 31 44 17"
+        },
+        {
+          "key": "Caption",
+          "value": "%d/%d"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "Result",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "167 19 37 37"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "Collection.RET"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "CollectionName",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "18 10 100 12"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "Caption",
+          "value": "STATIC"
+        }
+      ]
+    }
+  ]
+}

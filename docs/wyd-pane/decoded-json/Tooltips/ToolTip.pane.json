@@ -1,0 +1,95 @@
+{
+  "format": "wyd.pane",
+  "source": "Tooltips\\ToolTip.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "275"
+      },
+      {
+        "key": "Height",
+        "value": "335"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 120"
+      },
+      {
+        "key": "TextureAlias",
+        "value": "Tex.Black"
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "Color",
+        "value": "1 255 255 255"
+      },
+      {
+        "key": "ZOrder",
+        "value": "400"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "Price",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "1 302 250 16"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "Title",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "1 30 250 16"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        }
+      ]
+    }
+  ]
+}

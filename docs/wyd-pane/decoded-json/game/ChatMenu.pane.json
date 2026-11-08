@@ -1,0 +1,335 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\ChatMenu.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "62"
+      },
+      {
+        "key": "Height",
+        "value": "129"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionShadowType",
+        "value": "Outline"
+      },
+      {
+        "key": "CaptionShadowColor",
+        "value": "255 0 0 0"
+      },
+      {
+        "key": "TextureAlias",
+        "value": "MainHud.Bg_Chatting"
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "300"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Button",
+      "name": "normal",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "2 2 56 15"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.DropdownSel"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "NewUI.DropdownSel_O"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_245"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "whisper",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "2 18 56 15"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 255 255 0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.DropdownSel"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "NewUI.DropdownSel_O"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_246"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "party",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "2 33 56 15"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 255 153 255"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.DropdownSel"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "NewUI.DropdownSel_O"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_247"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "ally",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "2 65 56 15"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 0 255 255"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.DropdownSel"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "NewUI.DropdownSel_O"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_249"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "ch",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "2 80 56 15"
+        },
+        {
+          "key": "FontColor",
+          "value": "240 246 10 255"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.DropdownSel"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "NewUI.DropdownSel_O"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_250"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "guild",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "2 49 56 15"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 170 255 255"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.DropdownSel"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "NewUI.DropdownSel_O"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_248"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "king",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "2 96 56 15"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 0 170 255"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.DropdownSel"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "NewUI.DropdownSel_O"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_251"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "shout",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "2 111 56 15"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 0 205 0"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.DropdownSel"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "NewUI.DropdownSel_O"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_252"
+        }
+      ]
+    }
+  ]
+}

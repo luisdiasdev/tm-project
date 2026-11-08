@@ -1,0 +1,277 @@
+{
+  "format": "wyd.pane",
+  "source": "login\\GameLogin2.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "Center"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "Center"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "50.000000"
+      },
+      {
+        "key": "Width",
+        "value": "271"
+      },
+      {
+        "key": "Height",
+        "value": "192"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "30"
+      },
+      {
+        "key": "CaptionFont",
+        "value": "2"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 120"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "stretch"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "1 1 270 196"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Login.LoginBG"
+        }
+      ]
+    },
+    {
+      "type": "Editbox",
+      "name": "password",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "118 84 120 20"
+        },
+        {
+          "key": "Password",
+          "value": "true"
+        },
+        {
+          "key": "DrawBox",
+          "value": "true"
+        },
+        {
+          "key": "Font[0]",
+          "value": "1"
+        },
+        {
+          "key": "Font[1]",
+          "value": "1"
+        },
+        {
+          "key": "Font[2]",
+          "value": "1"
+        },
+        {
+          "key": "FontAlign[1]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "FontAlign[2]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "btnLogout",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "145 121 96 23"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "100 0 0 0"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_06"
+        }
+      ]
+    },
+    {
+      "type": "ImeEditbox",
+      "name": "id",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "118 57 120 22"
+        },
+        {
+          "key": "DrawBox",
+          "value": "true"
+        },
+        {
+          "key": "FontAlign[1]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "FontAlign[2]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "19 60 87 16"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_08"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "19 85 87 16"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_09"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "btnLogin",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "39 121 97 22"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "100 0 0 0"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_05"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "btnNew",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "85 154 101 22"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "100 0 0 0"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_07"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "70 17 136 20"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_05"
+        }
+      ]
+    }
+  ]
+}

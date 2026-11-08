@@ -1,0 +1,409 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\AutoTrade.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "Center"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "50.000000"
+      },
+      {
+        "key": "Width",
+        "value": "217"
+      },
+      {
+        "key": "Height",
+        "value": "190"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "30"
+      },
+      {
+        "key": "CaptionFont",
+        "value": "2"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 255"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": "[{\"Name\":\"Open\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":0,\"fParam1\":1}]},{\"Name\":\"Close\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":1,\"fParam1\":0},{\"Time\":100,\"Type\":1,\"Target\":\"Panel\",\"nParam0\":0}]}]"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 217 190"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Trade.AutotradeBG"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "39 5 136 15"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_170"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Money",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "39 165 109 11"
+        },
+        {
+          "key": "Tagname",
+          "value": "SetCost"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 255 255 170"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "10 73 34 37"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "51 73 34 37"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "91 73 35 37"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "133 73 34 37"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "173 73 35 37"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "10 116 34 37"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven6",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "51 116 34 37"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven7",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "91 116 35 37"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven8",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "133 116 34 37"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Inven9",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "173 116 35 37"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Title",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "85 30 108 15"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 255 255 170"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Name",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "85 48 108 15"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 255 255 170"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Btn",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "156 163 16 16"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI_Trade.CheckBtnN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_Trade.CheckBtnD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI_Trade.CheckBtnD"
+        },
+        {
+          "key": "ToolTip",
+          "value": "uu_171"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "11 30 66 15"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 255 255 170"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_174"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "11 48 66 15"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 255 255 170"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_176"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "CloseBtn",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "179 164 16 16"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI.CloseBtnN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI.CloseBtnD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.CloseBtnD"
+        }
+      ]
+    }
+  ]
+}

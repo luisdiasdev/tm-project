@@ -1,0 +1,123 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\QuestTitleItem.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "200"
+      },
+      {
+        "key": "Height",
+        "value": "17"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Static",
+      "name": "L",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "6 1 14 15"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Text",
+          "value": "Lv"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Lv",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "20 1 21 15"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        },
+        {
+          "key": "Text",
+          "value": "999"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Title",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "46 1 145 15"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Text",
+          "value": "999"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Msg",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "6 1 239 15"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Text",
+          "value": "999"
+        }
+      ]
+    }
+  ]
+}

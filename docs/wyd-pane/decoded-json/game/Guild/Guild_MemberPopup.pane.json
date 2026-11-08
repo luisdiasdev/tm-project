@@ -1,0 +1,151 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\Guild\\Guild_MemberPopup.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "10.000000"
+      },
+      {
+        "key": "Width",
+        "value": "130"
+      },
+      {
+        "key": "Height",
+        "value": "20"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionShadowType",
+        "value": "Outline"
+      },
+      {
+        "key": "CaptionShadowColor",
+        "value": "255 0 0 0"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "300"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "BG",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-11 0 150 45"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Arena.BTN"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Menu",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-2 23 130 19"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "cc.IconButtonH2"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "Component.Boder"
+        },
+        {
+          "key": "Caption",
+          "value": "Button"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Title",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-1 0 130 20"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 219 227 181"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "Static"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-11 17 150 3"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.ListPopup_Line"
+        }
+      ]
+    }
+  ]
+}

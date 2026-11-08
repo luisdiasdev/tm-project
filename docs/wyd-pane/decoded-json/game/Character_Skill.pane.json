@@ -1,0 +1,743 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\Character_Skill.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "SIDE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "-275.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "30.000000"
+      },
+      {
+        "key": "Width",
+        "value": "228"
+      },
+      {
+        "key": "Height",
+        "value": "425"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "30"
+      },
+      {
+        "key": "CaptionFont",
+        "value": "2"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 255"
+      },
+      {
+        "key": "CloseButton",
+        "value": "true"
+      },
+      {
+        "key": "CloseButtonLocation",
+        "value": "10 400 18 18"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "stretch"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": "[{\"Name\":\"Open\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":0,\"fParam1\":1}]},{\"Name\":\"Close\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":1,\"fParam1\":0},{\"Time\":100,\"Type\":1,\"Target\":\"Panel\",\"nParam0\":0}]}]"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 228 425"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_CharInfo.SkillBG"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "45 5 138 19"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 238 238 238"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_190"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 401 103 14"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 238 238 238"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_195"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "SkillName4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "24 314 75 13"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 238 238 238"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_194"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "SkillName3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "24 223 75 14"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 238 238 238"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "SkillName2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "24 132 75 14"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 238 238 238"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "SkillName1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "24 41 75 14"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 238 238 238"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "SkillPoint",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "136 401 41 14"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 238 238 238"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "30 61 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "59 61 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "88 61 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "116 61 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "146 61 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "175 61 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn6",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "30 94 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn7",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "59 94 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn8",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "88 94 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn9",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "116 94 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn10",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "146 94 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn11",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "175 94 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn12",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "30 153 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn13",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "59 153 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn14",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "88 153 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn15",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "116 153 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn16",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "146 153 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn17",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "175 153 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn18",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "30 186 22 23"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn19",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "59 186 22 23"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn20",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "88 186 23 23"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn21",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "116 186 23 23"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn22",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "146 186 22 23"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn23",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "175 186 23 23"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn24",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "30 244 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn25",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "59 244 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn26",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "88 244 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn27",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "116 244 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn28",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "146 244 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn29",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "175 244 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn30",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "30 276 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn31",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "59 276 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn32",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "88 276 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn33",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "116 276 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn34",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "146 276 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn35",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "175 276 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn36",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "30 335 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn37",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "59 335 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn38",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "88 335 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn39",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "116 335 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn40",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "146 335 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn41",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "175 335 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn42",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "30 367 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn43",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "59 367 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn44",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "88 367 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn45",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "116 367 23 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn46",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "146 367 22 24"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "SkillBtn47",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "175 367 23 24"
+        }
+      ]
+    }
+  ]
+}

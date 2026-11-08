@@ -1,0 +1,197 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\MiniPopup.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "SIDE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "SIDE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "-60.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "-160.000000"
+      },
+      {
+        "key": "Width",
+        "value": "118"
+      },
+      {
+        "key": "Height",
+        "value": "34"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 255"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "800"
+      },
+      {
+        "key": "Animation",
+        "value": "[{\"Name\":\"Open\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":0,\"fParam1\":1}]},{\"Name\":\"Close\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":1,\"fParam1\":0},{\"Time\":100,\"Type\":1,\"Target\":\"Panel\",\"nParam0\":0}]}]"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "83 3 30 34"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "false"
+        },
+        {
+          "key": "Tagname",
+          "value": "Quest"
+        },
+        {
+          "key": "UseAni",
+          "value": "true"
+        },
+        {
+          "key": "AniCutXPage",
+          "value": "2"
+        },
+        {
+          "key": "AniCutYPage",
+          "value": "1"
+        },
+        {
+          "key": "AnimationMinPage",
+          "value": "1"
+        },
+        {
+          "key": "AnimationMaxPage",
+          "value": "2"
+        },
+        {
+          "key": "AnimationDelay",
+          "value": "1.000"
+        },
+        {
+          "key": "AnimationLoopCnt",
+          "value": "-1"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.PopupQuest0"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "73 -5 60 15"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "false"
+        },
+        {
+          "key": "Tagname",
+          "value": "Quest"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center top"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_86"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "PopupQuest",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "83 3 30 30"
+        },
+        {
+          "key": "Visible",
+          "value": "false"
+        },
+        {
+          "key": "Tagname",
+          "value": "Quest"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "IconMemo",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "41 0 34 34"
+        },
+        {
+          "key": "Tagname",
+          "value": "Memo"
+        },
+        {
+          "key": "ToolTip",
+          "value": "uu_95"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "IconSummon",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 34 34"
+        },
+        {
+          "key": "Tagname",
+          "value": "Summon"
+        },
+        {
+          "key": "ToolTip",
+          "value": "uu_96"
+        }
+      ]
+    }
+  ]
+}

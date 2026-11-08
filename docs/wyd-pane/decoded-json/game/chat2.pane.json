@@ -1,0 +1,145 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\chat2.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "SIDE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "-110.000000"
+      },
+      {
+        "key": "Width",
+        "value": "20"
+      },
+      {
+        "key": "Height",
+        "value": "232"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "700"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "backimg",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "3 157 350 72"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "false"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "Tex.Black"
+        },
+        {
+          "key": "TextureColor",
+          "value": "200 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "ListView",
+      "name": "ChatList",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "4 155 345 74"
+        },
+        {
+          "key": "ItemSize",
+          "value": "318 13"
+        },
+        {
+          "key": "ItemPanel",
+          "value": "ui/Panel/game/chatItem.pane"
+        },
+        {
+          "key": "LeftScrollBar",
+          "value": "true"
+        },
+        {
+          "key": "ScrollBarWidth",
+          "value": "12"
+        },
+        {
+          "key": "Spacing",
+          "value": "0"
+        },
+        {
+          "key": "ItemSpacing",
+          "value": "0"
+        },
+        {
+          "key": "RichText",
+          "value": "true"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "Align",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 158 3 70"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "format": "wyd.pane",
+  "source": "msgbox\\msgbox_editbox.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "255"
+      },
+      {
+        "key": "Height",
+        "value": "142"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "26"
+      },
+      {
+        "key": "CaptionFont",
+        "value": "2"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 225 120"
+      },
+      {
+        "key": "CaptionShadowType",
+        "value": "Outline"
+      },
+      {
+        "key": "CaptionShadowColor",
+        "value": "255 0 0 0"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "200"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 255 144"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Msgbox.EditBox"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "msg",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "25 18 205 47"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "Hud.Contents_Bg3"
+        },
+        {
+          "key": "Text",
+          "value": "안녕하세요  메시지메시지메시지"
+        },
+        {
+          "key": "MultiLine",
+          "value": "true"
+        },
+        {
+          "key": "RichText",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "ok",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "24 113 90 20"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_209"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "cancel",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "138 113 90 20"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_210"
+        }
+      ]
+    },
+    {
+      "type": "ImeEditbox",
+      "name": "edit",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "63 56 133 24"
+        },
+        {
+          "key": "DrawBox",
+          "value": "true"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        }
+      ]
+    }
+  ]
+}

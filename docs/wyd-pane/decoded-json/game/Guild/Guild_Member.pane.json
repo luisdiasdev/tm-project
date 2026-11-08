@@ -1,0 +1,529 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\Guild\\Guild_Member.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "418"
+      },
+      {
+        "key": "Height",
+        "value": "372"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 120"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "16 40 384 300"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.WindowSub2"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "16 315 384 25"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.WindowSub2"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "16 265 384 25"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.WindowSub2"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "16 215 384 25"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.WindowSub2"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "16 165 384 25"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.WindowSub2"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "16 115 384 25"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.WindowSub2"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "16 65 384 25"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.WindowSub2"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "16 9 386 25"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.WindowSub"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "19 13 70 16"
+        },
+        {
+          "key": "Font",
+          "value": "1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_289"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "82 13 50 16"
+        },
+        {
+          "key": "Font",
+          "value": "1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_290"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "128 14 130 16"
+        },
+        {
+          "key": "Font",
+          "value": "1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_300"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "130 13 3 18"
+        },
+        {
+          "key": "RasterOp",
+          "value": "wrap"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.WindowLine2"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "261 13 3 18"
+        },
+        {
+          "key": "RasterOp",
+          "value": "wrap"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.WindowLine2"
+        }
+      ]
+    },
+    {
+      "type": "ListView",
+      "name": "ListView",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "16 41 396 300"
+        },
+        {
+          "key": "ItemSize",
+          "value": "384 25"
+        },
+        {
+          "key": "ItemPanel",
+          "value": "ui/Panel/game/Guild/Guild_MemberItem.pane"
+        },
+        {
+          "key": "ScrollBarWidth",
+          "value": "10"
+        },
+        {
+          "key": "BorderWidth",
+          "value": "0"
+        },
+        {
+          "key": "Spacing",
+          "value": "0"
+        },
+        {
+          "key": "ItemSpacing",
+          "value": "0"
+        },
+        {
+          "key": "DrawSelectBoxLast",
+          "value": "true"
+        },
+        {
+          "key": "FontAlign[0]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "FontAlign[1]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "Component.Boder"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "262 13 40 16"
+        },
+        {
+          "key": "Font",
+          "value": "1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_298"
+        },
+        {
+          "key": "MultiLineGap",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "300 14 56 16"
+        },
+        {
+          "key": "Font",
+          "value": "1"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_299"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "300 13 3 18"
+        },
+        {
+          "key": "RasterOp",
+          "value": "wrap"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.WindowLine2"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "318 13 3 18"
+        },
+        {
+          "key": "RasterOp",
+          "value": "wrap"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.WindowLine2"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "영향력",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "362 14 30 16"
+        },
+        {
+          "key": "Font",
+          "value": "1"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_312"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "360 13 3 18"
+        },
+        {
+          "key": "RasterOp",
+          "value": "wrap"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.WindowLine2"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "79 13 3 18"
+        },
+        {
+          "key": "Font",
+          "value": "1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "wrap"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.WindowLine2"
+        }
+      ]
+    }
+  ]
+}

@@ -25,6 +25,25 @@ original client, and what is still missing.
 - [`ui-rewrite/06-measurements.md`](ui-rewrite/06-measurements.md) — raw
   numbers and reproduction.
 
+## Newer `.pane` UI system
+
+- [`wyd-pane/README.md`](wyd-pane/README.md) — start here.
+- [`wyd-pane/01-container-and-crypto.md`](wyd-pane/01-container-and-crypto.md)
+  — exact `.pane` / `.wyp` delta cipher.
+- [`wyd-pane/02-text-format.md`](wyd-pane/02-text-format.md) — grammar and full
+  panel/element key reference.
+- [`wyd-pane/03-widget-framework.md`](wyd-pane/03-widget-framework.md) —
+  `CGuiElement`/`CGuiPanel` class model, vtables, lifecycle.
+- [`wyd-pane/04-widget-reference.md`](wyd-pane/04-widget-reference.md) —
+  per-widget draw/input behaviour.
+- [`wyd-pane/05-textures-and-guimat.md`](wyd-pane/05-textures-and-guimat.md) —
+  guimat aliases, `.wyt`, `.wyp`, `.wys`.
+- [`wyd-pane/06-reimplementation-notes.md`](wyd-pane/06-reimplementation-notes.md)
+  — practical porting guidance.
+- [`wyd-pane/tools/`](wyd-pane/tools/) — codec, JSON parser/emitter, schema.
+- [`wyd-pane/decoded-panels/`](wyd-pane/decoded-panels/) — all shipped panels
+  decoded to text.
+
 ## Reference
 
 - [`port-748/build-and-test.md`](port-748/build-and-test.md) — build, run,

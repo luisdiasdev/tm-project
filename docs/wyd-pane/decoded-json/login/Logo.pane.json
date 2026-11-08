@@ -1,0 +1,69 @@
+{
+  "format": "wyd.pane",
+  "source": "login\\Logo.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "1280"
+      },
+      {
+        "key": "Height",
+        "value": "1024"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "TextureAlias",
+        "value": "Tex.White"
+      },
+      {
+        "key": "RasterOp",
+        "value": "stretch"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "Image",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-344 -22 1920 1200"
+        },
+        {
+          "key": "ExternalImageFile",
+          "value": "ui/CI.png"
+        }
+      ]
+    }
+  ]
+}

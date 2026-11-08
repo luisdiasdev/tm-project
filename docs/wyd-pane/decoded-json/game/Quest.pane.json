@@ -1,0 +1,289 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\Quest.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "Center"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "30.000000"
+      },
+      {
+        "key": "Width",
+        "value": "512"
+      },
+      {
+        "key": "Height",
+        "value": "447"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "70"
+      },
+      {
+        "key": "CaptionFont",
+        "value": "2"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 255"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": "[{\"Name\":\"Open\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":0,\"fParam1\":1}]},{\"Name\":\"Close\",\"ScriptOne\":[{\"Time\":0,\"Type\":3,\"Target\":\"Panel\",\"nParam0\":100,\"fParam0\":1,\"fParam1\":0},{\"Time\":100,\"Type\":1,\"Target\":\"Panel\",\"nParam0\":0}]}]"
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 512 446"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Board.BG"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "183 5 147 15"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_81"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Close",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "207 418 97 15"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_80"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Quest0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "64 33 97 15"
+        },
+        {
+          "key": "Group",
+          "value": "tab"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_82"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Quest1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "161 33 97 15"
+        },
+        {
+          "key": "Group",
+          "value": "tab"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_83"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Quest2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "258 33 97 15"
+        },
+        {
+          "key": "Group",
+          "value": "tab"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_84"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Quest3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "355 33 96 15"
+        },
+        {
+          "key": "Group",
+          "value": "tab"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_85"
+        }
+      ]
+    },
+    {
+      "type": "ListView",
+      "name": "TitleList",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "10 53 211 357"
+        },
+        {
+          "key": "ItemSize",
+          "value": "200 17"
+        },
+        {
+          "key": "ItemPanel",
+          "value": "ui/Panel/game/QuestTitleItem.pane"
+        },
+        {
+          "key": "ScrollBarWidth",
+          "value": "12"
+        },
+        {
+          "key": "BorderWidth",
+          "value": "0"
+        },
+        {
+          "key": "Spacing",
+          "value": "0"
+        },
+        {
+          "key": "ItemSpacing",
+          "value": "0"
+        },
+        {
+          "key": "FontAlign[0]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "FontAlign[1]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "Component.Boder"
+        }
+      ]
+    },
+    {
+      "type": "ListView",
+      "name": "ContentList",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "231 53 269 357"
+        },
+        {
+          "key": "ItemSize",
+          "value": "237 17"
+        },
+        {
+          "key": "ItemPanel",
+          "value": "ui/Panel/game/QuestTitleItem.pane"
+        },
+        {
+          "key": "ScrollBarWidth",
+          "value": "12"
+        },
+        {
+          "key": "BorderWidth",
+          "value": "0"
+        },
+        {
+          "key": "Spacing",
+          "value": "0"
+        },
+        {
+          "key": "ItemSpacing",
+          "value": "0"
+        },
+        {
+          "key": "FontAlign[0]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "FontAlign[1]",
+          "value": "left vcenter"
+        }
+      ]
+    }
+  ]
+}

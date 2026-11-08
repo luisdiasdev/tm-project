@@ -1,0 +1,179 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\PartyInfo.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "110.000000"
+      },
+      {
+        "key": "Width",
+        "value": "215"
+      },
+      {
+        "key": "Height",
+        "value": "500"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "17"
+      },
+      {
+        "key": "CaptionFont",
+        "value": "2"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 120"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "700"
+      },
+      {
+        "key": "AllowFocus",
+        "value": "false"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "ListView",
+      "name": "List",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "6 18 206 478"
+        },
+        {
+          "key": "ItemSize",
+          "value": "206 21"
+        },
+        {
+          "key": "ItemPanel",
+          "value": "ui/panel/game/PartyInfoItem.pane"
+        },
+        {
+          "key": "ScrollBarWidth",
+          "value": "0"
+        },
+        {
+          "key": "BorderWidth",
+          "value": "0"
+        },
+        {
+          "key": "Spacing",
+          "value": "0"
+        },
+        {
+          "key": "ItemSpacing",
+          "value": "0"
+        },
+        {
+          "key": "FontAlign[0]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "FontAlign[1]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "8 1 56 17"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_123"
+        }
+      ]
+    },
+    {
+      "type": "Checkbox",
+      "name": "AutoJoin",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "63 1 94 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "Auto"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_255"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Exit",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "63 1 94 17"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_159"
+        }
+      ]
+    }
+  ]
+}

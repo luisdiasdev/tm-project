@@ -1,0 +1,177 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\SystemMenu.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "Center"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "Center"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "255"
+      },
+      {
+        "key": "Height",
+        "value": "177"
+      },
+      {
+        "key": "Caption",
+        "value": "설정"
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 255"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "200"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 255 176"
+        },
+        {
+          "key": "Font",
+          "value": "2"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "GPConfig.Settings"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "61 8 132 15"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_57"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "ServerSel",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 48 95 17"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_53"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "CharLogout",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 76 95 17"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_54"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Exit",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 106 95 17"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_55"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Close",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 135 95 16"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_56"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Settings",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "178 48 95 17"
+        },
+        {
+          "key": "Caption",
+          "value": "S"
+        }
+      ]
+    }
+  ]
+}

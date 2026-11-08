@@ -1,0 +1,215 @@
+{
+  "format": "wyd.pane",
+  "source": "msgbox\\msgbox_progress.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "236"
+      },
+      {
+        "key": "Height",
+        "value": "137"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "40"
+      },
+      {
+        "key": "CaptionFont",
+        "value": "2"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 225 120"
+      },
+      {
+        "key": "CaptionShadowType",
+        "value": "Outline"
+      },
+      {
+        "key": "CaptionShadowColor",
+        "value": "255 0 0 0"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "200"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "-6 -6 249 150"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.WindowBG"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "23 90 187 1"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.WindowLine"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "msg",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "15 13 205 47"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "Hud.Contents_Bg3"
+        },
+        {
+          "key": "Caption",
+          "value": "안녕하세요  메시지메시지메시지"
+        },
+        {
+          "key": "MultiLine",
+          "value": "true"
+        },
+        {
+          "key": "RichText",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "ok",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "121 96 78 29"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "NewUI.Button_N2"
+        },
+        {
+          "key": "Caption",
+          "value": "GUI_Msgbox_OK"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "cancel",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "35 96 78 29"
+        },
+        {
+          "key": "Caption",
+          "value": "GUI_Msgbox_Cancle"
+        }
+      ]
+    },
+    {
+      "type": "Gaugebar",
+      "name": "gauge",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "14 70 206 12"
+        },
+        {
+          "key": "BarRange",
+          "value": "0 100"
+        },
+        {
+          "key": "BarPos",
+          "value": "50"
+        },
+        {
+          "key": "RasterOp[0]",
+          "value": "wSplitStretch"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "NewUI.GaugeBar2_BG"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "NewUI.GaugeBar2_Bar3"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "format": "wyd.pane",
+  "source": "E:\\wyd\\test-setup\\tmproject\\docs\\wyd-pane\\samples\\notice.encrypted.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "Center"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "58.000000"
+      },
+      {
+        "key": "Width",
+        "value": "500"
+      },
+      {
+        "key": "Height",
+        "value": "25"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 225 120"
+      },
+      {
+        "key": "CaptionShadowType",
+        "value": "Outline"
+      },
+      {
+        "key": "CaptionShadowColor",
+        "value": "255 0 0 0"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "Color",
+        "value": "0 255 255 255"
+      },
+      {
+        "key": "ZOrder",
+        "value": "200"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "bg",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 500 25"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "false"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI.NoticeBG"
+        },
+        {
+          "key": "TextureColor",
+          "value": "150 255 255 255"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "msg",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 500 25"
+        },
+        {
+          "key": "MsgReceive",
+          "value": "false"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "안녕하세요  메시지메시지메시지"
+        }
+      ]
+    }
+  ]
+}

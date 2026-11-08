@@ -1,0 +1,315 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\Collection\\Collection_Base.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "Center"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "30.000000"
+      },
+      {
+        "key": "Width",
+        "value": "520"
+      },
+      {
+        "key": "Height",
+        "value": "425"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "70"
+      },
+      {
+        "key": "CaptionFont",
+        "value": "2"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 255"
+      },
+      {
+        "key": "CloseButton",
+        "value": "true"
+      },
+      {
+        "key": "CloseButtonLocation",
+        "value": "14 395 22 22"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 520 425"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "Collection.BG"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 2 520 24"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_325"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "All",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "18 38 85 20"
+        },
+        {
+          "key": "Group",
+          "value": "radio"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI_CharInfo.TabN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_CharInfo.TabD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI_CharInfo.TabD"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_322"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Incomplete",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "105 38 85 20"
+        },
+        {
+          "key": "Group",
+          "value": "radio"
+        },
+        {
+          "key": "FontOffset[0]",
+          "value": "0 4"
+        },
+        {
+          "key": "FontOffset[2]",
+          "value": "0 4"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI_CharInfo.TabN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_CharInfo.TabD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI_CharInfo.TabD"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_323"
+        }
+      ]
+    },
+    {
+      "type": "ListView",
+      "name": "ListView22",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "11 63 495 308"
+        },
+        {
+          "key": "ItemSize",
+          "value": "470 75"
+        },
+        {
+          "key": "ItemPanel",
+          "value": "ui/Panel/game/Collection/Collection_Item.pane"
+        },
+        {
+          "key": "ScrollBarWidth",
+          "value": "10"
+        },
+        {
+          "key": "Spacing",
+          "value": "0"
+        },
+        {
+          "key": "ItemSpacing",
+          "value": "0"
+        },
+        {
+          "key": "FontAlign[0]",
+          "value": "left vcenter"
+        },
+        {
+          "key": "FontAlign[1]",
+          "value": "left vcenter"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Complete",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "192 38 85 20"
+        },
+        {
+          "key": "Group",
+          "value": "radio"
+        },
+        {
+          "key": "FontOffset[0]",
+          "value": "0 4"
+        },
+        {
+          "key": "FontOffset[2]",
+          "value": "0 4"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI_CharInfo.TabN"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_CharInfo.TabD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI_CharInfo.TabD"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_324"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "SignUp",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "215 384 100 30"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI.ButtonN"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_326"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "10 58 520 3"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "Collection.Line"
+        }
+      ]
+    }
+  ]
+}

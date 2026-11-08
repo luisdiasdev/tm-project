@@ -1,0 +1,633 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\HudMyInfo.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "NONE"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "458"
+      },
+      {
+        "key": "Height",
+        "value": "123"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 120"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "900"
+      },
+      {
+        "key": "AllowFocus",
+        "value": "false"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "Symbol",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "13 15 48 55"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.Symbol2"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "BG",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 289 81"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.TopBG"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "56 83 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "76 83 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "96 83 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "116 83 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "136 83 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "156 83 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf6",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "176 83 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf7",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "196 83 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf8",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "216 83 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf9",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "236 83 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf10",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "256 83 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf11",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "276 83 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf12",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "296 83 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf13",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "316 83 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf14",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "336 83 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf15",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "356 83 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf16",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "376 83 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf17",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "396 83 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf18",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "416 83 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf19",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "436 83 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf20",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "56 103 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf21",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "76 103 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf22",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "96 103 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf23",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "116 103 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf24",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "136 103 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf25",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "156 103 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf26",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "176 103 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf27",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "196 103 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf28",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "216 103 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf29",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "236 103 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf30",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "256 103 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf31",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "276 103 19 18"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Name",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "138 7 128 11"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "Name"
+        }
+      ]
+    },
+    {
+      "type": "Gaugebar",
+      "name": "HP",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "80 30 199 16"
+        },
+        {
+          "key": "BarRange",
+          "value": "0 100"
+        },
+        {
+          "key": "BarPos",
+          "value": "50"
+        },
+        {
+          "key": "FillDrawMethod",
+          "value": "1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI_Hud.TopBarHPBG"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_Hud.TopBarHPBar"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": ""
+        },
+        {
+          "key": "TextureColor[2]",
+          "value": "0 0 0 0"
+        },
+        {
+          "key": "TextureColor.Disabled[2]",
+          "value": "0 0 0 0"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "HPValue",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "130 31 126 14"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "150 0 0 0"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "Static"
+        }
+      ]
+    },
+    {
+      "type": "Gaugebar",
+      "name": "MP",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "80 48 199 16"
+        },
+        {
+          "key": "BarRange",
+          "value": "0 100"
+        },
+        {
+          "key": "BarPos",
+          "value": "50"
+        },
+        {
+          "key": "FillDrawMethod",
+          "value": "1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI_Hud.TopBarMpBG"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_Hud.TopBarMpBar"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": ""
+        },
+        {
+          "key": "TextureColor[2]",
+          "value": "0 0 0 0"
+        },
+        {
+          "key": "TextureColor.Disabled[2]",
+          "value": "0 0 0 0"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "MPValue",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "130 50 126 13"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "150 0 0 0"
+        },
+        {
+          "key": "FontAlign",
+          "value": "right vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "Static"
+        }
+      ]
+    },
+    {
+      "type": "Gaugebar",
+      "name": "FP",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "80 66 200 9"
+        },
+        {
+          "key": "BarRange",
+          "value": "0 100"
+        },
+        {
+          "key": "BarPos",
+          "value": "50"
+        },
+        {
+          "key": "FillDrawMethod",
+          "value": "1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": "UI_Hud.TopBarFeedBG"
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI_Hud.TopBarFeedBar"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": ""
+        },
+        {
+          "key": "TextureColor[2]",
+          "value": "0 0 0 0"
+        },
+        {
+          "key": "TextureColor.Disabled[2]",
+          "value": "0 0 0 0"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Level",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "85 7 42 11"
+        },
+        {
+          "key": "FontAlign",
+          "value": "left vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "Name"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,459 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\HudYouInfo.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "Center"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "100.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "30.000000"
+      },
+      {
+        "key": "Width",
+        "value": "322"
+      },
+      {
+        "key": "Height",
+        "value": "70"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 120"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "AllowFocus",
+        "value": "false"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Iconbutton",
+      "name": "Buf31",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "288 45 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf30",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "268 45 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf29",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "248 45 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf28",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "228 45 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf27",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "208 45 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf26",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "188 45 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf25",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "168 45 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf24",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "148 45 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf23",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "128 45 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf22",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "108 45 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf21",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "88 45 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf20",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "68 45 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf0",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "55 18 18 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "75 18 18 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "95 18 18 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "115 18 18 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf4",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "135 18 18 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "155 18 18 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf6",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "175 18 18 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf7",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "195 18 18 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf8",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "215 18 18 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf9",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "235 18 18 18"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf10",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "55 36 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf11",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "75 36 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf12",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "95 36 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf13",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "115 36 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf14",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "135 36 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf15",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "155 36 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf16",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "175 36 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf17",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "195 36 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf18",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "215 36 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Iconbutton",
+      "name": "Buf19",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "235 36 18 19"
+        }
+      ]
+    },
+    {
+      "type": "Gaugebar",
+      "name": "HP",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "55 0 199 16"
+        },
+        {
+          "key": "BarRange",
+          "value": "0 100"
+        },
+        {
+          "key": "BarPos",
+          "value": "50"
+        },
+        {
+          "key": "FillDrawMethod",
+          "value": "1"
+        },
+        {
+          "key": "RasterOp",
+          "value": "stretch"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "Tex.White"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": ""
+        },
+        {
+          "key": "TextureColor[2]",
+          "value": "0 0 0 0"
+        },
+        {
+          "key": "TextureColor.Disabled[2]",
+          "value": "0 0 0 0"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Name",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "58 2 193 11"
+        },
+        {
+          "key": "FontColor",
+          "value": "255 255 255 170"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Outline"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "Name"
+        }
+      ]
+    }
+  ]
+}

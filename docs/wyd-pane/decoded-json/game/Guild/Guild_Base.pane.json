@@ -1,0 +1,253 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\Guild\\Guild_Base.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "Center"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "NONE"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "30.000000"
+      },
+      {
+        "key": "Width",
+        "value": "442"
+      },
+      {
+        "key": "Height",
+        "value": "442"
+      },
+      {
+        "key": "Titlebar",
+        "value": "true"
+      },
+      {
+        "key": "TitlebarHeight",
+        "value": "70"
+      },
+      {
+        "key": "CaptionFont",
+        "value": "2"
+      },
+      {
+        "key": "Caption",
+        "value": ""
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 255"
+      },
+      {
+        "key": "CloseButton",
+        "value": "true"
+      },
+      {
+        "key": "CloseButtonLocation",
+        "value": "14 14 22 22"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "600"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 442 442"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Board.BG"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "28 1 392 24"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_280"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Info",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "18 30 80 20"
+        },
+        {
+          "key": "Group",
+          "value": "radio"
+        },
+        {
+          "key": "FontOffset[0]",
+          "value": "0 4"
+        },
+        {
+          "key": "FontOffset[2]",
+          "value": "0 4"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI.TabBtnD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.TabBtnD"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_281"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Member",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "103 30 85 20"
+        },
+        {
+          "key": "Group",
+          "value": "radio"
+        },
+        {
+          "key": "FontOffset[0]",
+          "value": "0 4"
+        },
+        {
+          "key": "FontOffset[2]",
+          "value": "0 4"
+        },
+        {
+          "key": "ShadowType",
+          "value": "Top"
+        },
+        {
+          "key": "TextureAlias[0]",
+          "value": ""
+        },
+        {
+          "key": "TextureAlias[1]",
+          "value": "UI.TabBtnD"
+        },
+        {
+          "key": "TextureAlias[2]",
+          "value": "UI.TabBtnD"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_282"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "Align",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "12 55 418 372"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 374 442 61"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Boardbot.BG"
+        }
+      ]
+    },
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "9 53 422 375"
+        },
+        {
+          "key": "RasterOp",
+          "value": "split"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "NewUI.WindowSub"
+        }
+      ]
+    }
+  ]
+}

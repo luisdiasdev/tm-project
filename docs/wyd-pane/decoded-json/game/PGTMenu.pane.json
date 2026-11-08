@@ -1,0 +1,391 @@
+{
+  "format": "wyd.pane",
+  "source": "game\\PGTMenu.pane",
+  "comments": [],
+  "panel": {
+    "attributes": [
+      {
+        "key": "Resource",
+        "value": "ui/default.guimat"
+      },
+      {
+        "key": "AlignPanelX",
+        "value": "Center"
+      },
+      {
+        "key": "AlignPanelY",
+        "value": "Center"
+      },
+      {
+        "key": "OffsetX",
+        "value": "0.000000"
+      },
+      {
+        "key": "OffsetY",
+        "value": "0.000000"
+      },
+      {
+        "key": "Width",
+        "value": "255"
+      },
+      {
+        "key": "Height",
+        "value": "177"
+      },
+      {
+        "key": "Caption",
+        "value": "설정"
+      },
+      {
+        "key": "CaptionColor",
+        "value": "255 255 255 255"
+      },
+      {
+        "key": "TextureAlias",
+        "value": ""
+      },
+      {
+        "key": "RasterOp",
+        "value": "split"
+      },
+      {
+        "key": "ZOrder",
+        "value": "500"
+      },
+      {
+        "key": "Animation",
+        "value": ""
+      }
+    ]
+  },
+  "elements": [
+    {
+      "type": "Image",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "0 0 255 176"
+        },
+        {
+          "key": "TextureAlias",
+          "value": "UI_Hud.MainMenuBG"
+        }
+      ]
+    },
+    {
+      "type": "Static",
+      "name": "",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "61 7 132 17"
+        },
+        {
+          "key": "ShadowType",
+          "value": "BottomRight"
+        },
+        {
+          "key": "ShadowColor",
+          "value": "255 60 60 60"
+        },
+        {
+          "key": "FontAlign",
+          "value": "center vcenter"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_62"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Party",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 48 95 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "1"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_59"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Guild",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 76 95 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "1"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_60"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Trade",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 106 95 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "1"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_61"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "Challenge",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 135 95 16"
+        },
+        {
+          "key": "Tagname",
+          "value": "1"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_63"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "vs1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 48 95 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "2"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_64"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "vs5",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 76 95 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "2"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_65"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "vs10",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 106 95 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "2"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_66"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "vsall",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 135 95 16"
+        },
+        {
+          "key": "Tagname",
+          "value": "2"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_67"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "guilddrop",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 48 95 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "3"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_68"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "guildwar",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 76 95 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "3"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_69"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "guildally",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 106 95 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "3"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_70"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "guildinvite",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 135 95 16"
+        },
+        {
+          "key": "Tagname",
+          "value": "3"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_71"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "gicommon",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 48 95 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "4"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_73"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "gichief1",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 76 95 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "4"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_74"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "gichief2",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 106 95 17"
+        },
+        {
+          "key": "Tagname",
+          "value": "4"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_75"
+        }
+      ]
+    },
+    {
+      "type": "Button",
+      "name": "gichief3",
+      "attributes": [
+        {
+          "key": "Area",
+          "value": "78 135 95 16"
+        },
+        {
+          "key": "Tagname",
+          "value": "4"
+        },
+        {
+          "key": "Caption",
+          "value": "uu_76"
+        }
+      ]
+    }
+  ]
+}
