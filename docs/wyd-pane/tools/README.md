@@ -65,6 +65,27 @@ Machine-readable reference for:
 
 Use it for an editor's property grid, a validator, or code generation.
 
+## `pane_audit.py`
+
+Audit a full shipped data set and emit a manifest.
+
+```bash
+python pane_audit.py --client ../../wydglobal2026
+python pane_audit.py --client ../../wydglobal2026 --json manifest.json --strict
+```
+
+- Parses every `.pane`/`.panel`, validates it against `pane_schema.json`, and
+  reports unknown keys/types.
+- Resolves every `TextureAlias` through the guimat, checks that the texture row
+  exists and that the file is present under the client root.
+- Resolves every `uu_*` key against `Lang/EN/UIString.txt`.
+- Reports duplicate element names per panel (they make name binding ambiguous).
+- Emits a JSON manifest (`panels`, element counts, hashes, used textures,
+  aliases, fonts, issues) intended as input for a C++ binding generator.
+
+Verified against `wydglobal2026`: 64 files, 1,315 element records, 36 used
+textures (all present), 212 `uu_` keys (all present), 0 schema issues.
+
 ## Suggested extra tooling
 
 - `pane_editor` — load `to-json`, render the tree, edit properties, save back.

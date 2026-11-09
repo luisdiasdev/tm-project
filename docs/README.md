@@ -44,6 +44,19 @@ original client, and what is still missing.
 - [`wyd-pane/decoded-panels/`](wyd-pane/decoded-panels/) — all shipped panels
   decoded to text.
 
+## UI modernization plan (using the `.pane` format)
+
+- [`ui-modernization/README.md`](ui-modernization/README.md) — verdict, effort,
+  milestones, decision summary.
+- [`ui-modernization/01-scope-and-assets.md`](ui-modernization/01-scope-and-assets.md)
+  — 2026 hybrid architecture, panel inventory, asset coverage, 748 feature map.
+- [`ui-modernization/02-architecture.md`](ui-modernization/02-architecture.md)
+  — target layering, modules, binding/input/draw models, integration points.
+- [`ui-modernization/03-plan-and-effort.md`](ui-modernization/03-plan-and-effort.md)
+  — work packages, estimates, scope levers, test strategy.
+- [`ui-modernization/04-risks-and-decisions.md`](ui-modernization/04-risks-and-decisions.md)
+  — unknowns, risks, decision log, go/no-go.
+
 ## Reference
 
 - [`port-748/build-and-test.md`](port-748/build-and-test.md) — build, run,

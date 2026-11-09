@@ -8,6 +8,15 @@ It is a **newer, text-based UI system** (`CGuiPanel`, `CGuiElement`,
 748-era `UI/*Scene*.bin` control records documented in
 [`../port-748/assets-and-formats.md`](../port-748/assets-and-formats.md).
 
+The 2026 client **ships both systems and runs both**: its scene factory still
+instantiates `TMFieldScene`/`TMSelectCharScene`/`TMSelectServerScene` and loads
+`UI\FieldScene2.txt` (1,354 classic controls), `UI\SelCharScene2.txt` (107) and
+`UI\SelServerScene3.txt` (2 background panels), while pane controllers load the
+`.pane` files on top. Login/server-select is pane-only; field and char-select
+are mixed. See
+[`../ui-modernization/01-scope-and-assets.md`](../ui-modernization/01-scope-and-assets.md)
+for the evidence and the porting consequences.
+
 ## What is here
 
 | Path | Contents |
@@ -29,6 +38,7 @@ It is a **newer, text-based UI system** (`CGuiPanel`, `CGuiElement`,
 | [`tools/pane_codec.py`](tools/pane_codec.py) | standalone decode/encode/dump tool |
 | [`tools/pane_json.py`](tools/pane_json.py) | parse `.pane` into ordered JSON and rebuild it |
 | [`tools/pane_schema.json`](tools/pane_schema.json) | machine-readable key/type/enum reference |
+| [`tools/pane_audit.py`](tools/pane_audit.py) | validate a data set, resolve aliases/textures/strings, emit a manifest |
 | [`decoded-panels/`](decoded-panels/) | all 63 shipped `.pane` files plus the plaintext `.panel` |
 | [`decoded-json/`](decoded-json/) | the same panels parsed into ordered JSON |
 

@@ -68,3 +68,7 @@ SHA-256 prefix and round-trip status of all 64 shipped files.
   MSVC RTTI.
 - `.wys` was identified and its loader branch located, but its internal pixel
   layout was not fully decoded.
+- Addresses in these docs are image-relative with the PE preferred base
+  `0x400000`. Tools that rebase the image by `+0x190000` (e.g. an IDA view
+  showing `0x676042`/`0xA1BA6C`) will show the same sites at
+  `0x4E6042`/`0x88BA6C`. Always state the base when quoting an address.
