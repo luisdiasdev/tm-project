@@ -64,6 +64,17 @@ TMSelectServerScene::TMSelectServerScene()
 	m_nDemoType = 0;
 	m_bAdmit = 0;
 	m_bRemove = 0;
+	m_cLogin = 0;
+
+	m_pNServerSelect = nullptr;
+	m_pNServerGroupList = nullptr;
+	m_pNServerList = nullptr;
+	m_pLoginPanel = nullptr;
+	m_pLoginBtns[0] = nullptr;
+	m_pLoginBtns[1] = nullptr;
+	m_pLoginBtns[2] = nullptr;
+	m_pLogoPanels[0] = nullptr;
+	m_pLogoPanels[1] = nullptr;
 
 	if (Game_grade)
 		GameGradeScene();
@@ -103,11 +114,23 @@ TMSelectServerScene::~TMSelectServerScene()
 		}
 	}
 	Game_grade = 0;
+	g_nUIFadeAlpha = 255;
 }
 
 int TMSelectServerScene::InitializeScene()
 {
 	LoadRC("UI\\SelServerScene2.txt");
+
+	// The bottom copyright text is part of the scene controls but should not
+	// take part in the [DEMO] fade.
+	SText* pCopyright = static_cast<SText*>(m_pControlContainer->FindControl(769));
+	if (pCopyright != nullptr)
+	{
+		pCopyright->m_Font.m_bNoFade = 1;
+		pCopyright->m_Font2.m_bNoFade = 1;
+		pCopyright->m_Font3.m_bNoFade = 1;
+		pCopyright->m_Font4.m_bNoFade = 1;
+	}
 
 	_SYSTEMTIME time{};
 	GetLocalTime(&time);
@@ -116,6 +139,11 @@ int TMSelectServerScene::InitializeScene()
 	
 	memset(m_nDay, 0, sizeof m_nDay);
 	memset(m_pGroupPanel, 0, sizeof m_pGroupPanel);
+
+	// Start hidden when the [DEMO] fade is enabled; otherwise the first frame
+	// would render fully visible before CamAction() sets m_dwStartCamTime, and
+	// the UI would visibly blink as the fade restarts from zero.
+	g_nUIFadeAlpha = g_nPlayDemo ? 0 : 255;
 
 	InitializeUI();
 	m_pLoginPanel = static_cast<SPanel*>(m_pControlContainer->FindControl(TMP_LOGIN_BOX));
@@ -1251,71 +1279,50 @@ void TMSelectServerScene::RemoveHuman()
 
 void TMSelectServerScene::SetAlphaServer(unsigned int dwStartTime, unsigned int dwServerTime, unsigned int dwTerm, int bFade)
 {
-	int dwOff = 0;
-	int dwOn = -1;
-
-	if (bFade == 1)
-	{
-		dwOff = -1;
-		dwOn = 0;
-	}
-
+	// [DEMO] fades the whole server-select UI.  RenderDevice multiplies every
+	// 2D UI colour by g_nUIFadeAlpha, so the frame, plates, titles, list rows
+	// and buttons fade together instead of only the group-row plates.
 	if (!dwStartTime)
 	{
-		for (int i = 0; i < 2; ++i)
-			if (m_pLogoPanels[i])
-				m_pLogoPanels[i]->m_GCPanel.dwColor = dwOff;
+		// Before CamAction() starts the timer the UI must stay hidden when the
+		// [DEMO] fade is on, otherwise it flashes fully visible first.
+		g_nUIFadeAlpha = g_nPlayDemo ? 0 : 255;
+		return;
 	}
-	else if (dwServerTime - dwStartTime >= dwTerm)
+
+	// The timer can briefly report a value behind dwStartTime on the first
+	// frame.  Use a signed elapsed time; an unsigned subtraction would wrap
+	// and look like the fade had already finished (one fully-visible frame).
+	int nElapsed = static_cast<int>(dwServerTime - dwStartTime);
+	if (nElapsed < 0)
+		nElapsed = 0;
+
+	if (nElapsed >= static_cast<int>(dwTerm))
 	{
-		for (int i = 0; i < 2; ++i)
-		{
-			if (m_pLogoPanels[i])
-				m_pLogoPanels[i]->m_GCPanel.dwColor = 0x1010101;
-
-			if (m_pGroupPanel[i])
-				m_pGroupPanel[i]->m_GCPanel.dwColor = dwOn;
-		}
-
-		if (m_pLogoPanels[0])
-			m_pLogoPanels[0]->m_GCPanel.dwColor = dwOn;
-		if (m_pLogoPanels[1])
-			m_pLogoPanels[1]->m_GCPanel.dwColor = dwOn;
+		g_nUIFadeAlpha = 255;
+		return;
 	}
-	else
-	{
-		float fAlpha = (float)(dwServerTime - dwStartTime) / static_cast<float>(dwTerm);
 
-		if (bFade == 1)
-			fAlpha = 1.0f - fAlpha;
+	float fAlpha = nElapsed / static_cast<float>(dwTerm);
 
-		unsigned int dwAlpha = static_cast<unsigned int>(fAlpha * 255.0f);
-		if (!g_nPlayDemo)
-			dwAlpha = 255;
+	if (bFade == 1)
+		fAlpha = 1.0f - fAlpha;
 
-		unsigned int dwAlphaa = 2 * dwAlpha;
-		if (dwAlphaa > 255)
-			dwAlphaa = 255;
+	int nAlpha = static_cast<int>(fAlpha * 255.0f);
+	if (!g_nPlayDemo)
+		nAlpha = 255;
 
-		for (int i = 0; i < 2; ++i)
-		{
-			if (m_pGroupPanel[i])
-				m_pGroupPanel[i]->m_GCPanel.dwColor = 0x01010101;
-		}
-		for (int l = 0; l < 10; ++l)
-		{
-			if (m_pGroupPanel[l])
-				m_pGroupPanel[l]->m_GCPanel.dwColor = (dwAlphaa << 24) | 0x0FFFFFF;
-		}
+	nAlpha *= 2;
+	if (nAlpha > 255)
+		nAlpha = 255;
 
-		m_pNServerSelect->m_GCPanel.dwColor = (dwAlphaa << 24) | 0x0FFFFFF;
-		m_pLogoPanels[0]->m_GCPanel.dwColor = (dwAlphaa << 24) | 0x0FFFFFF;
-		m_pLogoPanels[1]->m_GCPanel.dwColor = (dwAlphaa << 24) | 0x0FFFFFF;
-	}
+	g_nUIFadeAlpha = nAlpha;
 }
 
 void TMSelectServerScene::SetAlphaLogin(unsigned int dwStartTime, unsigned int dwServerTime, unsigned int dwTerm, int bFade)
 {
+	g_nUIFadeAlpha = 255;
+
 	int dwOff = 0;
 	if (bFade == 1)
 		dwOff = -1;
@@ -1328,7 +1335,8 @@ void TMSelectServerScene::SetAlphaLogin(unsigned int dwStartTime, unsigned int d
 				m_pLoginBtns[i]->m_GCPanel.dwColor = dwOff;
 		}
 
-		m_pLoginPanel->m_GCPanel.dwColor = dwOff;
+		if (m_pLoginPanel)
+			m_pLoginPanel->m_GCPanel.dwColor = dwOff;
 	}
 	else if (dwServerTime - dwStartTime < dwTerm)
 	{
@@ -1343,7 +1351,8 @@ void TMSelectServerScene::SetAlphaLogin(unsigned int dwStartTime, unsigned int d
 				m_pLoginBtns[i]->m_GCPanel.dwColor = 0x1010101;
 		}
 
-		m_pLoginPanel->m_GCPanel.dwColor = ((int)(fAlpha * 255.0f) << 24) | 0x0FFFFFF;
+		if (m_pLoginPanel)
+			m_pLoginPanel->m_GCPanel.dwColor = ((int)(fAlpha * 255.0f) << 24) | 0x0FFFFFF;
 	}
 }
 
@@ -1356,6 +1365,12 @@ void TMSelectServerScene::InitializeUI()
 	SListBoxItem* pGroupItem[11];
 	m_pNServerSelect = (SPanel*)m_pControlContainer->FindControl(TMP_SELSERVER);
 	m_pNServerSelect->SetVisible(1);
+
+	// 4622 is a solid placeholder; the visible frame is built from the
+	// -391..-396 panels below.  Keep it transparent (the original also forces
+	// it to 0x01010101) so it does not flash through as a blank window when
+	// the [DEMO] fade makes the frame translucent.
+	m_pNServerSelect->m_GCPanel.dwColor = 0x01010101;
 
 	m_pNServerGroupList =
             (SListBox*)m_pControlContainer->FindControl(TML_SELECT_SERVERG);
@@ -1387,6 +1402,12 @@ void TMSelectServerScene::InitializeUI()
 		{ -396, 142.0f, 45.0f, 157.0f, 211.0f }, // NewUI_ChannelList_Blank
 	};
 
+	// The -391 backdrop already contains the first row's button plate baked in
+	// at atlas (16, 52).  Plates for the remaining rows are created below and
+	// are parented to this panel so they draw over the backdrop but under the
+	// list text/buttons (same layering as the original client).
+	SPanel* pServerListTop = nullptr;
+
 	for (int i = 0; i < _countof(s_748Frame); ++i)
 	{
 		SPanel* pFrame = new SPanel(s_748Frame[i].nTextureSet,
@@ -1400,6 +1421,8 @@ void TMSelectServerScene::InitializeUI()
 		if (pFrame)
 		{
 			pFrame->m_bSelectEnable = 0;
+			if (s_748Frame[i].nTextureSet == -391)
+				pServerListTop = pFrame;
 			m_pNServerSelect->AddChild(pFrame);
 		}
 	}
@@ -1468,6 +1491,8 @@ void TMSelectServerScene::InitializeUI()
 		if (g_pServerList[9][0][0])
 			m_nMaxGroup = 9;
 
+		int nGroupRow = 0;
+
 		for (int i = m_nMaxGroup; i >= 0; --i)
 		{
 			int count = g_nServerCountList[i] - 1;
@@ -1480,8 +1505,26 @@ void TMSelectServerScene::InitializeUI()
 				else
 					sprintf_s(szStr, g_pMessageStringTable[66], count);
 
+				// The -391 backdrop has the first row's plate baked in at
+				// (16, 52); the original creates a NewUI_ServerList_Button
+				// plate for every other row.  Rows are 26 px apart.
+				if (nGroupRow > 0 && pServerListTop)
+				{
+					SPanel* pPlate = new SPanel(-395, 17.0f,
+						52.0f + (float)nGroupRow * 26.0f, 109.0f, 22.0f,
+						0xFFFFFFFF, RENDERCTRLTYPE::RENDER_IMAGE_STRETCH);
+
+					if (pPlate)
+					{
+						pPlate->m_bSelectEnable = 0;
+						m_pGroupPanel[nGroupRow] = pPlate;
+						pServerListTop->AddChild(pPlate);
+					}
+				}
+
 				pGroupItem[i] = new SListBoxItem(szStr, 0xD0FFFFFF, 0.0f, 0.0f, 63.0f, 16.0f, 0, 0x77777777u, 1u, 0);
 				m_pNServerGroupList->AddItem(pGroupItem[i]);
+				++nGroupRow;
 			}
 		}
 	}

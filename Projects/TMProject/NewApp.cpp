@@ -50,6 +50,63 @@ static LONG WINAPI CrashDumpHandler(EXCEPTION_POINTERS* ep)
 }
 #endif
 
+// The 748 client stores its options in config.txt as "[KEY] value" lines.
+// This is the port of the config half of FUN_0055bc0a in WYD.exe: every key
+// is optional and the TMConfig defaults above match the original's.
+static void LoadConfigTxt(TMConfig& Config)
+{
+	FILE* fp = nullptr;
+	fopen_s(&fp, ConfigFile_Path, "rt");
+	if (fp == nullptr)
+		return;
+
+	char szLine[256];
+	while (fgets(szLine, sizeof szLine, fp) != nullptr)
+	{
+		char* pOpen = strchr(szLine, '[');
+		char* pClose = pOpen != nullptr ? strchr(pOpen, ']') : nullptr;
+		if (pClose == nullptr)
+			continue;
+
+		*pClose = '\0';
+		const char* szKey = pOpen + 1;
+		const int nValue = atoi(pClose + 1);
+
+		if (_stricmp(szKey, "VERSION") == 0)
+			Config.version = nValue;
+		else if (_stricmp(szKey, "RES") == 0)
+			Config.res = nValue;
+		else if (_stricmp(szKey, "ANIMATION") == 0)
+			Config.animation = nValue;
+		else if (_stricmp(szKey, "SOUND") == 0)
+			Config.sound = nValue;
+		else if (_stricmp(szKey, "MUSIC") == 0)
+			Config.music = nValue;
+		else if (_stricmp(szKey, "SERVER") == 0)
+			Config.server = nValue;
+		else if (_stricmp(szKey, "BRIGHT") == 0)
+			Config.bright = nValue;
+		else if (_stricmp(szKey, "CURSOR") == 0)
+			Config.cursor = nValue;
+		else if (_stricmp(szKey, "DEMO") == 0)
+			Config.demo = nValue;
+		else if (_stricmp(szKey, "WINDOW") == 0)
+			Config.window = nValue;
+		else if (_stricmp(szKey, "CLASSIC") == 0)
+			Config.classic = nValue;
+		else if (_stricmp(szKey, "CAMERAROTATE") == 0)
+			Config.cameraRotate = nValue;
+		else if (_stricmp(szKey, "DXT") == 0)
+			Config.dxt = nValue;
+		else if (_stricmp(szKey, "KEYTYPE") == 0)
+			Config.keyType = nValue;
+		else if (_stricmp(szKey, "CAMERAVIEW") == 0)
+			Config.cameraView = nValue;
+	}
+
+	fclose(fp);
+}
+
 NewApp::NewApp()
 {
 	m_hWnd = 0;
@@ -114,12 +171,26 @@ HRESULT NewApp::Initialize(HINSTANCE hInstance, int nFull)
 	SetUnhandledExceptionFilter(CrashDumpHandler);
 #endif
 
-	struct stRes
+	// 748 resolution table from WYD.exe FUN_0055bc0a.  [RES] is 1-based.
+	static const struct
 	{
 		unsigned int dwWidth;
 		unsigned int dwHeight;
 		unsigned int dwBit;
-	} stResList[11];
+	} s_748ResList[11] =
+	{
+		{  640,  480, 16 },
+		{  800,  600, 16 },
+		{ 1024,  768, 16 },
+		{ 1280, 1024, 16 },
+		{ 1600, 1200, 16 },
+		{  640,  480, 32 },
+		{  800,  600, 32 },
+		{ 1024,  768, 32 },
+		{ 1280, 1024, 32 },
+		{ 1600, 1200, 32 },
+		{ 3200, 2400, 32 },
+	};
 
 	m_dwColorBit = 16;
 	m_bwFullScreen = 0;
@@ -130,124 +201,51 @@ HRESULT NewApp::Initialize(HINSTANCE hInstance, int nFull)
 	m_dwColorBit = 16;
 	m_bwFullScreen = nFull;
 	BASE_InitEffectString();
-	stResList[0].dwWidth = 640;
-	stResList[0].dwHeight = 480;
-	stResList[0].dwBit = 32;
-	stResList[1].dwWidth = 800;
-	stResList[1].dwHeight = 600;
-	stResList[1].dwBit = 32;
-	stResList[2].dwWidth = 1024;
-	stResList[2].dwHeight = 768;
-	stResList[2].dwBit = 32;
-	stResList[3].dwWidth = 1280;
-	stResList[3].dwHeight = 1024;
-	stResList[3].dwBit = 32;
-	stResList[4].dwWidth = 1600;
-	stResList[4].dwHeight = 1200;
-	stResList[4].dwBit = 32;
-	stResList[5].dwWidth = 640;
-	stResList[5].dwHeight = 480;
-	stResList[5].dwBit = 32;
-	stResList[6].dwWidth = 800;
-	stResList[6].dwHeight = 600;
-	stResList[6].dwBit = 32;
-	stResList[7].dwWidth = 1024;
-	stResList[7].dwHeight = 768;
-	stResList[7].dwBit = 32;
-	stResList[8].dwWidth = 1280;
-	stResList[8].dwHeight = 1024;
-	stResList[8].dwBit = 32;
-	stResList[9].dwWidth = 1600;
-	stResList[9].dwHeight = 1200;
-	stResList[9].dwBit = 32;
-	stResList[10].dwWidth = 3200;
-	stResList[10].dwHeight = 2400;
-	stResList[10].dwBit = 32;
 
-	int nResIndex = 2;
-	int nBright = 50;
-	int nCursor = 0;
-	int nClassic = 0;
-	int nMipMap = 30;
-	int nCameraRotate = 0;
-	int nDXT = 0;
-	int nCameraView = 1;
+	TMConfig Config;
+	LoadConfigTxt(Config);
 
-	SaveUpdatAndConfig Config;
-
-	FILE* fp = nullptr;
-	fopen_s(&fp, ConfigFile_Path, "rb");
-	if (fp)
-	{
-		fread(&Config, sizeof(Config), 1, fp);
-		fclose(fp);
-		fp = nullptr;
-	}
-	else
-	{
-		Config.Version = 7000;
-		Config.Config[0] = 7;
-		Config.Config[1] = 2;
-		Config.Config[2] = 0;
-		Config.Config[3] = 0;
-		Config.Config[4] = -1;
-		Config.Config[5] = 49;
-		Config.Config[6] = 2;
-		Config.Config[7] = 1;
-		Config.Config[8] = 1;
-		Config.Config[9] = 1;
-		Config.Config[10] = 0;
-		Config.Config[11] = 0;
-		Config.Config[12] = 0;
-		Config.Config[13] = 1;
-	}
-
-	int nWindow = -1;
-	nResIndex = Config.Config[0];
-
-	TMSkinMesh::m_nSmooth = Config.Config[1];
-
-	if (Config.Config[1] >= 3)
-		TMSkinMesh::m_nSmooth = 2;
+	int nResIndex = Config.res;
+	if (nResIndex < 1)
+		nResIndex = 1;
+	else if (nResIndex > _countof(s_748ResList))
+		nResIndex = _countof(s_748ResList);
 
 	g_bHideEffect = 0;
 	g_bHideSkillBuffEffect = 0;
 	g_bHideSkillBuffEffect2 = 0;
 
-	m_nSound = Config.Config[2];
-    m_nSound = 0;
-	m_nMusic = Config.Config[3];
-    m_nMusic = 0;
-	nBright = Config.Config[5];
-	nCursor = Config.Config[6];
+	m_nSound = Config.sound;
+	m_nMusic = Config.music;
 
-	g_nPlayDemo = Config.Config[7];
-	nWindow = Config.Config[8];
-	if (Config.Config[8] >= 0)
-	{		 
-		m_bwFullScreen = nWindow == 0;
-	}
+	int nBright = Config.bright;
+	int nCursor = Config.cursor;
+	g_nPlayDemo = Config.demo;
+	m_nCameraView = Config.cameraView;
+	g_nKeyType = Config.keyType;
 
-	g_UIVer = Config.Config[9];
-	if (nClassic == 1 || nResIndex == 1 || nResIndex == 6)
-		g_UIVer = 1;
-
-	nCameraRotate = Config.Config[10] > 0;
-	nDXT = Config.Config[11] > 0;
-	g_nKeyType = Config.Config[12];
-	nCameraView = Config.Config[13];
-	m_nCameraView = Config.Config[13];
-	m_nCameraView = 1;
+	// FUN_0055bc0a also forces the new UI after reading [CLASSIC].
 	g_UIVer = 2;
-	D3DDevice::m_bDxt = nDXT == 0;
-	RenderDevice::m_bCameraRot = nCameraRotate;
-	D3DDevice::m_nMipMap = nMipMap;
+
+	if (Config.window >= 0)
+		m_bwFullScreen = Config.window == 0;
+
+	const bool bCameraRotate = Config.cameraRotate > 0;
+	const bool bDxt = Config.dxt > 0;
+	D3DDevice::m_bDxt = bDxt == 0;
+	RenderDevice::m_bCameraRot = bCameraRotate;
+	D3DDevice::m_nMipMap = 30;
 
 	if (nBright < 0)
 		nBright = 0;
 	if (nBright > 100)
 		nBright = 100;
 	RenderDevice::m_nBright = nBright;
+
+	// [ANIMATION] is clamped to 2 by the original, then the smooth-skinning
+	// level (DAT_005bab20) is unconditionally forced to 1.
+	if (Config.animation > 2)
+		Config.animation = 2;
 	TMSkinMesh::m_nSmooth = 1;
 
 	if (nCursor == 1)
@@ -264,14 +262,14 @@ HRESULT NewApp::Initialize(HINSTANCE hInstance, int nFull)
 			SetCursor(SCursor::m_hCursor1);
 	}
 
-	m_dwScreenWidth = stResList[nResIndex - 1].dwWidth;
-	m_dwScreenHeight = stResList[nResIndex - 1].dwHeight;
-	m_dwColorBit = stResList[nResIndex - 1].dwBit;
+	m_dwScreenWidth = s_748ResList[nResIndex - 1].dwWidth;
+	m_dwScreenHeight = s_748ResList[nResIndex - 1].dwHeight;
+	m_dwColorBit = s_748ResList[nResIndex - 1].dwBit;
 	if (!CheckResolution(m_dwScreenWidth, m_dwScreenHeight, m_dwColorBit))
 	{
-		m_dwScreenWidth = stResList[1].dwWidth;
-		m_dwScreenHeight = stResList[1].dwHeight;
-		m_dwColorBit = stResList[1].dwBit;
+		m_dwScreenWidth = s_748ResList[1].dwWidth;
+		m_dwScreenHeight = s_748ResList[1].dwHeight;
+		m_dwColorBit = s_748ResList[1].dwBit;
 	}
 
 	int _nFontSize = 14;
@@ -375,6 +373,7 @@ HRESULT NewApp::Initialize(HINSTANCE hInstance, int nFull)
 
 	MixHelp();
 
+	FILE* fp = nullptr;
 	fopen_s(&fp, szItemHelpFile, "rt");
 
 	if (fp == nullptr)

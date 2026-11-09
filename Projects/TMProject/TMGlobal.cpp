@@ -36,6 +36,7 @@ int g_bHideSkillBuffEffect2;
 int g_nPlayDemo = 1;
 int g_UIVer = 2;
 int g_nKeyType;
+int g_nUIFadeAlpha = 255;
 
 int g_HeightWidth = 256;
 int g_HeightHeight = 256;

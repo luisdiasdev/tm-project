@@ -22,6 +22,18 @@ constexpr unsigned int WYD_RGBA(unsigned int r, unsigned int  g, unsigned int  b
     return ((DWORD)((a | 0xFF000000) | (b & 0xFF) | ((g << 8) & 0xFF00) | ((r << 16) & 0xFF0000))); 
 }
 
+// Scales the alpha channel of a UI colour by fade (0..255).  RGB is untouched.
+inline unsigned int WYDCOLOR_SCALE_ALPHA(unsigned int color, int fade)
+{
+    if (fade >= 255)
+        return color;
+    if (fade <= 0)
+        return color & 0x00FFFFFFu;
+
+    unsigned int alpha = ((color >> 24) & 0xFFu) * (unsigned int)fade / 255u;
+    return (color & 0x00FFFFFFu) | (alpha << 24);
+}
+
 constexpr DWORD operator""_min(unsigned long long min)
 {
     return static_cast<DWORD>(min) * 60000;
@@ -67,6 +79,10 @@ extern int g_bHideSkillBuffEffect2;
 extern int g_nPlayDemo;
 extern int g_UIVer;
 extern int g_nKeyType;
+
+// Multiplier (0..255) applied to every 2D UI colour at render time.  The
+// server-select scene uses it for the [DEMO] fade; other scenes leave it 255.
+extern int g_nUIFadeAlpha;
 
 extern int g_HeightWidth;
 extern int g_HeightHeight;

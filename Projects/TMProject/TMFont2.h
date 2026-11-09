@@ -18,6 +18,7 @@ public:
     unsigned int m_dwShadeColor;
     unsigned int m_dwColor;
     int m_bMultiLine;
+    int m_bNoFade;
     float m_fSize;
     int m_nLineNumber;
     char m_szString[MAX_STRRENDER];

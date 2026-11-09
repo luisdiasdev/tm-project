@@ -174,6 +174,8 @@ int RenderDevice::Initialize(HWND hWnd)
 	if (m_pFont == nullptr)
 	{
 		m_pFont = new TMFont2();
+		if (m_pFont != nullptr)
+			m_pFont->m_bNoFade = 1; // FPS/status overlay stays opaque
 	}
 
 	if (m_pSprite == nullptr)
@@ -2830,6 +2832,8 @@ void RenderDevice::LogTextureStageState()
 
 void RenderDevice::RenderGeomRectImage(GeomControl* ipControl)
 {
+	const DWORD dwColor = WYDCOLOR_SCALE_ALPHA(ipControl->dwColor, g_nUIFadeAlpha);
+
 	if (ipControl->nTextureSetIndex >= 0)
 	{
 		ControlTextureSet* pUISet = g_pTextureManager->GetUITextureSet(ipControl->nTextureSetIndex);
@@ -3121,7 +3125,7 @@ void RenderDevice::RenderGeomRectImage(GeomControl* ipControl)
 				ipControl->nWidth,
 				ipControl->nHeight,
 				pTexture,
-				ipControl->dwColor,
+				dwColor,
 				ipControl->nWidth / (float)pUISet->pTextureCoord[ipControl->nTextureIndex].nWidth,
 				ipControl->nHeight / (float)pUISet->pTextureCoord[ipControl->nTextureIndex].nHeight);
 		}
@@ -3149,7 +3153,7 @@ void RenderDevice::RenderGeomRectImage(GeomControl* ipControl)
 					ipControl->nWidth,
 					ipControl->nHeight,
 					pTexture,
-					ipControl->dwColor,
+					dwColor,
 					1,
 					ipControl->fAngle,
 					1.0);
@@ -3240,7 +3244,7 @@ void RenderDevice::RenderGeomRectImage(GeomControl* ipControl)
 				ipControl->nPosY,
 				ipControl->nWidth,
 				ipControl->nHeight,
-				ipControl->dwColor,
+				dwColor,
 				bTrans);
 		}
 	}

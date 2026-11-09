@@ -85,6 +85,9 @@ original client, and what is still missing.
   dry-run/verified ID rewriter used for `TMFieldScene.cpp` (byte-preserving).
 - [`tools/restore_non_utf8.py`](tools/restore_non_utf8.py) — repair raw bytes
   replaced by U+FFFD in `TMFieldScene.cpp`.
+- [`tools/generate_serverlist.py`](tools/generate_serverlist.py) — write the
+  client's `serverlist.bin` and `sn.bin` (localhost by default; `--dump` to
+  inspect an existing pair).
 - [`tools/capture_and_click.ps1`](tools/capture_and_click.ps1) — launch the
   client, click a client-area point, capture the window.
 

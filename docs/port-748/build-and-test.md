@@ -28,8 +28,39 @@ Start-Process .\client_748\TMProject_d.exe -WorkingDirectory .\client_748
 ```
 
 The client reads `config.txt` and writes `WYD.log` in the working directory.
-`client_748\config.txt` currently uses `[WINDOW] 1`, `[RES] 3` (800x600) and
-`[CLASSIC] 0`. Note `NewApp.cpp` currently forces `g_UIVer = 2`.
+`client_748\config.txt` currently uses `[WINDOW] 1`, `[RES] 3`, and
+`[CLASSIC] 0`. Note `NewApp.cpp` forces `g_UIVer = 2`.
+
+## `config.txt`
+
+`config.txt` is the 748 source of truth (`LoadConfigTxt()` in `NewApp.cpp`,
+ported from `FUN_0055bc0a` in `WYD.exe`). Every key is optional; the defaults
+in `TMConfig` (`NewApp.h`) match the original. Unknown keys are ignored.
+
+| Key | Effect |
+|---|---|
+| `[VERSION]` | Parsed, ignored (same as `WYD.exe`). |
+| `[RES]` | 1-based index into the 748 resolution table (default `2`). |
+| `[ANIMATION]` | Clamped to 2; the original's animation-LOD flags are not ported, and the smooth-skinning level is then forced to 1. |
+| `[SOUND]` | `m_nSound` (0 disables sound init). Default `1`. |
+| `[MUSIC]` | `m_nMusic` (0 disables BGM init). Default `0`. |
+| `[SERVER]` | Parsed, ignored. |
+| `[BRIGHT]` | Gamma brightness, clamped to 0..100. Default `50`. |
+| `[CURSOR]` | `1` = system cursor, any other value = WYD cursors. |
+| `[DEMO]` | Non-zero enables the UI fade (see `server-select.md`). |
+| `[WINDOW]` | `-1` keeps the command-line mode; `0` = fullscreen, `1` = windowed. |
+| `[CLASSIC]` | Read, but the 748 client forces UI2 right after reading it. |
+| `[CAMERAROTATE]` | Any positive value enables camera rotation. |
+| `[DXT]` | Any positive value disables DXT (the original stores the inverse). |
+| `[KEYTYPE]` | `g_nKeyType`. |
+| `[CAMERAVIEW]` | `m_nCameraView` (stored; the port has no consumer for it yet). |
+
+The resolution table matches `WYD.exe`: entries 1..5 are 16-bit
+(640x480, 800x600, 1024x768, 1280x1024, 1600x1200) and 6..11 are 32-bit
+(the same list plus 3200x2400). If `EnumDisplaySettings` does not report the
+selected mode, the client falls back to entry 2 (800x600x16). Most modern
+drivers do not expose 16-bit modes, so `[RES] 3` still produces an 800x600
+window, exactly like the original.
 
 Test account: `admin` / `admin`. On the server list, pick the **4th** entry
 (`World SV-…`); the rows above it are "No Server." placeholders. Clicking

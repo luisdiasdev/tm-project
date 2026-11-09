@@ -78,6 +78,38 @@ is a narrow icon strip from `MainBox2.wyt`; stretching it to 143x256 produces
 the column of distorted icons seen during the first attempt. The correct set is
 `391`.
 
+## Group-row plates
+
+Each group row is drawn on top of a `NewUI_ServerList_Button` plate (set `-395`,
+109x22). The `-391` backdrop already contains the first row's plate baked in at
+atlas `(16, 52)`, so the original only creates plates for rows 1..N at
+`(17, 52 + row * 26)`. They are parented to the `-391` panel so they render over
+the backdrop but under the list text, and stored in `m_pGroupPanel[]`. The port
+previously omitted these plates, which is why only the first row appeared to be
+outlined.
+
+The `[DEMO]` fade is applied to the whole server-select UI, not per control:
+`SetAlphaServer()` sets `g_nUIFadeAlpha`, and `RenderDevice` / `TMFont2`
+multiply every 2D UI colour by it. That makes the frame panels, plates,
+titles, list rows and buttons fade together. With the shipped `[DEMO] 0` the
+alpha is forced to 255, so the UI is fully opaque from the first frame, like
+`WYD.exe`.
+
+`TMP_SELSERVER` (4622) is a solid `-2` placeholder behind the generated frame;
+it is forced to `0x01010101` so it never shows through as a blank window while
+the frame is translucent.
+
+`InitializeScene()` starts `g_nUIFadeAlpha` at 0 when `[DEMO]` is set, so the
+scene does not render one fully-visible frame before `CamAction()` starts the
+fade timer. `SetAlphaServer()` uses a signed elapsed time (clamped to 0) because
+the timer can briefly report a value behind `m_dwStartCamTime` on the first
+frame; an unsigned subtraction would wrap and take the "fade finished" branch,
+producing exactly that one-frame flash.
+
+The bottom copyright text (control `769`) and the `RenderDevice` FPS/status
+overlay opt out of the fade via `TMFont2::m_bNoFade`, so they stay readable
+while the window fades.
+
 ## Resulting screen (800x600)
 
 Panel `4622` at `(272,236)`, 256x128. The generated frame covers

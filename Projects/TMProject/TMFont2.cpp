@@ -12,6 +12,7 @@ TMFont2::TMFont2()
 	m_pTexture = nullptr;
 	m_fSize = 1.0f;
 	m_bMultiLine = 0;
+	m_bNoFade = 0;
 	memset(m_szString, 0, sizeof(m_szString));
 	memset(m_szStringArray, 0, sizeof(m_szStringArray));
 	memset(m_szStringSize, 0, sizeof(m_szStringSize));
@@ -289,6 +290,10 @@ int TMFont2::Render(int nPosX, int nPosY, int nRenderType)
 	if (m_pTexture == nullptr)
 		SetText(m_szString, m_dwColor, 0);
 
+	const int nFade = m_bNoFade ? 255 : g_nUIFadeAlpha;
+	const DWORD dwColor = WYDCOLOR_SCALE_ALPHA(m_dwColor, nFade);
+	const DWORD dwShadeColor = WYDCOLOR_SCALE_ALPHA(m_dwShadeColor, nFade);
+
 	int strLen = strlen(m_szString);
 
 	if (strLen <= 0 || strLen >= MAX_STRRENDER)
@@ -312,7 +317,7 @@ int TMFont2::Render(int nPosX, int nPosY, int nRenderType)
 					(float)(nPosX + 1),
 					((float)(nPosY + 1) + (float)(nLine * RenderDevice::m_nFontSize)),
 					m_pTexture,
-					m_dwShadeColor,
+					dwShadeColor,
 					1.0f,
 					1.0f);
 			}
@@ -325,7 +330,7 @@ int TMFont2::Render(int nPosX, int nPosY, int nRenderType)
 				(float)(nPosX),
 				(float)((float)(nPosY) + (float)(nLine * RenderDevice::m_nFontSize)),
 				m_pTexture,
-				m_dwColor,
+				dwColor,
 				1.0f,
 				1.0f);
 		}
@@ -341,7 +346,7 @@ int TMFont2::Render(int nPosX, int nPosY, int nRenderType)
 					((float)nPosX + (float)nLength) + 1.0f,
 					(float)(nPosY + 1),
 					m_pTexture,
-					m_dwShadeColor,
+					dwShadeColor,
 					m_fSize,
 					m_fSize);
 			}
@@ -354,7 +359,7 @@ int TMFont2::Render(int nPosX, int nPosY, int nRenderType)
 				(float)nPosX + (float)nLength,
 				(float)nPosY,
 				m_pTexture,
-				m_dwColor,
+				dwColor,
 				m_fSize,
 				m_fSize);
 		}

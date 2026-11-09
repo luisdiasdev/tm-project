@@ -10,10 +10,23 @@ class TimerManager;
 class ObjectManager;
 class CPSock;
 
-struct SaveUpdatAndConfig
+struct TMConfig
 {
-    short Version;
-    short Config[14];
+    int version = 10000;   // [VERSION]  (read, unused by the client)
+    int res = 2;           // [RES]      1..11 index into the 748 resolution table
+    int animation = 1;     // [ANIMATION]
+    int sound = 1;         // [SOUND]
+    int music = 0;         // [MUSIC]
+    int server = -1;       // [SERVER]   (read, unused by the client)
+    int bright = 50;       // [BRIGHT]   0..100
+    int cursor = 0;        // [CURSOR]
+    int demo = 1;          // [DEMO]
+    int window = -1;       // [WINDOW]   -1 = keep command line default
+    int classic = 0;       // [CLASSIC]  (the 748 client forces UI2 regardless)
+    int cameraRotate = 0;  // [CAMERAROTATE]
+    int dxt = 0;           // [DXT]
+    int keyType = 0;       // [KEYTYPE]
+    int cameraView = 1;    // [CAMERAVIEW]
 };
 
 class NewApp
