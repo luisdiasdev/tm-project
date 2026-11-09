@@ -63,10 +63,11 @@ recipes are therefore empty (see below).
   skill panel `5745`) and sets them visible and pickable. `FUN_004539bc` in
   `WYD.exe` toggles them on `A`/`D`. The port does not bind them yet and
   `OnKeyAuto` is still a stub.
-- **HUD layout.** The bottom-centre `Att`/`Def` labels and the HP/MP bars still
-  come from the 755 `TMP_MAIN_INFO1` layout; the chat input/back panel is
-  755-only and the minimap area only shows the server/NPC name. See sections
-  below for the remaining control bindings.
+- **HUD layout.** The top-left status panel (`TMP_MAIN_INFO2`, 5723) is now
+  visible again, and the bottom-centre strip uses the 748 `TMP_MAIN_INFO1`
+  art/backdrop with the single 748 EXP bar (1171). The minimap area still only
+  shows the server/NPC name. See sections below for the remaining control
+  bindings.
 
 ## 2. Character select
 
@@ -131,6 +132,18 @@ Already done:
   party buttons, daily quest, etc.
 - Fallback to `TMG_INV_GRID` / `TMG_CARGO_GRID` when the 755 multi-page grids
   are absent.
+- Top-left status panel restored: `TMP_MAIN_INFO2` (5723) is no longer hidden,
+  so the HP/MP orbs, name, level and HP/MP/mount labels render. The HP orb keeps
+  texture set 419 instead of the missing 755 set 538/545..547.
+- Bottom-centre stat strip: `TMP_MAIN_INFO1` (5716) is positioned correctly and
+  its background (5717) stays at `(0,0)`; Att/Def and the `current / next` EXP
+  text are filled from `UpdateScoreUI`.
+- Single 748 EXP bar (`TMP_EXP_PROGRESS`, 1171) bound in addition to the 755
+  ten-segment array (which remains null in 748).
+- Auto attack now starts disabled; the 748 `TMP_SKILL_SEL` (575) red line is no
+  longer treated as the 755 auto-skill panel.
+- Debug FPS text is off by default (`g_bDebugMsg = 0`) so it no longer covers
+  the chat tabs; re-enable it locally when profiling.
 
 Still open:
 

@@ -382,6 +382,15 @@ TMFieldScene::TMFieldScene()
 	m_pCurrentMHPText = 0;
 	m_pMaxMHPText = 0;
 	m_pInfoText = 0;
+	m_pMainInfoAtt = 0;
+	m_pMainInfoAttEnc = 0;
+	m_pMainInfoDef = 0;
+	m_pMainInfoDefEnc = 0;
+	m_pMainInfoExp = 0;
+	m_pMainInfoExpEnc = 0;
+	m_pExpProgressAll = 0;
+	for (int i = 0; i < 10; ++i)
+		m_pExpProgress[i] = 0;
 
 	memset(m_szLastAttackerName, 0, sizeof(m_szLastAttackerName));
 
@@ -743,6 +752,12 @@ int TMFieldScene::InitializeScene()
 	if (m_pAutoSkillPanel)
 		m_pAutoSkillPanel->SetVisible(0);
 
+	// In 748, TMP_SKILL_SEL (575) is only a 350x4 red selection line, not the
+	// 755 auto-skill panel. Only keep it as the auto panel when the 755 child
+	// panels exist, otherwise the auto-target key would reveal the red line.
+	if (m_pAutoSkillPanel && m_pAutoSkillPanelChild[0] == nullptr)
+		m_pAutoSkillPanel = nullptr;
+
 	SetAutoSkillNum(m_nAutoSkillNum);
 
 	memset(&g_pObjectManager->m_stTrade, 0, sizeof(g_pObjectManager->m_stTrade));
@@ -914,6 +929,15 @@ int TMFieldScene::InitializeScene()
 	m_pExpProgress[7] = (SProgressBar*)m_pControlContainer->FindControl(65662u);
 	m_pExpProgress[8] = (SProgressBar*)m_pControlContainer->FindControl(65663u);
 	m_pExpProgress[9] = (SProgressBar*)m_pControlContainer->FindControl(65664u);
+	// 748 uses a single EXP progress bar (TMP_EXP_PROGRESS, 1171) instead of
+	// the ten 755 segments above. The Att/Def/EXP texts live in TMP_MAIN_INFO1.
+	m_pExpProgressAll = (SProgressBar*)m_pControlContainer->FindControl(TMP_EXP_PROGRESS);
+	m_pMainInfoAtt = (SText*)m_pControlContainer->FindControl(TMT_ATT);
+	m_pMainInfoAttEnc = (SText*)m_pControlContainer->FindControl(TMT_ATT_ENC);
+	m_pMainInfoDef = (SText*)m_pControlContainer->FindControl(TMT_DEF);
+	m_pMainInfoDefEnc = (SText*)m_pControlContainer->FindControl(TMT_DEF_ENC);
+	m_pMainInfoExp = (SText*)m_pControlContainer->FindControl(TMT_EXP);
+	m_pMainInfoExpEnc = (SText*)m_pControlContainer->FindControl(TMT_EXP_ENC);
 	// 748 has no C.C. mode dialog (66817..66824); keep the 755 bindings so a
 	// newer scene still works, but never dereference them here.
 	m_pCCModeHpSte = (SText*)m_pControlContainer->FindControl(66823u);
@@ -972,11 +996,19 @@ int TMFieldScene::InitializeScene()
 	m_pMainInfo1 = (SPanel*)m_pControlContainer->FindControl(TMP_MAIN_INFO1);
 	m_pMainInfo1_BG = (SPanel*)m_pControlContainer->FindControl(TMP_MAIN_INFO1_BG);
 
-	m_pMainInfo1_BG->SetPos(((float)g_pDevice->m_dwScreenWidth - m_pMainInfo1_BG->m_nWidth) / 2.0f,
-		m_pMainInfo1_BG->m_nPosX);
-
-	m_pMainInfo1->SetStickLeft();
-	m_pMainInfo1->SetStickBottom();
+	// 748 TMP_MAIN_INFO1 (5716) is the bottom-centre stat strip. Its background
+	// (5717) is a child at (0,0). The 755 code moved the background instead of
+	// the panel, which detaches the art from the Att/Def/EXP fields.
+	if (m_pMainInfo1)
+	{
+		m_pMainInfo1->SetAutoSize();
+		m_pMainInfo1->SetStickBottom();
+		m_pMainInfo1->SetPos(
+			((float)g_pDevice->m_dwScreenWidth * 0.5f) - (m_pMainInfo1->m_nWidth * 0.5f) + 4.0f,
+			m_pMainInfo1->m_nPosY);
+	}
+	if (m_pMainInfo1_BG)
+		m_pMainInfo1_BG->SetPos(0.0f, 0.0f);
 
 	SPanel* pChatPanel = (SPanel*)m_pControlContainer->FindControl(TMP_CHAT_PANEL);
 	m_pChatPanel = (SPanel*)m_pControlContainer->FindControl(TMP_CHAT_PANEL);
@@ -1025,11 +1057,12 @@ int TMFieldScene::InitializeScene()
 
 	if (m_pMainInfo2)
 	{
+		// 748 keeps the top-left status panel visible: HP/MP orbs, name,
+		// level and the mount/HP labels all live under 5723.
 		m_pMainInfo2->SetAutoSize();
 		m_pMainInfo2->SetStickLeft();
 		m_pMainInfo2->SetStickTop();
 		m_pMainInfo2_Name = (SText*)m_pControlContainer->FindControl(TMT_MAIN_INFO2_NAME);
-		m_pMainInfo2->SetVisible(0);
 	}
 
 	m_pMainInfo2_Lv = (SText*)m_pControlContainer->FindControl(TMT_MAIN_INFO2_LEVEL);
@@ -2170,7 +2203,11 @@ int TMFieldScene::InitializeScene()
 
 	BASE_ReadTOTOList((char*)"UI\\TOTOGame.csv");
 
-	SetAutoTarget();
+	// 748 starts with auto attack disabled. The 755 code toggled it on here,
+	// which also exposed the 748 skill-selection line (575).
+	m_cAutoAttack = 0;
+	if (m_pAutoSkillPanel)
+		m_pAutoSkillPanel->SetVisible(0);
 
 	memset(&m_stMoveStop, 0, sizeof(m_stMoveStop));
 
@@ -13341,27 +13378,10 @@ void TMFieldScene::SetEquipGridState(int bDefault)
 void TMFieldScene::UpdateScoreUI(unsigned int unFlag)
 {
 	auto pMobData = &g_pObjectManager->m_stMobData;
-	if (g_pObjectManager->m_stMobData.Equip[13].sIndex == 769)
-	{
-		int sanc = BASE_GetItemSanc(&pMobData->Equip[13]);
-		int hpprogress = 0;
 
-		if (sanc > 6)
-			hpprogress = 545;
-		else if (sanc > 3)
-			hpprogress = 546;
-		else if (sanc > 0)
-			hpprogress = 547;
-		else
-			hpprogress = 538;
-		m_pHPBar->m_GCProgress.nTextureSetIndex = hpprogress;
-		m_pHPBar->Update();
-	}
-	else
-	{
-		m_pHPBar->m_GCProgress.nTextureSetIndex = 538;
-		m_pHPBar->Update();
-	}
+	// The 755 client swaps the HP orb to texture sets 538/545..547 for item
+	// 769. Those sets do not exist in 748 (max index 456), so the orb would
+	// render nothing. Keep the scene's NewUI_MainInfo_HPProgress set (419).
 
 	if (pMobData->CurrentScore.Hp > pMobData->CurrentScore.MaxHp)
 		pMobData->CurrentScore.Hp = pMobData->CurrentScore.MaxHp;
@@ -13376,6 +13396,9 @@ void TMFieldScene::UpdateScoreUI(unsigned int unFlag)
 	sprintf(szStr, "%d", pMobData->CurrentScore.Hp);
 	if (m_pCHP)
 		m_pCHP->SetText(szStr, 0);
+	sprintf(szStr, "%d", pMobData->CurrentScore.MaxHp);
+	if (m_pMaxHPText)
+		m_pMaxHPText->SetText(szStr, 0);
 
 	// HP on "C"
 	sprintf(szStr, "%d", pMobData->CurrentScore.Hp);
@@ -13392,6 +13415,9 @@ void TMFieldScene::UpdateScoreUI(unsigned int unFlag)
 		m_pCMP->SetText(szStr, 0);
 	if (m_pCIMP)
 		m_pCIMP->SetText(szStr, 0);
+	sprintf(szStr, "%d", pMobData->CurrentScore.MaxMp);
+	if (m_pMaxMPText)
+		m_pMaxMPText->SetText(szStr, 0);
 
 	if (m_pMainCharName)
 		m_pMainCharName->SetText(pMobData->MobName, 0);
@@ -13600,6 +13626,43 @@ void TMFieldScene::UpdateScoreUI(unsigned int unFlag)
 		{
 			nMax = g_pNextLevel[CurLevel + 1] -g_pNextLevel[CurLevel];
 			nCur = pMobData->Exp - g_pNextLevel[CurLevel];
+		}
+
+		// 748 draws the EXP as one continuous bar (TMP_EXP_PROGRESS, 1171).
+		long long nExpMaxAll = nMax;
+		long long nExpCurAll = nCur;
+		if (nExpMaxAll <= 0)
+			nExpMaxAll = 1;
+		if (nExpMaxAll > 2000000000LL)
+		{
+			nExpCurAll = (nExpCurAll * 100000LL) / nExpMaxAll;
+			nExpMaxAll = 100000LL;
+		}
+		if (m_pExpProgressAll)
+		{
+			m_pExpProgressAll->SetMaxProgress(static_cast<int>(nExpMaxAll));
+			m_pExpProgressAll->SetCurrentProgress(static_cast<int>(nExpCurAll));
+		}
+
+		if (m_pMainInfoExp)
+		{
+			// 748 UI2 uses "%s / %s" (current / next level EXP).
+			char szExpCur[32]{};
+			char szExpNext[32]{};
+			char szExpBoth[80]{};
+			sprintf(szExpCur, "%I64u", static_cast<unsigned long long>(pMobData->Exp));
+			sprintf(szExpNext, "%I64u", static_cast<unsigned long long>(g_pNextLevel[CurLevel + 1]));
+			sprintf(szExpBoth, "%s / %s", szExpCur, szExpNext);
+			m_pMainInfoExp->m_cComma = 0;
+			m_pMainInfoExp->SetText(szExpBoth, 0);
+			// TMT_EXP_ENC sits on the right half of TMT_EXP. The 748 UI2
+			// combines current/next into TMT_EXP, so leaving this field empty
+			// avoids drawing the next value twice at low levels.
+			if (m_pMainInfoExpEnc)
+			{
+				m_pMainInfoExpEnc->m_cComma = 0;
+				m_pMainInfoExpEnc->SetText((char*)"", 0);
+			}
 		}
 
 		int nLamp = static_cast<int>(nMax / 4);
@@ -13888,6 +13951,8 @@ void TMFieldScene::UpdateScoreUI(unsigned int unFlag)
 		sprintf(szStr, "%d", nDamageValue);
 		if (m_pDamage)
 			m_pDamage->SetText(szStr, 0);
+		if (m_pMainInfoAtt)
+			m_pMainInfoAtt->SetText(szStr, 0);
 
 		int cSkillIndex = g_pObjectManager->m_cShortSkill[g_pObjectManager->m_cSelectShortSkill];
 		if (cSkillIndex >= 0 && cSkillIndex < 248)
@@ -13941,9 +14006,13 @@ void TMFieldScene::UpdateScoreUI(unsigned int unFlag)
 		sprintf(szStr, "%d", nACValue);
 		if (m_pDefence)
 			m_pDefence->SetText(szStr, 0);
+		if (m_pMainInfoDef)
+			m_pMainInfoDef->SetText(szStr, 0);
 
 		int nDef = BASE_GetMobAbility(pMobData, 53) + (BASE_GetMobAbility(pMobData, 3) + pMobData->BaseScore.Ac);
 		sprintf(szStr, "%d", nDef);
+		if (m_pMainInfoDefEnc)
+			m_pMainInfoDefEnc->SetText(szStr, 0);
 		int nSpeedClass = 0;
 
 		if (m_pMyHuman->m_nClass == 26 && !m_pMyHuman->m_stLookInfo.FaceMesh)
@@ -13984,6 +14053,13 @@ void TMFieldScene::UpdateScoreUI(unsigned int unFlag)
 		sprintf(szStr, "%d.%d%%", nCriticalValue / 10, nCriticalValue % 10);
 		if (m_pCritical)
 			m_pCritical->SetText(szStr, 0);
+
+		// The 748 stat strip's second Att field is the critical chance
+		// (Critical << 1, formatted as x.y%).
+		int nMainInfoCrit = pMobData->Critical * 2;
+		sprintf(szStr, "%d.%d%%", nMainInfoCrit / 10, nMainInfoCrit % 10);
+		if (m_pMainInfoAttEnc)
+			m_pMainInfoAttEnc->SetText(szStr, 0);
 		sprintf(szStr, "%d", pMobData->Resist[2]);
 		if (m_pRegist1)
 			m_pRegist1->SetText(szStr, 0);
@@ -14825,7 +14901,8 @@ void TMFieldScene::SetAutoTarget()
 	if (pBtnAuto)
 		pBtnAuto->SetSelected(m_cAutoAttack);
 
-	m_pAutoSkillPanel->SetVisible(m_cAutoAttack);
+	if (m_pAutoSkillPanel)
+		m_pAutoSkillPanel->SetVisible(m_cAutoAttack);
 }
 
 void TMFieldScene::SetVisibleAutoTrade(int bShow, int bCargo)

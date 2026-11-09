@@ -136,6 +136,6 @@ Remove the probe before committing.
 | Login / server select | WYD II FC logo, two stone panels "Server"/"Channel", one "World 5v" row, Connect/Close. |
 | Close modal | Dark etched 256x128 frame, "Information", "Want to exit the game?", Confirm/Cancel with button art. |
 | Char select | Hall with Create/Delete/Exit; selecting a character shows the info panel (name/class/level/gold/stats) and Connect/Cancel. No password modal until a delete is confirmed. |
-| Field | Verified: Armia map renders, player name `Agate`, mobs/NPC names, click-to-move and attack. HUD: chat list bottom-left, inventory on `i`, auto-mode icons `318/319`, minimap area mostly empty, 755 `Att`/`Def` labels still misplaced at bottom centre. |
+| Field | Verified: Armia map renders, player name `Agate`, mobs/NPC names, click-to-move and attack. HUD: top-left status panel with HP/MP orbs, chat bar bottom-left, `Att`/`Def` + single EXP bar bottom-centre, skill bar and auto-mode icons `318/319` bottom-right. Inventory on `i`; minimap area mostly empty. |
 
 Compare against the original `client_748\WYD.exe` screenshots when in doubt.

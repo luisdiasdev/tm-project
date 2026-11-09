@@ -408,6 +408,12 @@ public:
 	SText* m_pCIClass;
 	SText* m_pCIClass2;
 	SText* m_pCHP;
+	SText* m_pMainInfoAtt;
+	SText* m_pMainInfoAttEnc;
+	SText* m_pMainInfoDef;
+	SText* m_pMainInfoDefEnc;
+	SText* m_pMainInfoExp;
+	SText* m_pMainInfoExpEnc;
 	SText* m_pCIHP;
 	SText* m_pCMP;
 	SText* m_pCIMP;
@@ -433,6 +439,7 @@ public:
 	SText* m_pCIFakeExp;
 	SPanel* m_pExpLamp[3];
 	SProgressBar* m_pExpProgress[10];
+	SProgressBar* m_pExpProgressAll;
 	SGridControl* m_pSkillSecGrid[24];
 	SGridControl* m_pSkillSecGrid2[12];
 	SPanel* m_pSLPanel1;
