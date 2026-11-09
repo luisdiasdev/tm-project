@@ -177,7 +177,7 @@ HRESULT NewApp::Initialize(HINSTANCE hInstance, int nFull)
 		unsigned int dwWidth;
 		unsigned int dwHeight;
 		unsigned int dwBit;
-	} s_748ResList[11] =
+	} stResList[11] =
 	{
 		{  640,  480, 16 },
 		{  800,  600, 16 },
@@ -192,7 +192,6 @@ HRESULT NewApp::Initialize(HINSTANCE hInstance, int nFull)
 		{ 3200, 2400, 32 },
 	};
 
-	m_dwColorBit = 16;
 	m_bwFullScreen = 0;
 	g_hInstance = hInstance;
 	m_dwScreenWidth = 800;
@@ -208,8 +207,8 @@ HRESULT NewApp::Initialize(HINSTANCE hInstance, int nFull)
 	int nResIndex = Config.res;
 	if (nResIndex < 1)
 		nResIndex = 1;
-	else if (nResIndex > _countof(s_748ResList))
-		nResIndex = _countof(s_748ResList);
+	else if (nResIndex > _countof(stResList))
+		nResIndex = _countof(stResList);
 
 	g_bHideEffect = 0;
 	g_bHideSkillBuffEffect = 0;
@@ -262,14 +261,14 @@ HRESULT NewApp::Initialize(HINSTANCE hInstance, int nFull)
 			SetCursor(SCursor::m_hCursor1);
 	}
 
-	m_dwScreenWidth = s_748ResList[nResIndex - 1].dwWidth;
-	m_dwScreenHeight = s_748ResList[nResIndex - 1].dwHeight;
-	m_dwColorBit = s_748ResList[nResIndex - 1].dwBit;
+	m_dwScreenWidth = stResList[nResIndex - 1].dwWidth;
+	m_dwScreenHeight = stResList[nResIndex - 1].dwHeight;
+	m_dwColorBit = stResList[nResIndex - 1].dwBit;
 	if (!CheckResolution(m_dwScreenWidth, m_dwScreenHeight, m_dwColorBit))
 	{
-		m_dwScreenWidth = s_748ResList[1].dwWidth;
-		m_dwScreenHeight = s_748ResList[1].dwHeight;
-		m_dwColorBit = s_748ResList[1].dwBit;
+		m_dwScreenWidth = stResList[1].dwWidth;
+		m_dwScreenHeight = stResList[1].dwHeight;
+		m_dwColorBit = stResList[1].dwBit;
 	}
 
 	int _nFontSize = 14;
