@@ -51,6 +51,42 @@ Restores lines whose raw bytes were replaced by U+FFFD, using
 `git show HEAD:<file>`. Run from the repo root; use `--dry-run` first.
 `TMFieldScene.cpp` should have 13 raw non-ASCII bytes on 9 lines.
 
+## `generate_serverlist.py`
+
+Writes the client's `serverlist.bin` (7040 bytes) and `sn.bin` (143 bytes) in
+the exact format `BASE_InitializeServerList()` / `InitServerName()` expect.
+
+```powershell
+cd tmproject
+
+# default: the shipped group layout, every address 127.0.0.1, written into
+# ..\client_748 (previous files are kept as *.bak)
+python docs\tools\generate_serverlist.py
+
+# a custom local setup, written elsewhere
+python docs\tools\generate_serverlist.py --out ..\client_748 `
+  --group-names "LOCAL" --servers 2 --ip 127.0.0.1
+
+# decode and inspect the pair currently in a folder
+python docs\tools\generate_serverlist.py --out ..\client_748 --dump
+```
+
+- `serverlist.bin` is 10 groups x 11 entries x 64 bytes. Entry 0 of a group is
+  the user-count URL and doubles as the "group exists" flag, so it must be
+  non-empty or the client hides the group.
+- Every 64-byte record is scrambled with the fixed table from
+  `BASE_InitializeServerList()`; **all** slots must be written, including the
+  unused ones, or they decode to garbage.
+- `sn.bin` is 11 names of 9 bytes plus 11 little-endian int32 values. The
+  int32 entry `i` selects serverlist group `value - 1`, and the displayed name
+  is `names[i + 1]` (so `names[0]` is a non-empty sentinel, "Reserved").
+- The top server row is the client's aggregate/admit group: it borrows one
+  server from each lower group. The defaults keep the shipped per-group counts
+  (reserved 2, MALECH 6, SEPHIRA 4, ALASTAR 4, NOVATO 1) for that reason.
+- `--config` accepts a JSON file with a `groups` list; the first element is the
+  hidden reserved group 0. See the script docstring for an example.
+- The tool re-encodes the shipped 748 pair byte-for-byte in a round-trip test.
+
 ## `client_drive.ps1`
 
 Launches, clicks, types, captures and runs the login sequence against the 748
