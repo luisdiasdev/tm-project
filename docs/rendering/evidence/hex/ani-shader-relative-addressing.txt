@@ -1,0 +1,10 @@
+# Second pass with the exact D3D9 rule: bit 13 (0x2000) of a source-register token =
+# 'relatively addressed via a0.x'. Only register-type 2 (constant) tokens are counted.
+# skinmesh1.bin: relative const bases = c9x2
+# skinmesh2.bin: relative const bases = c9x4
+# skinmesh3.bin: relative const bases = c9x6
+# skinmesh4.bin: relative const bases = c9x8
+# skinmesh5.bin: relative const bases = c9x2
+# skinmesh6.bin: relative const bases = c9x4
+# skinmesh7.bin: relative const bases = c9x6
+# skinmesh8.bin: relative const bases = c9x8

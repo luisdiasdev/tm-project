@@ -1,0 +1,11 @@
+; file=E:\wyd\test-setup\client_748\Shader\pseffect1.bin  bytes=112  version=0xFFFF0101 (ps_1_1)
+  tex      t0.wwxx
+  texm3x3pad t1, t0
+  texm3x3pad t2, t0
+  texm3x3vspec t3, t0
+  mul      r0, t3, v0
+  dp3      r1, t0_bx2, v1
+  mul      r0, r0, r1
+  mov      r0.w, v0.wwww
+  end
+

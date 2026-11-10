@@ -1,0 +1,28 @@
+File: E:/wyd/test-setup/client_748/UI/minimap.wyt
+Size: 49182 bytes
+
+[0x0000..0x003F]
+57 54 31 30 00 00 02 00 00 00 00 00 00 00 00 00 80 00 80 00 18 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+[0x0000..0x0003] magic         = "WT10"
+[0x0004..0x0015] TGA header (18 bytes):
+  idLength      = 0
+  colorMapType  = 0
+  imageType     = 2  (2 = uncompressed true-colour)
+  cmapFirst     = 0
+  cmapLength    = 0
+  cmapDepth     = 0
+  xOrigin       = 0
+  yOrigin       = 0
+  width         = 128
+  height        = 128
+  pixelDepth    = 24 bpp
+  descriptor    = 0x0
+
+Payload: width*height*3 = 128*128*3 = 49152 bytes at 0x0016
+4 + 18 + 49152 = 49174; file size 49182 => 8 trailing zero bytes.
+No TGA footer: the loader strips the 4-byte magic and appends "TRUEVISION-XFILE\0"
+so that D3DX accepts the stream as a TGA (TMFont2.cpp:198-236).
+
+[tail, last 30 bytes]
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00

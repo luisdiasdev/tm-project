@@ -1,0 +1,707 @@
+# Empirical proof: for EVERY .msh in client_748/mesh (657 files) the layout below parses exactly to EOF
+#   DWORD parentID; DWORD myID; DWORD fvf; DWORD sizeVertex; DWORD numInfluence; DWORD numPalette;
+#   DWORD vertexCount; DWORD indexCount;
+#   numPalette * 64 bytes  (bind / 'inverse bind' matrices)
+#   numPalette * 4  bytes  (bone name IDs, matched against .bon bone IDs)
+#   vertexCount * sizeVertex bytes
+#   indexCount * 2 bytes     (indexCount = 3 * triangleCount here, unlike .msa!)
+
+ag010101.msh       len= 37136 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=10 nvert=  722 nidx= 2328 tris=  776 expected= 37136 OK
+ag010102.msh       len= 35436 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=10 nvert=  685 nidx= 2292 tris=  764 expected= 35436 OK
+ag010103.msh       len= 35996 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette= 9 nvert=  677 nidx= 1428 tris=  476 expected= 35996 OK
+ag010104.msh       len= 29692 parent=  0 id=  1 fvf=0x1116 stride=36 infl=1 palette=10 nvert=  668 nidx= 2466 tris=  822 expected= 29692 OK
+ag010105.msh       len= 29692 parent=  0 id=  1 fvf=0x1116 stride=36 infl=1 palette=10 nvert=  668 nidx= 2466 tris=  822 expected= 29692 OK
+bd010101.msh       len= 14236 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=16 nvert=  226 nidx= 1134 tris=  378 expected= 14236 OK
+bd010102.msh       len=  5272 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=10 nvert=   82 nidx=  312 tris=  104 expected=  5272 OK
+bd010103.msh       len=  6656 parent=  0 id=  1 fvf=0x1118 stride=40 infl=2 palette= 9 nvert=  132 nidx=  366 tris=  122 expected=  6656 OK
+bd020101.msh       len=106096 parent=  0 id= 47 fvf=0x111A stride=44 infl=3 palette=24 nvert= 2182 nidx= 4212 tris= 1404 expected=106096 OK
+bd020201.msh       len= 35872 parent=  0 id= 48 fvf=0x111A stride=44 infl=3 palette=12 nvert=  727 nidx= 1518 tris=  506 expected= 35872 OK
+bd020301.msh       len=  7112 parent=  0 id=  1 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  158 nidx=  312 tris=  104 expected=  7112 OK
+bd020302.msh       len= 19684 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette= 8 nvert=  374 nidx= 1326 tris=  442 expected= 19684 OK
+bd020303.msh       len= 29384 parent=  0 id=  1 fvf=0x1118 stride=40 infl=2 palette= 9 nvert=  606 nidx= 2250 tris=  750 expected= 29384 OK
+be010101.msh       len= 24924 parent=  0 id= 35 fvf=0x111C stride=48 infl=4 palette=17 nvert=  424 nidx= 1692 tris=  564 expected= 24924 OK
+be010102.msh       len= 39552 parent=  0 id= 35 fvf=0x111C stride=48 infl=4 palette=17 nvert=  680 nidx= 2862 tris=  954 expected= 39552 OK
+be010103.msh       len= 24788 parent=  0 id= 35 fvf=0x111C stride=48 infl=4 palette=15 nvert=  424 nidx= 1692 tris=  564 expected= 24788 OK
+be010104.msh       len= 43880 parent=  0 id= 35 fvf=0x111C stride=48 infl=4 palette=15 nvert=  786 nidx= 2550 tris=  850 expected= 43880 OK
+be010201.msh       len= 15252 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=11 nvert=  256 nidx= 1092 tris=  364 expected= 15252 OK
+be010202.msh       len= 19772 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=12 nvert=  340 nidx= 1302 tris=  434 expected= 19772 OK
+be010203.msh       len= 20516 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=11 nvert=  388 nidx= 1332 tris=  444 expected= 20516 OK
+be010204.msh       len= 22576 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=12 nvert=  424 nidx= 1536 tris=  512 expected= 22576 OK
+bf010101.msh       len=   860 parent=  0 id=  1 fvf=0x1116 stride=36 infl=1 palette= 3 nvert=   16 nidx=   24 tris=    8 expected=   860 OK
+BL010101.msh       len= 52256 parent=  0 id= 69 fvf=0x1118 stride=40 infl=2 palette=13 nvert= 1117 nidx= 3330 tris= 1110 expected= 52256 OK
+BL010201.msh       len= 26104 parent=  0 id= 68 fvf=0x111C stride=48 infl=4 palette=13 nvert=  470 nidx= 1314 tris=  438 expected= 26104 OK
+BL010301.msh       len= 33308 parent=  0 id= 67 fvf=0x111C stride=48 infl=4 palette=15 nvert=  588 nidx= 2016 tris=  672 expected= 33308 OK
+BL010401.msh       len= 23460 parent=  0 id= 66 fvf=0x111C stride=48 infl=4 palette=11 nvert=  422 nidx= 1212 tris=  404 expected= 23460 OK
+bm010101.msh       len= 49604 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=24 nvert=  856 nidx= 3426 tris= 1142 expected= 49604 OK
+bm010102.msh       len= 53636 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=24 nvert=  940 nidx= 3426 tris= 1142 expected= 53636 OK
+bm010201.msh       len= 22812 parent=  0 id= 46 fvf=0x111C stride=48 infl=4 palette=11 nvert=  398 nidx= 1464 tris=  488 expected= 22812 OK
+bm010202.msh       len= 20128 parent=  0 id= 46 fvf=0x111A stride=44 infl=3 palette=11 nvert=  374 nidx= 1446 tris=  482 expected= 20128 OK
+bm020101.msh       len= 79792 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=22 nvert= 1475 nidx= 3732 tris= 1244 expected= 79792 OK
+bm020201.msh       len= 44328 parent=  0 id=  2 fvf=0x111A stride=44 infl=3 palette=14 nvert=  888 nidx= 2136 tris=  712 expected= 44328 OK
+bn010101.msh       len= 71816 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette= 8 nvert= 1480 nidx= 3060 tris= 1020 expected= 71816 OK
+bn010201.msh       len= 71816 parent=  0 id=  2 fvf=0x111A stride=44 infl=3 palette= 8 nvert= 1480 nidx= 3060 tris= 1020 expected= 71816 OK
+bn010301.msh       len= 71816 parent=  0 id=  3 fvf=0x111A stride=44 infl=3 palette= 8 nvert= 1480 nidx= 3060 tris= 1020 expected= 71816 OK
+bn010401.msh       len= 71816 parent=4294967295 id=  4 fvf=0x111A stride=44 infl=3 palette= 8 nvert= 1480 nidx= 3060 tris= 1020 expected= 71816 OK
+bo010101.msh       len= 22928 parent=  0 id= 31 fvf=0x111C stride=48 infl=4 palette=15 nvert=  380 nidx= 1818 tris=  606 expected= 22928 OK
+bo010102.msh       len= 27944 parent=  0 id= 31 fvf=0x111C stride=48 infl=4 palette=15 nvert=  474 nidx= 2070 tris=  690 expected= 27944 OK
+bo010201.msh       len= 12052 parent=  0 id= 32 fvf=0x111C stride=48 infl=4 palette=13 nvert=  193 nidx=  936 tris=  312 expected= 12052 OK
+bo010202.msh       len= 11840 parent=  0 id= 32 fvf=0x111A stride=44 infl=3 palette=13 nvert=  206 nidx=  930 tris=  310 expected= 11840 OK
+bt010101.msh       len=130824 parent=  0 id= 35 fvf=0x111C stride=48 infl=4 palette=26 nvert= 2409 nidx= 6696 tris= 2232 expected=130824 OK
+bt010102.msh       len=107112 parent=  0 id= 35 fvf=0x1116 stride=36 infl=1 palette=23 nvert= 2612 nidx= 5742 tris= 1914 expected=107112 OK
+bt010201.msh       len=   296 parent=  0 id=  2 fvf=0x0012 stride=24 infl=0 palette= 0 nvert=    9 nidx=   24 tris=    8 expected=   296 OK
+cb010101.msh       len= 35064 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=14 nvert=  618 nidx= 2208 tris=  736 expected= 35064 OK
+cb010102.msh       len= 42120 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=14 nvert=  758 nidx= 2376 tris=  792 expected= 42120 OK
+cb010103.msh       len= 45204 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=14 nvert=  799 nidx= 2934 tris=  978 expected= 45204 OK
+cb010201.msh       len= 20712 parent=  0 id= 36 fvf=0x111C stride=48 infl=4 palette=14 nvert=  358 nidx= 1272 tris=  424 expected= 20712 OK
+cb010202.msh       len= 20712 parent=  0 id= 36 fvf=0x111C stride=48 infl=4 palette=14 nvert=  358 nidx= 1272 tris=  424 expected= 20712 OK
+cb010203.msh       len= 18816 parent=  0 id= 36 fvf=0x111A stride=44 infl=3 palette=12 nvert=  344 nidx= 1416 tris=  472 expected= 18816 OK
+ch010101.msh       len= 10668 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 5 nvert=  222 nidx=  708 tris=  236 expected= 10668 OK
+ch010106.msh       len=  7356 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  144 nidx=  714 tris=  238 expected=  7356 OK
+ch010107.msh       len=  6608 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  128 nidx=  660 tris=  220 expected=  6608 OK
+ch010108.msh       len=  6608 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  128 nidx=  660 tris=  220 expected=  6608 OK
+ch010113.msh       len= 16188 parent=  0 id= 46 fvf=0x111A stride=44 infl=3 palette= 5 nvert=  318 nidx=  912 tris=  304 expected= 16188 OK
+ch010114.msh       len= 14916 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 5 nvert=  318 nidx=  912 tris=  304 expected= 14916 OK
+ch010116.msh       len=  6296 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  122 nidx=  624 tris=  208 expected=  6296 OK
+ch010117.msh       len=  7356 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  144 nidx=  714 tris=  238 expected=  7356 OK
+ch010119.msh       len=  6696 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  132 nidx=  624 tris=  208 expected=  6696 OK
+ch010121.msh       len=  9940 parent=  0 id= 46 fvf=0x111A stride=44 infl=3 palette= 5 nvert=  182 nidx=  780 tris=  260 expected=  9940 OK
+ch010128.msh       len=  6296 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  122 nidx=  624 tris=  208 expected=  6296 OK
+ch010129.msh       len=  6296 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  122 nidx=  624 tris=  208 expected=  6296 OK
+ch010130.msh       len=  7980 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  168 nidx=  546 tris=  182 expected=  7980 OK
+ch010134.msh       len= 22252 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 3 nvert=  497 nidx= 1068 tris=  356 expected= 22252 OK
+ch010135.msh       len= 11848 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  244 nidx=  960 tris=  320 expected= 11848 OK
+ch010137.msh       len= 16968 parent=  0 id= 44 fvf=0x1116 stride=36 infl=1 palette= 2 nvert=  404 nidx= 1128 tris=  376 expected= 16968 OK
+ch010138.msh       len= 16636 parent=  0 id= 42 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  370 nidx= 1608 tris=  536 expected= 16636 OK
+ch010141.msh       len=  8464 parent=  0 id= 46 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  190 nidx=  762 tris=  254 expected=  8464 OK
+ch010161.msh       len=  7264 parent=  0 id= 46 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  159 nidx=  720 tris=  240 expected=  7264 OK
+ch010164.msh       len= 29944 parent=  0 id= 46 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  748 nidx= 1458 tris=  486 expected= 29944 OK
+ch010181.msh       len=  8464 parent=  0 id= 46 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  190 nidx=  762 tris=  254 expected=  8464 OK
+ch010185.msh       len=  7264 parent=  0 id= 46 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  159 nidx=  720 tris=  240 expected=  7264 OK
+ch010201.msh       len= 21848 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette= 9 nvert=  412 nidx=  714 tris=  238 expected= 21848 OK
+ch010202.msh       len=  9472 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  170 nidx=  402 tris=  134 expected=  9472 OK
+ch010203.msh       len=  7264 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  129 nidx=  282 tris=   94 expected=  7264 OK
+ch010204.msh       len=  7944 parent=  0 id= 45 fvf=0x111A stride=44 infl=3 palette= 4 nvert=  151 nidx=  498 tris=  166 expected=  7944 OK
+ch010205.msh       len=  9306 parent=  0 id= 45 fvf=0x111A stride=44 infl=3 palette= 4 nvert=  178 nidx=  585 tris=  195 expected=  9306 OK
+ch010207.msh       len=  6284 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  108 nidx=  330 tris=  110 expected=  6284 OK
+ch010208.msh       len=  9500 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  170 nidx=  450 tris=  150 expected=  9500 OK
+ch010209.msh       len=  2240 parent=  0 id= 45 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=   41 nidx=  216 tris=   72 expected=  2240 OK
+ch010210.msh       len=  4932 parent=  0 id= 45 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  105 nidx=  282 tris=   94 expected=  4932 OK
+ch010211.msh       len=  5080 parent=  0 id= 45 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  120 nidx=  330 tris=  110 expected=  5080 OK
+ch010212.msh       len=  9072 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette= 5 nvert=  156 nidx=  606 tris=  202 expected=  9072 OK
+ch010215.msh       len= 10376 parent=  0 id= 45 fvf=0x111A stride=44 infl=3 palette= 3 nvert=  204 nidx=  582 tris=  194 expected= 10376 OK
+ch010216.msh       len=  6530 parent=  0 id= 45 fvf=0x111A stride=44 infl=3 palette= 5 nvert=  127 nidx=  285 tris=   95 expected=  6530 OK
+ch010217.msh       len= 10912 parent=  0 id= 45 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  265 nidx=  636 tris=  212 expected= 10912 OK
+ch010218.msh       len=  3784 parent=  0 id= 45 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=   88 nidx=  258 tris=   86 expected=  3784 OK
+ch010219.msh       len= 72164 parent=  0 id= 45 fvf=0x1118 stride=40 infl=2 palette= 4 nvert= 1636 nidx= 3210 tris= 1070 expected= 72164 OK
+ch010220.msh       len=  4792 parent=  0 id= 45 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  114 nidx=  294 tris=   98 expected=  4792 OK
+ch010221.msh       len= 22696 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=10 nvert=  422 nidx=  864 tris=  288 expected= 22696 OK
+ch010222.msh       len=  5108 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette= 6 nvert=   87 nidx=  246 tris=   82 expected=  5108 OK
+ch010223.msh       len=  8528 parent=  0 id= 45 fvf=0x111A stride=44 infl=3 palette= 4 nvert=  167 nidx=  438 tris=  146 expected=  8528 OK
+ch010224.msh       len=  5288 parent=  0 id= 45 fvf=0x111A stride=44 infl=3 palette= 3 nvert=   96 nidx=  414 tris=  138 expected=  5288 OK
+ch010225.msh       len=  6828 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette= 5 nvert=  116 nidx=  444 tris=  148 expected=  6828 OK
+ch010226.msh       len= 10790 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  192 nidx=  567 tris=  189 expected= 10790 OK
+ch010227.msh       len=  3844 parent=  0 id= 45 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=   88 nidx=  288 tris=   96 expected=  3844 OK
+ch010228.msh       len= 10104 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette= 5 nvert=  174 nidx=  690 tris=  230 expected= 10104 OK
+ch010229.msh       len=  5124 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette= 5 nvert=   88 nidx=  264 tris=   88 expected=  5124 OK
+ch010231.msh       len=  7670 parent=  0 id= 45 fvf=0x1118 stride=40 infl=2 palette= 3 nvert=  165 nidx=  417 tris=  139 expected=  7670 OK
+ch010232.msh       len=  6352 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  102 nidx=  474 tris=  158 expected=  6352 OK
+ch010233.msh       len=  9704 parent=  0 id= 45 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  206 nidx=  648 tris=  216 expected=  9704 OK
+ch010236.msh       len= 18860 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  398 nidx= 1386 tris=  462 expected= 18860 OK
+ch010237.msh       len=  4102 parent=  0 id= 46 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=   99 nidx=  219 tris=   73 expected=  4102 OK
+ch010238.msh       len=   214 parent=  0 id= 46 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=    3 nidx=    3 tris=    1 expected=   214 OK
+ch010239.msh       len= 78456 parent=  0 id= 45 fvf=0x111A stride=44 infl=3 palette= 4 nvert= 1630 nidx= 3216 tris= 1072 expected= 78456 OK
+ch010240.msh       len=  9376 parent=  0 id= 45 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  214 nidx=  786 tris=  262 expected=  9376 OK
+ch010241.msh       len=  9232 parent=  0 id= 45 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  217 nidx=  660 tris=  220 expected=  9232 OK
+ch010243.msh       len=  4792 parent=  0 id= 45 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  114 nidx=  294 tris=   98 expected=  4792 OK
+ch010261.msh       len= 17116 parent=  0 id= 45 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  406 nidx= 1200 tris=  400 expected= 17116 OK
+ch010263.msh       len=  9376 parent=  0 id= 45 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  214 nidx=  786 tris=  262 expected=  9376 OK
+ch010264.msh       len=   214 parent=  0 id= 45 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=    3 nidx=    3 tris=    1 expected=   214 OK
+ch010281.msh       len=  9232 parent=  0 id= 45 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  217 nidx=  660 tris=  220 expected=  9232 OK
+ch010285.msh       len= 17116 parent=  0 id= 45 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  406 nidx= 1200 tris=  400 expected= 17116 OK
+ch010301.msh       len= 15440 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=15 nvert=  260 nidx=  954 tris=  318 expected= 15440 OK
+ch010302.msh       len= 20900 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=15 nvert=  370 nidx= 1044 tris=  348 expected= 20900 OK
+ch010303.msh       len= 24656 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=15 nvert=  429 nidx= 1506 tris=  502 expected= 24656 OK
+ch010304.msh       len= 21456 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=14 nvert=  377 nidx= 1188 tris=  396 expected= 21456 OK
+ch010305.msh       len= 16448 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=15 nvert=  276 nidx= 1074 tris=  358 expected= 16448 OK
+ch010306.msh       len= 18840 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=14 nvert=  332 nidx=  960 tris=  320 expected= 18840 OK
+ch010307.msh       len= 15680 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=15 nvert=  260 nidx= 1074 tris=  358 expected= 15680 OK
+ch010308.msh       len= 16340 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=12 nvert=  282 nidx=  978 tris=  326 expected= 16340 OK
+ch010309.msh       len= 18360 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=14 nvert=  318 nidx= 1056 tris=  352 expected= 18360 OK
+ch010310.msh       len= 21468 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=14 nvert=  384 nidx= 1026 tris=  342 expected= 21468 OK
+ch010311.msh       len= 21336 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=14 nvert=  375 nidx= 1176 tris=  392 expected= 21336 OK
+ch010312.msh       len= 25050 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=14 nvert=  448 nidx= 1281 tris=  427 expected= 25050 OK
+ch010313.msh       len= 21992 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=12 nvert=  403 nidx=  900 tris=  300 expected= 21992 OK
+ch010314.msh       len= 17936 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=12 nvert=  324 nidx=  768 tris=  256 expected= 17936 OK
+ch010315.msh       len= 28704 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=14 nvert=  512 nidx= 1572 tris=  524 expected= 28704 OK
+ch010316.msh       len= 32532 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=14 nvert=  604 nidx= 1278 tris=  426 expected= 32532 OK
+ch010317.msh       len= 24852 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=14 nvert=  444 nidx= 1278 tris=  426 expected= 24852 OK
+ch010318.msh       len= 30896 parent=  0 id= 41 fvf=0x111A stride=44 infl=3 palette=12 nvert=  606 nidx= 1692 tris=  564 expected= 30896 OK
+ch010320.msh       len= 27692 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=12 nvert=  488 nidx= 1710 tris=  570 expected= 27692 OK
+ch010321.msh       len= 15176 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=12 nvert=  258 nidx=  972 tris=  324 expected= 15176 OK
+ch010322.msh       len= 16256 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=12 nvert=  282 nidx=  936 tris=  312 expected= 16256 OK
+ch010323.msh       len= 18800 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=12 nvert=  322 nidx= 1248 tris=  416 expected= 18800 OK
+ch010324.msh       len= 20180 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=12 nvert=  356 nidx= 1122 tris=  374 expected= 20180 OK
+ch010325.msh       len= 20132 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=12 nvert=  354 nidx= 1146 tris=  382 expected= 20132 OK
+ch010326.msh       len= 19784 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=12 nvert=  348 nidx= 1116 tris=  372 expected= 19784 OK
+ch010327.msh       len= 16784 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=12 nvert=  292 nidx=  960 tris=  320 expected= 16784 OK
+ch010328.msh       len= 21740 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=12 nvert=  382 nidx= 1278 tris=  426 expected= 21740 OK
+ch010330.msh       len= 27452 parent=  0 id= 41 fvf=0x1118 stride=40 infl=2 palette=10 nvert=  565 nidx= 2070 tris=  690 expected= 27452 OK
+ch010331.msh       len= 19396 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=10 nvert=  350 nidx=  942 tris=  314 expected= 19396 OK
+ch010332.msh       len= 10900 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=13 nvert=  178 nidx=  720 tris=  240 expected= 10900 OK
+ch010333.msh       len= 29264 parent=  0 id= 41 fvf=0x111A stride=44 infl=3 palette=12 nvert=  576 nidx= 1536 tris=  512 expected= 29264 OK
+ch010334.msh       len= 26712 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=11 nvert=  492 nidx= 1158 tris=  386 expected= 26712 OK
+ch010335.msh       len= 34788 parent=  0 id= 41 fvf=0x111A stride=44 infl=3 palette= 8 nvert=  678 nidx= 2190 tris=  730 expected= 34788 OK
+ch010336.msh       len= 35552 parent=  0 id= 41 fvf=0x111A stride=44 infl=3 palette=12 nvert=  696 nidx= 2040 tris=  680 expected= 35552 OK
+ch010337.msh       len= 15452 parent=  0 id= 42 fvf=0x1118 stride=40 infl=2 palette=11 nvert=  308 nidx= 1176 tris=  392 expected= 15452 OK
+ch010338.msh       len= 29898 parent=  0 id= 43 fvf=0x111C stride=48 infl=4 palette=14 nvert=  520 nidx= 1977 tris=  659 expected= 29898 OK
+ch010340.msh       len= 35288 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=12 nvert=  634 nidx= 2004 tris=  668 expected= 35288 OK
+ch010341.msh       len= 25784 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=15 nvert=  461 nidx= 1302 tris=  434 expected= 25784 OK
+ch010342.msh       len= 29016 parent=  0 id= 41 fvf=0x111A stride=44 infl=3 palette=12 nvert=  566 nidx= 1632 tris=  544 expected= 29016 OK
+ch010343.msh       len= 27692 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=12 nvert=  488 nidx= 1710 tris=  570 expected= 27692 OK
+ch010361.msh       len= 22900 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=16 nvert=  408 nidx= 1098 tris=  366 expected= 22900 OK
+ch010362.msh       len= 27348 parent=  0 id= 41 fvf=0x111A stride=44 infl=3 palette=12 nvert=  518 nidx= 1854 tris=  618 expected= 27348 OK
+ch010363.msh       len= 35288 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=12 nvert=  634 nidx= 2004 tris=  668 expected= 35288 OK
+ch010364.msh       len= 51116 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette=15 nvert=  941 nidx= 2448 tris=  816 expected= 51116 OK
+ch010401.msh       len= 13444 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  242 nidx=  660 tris=  220 expected= 13444 OK
+ch010402.msh       len= 13140 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 8 nvert=  232 nidx=  714 tris=  238 expected= 13140 OK
+ch010403.msh       len= 20428 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  384 nidx=  744 tris=  248 expected= 20428 OK
+ch010404.msh       len= 10072 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  170 nidx=  702 tris=  234 expected= 10072 OK
+ch010405.msh       len= 11920 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  205 nidx=  786 tris=  262 expected= 11920 OK
+ch010406.msh       len= 10026 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 8 nvert=  170 nidx=  645 tris=  215 expected= 10026 OK
+ch010407.msh       len= 10952 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  190 nidx=  696 tris=  232 expected= 10952 OK
+ch010408.msh       len=  9792 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 8 nvert=  168 nidx=  576 tris=  192 expected=  9792 OK
+ch010410.msh       len= 12240 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 8 nvert=  214 nidx=  696 tris=  232 expected= 12240 OK
+ch010411.msh       len= 11196 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 8 nvert=  194 nidx=  654 tris=  218 expected= 11196 OK
+ch010412.msh       len= 12660 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 8 nvert=  220 nidx=  762 tris=  254 expected= 12660 OK
+ch010413.msh       len= 10544 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  192 nidx=  444 tris=  148 expected= 10544 OK
+ch010414.msh       len= 10544 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  192 nidx=  444 tris=  148 expected= 10544 OK
+ch010415.msh       len= 12288 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 8 nvert=  210 nidx=  816 tris=  272 expected= 12288 OK
+ch010416.msh       len= 12236 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  217 nidx=  690 tris=  230 expected= 12236 OK
+ch010417.msh       len=  9828 parent=  0 id= 42 fvf=0x111A stride=44 infl=3 palette= 6 nvert=  182 nidx=  690 tris=  230 expected=  9828 OK
+ch010418.msh       len= 14356 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  255 nidx=  804 tris=  268 expected= 14356 OK
+ch010419.msh       len= 14356 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  255 nidx=  804 tris=  268 expected= 14356 OK
+ch010420.msh       len= 24108 parent=  0 id= 42 fvf=0x111A stride=44 infl=3 palette= 8 nvert=  456 nidx= 1734 tris=  578 expected= 24108 OK
+ch010421.msh       len=  9268 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  156 nidx=  636 tris=  212 expected=  9268 OK
+ch010422.msh       len=  9076 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  152 nidx=  636 tris=  212 expected=  9076 OK
+ch010423.msh       len=  9190 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  158 nidx=  549 tris=  183 expected=  9190 OK
+ch010424.msh       len= 10364 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  178 nidx=  690 tris=  230 expected= 10364 OK
+ch010425.msh       len= 12484 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  218 nidx=  756 tris=  252 expected= 12484 OK
+ch010426.msh       len=  9088 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  154 nidx=  594 tris=  198 expected=  9088 OK
+ch010427.msh       len=  9332 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  162 nidx=  558 tris=  186 expected=  9332 OK
+ch010428.msh       len=  9824 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  169 nidx=  636 tris=  212 expected=  9824 OK
+ch010429.msh       len=  9512 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  164 nidx=  600 tris=  200 expected=  9512 OK
+ch010430.msh       len= 15364 parent=  0 id= 42 fvf=0x1118 stride=40 infl=2 palette= 4 nvert=  336 nidx=  810 tris=  270 expected= 15364 OK
+ch010431.msh       len= 11832 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 5 nvert=  212 nidx=  642 tris=  214 expected= 11832 OK
+ch010432.msh       len= 11384 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  197 nidx=  744 tris=  248 expected= 11384 OK
+ch010433.msh       len= 14356 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  255 nidx=  804 tris=  268 expected= 14356 OK
+ch010434.msh       len= 12692 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  234 nidx=  510 tris=  170 expected= 12692 OK
+ch010435.msh       len=  3720 parent=  0 id= 42 fvf=0x1116 stride=36 infl=1 palette= 2 nvert=   80 nidx=  336 tris=  112 expected=  3720 OK
+ch010436.msh       len= 14180 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  254 nidx=  774 tris=  258 expected= 14180 OK
+ch010437.msh       len= 16744 parent=  0 id= 45 fvf=0x1118 stride=40 infl=2 palette= 5 nvert=  346 nidx= 1266 tris=  422 expected= 16744 OK
+ch010438.msh       len= 18590 parent=  0 id= 41 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  326 nidx= 1251 tris=  417 expected= 18590 OK
+ch010440.msh       len= 18400 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  324 nidx= 1170 tris=  390 expected= 18400 OK
+ch010441.msh       len= 14356 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  259 nidx=  708 tris=  236 expected= 14356 OK
+ch010442.msh       len= 16664 parent=  0 id= 42 fvf=0x111A stride=44 infl=3 palette= 7 nvert=  320 nidx= 1038 tris=  346 expected= 16664 OK
+ch010443.msh       len= 24108 parent=  0 id= 42 fvf=0x111A stride=44 infl=3 palette= 8 nvert=  456 nidx= 1734 tris=  578 expected= 24108 OK
+ch010461.msh       len= 14332 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  258 nidx=  720 tris=  240 expected= 14332 OK
+ch010462.msh       len= 13944 parent=  0 id= 42 fvf=0x111A stride=44 infl=3 palette= 6 nvert=  266 nidx=  900 tris=  300 expected= 13944 OK
+ch010463.msh       len= 18400 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  324 nidx= 1170 tris=  390 expected= 18400 OK
+ch010464.msh       len= 31340 parent=  0 id= 42 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  594 nidx= 1194 tris=  398 expected= 31340 OK
+ch010501.msh       len= 11332 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 8 nvert=  218 nidx=  582 tris=  194 expected= 11332 OK
+ch010502.msh       len= 18528 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 9 nvert=  380 nidx=  582 tris=  194 expected= 18528 OK
+ch010503.msh       len= 18616 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 9 nvert=  382 nidx=  582 tris=  194 expected= 18616 OK
+ch010504.msh       len=  9800 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 7 nvert=  182 nidx=  642 tris=  214 expected=  9800 OK
+ch010505.msh       len=  9512 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 7 nvert=  176 nidx=  630 tris=  210 expected=  9512 OK
+ch010506.msh       len=  7764 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  154 nidx=  582 tris=  194 expected=  7764 OK
+ch010507.msh       len=  8448 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 7 nvert=  154 nidx=  582 tris=  194 expected=  8448 OK
+ch010508.msh       len=  9576 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 7 nvert=  178 nidx=  618 tris=  206 expected=  9576 OK
+ch010510.msh       len=  7996 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  158 nidx=  618 tris=  206 expected=  7996 OK
+ch010511.msh       len=  8852 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  180 nidx=  606 tris=  202 expected=  8852 OK
+ch010512.msh       len=  9776 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 9 nvert=  180 nidx=  606 tris=  202 expected=  9776 OK
+ch010513.msh       len= 34532 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 8 nvert=  712 nidx= 1314 tris=  438 expected= 34532 OK
+ch010514.msh       len= 31548 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  712 nidx= 1314 tris=  438 expected= 31548 OK
+ch010515.msh       len=  8644 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  172 nidx=  594 tris=  198 expected=  8644 OK
+ch010516.msh       len= 13828 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  302 nidx=  654 tris=  218 expected= 13828 OK
+ch010517.msh       len=  8868 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  178 nidx=  654 tris=  218 expected=  8868 OK
+ch010518.msh       len=  9052 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  184 nidx=  558 tris=  186 expected=  9052 OK
+ch010520.msh       len= 10172 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  210 nidx=  666 tris=  222 expected= 10172 OK
+ch010521.msh       len=  7852 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  158 nidx=  546 tris=  182 expected=  7852 OK
+ch010522.msh       len=  7852 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  158 nidx=  546 tris=  182 expected=  7852 OK
+ch010523.msh       len=  8220 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  166 nidx=  570 tris=  190 expected=  8220 OK
+ch010524.msh       len=  7852 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  158 nidx=  546 tris=  182 expected=  7852 OK
+ch010525.msh       len=  8420 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  174 nidx=  510 tris=  170 expected=  8420 OK
+ch010526.msh       len=  8244 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  166 nidx=  582 tris=  194 expected=  8244 OK
+ch010527.msh       len=  8756 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  180 nidx=  558 tris=  186 expected=  8756 OK
+ch010528.msh       len=  7852 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  158 nidx=  546 tris=  182 expected=  7852 OK
+ch010530.msh       len= 19960 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  434 nidx= 1080 tris=  360 expected= 19960 OK
+ch010531.msh       len= 16424 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  348 nidx= 1032 tris=  344 expected= 16424 OK
+ch010532.msh       len= 15712 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  334 nidx=  888 tris=  296 expected= 15712 OK
+ch010533.msh       len=  9052 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  184 nidx=  558 tris=  186 expected=  9052 OK
+ch010534.msh       len= 30908 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 7 nvert=  706 nidx= 1080 tris=  360 expected= 30908 OK
+ch010535.msh       len= 12120 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 4 nvert=  254 nidx=  828 tris=  276 expected= 12120 OK
+ch010536.msh       len= 22104 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  478 nidx= 1272 tris=  424 expected= 22104 OK
+ch010537.msh       len= 20192 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  432 nidx= 1236 tris=  412 expected= 20192 OK
+ch010538.msh       len= 16068 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 4 nvert=  350 nidx=  882 tris=  294 expected= 16068 OK
+ch010540.msh       len= 13920 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 7 nvert=  296 nidx=  786 tris=  262 expected= 13920 OK
+ch010541.msh       len= 21992 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 9 nvert=  444 nidx=  906 tris=  302 expected= 21992 OK
+ch010542.msh       len= 12492 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  262 nidx=  786 tris=  262 expected= 12492 OK
+ch010543.msh       len= 10172 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  210 nidx=  666 tris=  222 expected= 10172 OK
+ch010561.msh       len= 22624 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 9 nvert=  460 nidx=  870 tris=  290 expected= 22624 OK
+ch010562.msh       len= 14068 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  298 nidx=  786 tris=  262 expected= 14068 OK
+ch010563.msh       len= 13920 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 7 nvert=  296 nidx=  786 tris=  262 expected= 13920 OK
+ch010564.msh       len= 43000 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  968 nidx= 1920 tris=  640 expected= 43000 OK
+ch010601.msh       len= 23044 parent=  0 id= 44 fvf=0x111A stride=44 infl=3 palette= 9 nvert=  472 nidx=  816 tris=  272 expected= 23044 OK
+ch010602.msh       len= 22500 parent=  0 id= 44 fvf=0x111A stride=44 infl=3 palette= 9 nvert=  458 nidx=  852 tris=  284 expected= 22500 OK
+ch010603.msh       len= 25916 parent=  0 id= 44 fvf=0x111A stride=44 infl=3 palette= 9 nvert=  534 nidx=  888 tris=  296 expected= 25916 OK
+ch010604.msh       len= 14248 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  298 nidx=  876 tris=  292 expected= 14248 OK
+ch010605.msh       len= 11320 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  226 nidx=  852 tris=  284 expected= 11320 OK
+ch010606.msh       len=  8576 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  164 nidx=  720 tris=  240 expected=  8576 OK
+ch010607.msh       len= 11712 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  234 nidx=  888 tris=  296 expected= 11712 OK
+ch010608.msh       len=  9368 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  182 nidx=  756 tris=  252 expected=  9368 OK
+ch010610.msh       len=  9536 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  182 nidx=  840 tris=  280 expected=  9536 OK
+ch010611.msh       len= 11720 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  236 nidx=  852 tris=  284 expected= 11720 OK
+ch010612.msh       len=  9784 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  190 nidx=  804 tris=  268 expected=  9784 OK
+ch010613.msh       len= 19856 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  446 nidx=  720 tris=  240 expected= 19856 OK
+ch010614.msh       len= 18096 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  402 nidx=  720 tris=  240 expected= 18096 OK
+ch010615.msh       len= 12112 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  250 nidx=  768 tris=  256 expected= 12112 OK
+ch010616.msh       len= 20860 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  466 nidx=  822 tris=  274 expected= 20860 OK
+ch010617.msh       len= 13500 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  282 nidx=  822 tris=  274 expected= 13500 OK
+ch010618.msh       len=  9768 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  192 nidx=  756 tris=  252 expected=  9768 OK
+ch010620.msh       len= 12504 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  252 nidx=  924 tris=  308 expected= 12504 OK
+ch010621.msh       len=  7328 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  140 nidx=  576 tris=  192 expected=  7328 OK
+ch010622.msh       len=  7328 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  140 nidx=  576 tris=  192 expected=  7328 OK
+ch010623.msh       len=  9224 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  182 nidx=  684 tris=  228 expected=  9224 OK
+ch010624.msh       len=  9456 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  186 nidx=  720 tris=  240 expected=  9456 OK
+ch010625.msh       len=  9560 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  188 nidx=  732 tris=  244 expected=  9560 OK
+ch010626.msh       len=  9120 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  180 nidx=  672 tris=  224 expected=  9120 OK
+ch010627.msh       len= 11592 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  234 nidx=  828 tris=  276 expected= 11592 OK
+ch010628.msh       len=  9264 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  186 nidx=  624 tris=  208 expected=  9264 OK
+ch010630.msh       len= 26984 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  588 nidx= 1512 tris=  504 expected= 26984 OK
+ch010631.msh       len= 15700 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 7 nvert=  324 nidx= 1116 tris=  372 expected= 15700 OK
+ch010632.msh       len= 12492 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette= 8 nvert=  218 nidx=  726 tris=  242 expected= 12492 OK
+ch010633.msh       len= 13504 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  280 nidx=  864 tris=  288 expected= 13504 OK
+ch010634.msh       len= 27288 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  618 nidx=  996 tris=  332 expected= 27288 OK
+ch010635.msh       len= 10840 parent=  0 id= 44 fvf=0x1116 stride=36 infl=1 palette= 4 nvert=  252 nidx=  732 tris=  244 expected= 10840 OK
+ch010636.msh       len= 14424 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  294 nidx= 1044 tris=  348 expected= 14424 OK
+ch010637.msh       len=  9720 parent=  0 id= 41 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  192 nidx=  732 tris=  244 expected=  9720 OK
+ch010638.msh       len= 14064 parent=  0 id= 45 fvf=0x1118 stride=40 infl=2 palette= 5 nvert=  300 nidx=  846 tris=  282 expected= 14064 OK
+ch010640.msh       len= 16088 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  342 nidx=  984 tris=  328 expected= 16088 OK
+ch010641.msh       len= 19124 parent=  0 id= 44 fvf=0x111A stride=44 infl=3 palette= 7 nvert=  386 nidx=  816 tris=  272 expected= 19124 OK
+ch010642.msh       len= 13200 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  270 nidx=  912 tris=  304 expected= 13200 OK
+ch010643.msh       len= 12504 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  252 nidx=  924 tris=  308 expected= 12504 OK
+ch010661.msh       len= 15340 parent=  0 id= 44 fvf=0x111A stride=44 infl=3 palette= 7 nvert=  306 nidx=  684 tris=  228 expected= 15340 OK
+ch010662.msh       len= 12328 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  250 nidx=  876 tris=  292 expected= 12328 OK
+ch010663.msh       len= 16088 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  342 nidx=  984 tris=  328 expected= 16088 OK
+ch010664.msh       len= 39080 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  870 nidx= 1920 tris=  640 expected= 39080 OK
+ch020101.msh       len=  8088 parent=  0 id= 42 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  165 nidx=  660 tris=  220 expected=  8088 OK
+ch020108.msh       len=  6088 parent=  0 id= 42 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  132 nidx=  618 tris=  206 expected=  6088 OK
+ch020109.msh       len=  6536 parent=  0 id= 42 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  128 nidx=  624 tris=  208 expected=  6536 OK
+ch020110.msh       len=  6888 parent=  0 id= 42 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  138 nidx=  600 tris=  200 expected=  6888 OK
+ch020111.msh       len=  6888 parent=  0 id= 42 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  138 nidx=  600 tris=  200 expected=  6888 OK
+ch020113.msh       len=  7980 parent=  0 id= 42 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  168 nidx=  546 tris=  182 expected=  7980 OK
+ch020114.msh       len=  6820 parent=  0 id= 42 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  136 nidx=  606 tris=  202 expected=  6820 OK
+ch020117.msh       len=  9588 parent=  0 id= 42 fvf=0x1116 stride=36 infl=1 palette= 2 nvert=  228 nidx=  606 tris=  202 expected=  9588 OK
+ch020121.msh       len=  8740 parent=  0 id= 42 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  181 nidx=  666 tris=  222 expected=  8740 OK
+ch020141.msh       len=  7828 parent=  0 id= 42 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  174 nidx=  732 tris=  244 expected=  7828 OK
+ch020161.msh       len=  8164 parent=  0 id= 42 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  182 nidx=  756 tris=  252 expected=  8164 OK
+ch020181.msh       len=  7828 parent=  0 id= 42 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  174 nidx=  732 tris=  244 expected=  7828 OK
+ch020185.msh       len=  8164 parent=  0 id= 42 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  182 nidx=  756 tris=  252 expected=  8164 OK
+ch020191.msh       len= 41840 parent=  0 id= 47 fvf=0x111C stride=48 infl=4 palette=15 nvert=  737 nidx= 2706 tris=  902 expected= 41840 OK
+ch020192.msh       len= 22350 parent=  0 id=  0 fvf=0x111A stride=44 infl=3 palette= 5 nvert=  414 nidx= 1881 tris=  627 expected= 22350 OK
+ch020193.msh       len= 19994 parent=  0 id=  0 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  410 nidx= 1713 tris=  571 expected= 19994 OK
+ch020201.msh       len= 25556 parent=  0 id= 43 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  479 nidx= 1062 tris=  354 expected= 25556 OK
+ch020202.msh       len= 14556 parent=  0 id= 43 fvf=0x111C stride=48 infl=4 palette= 8 nvert=  267 nidx=  582 tris=  194 expected= 14556 OK
+ch020203.msh       len= 14892 parent=  0 id= 43 fvf=0x111C stride=48 infl=4 palette= 8 nvert=  271 nidx=  654 tris=  218 expected= 14892 OK
+ch020204.msh       len=  8950 parent=  0 id= 43 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  161 nidx=  357 tris=  119 expected=  8950 OK
+ch020205.msh       len=  7060 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 8 nvert=  134 nidx=  294 tris=   98 expected=  7060 OK
+ch020206.msh       len=  8594 parent=  0 id= 43 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  154 nidx=  381 tris=  127 expected=  8594 OK
+ch020207.msh       len=  6100 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 3 nvert=  115 nidx=  402 tris=  134 expected=  6100 OK
+ch020208.msh       len=  8688 parent=  0 id= 43 fvf=0x111C stride=48 infl=4 palette= 5 nvert=  146 nidx=  654 tris=  218 expected=  8688 OK
+ch020209.msh       len=  8644 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 4 nvert=  168 nidx=  474 tris=  158 expected=  8644 OK
+ch020210.msh       len=  7740 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 5 nvert=  150 nidx=  384 tris=  128 expected=  7740 OK
+ch020211.msh       len= 10088 parent=  0 id= 43 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  184 nidx=  408 tris=  136 expected= 10088 OK
+ch020212.msh       len= 13152 parent=  0 id= 43 fvf=0x111C stride=48 infl=4 palette= 5 nvert=  236 nidx=  726 tris=  242 expected= 13152 OK
+ch020213.msh       len=  6480 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 3 nvert=  122 nidx=  438 tris=  146 expected=  6480 OK
+ch020214.msh       len= 12000 parent=  0 id= 43 fvf=0x111C stride=48 infl=4 palette= 5 nvert=  222 nidx=  486 tris=  162 expected= 12000 OK
+ch020217.msh       len= 22030 parent=  0 id= 47 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  564 nidx=  813 tris=  271 expected= 22030 OK
+ch020219.msh       len= 81136 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 4 nvert= 1686 nidx= 3324 tris= 1108 expected= 81136 OK
+ch020220.msh       len=  7424 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 3 nvert=  150 nidx=  594 tris=  198 expected=  7424 OK
+ch020221.msh       len= 14762 parent=  0 id= 43 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  269 nidx=  705 tris=  235 expected= 14762 OK
+ch020222.msh       len= 11316 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 5 nvert=  225 nidx=  522 tris=  174 expected= 11316 OK
+ch020223.msh       len= 11736 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 5 nvert=  231 nidx=  600 tris=  200 expected= 11736 OK
+ch020224.msh       len= 15072 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 5 nvert=  303 nidx=  684 tris=  228 expected= 15072 OK
+ch020225.msh       len= 10216 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 5 nvert=  200 nidx=  522 tris=  174 expected= 10216 OK
+ch020226.msh       len= 15736 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 4 nvert=  318 nidx=  720 tris=  240 expected= 15736 OK
+ch020227.msh       len= 15176 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 5 nvert=  332 nidx=  762 tris=  254 expected= 15176 OK
+ch020228.msh       len= 12696 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 5 nvert=  276 nidx=  642 tris=  214 expected= 12696 OK
+ch020239.msh       len= 77976 parent=  0 id= 43 fvf=0x111A stride=44 infl=3 palette= 3 nvert= 1619 nidx= 3252 tris= 1084 expected= 77976 OK
+ch020240.msh       len= 12156 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 3 nvert=  259 nidx=  780 tris=  260 expected= 12156 OK
+ch020241.msh       len= 13756 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 3 nvert=  281 nidx= 1140 tris=  380 expected= 13756 OK
+ch020243.msh       len=  7424 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 3 nvert=  150 nidx=  594 tris=  198 expected=  7424 OK
+ch020261.msh       len=  7012 parent=  0 id= 43 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  157 nidx=  630 tris=  210 expected=  7012 OK
+ch020263.msh       len= 12156 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 3 nvert=  259 nidx=  780 tris=  260 expected= 12156 OK
+ch020281.msh       len=  9424 parent=  0 id= 43 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  209 nidx=  900 tris=  300 expected=  9424 OK
+ch020285.msh       len=  7012 parent=  0 id= 43 fvf=0x1116 stride=36 infl=1 palette= 1 nvert=  157 nidx=  630 tris=  210 expected=  7012 OK
+ch020301.msh       len= 17784 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=17 nvert=  307 nidx=  930 tris=  310 expected= 17784 OK
+ch020302.msh       len= 27076 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=19 nvert=  487 nidx= 1188 tris=  396 expected= 27076 OK
+ch020303.msh       len= 26958 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=17 nvert=  484 nidx= 1269 tris=  423 expected= 26958 OK
+ch020304.msh       len= 22160 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=15 nvert=  389 nidx= 1218 tris=  406 expected= 22160 OK
+ch020305.msh       len= 19256 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=15 nvert=  330 nidx= 1182 tris=  394 expected= 19256 OK
+ch020306.msh       len= 25984 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=13 nvert=  468 nidx= 1302 tris=  434 expected= 25984 OK
+ch020307.msh       len= 27812 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=15 nvert=  496 nidx= 1476 tris=  492 expected= 27812 OK
+ch020309.msh       len= 15332 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=15 nvert=  260 nidx=  900 tris=  300 expected= 15332 OK
+ch020310.msh       len= 17900 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=15 nvert=  304 nidx= 1128 tris=  376 expected= 17900 OK
+ch020311.msh       len= 19094 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=15 nvert=  331 nidx= 1077 tris=  359 expected= 19094 OK
+ch020312.msh       len= 28544 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=15 nvert=  512 nidx= 1458 tris=  486 expected= 28544 OK
+ch020313.msh       len= 41544 parent=  0 id= 45 fvf=0x111A stride=44 infl=3 palette=10 nvert=  823 nidx= 2310 tris=  770 expected= 41544 OK
+ch020314.msh       len= 36220 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=13 nvert=  663 nidx= 1740 tris=  580 expected= 36220 OK
+ch020315.msh       len= 19684 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=13 nvert=  338 nidx= 1272 tris=  424 expected= 19684 OK
+ch020317.msh       len= 27408 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette=14 nvert=  480 nidx= 1692 tris=  564 expected= 27408 OK
+ch020319.msh       len= 56988 parent=  0 id=  0 fvf=0x111C stride=48 infl=4 palette=26 nvert= 1008 nidx= 3402 tris= 1134 expected= 56988 OK
+ch020320.msh       len= 26508 parent=  0 id= 45 fvf=0x111A stride=44 infl=3 palette=15 nvert=  500 nidx= 1728 tris=  576 expected= 26508 OK
+ch020321.msh       len= 18696 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=11 nvert=  329 nidx= 1062 tris=  354 expected= 18696 OK
+ch020322.msh       len= 28312 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=13 nvert=  515 nidx= 1338 tris=  446 expected= 28312 OK
+ch020323.msh       len= 21664 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=13 nvert=  387 nidx= 1086 tris=  362 expected= 21664 OK
+ch020324.msh       len= 28204 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=10 nvert=  523 nidx= 1194 tris=  398 expected= 28204 OK
+ch020325.msh       len= 33004 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=10 nvert=  618 nidx= 1314 tris=  438 expected= 33004 OK
+ch020326.msh       len= 30174 parent=  0 id= 45 fvf=0x111A stride=44 infl=3 palette=12 nvert=  605 nidx= 1353 tris=  451 expected= 30174 OK
+ch020327.msh       len= 40024 parent=  0 id= 45 fvf=0x111A stride=44 infl=3 palette=11 nvert=  815 nidx= 1692 tris=  564 expected= 40024 OK
+ch020328.msh       len= 39476 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=15 nvert=  734 nidx= 1596 tris=  532 expected= 39476 OK
+ch020337.msh       len= 30316 parent=  0 id= 45 fvf=0x1118 stride=40 infl=2 palette=10 nvert=  624 nidx= 2322 tris=  774 expected= 30316 OK
+ch020340.msh       len= 26484 parent=  0 id= 45 fvf=0x111A stride=44 infl=3 palette=13 nvert=  502 nidx= 1740 tris=  580 expected= 26484 OK
+ch020341.msh       len= 26248 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=16 nvert=  478 nidx= 1092 tris=  364 expected= 26248 OK
+ch020342.msh       len= 25056 parent=  0 id= 45 fvf=0x111A stride=44 infl=3 palette=13 nvert=  472 nidx= 1686 tris=  562 expected= 25056 OK
+ch020343.msh       len= 26508 parent=  0 id= 45 fvf=0x111A stride=44 infl=3 palette=15 nvert=  500 nidx= 1728 tris=  576 expected= 26508 OK
+ch020357.msh       len= 30316 parent=  0 id= 45 fvf=0x1118 stride=40 infl=2 palette=10 nvert=  624 nidx= 2322 tris=  774 expected= 30316 OK
+ch020361.msh       len= 24308 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=15 nvert=  432 nidx= 1260 tris=  420 expected= 24308 OK
+ch020362.msh       len= 27296 parent=  0 id= 45 fvf=0x111A stride=44 infl=3 palette=13 nvert=  512 nidx= 1926 tris=  642 expected= 27296 OK
+ch020363.msh       len= 26484 parent=  0 id= 45 fvf=0x111A stride=44 infl=3 palette=13 nvert=  502 nidx= 1740 tris=  580 expected= 26484 OK
+ch020391.msh       len= 56988 parent=  0 id= 46 fvf=0x111C stride=48 infl=4 palette=26 nvert= 1008 nidx= 3402 tris= 1134 expected= 56988 OK
+ch020392.msh       len= 60760 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=16 nvert= 1096 nidx= 3516 tris= 1172 expected= 60760 OK
+ch020401.msh       len= 15168 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette= 8 nvert=  268 nidx=  864 tris=  288 expected= 15168 OK
+ch020402.msh       len= 14304 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette= 8 nvert=  251 nidx=  840 tris=  280 expected= 14304 OK
+ch020403.msh       len= 19164 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette= 8 nvert=  347 nidx=  966 tris=  322 expected= 19164 OK
+ch020404.msh       len= 15096 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette= 8 nvert=  262 nidx=  972 tris=  324 expected= 15096 OK
+ch020405.msh       len= 12414 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette= 8 nvert=  213 nidx=  807 tris=  269 expected= 12414 OK
+ch020406.msh       len= 14880 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette= 8 nvert=  258 nidx=  960 tris=  320 expected= 14880 OK
+ch020407.msh       len= 13380 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette= 8 nvert=  228 nidx=  930 tris=  310 expected= 13380 OK
+ch020409.msh       len= 12668 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  218 nidx=  882 tris=  294 expected= 12668 OK
+ch020410.msh       len= 11840 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  206 nidx=  756 tris=  252 expected= 11840 OK
+ch020411.msh       len= 15764 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette= 6 nvert=  280 nidx=  942 tris=  314 expected= 15764 OK
+ch020412.msh       len= 18396 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette= 8 nvert=  328 nidx= 1038 tris=  346 expected= 18396 OK
+ch020413.msh       len= 15364 parent=  0 id= 44 fvf=0x1118 stride=40 infl=2 palette= 4 nvert=  336 nidx=  810 tris=  270 expected= 15364 OK
+ch020414.msh       len= 18816 parent=  0 id= 44 fvf=0x111A stride=44 infl=3 palette= 8 nvert=  354 nidx= 1332 tris=  444 expected= 18816 OK
+ch020417.msh       len= 19704 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette= 8 nvert=  352 nidx= 1116 tris=  372 expected= 19704 OK
+ch020420.msh       len= 17252 parent=  0 id= 44 fvf=0x111A stride=44 infl=3 palette= 7 nvert=  326 nidx= 1200 tris=  400 expected= 17252 OK
+ch020421.msh       len= 16576 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  296 nidx=  930 tris=  310 expected= 16576 OK
+ch020422.msh       len= 14116 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  251 nidx=  780 tris=  260 expected= 14116 OK
+ch020423.msh       len= 18412 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  337 nidx=  864 tris=  288 expected= 18412 OK
+ch020424.msh       len= 21280 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  390 nidx= 1026 tris=  342 expected= 21280 OK
+ch020425.msh       len= 18936 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette= 8 nvert=  343 nidx=  948 tris=  316 expected= 18936 OK
+ch020426.msh       len= 33640 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  642 nidx= 1158 tris=  386 expected= 33640 OK
+ch020427.msh       len= 29568 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette= 8 nvert=  561 nidx= 1032 tris=  344 expected= 29568 OK
+ch020428.msh       len= 22120 parent=  0 id= 44 fvf=0x111A stride=44 infl=3 palette= 7 nvert=  441 nidx= 1104 tris=  368 expected= 22120 OK
+ch020437.msh       len= 14760 parent=  0 id= 44 fvf=0x111A stride=44 infl=3 palette= 7 nvert=  274 nidx= 1098 tris=  366 expected= 14760 OK
+ch020440.msh       len= 17028 parent=  0 id= 44 fvf=0x111A stride=44 infl=3 palette= 8 nvert=  324 nidx= 1098 tris=  366 expected= 17028 OK
+ch020441.msh       len= 15124 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  267 nidx=  900 tris=  300 expected= 15124 OK
+ch020442.msh       len= 15188 parent=  0 id= 44 fvf=0x111A stride=44 infl=3 palette= 7 nvert=  284 nidx= 1092 tris=  364 expected= 15188 OK
+ch020443.msh       len= 17252 parent=  0 id= 44 fvf=0x111A stride=44 infl=3 palette= 7 nvert=  326 nidx= 1200 tris=  400 expected= 17252 OK
+ch020457.msh       len= 14760 parent=  0 id= 44 fvf=0x111A stride=44 infl=3 palette= 7 nvert=  274 nidx= 1098 tris=  366 expected= 14760 OK
+ch020461.msh       len= 17392 parent=  0 id= 44 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  310 nidx= 1002 tris=  334 expected= 17392 OK
+ch020462.msh       len= 18580 parent=  0 id= 44 fvf=0x111A stride=44 infl=3 palette= 7 nvert=  354 nidx= 1248 tris=  416 expected= 18580 OK
+ch020463.msh       len= 17028 parent=  0 id= 44 fvf=0x111A stride=44 infl=3 palette= 8 nvert=  324 nidx= 1098 tris=  366 expected= 17028 OK
+ch020501.msh       len= 11772 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  258 nidx=  438 tris=  146 expected= 11772 OK
+ch020502.msh       len= 14908 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  334 nidx=  486 tris=  162 expected= 14908 OK
+ch020503.msh       len= 14028 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  312 nidx=  486 tris=  162 expected= 14028 OK
+ch020504.msh       len=  8844 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  180 nidx=  534 tris=  178 expected=  8844 OK
+ch020505.msh       len=  7356 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  144 nidx=  510 tris=  170 expected=  7356 OK
+ch020506.msh       len=  9696 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 9 nvert=  202 nidx=  486 tris=  162 expected=  9696 OK
+ch020507.msh       len=  7852 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  154 nidx=  558 tris=  186 expected=  7852 OK
+ch020509.msh       len=  8652 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  174 nidx=  558 tris=  186 expected=  8652 OK
+ch020510.msh       len=  9696 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 9 nvert=  202 nidx=  486 tris=  162 expected=  9696 OK
+ch020511.msh       len=  8844 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  180 nidx=  534 tris=  178 expected=  8844 OK
+ch020512.msh       len=  9528 parent=  0 id= 46 fvf=0x111A stride=44 infl=3 palette= 9 nvert=  176 nidx=  570 tris=  190 expected=  9528 OK
+ch020513.msh       len= 14200 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  302 nidx=  840 tris=  280 expected= 14200 OK
+ch020514.msh       len= 11812 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  244 nidx=  738 tris=  246 expected= 11812 OK
+ch020517.msh       len= 25528 parent=  0 id= 43 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  562 nidx= 1236 tris=  412 expected= 25528 OK
+ch020520.msh       len=  9940 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  202 nidx=  642 tris=  214 expected=  9940 OK
+ch020521.msh       len= 11296 parent=  0 id= 46 fvf=0x111A stride=44 infl=3 palette= 9 nvert=  220 nidx=  486 tris=  162 expected= 11296 OK
+ch020522.msh       len= 11736 parent=  0 id= 46 fvf=0x111A stride=44 infl=3 palette= 9 nvert=  230 nidx=  486 tris=  162 expected= 11736 OK
+ch020523.msh       len= 12352 parent=  0 id= 46 fvf=0x111A stride=44 infl=3 palette= 9 nvert=  244 nidx=  486 tris=  162 expected= 12352 OK
+ch020524.msh       len= 15756 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  348 nidx=  630 tris=  210 expected= 15756 OK
+ch020525.msh       len= 13832 parent=  0 id= 46 fvf=0x111A stride=44 infl=3 palette= 9 nvert=  276 nidx=  522 tris=  174 expected= 13832 OK
+ch020526.msh       len= 17388 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  390 nidx=  606 tris=  202 expected= 17388 OK
+ch020527.msh       len= 12472 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 9 nvert=  272 nidx=  474 tris=  158 expected= 12472 OK
+ch020528.msh       len= 21032 parent=  0 id= 46 fvf=0x111A stride=44 infl=3 palette= 9 nvert=  432 nidx=  690 tris=  230 expected= 21032 OK
+ch020537.msh       len= 21416 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  444 nidx= 1608 tris=  536 expected= 21416 OK
+ch020540.msh       len= 11732 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  242 nidx=  738 tris=  246 expected= 11732 OK
+ch020541.msh       len= 19612 parent=  0 id= 46 fvf=0x111A stride=44 infl=3 palette= 8 nvert=  398 nidx=  762 tris=  254 expected= 19612 OK
+ch020542.msh       len= 10660 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  220 nidx=  642 tris=  214 expected= 10660 OK
+ch020543.msh       len=  9940 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  202 nidx=  642 tris=  214 expected=  9940 OK
+ch020557.msh       len= 21416 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  444 nidx= 1608 tris=  536 expected= 21416 OK
+ch020561.msh       len= 22048 parent=  0 id= 46 fvf=0x111A stride=44 infl=3 palette= 9 nvert=  448 nidx=  846 tris=  282 expected= 22048 OK
+ch020562.msh       len= 11084 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  230 nidx=  654 tris=  218 expected= 11084 OK
+ch020563.msh       len= 11732 parent=  0 id= 46 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  242 nidx=  738 tris=  246 expected= 11732 OK
+ch020601.msh       len= 14768 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  326 nidx=  576 tris=  192 expected= 14768 OK
+ch020602.msh       len= 17352 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  391 nidx=  636 tris=  212 expected= 17352 OK
+ch020603.msh       len= 14688 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  324 nidx=  576 tris=  192 expected= 14688 OK
+ch020604.msh       len= 11976 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  246 nidx=  780 tris=  260 expected= 11976 OK
+ch020605.msh       len=  9312 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  186 nidx=  648 tris=  216 expected=  9312 OK
+ch020606.msh       len= 12072 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  250 nidx=  816 tris=  272 expected= 12072 OK
+ch020607.msh       len=  9328 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  184 nidx=  696 tris=  232 expected=  9328 OK
+ch020608.msh       len=  8328 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  166 nidx=  624 tris=  208 expected=  8328 OK
+ch020609.msh       len=  8328 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  166 nidx=  624 tris=  208 expected=  8328 OK
+ch020610.msh       len=  9448 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  194 nidx=  624 tris=  208 expected=  9448 OK
+ch020611.msh       len= 10408 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  212 nidx=  744 tris=  248 expected= 10408 OK
+ch020612.msh       len=  9440 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  188 nidx=  672 tris=  224 expected=  9440 OK
+ch020613.msh       len= 15632 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  324 nidx= 1116 tris=  372 expected= 15632 OK
+ch020614.msh       len= 11432 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  236 nidx=  708 tris=  236 expected= 11432 OK
+ch020617.msh       len= 11552 parent=  0 id= 46 fvf=0x1116 stride=36 infl=1 palette= 6 nvert=  268 nidx=  732 tris=  244 expected= 11552 OK
+ch020620.msh       len= 10512 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  214 nidx=  756 tris=  252 expected= 10512 OK
+ch020621.msh       len=  8512 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  172 nidx=  528 tris=  176 expected=  8512 OK
+ch020622.msh       len= 13680 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  294 nidx=  672 tris=  224 expected= 13680 OK
+ch020623.msh       len= 12600 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  270 nidx=  612 tris=  204 expected= 12600 OK
+ch020624.msh       len= 14264 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  308 nidx=  684 tris=  228 expected= 14264 OK
+ch020625.msh       len= 14424 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  312 nidx=  684 tris=  228 expected= 14424 OK
+ch020626.msh       len= 17200 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  382 nidx=  672 tris=  224 expected= 17200 OK
+ch020627.msh       len= 23448 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 8 nvert=  534 nidx=  756 tris=  252 expected= 23448 OK
+ch020628.msh       len= 19616 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 7 nvert=  442 nidx=  714 tris=  238 expected= 19616 OK
+ch020637.msh       len=  7960 parent=  0 id= 47 fvf=0x1116 stride=36 infl=1 palette= 4 nvert=  176 nidx=  660 tris=  220 expected=  7960 OK
+ch020640.msh       len= 12544 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  260 nidx=  852 tris=  284 expected= 12544 OK
+ch020641.msh       len= 15024 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  334 nidx=  612 tris=  204 expected= 15024 OK
+ch020642.msh       len= 10408 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  212 nidx=  744 tris=  248 expected= 10408 OK
+ch020643.msh       len= 10512 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  214 nidx=  756 tris=  252 expected= 10512 OK
+ch020657.msh       len=  7960 parent=  0 id= 47 fvf=0x1116 stride=36 infl=1 palette= 4 nvert=  176 nidx=  660 tris=  220 expected=  7960 OK
+ch020661.msh       len= 14072 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  312 nidx=  576 tris=  192 expected= 14072 OK
+ch020662.msh       len= 12664 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  260 nidx=  912 tris=  304 expected= 12664 OK
+ch020663.msh       len= 12544 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  260 nidx=  852 tris=  284 expected= 12544 OK
+cr010101.msh       len= 51364 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=15 nvert= 1042 nidx= 2232 tris=  744 expected= 51364 OK
+cr010201.msh       len= 30924 parent=  0 id= 32 fvf=0x111C stride=48 infl=4 palette=11 nvert=  578 nidx= 1200 tris=  400 expected= 30924 OK
+dr010101.msh       len= 62460 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=23 nvert= 1164 nidx= 4824 tris= 1608 expected= 62460 OK
+dr010103.msh       len= 11292 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=12 nvert=  206 nidx=  690 tris=  230 expected= 11292 OK
+dr010105.msh       len= 14668 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=12 nvert=  268 nidx= 1014 tris=  338 expected= 14668 OK
+dr010107.msh       len= 36972 parent=  0 id=  1 fvf=0x1118 stride=40 infl=2 palette= 9 nvert=  790 nidx= 2364 tris=  788 expected= 36972 OK
+dr010108.msh       len= 11908 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=12 nvert=  220 nidx=  690 tris=  230 expected= 11908 OK
+dr010201.msh       len= 14948 parent=  0 id= 51 fvf=0x111A stride=44 infl=3 palette=12 nvert=  264 nidx= 1242 tris=  414 expected= 14948 OK
+dr010203.msh       len= 17604 parent=  0 id= 51 fvf=0x111C stride=48 infl=4 palette=14 nvert=  295 nidx= 1230 tris=  410 expected= 17604 OK
+dr010205.msh       len= 24208 parent=  0 id= 51 fvf=0x111A stride=44 infl=3 palette=17 nvert=  440 nidx= 1830 tris=  610 expected= 24208 OK
+dr010207.msh       len= 69960 parent=  0 id= 51 fvf=0x1118 stride=40 infl=2 palette=10 nvert= 1469 nidx= 5244 tris= 1748 expected= 69960 OK
+dr010208.msh       len= 16812 parent=  0 id= 51 fvf=0x111A stride=44 infl=3 palette=13 nvert=  304 nidx= 1260 tris=  420 expected= 16812 OK
+dr020101.msh       len= 47128 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=16 nvert=  798 nidx= 3852 tris= 1284 expected= 47128 OK
+dr020201.msh       len= 34084 parent=  0 id= 47 fvf=0x111A stride=44 infl=3 palette=18 nvert=  622 nidx= 2730 tris=  910 expected= 34084 OK
+dr020301.msh       len=  5824 parent=  0 id=  2 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  124 nidx=  348 tris=  116 expected=  5824 OK
+et010101.msh       len= 21504 parent=  0 id= 43 fvf=0x111C stride=48 infl=4 palette=11 nvert=  368 nidx= 1530 tris=  510 expected= 21504 OK
+et010102.msh       len= 21572 parent=  0 id= 43 fvf=0x111C stride=48 infl=4 palette=12 nvert=  368 nidx= 1530 tris=  510 expected= 21572 OK
+et010201.msh       len= 40476 parent=  0 id=  3 fvf=0x111A stride=44 infl=3 palette=14 nvert=  804 nidx= 2058 tris=  686 expected= 40476 OK
+et010202.msh       len= 43692 parent=  0 id=  3 fvf=0x111C stride=48 infl=4 palette=14 nvert=  804 nidx= 2058 tris=  686 expected= 43692 OK
+et010301.msh       len= 16540 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=10 nvert=  306 nidx= 1182 tris=  394 expected= 16540 OK
+et010302.msh       len= 19956 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette= 8 nvert=  378 nidx= 1374 tris=  458 expected= 19956 OK
+et010401.msh       len= 34108 parent=  0 id=  2 fvf=0x111C stride=48 infl=4 palette= 7 nvert=  630 nidx= 1680 tris=  560 expected= 34108 OK
+et010402.msh       len= 24104 parent=  0 id=  2 fvf=0x1118 stride=40 infl=2 palette= 6 nvert=  522 nidx= 1392 tris=  464 expected= 24104 OK
+et010501.msh       len= 13076 parent=  0 id= 44 fvf=0x111A stride=44 infl=3 palette= 9 nvert=  252 nidx=  672 tris=  224 expected= 13076 OK
+et010502.msh       len= 14036 parent=  0 id= 44 fvf=0x1116 stride=36 infl=1 palette= 9 nvert=  324 nidx=  864 tris=  288 expected= 14036 OK
+fl010101.msh       len= 33716 parent=  0 id=  1 fvf=0x1116 stride=36 infl=1 palette= 9 nvert=  843 nidx= 1362 tris=  454 expected= 33716 OK
+fn010101.msh       len=134228 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=24 nvert= 2742 nidx= 5958 tris= 1986 expected=134228 OK
+fn010102.msh       len= 53296 parent=  0 id=  1 fvf=0x1118 stride=40 infl=2 palette=14 nvert= 1141 nidx= 3336 tris= 1112 expected= 53296 OK
+fs010101.msh       len=  4088 parent=  0 id=  1 fvf=0x1118 stride=40 infl=2 palette= 4 nvert=   82 nidx=  252 tris=   84 expected=  4088 OK
+fs010102.msh       len=  2912 parent=  0 id=  1 fvf=0x1118 stride=40 infl=2 palette= 4 nvert=   55 nidx=  204 tris=   68 expected=  2912 OK
+fs010103.msh       len=  2676 parent=  0 id=  1 fvf=0x1118 stride=40 infl=2 palette= 4 nvert=   50 nidx=  186 tris=   62 expected=  2676 OK
+gb010101.msh       len= 86440 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=16 nvert= 1570 nidx= 4980 tris= 1660 expected= 86440 OK
+gb010201.msh       len= 16552 parent=  0 id= 31 fvf=0x111A stride=44 infl=3 palette= 4 nvert=  318 nidx= 1128 tris=  376 expected= 16552 OK
+gg010101.msh       len= 68080 parent=  0 id= 44 fvf=0x111A stride=44 infl=3 palette=14 nvert= 1364 nidx= 3540 tris= 1180 expected= 68080 OK
+gg010102.msh       len= 11608 parent=  0 id= 44 fvf=0x111A stride=44 infl=3 palette=16 nvert=  216 nidx=  492 tris=  164 expected= 11608 OK
+gg010201.msh       len= 54252 parent=  0 id= 45 fvf=0x111A stride=44 infl=3 palette=18 nvert= 1046 nidx= 3486 tris= 1162 expected= 54252 OK
+gg010202.msh       len= 13580 parent=  0 id= 45 fvf=0x111C stride=48 infl=4 palette=18 nvert=  236 nidx=  498 tris=  166 expected= 13580 OK
+gr010101.msh       len= 64404 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=23 nvert= 1308 nidx= 2628 tris=  876 expected= 64404 OK
+gr010102.msh       len= 64404 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=23 nvert= 1308 nidx= 2628 tris=  876 expected= 64404 OK
+gr010103.msh       len= 38516 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=21 nvert=  664 nidx= 2592 tris=  864 expected= 38516 OK
+gr010104.msh       len= 38516 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=21 nvert=  664 nidx= 2592 tris=  864 expected= 38516 OK
+gr010201.msh       len= 30352 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette=13 nvert=  672 nidx= 1278 tris=  426 expected= 30352 OK
+gr010202.msh       len= 30352 parent=  0 id= 47 fvf=0x1118 stride=40 infl=2 palette=13 nvert=  672 nidx= 1278 tris=  426 expected= 30352 OK
+gr010203.msh       len= 25096 parent=  0 id= 47 fvf=0x111C stride=48 infl=4 palette=13 nvert=  442 nidx= 1482 tris=  494 expected= 25096 OK
+gr010204.msh       len= 26260 parent=  0 id= 47 fvf=0x111C stride=48 infl=4 palette=13 nvert=  464 nidx= 1536 tris=  512 expected= 26260 OK
+hs010101.msh       len= 29544 parent=  0 id= 35 fvf=0x111C stride=48 infl=4 palette=14 nvert=  502 nidx= 2232 tris=  744 expected= 29544 OK
+hs010107.msh       len= 35892 parent=  0 id= 35 fvf=0x111A stride=44 infl=3 palette=14 nvert=  672 nidx= 2670 tris=  890 expected= 35892 OK
+hs010108.msh       len= 33396 parent=  0 id= 35 fvf=0x111C stride=48 infl=4 palette=14 nvert=  572 nidx= 2478 tris=  826 expected= 33396 OK
+hs010201.msh       len= 24176 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=15 nvert=  408 nidx= 1770 tris=  590 expected= 24176 OK
+hs010207.msh       len= 23860 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=14 nvert=  440 nidx= 1758 tris=  586 expected= 23860 OK
+hs010208.msh       len= 22164 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=14 nvert=  408 nidx= 1614 tris=  538 expected= 22164 OK
+hs010302.msh       len=  4696 parent=  0 id= 36 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  100 nidx=  264 tris=   88 expected=  4696 OK
+hs010303.msh       len= 10920 parent=  0 id= 36 fvf=0x111A stride=44 infl=3 palette= 6 nvert=  212 nidx=  576 tris=  192 expected= 10920 OK
+hs010304.msh       len= 20312 parent=  0 id= 36 fvf=0x1118 stride=40 infl=2 palette= 5 nvert=  446 nidx= 1050 tris=  350 expected= 20312 OK
+hs010305.msh       len= 18228 parent=  0 id= 36 fvf=0x111A stride=44 infl=3 palette= 9 nvert=  350 nidx= 1092 tris=  364 expected= 18228 OK
+hs010306.msh       len= 26368 parent=  0 id= 36 fvf=0x111A stride=44 infl=3 palette=11 nvert=  512 nidx= 1530 tris=  510 expected= 26368 OK
+hs010307.msh       len=  6208 parent=  0 id= 36 fvf=0x111A stride=44 infl=3 palette= 4 nvert=  120 nidx=  312 tris=  104 expected=  6208 OK
+hs010308.msh       len= 23748 parent=  0 id= 36 fvf=0x111A stride=44 infl=3 palette=12 nvert=  446 nidx= 1638 tris=  546 expected= 23748 OK
+hs010309.msh       len= 16148 parent=  0 id= 36 fvf=0x111A stride=44 infl=3 palette= 9 nvert=  300 nidx= 1152 tris=  384 expected= 16148 OK
+hs010310.msh       len= 30652 parent=  0 id= 36 fvf=0x111A stride=44 infl=3 palette=13 nvert=  576 nidx= 2196 tris=  732 expected= 30652 OK
+hs010311.msh       len= 25236 parent=  0 id= 36 fvf=0x111A stride=44 infl=3 palette=12 nvert=  470 nidx= 1854 tris=  618 expected= 25236 OK
+hs010312.msh       len= 27384 parent=  0 id= 36 fvf=0x111A stride=44 infl=3 palette=11 nvert=  516 nidx= 1950 tris=  650 expected= 27384 OK
+hy010101.msh       len= 16308 parent=  0 id= 37 fvf=0x111A stride=44 infl=3 palette= 8 nvert=  312 nidx= 1002 tris=  334 expected= 16308 OK
+hy010201.msh       len= 33140 parent=  0 id= 38 fvf=0x111C stride=48 infl=4 palette=12 nvert=  596 nidx= 1842 tris=  614 expected= 33140 OK
+hy010301.msh       len= 35732 parent=  0 id= 39 fvf=0x111A stride=44 infl=3 palette=14 nvert=  694 nidx= 2106 tris=  702 expected= 35732 OK
+lf010101.msh       len=  3108 parent=  0 id= 12 fvf=0x1116 stride=36 infl=1 palette= 5 nvert=   72 nidx=   72 tris=   24 expected=  3108 OK
+lf010103.msh       len=  3108 parent=  0 id= 12 fvf=0x1116 stride=36 infl=1 palette= 5 nvert=   72 nidx=   72 tris=   24 expected=  3108 OK
+mi010101.msh       len= 29700 parent=  0 id= 33 fvf=0x111C stride=48 infl=4 palette=17 nvert=  512 nidx= 1968 tris=  656 expected= 29700 OK
+mi010102.msh       len= 33072 parent=  0 id= 33 fvf=0x111C stride=48 infl=4 palette=17 nvert=  575 nidx= 2142 tris=  714 expected= 33072 OK
+mi010103.msh       len= 37176 parent=  0 id= 33 fvf=0x111C stride=48 infl=4 palette=17 nvert=  650 nidx= 2394 tris=  798 expected= 37176 OK
+mi010104.msh       len= 31104 parent=  0 id= 33 fvf=0x111C stride=48 infl=4 palette=14 nvert=  536 nidx= 2196 tris=  732 expected= 31104 OK
+mi010105.msh       len= 31832 parent=  0 id= 33 fvf=0x111A stride=44 infl=3 palette=17 nvert=  598 nidx= 2166 tris=  722 expected= 31832 OK
+mi010201.msh       len= 18080 parent=  0 id= 34 fvf=0x111C stride=48 infl=4 palette=12 nvert=  317 nidx= 1008 tris=  336 expected= 18080 OK
+mi010202.msh       len= 24008 parent=  0 id= 34 fvf=0x111C stride=48 infl=4 palette=12 nvert=  427 nidx= 1332 tris=  444 expected= 24008 OK
+mi010203.msh       len= 17900 parent=  0 id= 34 fvf=0x111C stride=48 infl=4 palette=12 nvert=  312 nidx= 1038 tris=  346 expected= 17900 OK
+mi010204.msh       len= 18392 parent=  0 id= 34 fvf=0x111C stride=48 infl=4 palette=12 nvert=  316 nidx= 1188 tris=  396 expected= 18392 OK
+mi010205.msh       len= 17504 parent=  0 id= 34 fvf=0x111A stride=44 infl=3 palette=12 nvert=  324 nidx= 1200 tris=  400 expected= 17504 OK
+mo010101.msh       len= 37500 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=14 nvert=  650 nidx= 2658 tris=  886 expected= 37500 OK
+mo010102.msh       len= 73784 parent=  0 id=  1 fvf=0x1118 stride=40 infl=2 palette=12 nvert= 1641 nidx= 3648 tris= 1216 expected= 73784 OK
+mo010103.msh       len= 81336 parent=  0 id=  1 fvf=0x1118 stride=40 infl=2 palette=12 nvert= 1825 nidx= 3744 tris= 1248 expected= 81336 OK
+mo010105.msh       len= 42432 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=14 nvert=  734 nidx= 3108 tris= 1036 expected= 42432 OK
+mo010106.msh       len= 43104 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=14 nvert=  748 nidx= 3108 tris= 1036 expected= 43104 OK
+mo010107.msh       len= 53916 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=14 nvert=  952 nidx= 3618 tris= 1206 expected= 53916 OK
+mo010201.msh       len= 20628 parent=  0 id= 32 fvf=0x111A stride=44 infl=3 palette=10 nvert=  388 nidx= 1422 tris=  474 expected= 20628 OK
+mo010202.msh       len= 39522 parent=  0 id= 32 fvf=0x1118 stride=40 infl=2 palette= 9 nvert=  895 nidx= 1539 tris=  513 expected= 39522 OK
+mo010203.msh       len= 37984 parent=  0 id= 32 fvf=0x1118 stride=40 infl=2 palette= 9 nvert=  854 nidx= 1590 tris=  530 expected= 37984 OK
+mo010205.msh       len= 26516 parent=  0 id= 32 fvf=0x111A stride=44 infl=3 palette= 9 nvert=  498 nidx= 1980 tris=  660 expected= 26516 OK
+mo010206.msh       len= 27532 parent=  0 id= 32 fvf=0x111A stride=44 infl=3 palette=11 nvert=  518 nidx= 1980 tris=  660 expected= 27532 OK
+mo010207.msh       len= 23308 parent=  0 id= 32 fvf=0x111A stride=44 infl=3 palette=11 nvert=  434 nidx= 1716 tris=  572 expected= 23308 OK
+mt010101.msh       len=  7760 parent=  0 id= 12 fvf=0x111C stride=48 infl=4 palette= 9 nvert=  130 nidx=  438 tris=  146 expected=  7760 OK
+mt010124.msh       len=  8320 parent=  0 id= 12 fvf=0x1118 stride=40 infl=2 palette= 9 nvert=  164 nidx=  558 tris=  186 expected=  8320 OK
+mt010131.msh       len= 39392 parent=  0 id= 12 fvf=0x111C stride=48 infl=4 palette= 9 nvert=  682 nidx= 3006 tris= 1002 expected= 39392 OK
+or010101.msh       len= 65804 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=17 nvert= 1336 nidx= 2916 tris=  972 expected= 65804 OK
+or010102.msh       len= 94924 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=16 nvert= 1807 nidx= 3534 tris= 1178 expected= 94924 OK
+or010103.msh       len= 68552 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=18 nvert= 1252 nidx= 3600 tris= 1200 expected= 68552 OK
+or010104.msh       len= 57012 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=17 nvert= 1056 nidx= 2568 tris=  856 expected= 57012 OK
+or010105.msh       len= 45880 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=16 nvert=  810 nidx= 2940 tris=  980 expected= 45880 OK
+or010106.msh       len= 45396 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=17 nvert=  810 nidx= 2664 tris=  888 expected= 45396 OK
+or010107.msh       len= 52428 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=17 nvert=  943 nidx= 2988 tris=  996 expected= 52428 OK
+or010108.msh       len= 82588 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=16 nvert= 1566 nidx= 3150 tris= 1050 expected= 82588 OK
+or010109.msh       len= 75688 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=16 nvert= 1429 nidx= 2988 tris=  996 expected= 75688 OK
+or010110.msh       len= 63544 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=16 nvert= 1190 nidx= 2652 tris=  884 expected= 63544 OK
+or010111.msh       len= 71480 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=13 nvert= 1472 nidx= 2898 tris=  966 expected= 71480 OK
+or010113.msh       len=101384 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=15 nvert= 1926 nidx= 3942 tris= 1314 expected=101384 OK
+or010114.msh       len= 57860 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=18 nvert= 1122 nidx= 3618 tris= 1206 expected= 57860 OK
+or010115.msh       len= 63262 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=15 nvert= 1252 nidx= 3561 tris= 1187 expected= 63262 OK
+or010116.msh       len= 58852 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=15 nvert= 1168 nidx= 3204 tris= 1068 expected= 58852 OK
+or010117.msh       len= 70528 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=17 nvert= 1364 nidx= 4662 tris= 1554 expected= 70528 OK
+or010201.msh       len= 25366 parent=  0 id= 34 fvf=0x111C stride=48 infl=4 palette=10 nvert=  467 nidx= 1119 tris=  373 expected= 25366 OK
+or010202.msh       len= 25366 parent=  0 id= 34 fvf=0x111C stride=48 infl=4 palette=10 nvert=  467 nidx= 1119 tris=  373 expected= 25366 OK
+or010203.msh       len= 16804 parent=  0 id= 34 fvf=0x111C stride=48 infl=4 palette=10 nvert=  300 nidx=  846 tris=  282 expected= 16804 OK
+or010204.msh       len= 20476 parent=  0 id= 34 fvf=0x111C stride=48 infl=4 palette=10 nvert=  366 nidx= 1098 tris=  366 expected= 20476 OK
+or010205.msh       len= 18640 parent=  0 id= 34 fvf=0x111C stride=48 infl=4 palette=10 nvert=  331 nidx= 1020 tris=  340 expected= 18640 OK
+or010206.msh       len= 17836 parent=  0 id= 34 fvf=0x111C stride=48 infl=4 palette=10 nvert=  310 nidx= 1122 tris=  374 expected= 17836 OK
+or010207.msh       len= 20464 parent=  0 id= 34 fvf=0x111C stride=48 infl=4 palette=10 nvert=  360 nidx= 1236 tris=  412 expected= 20464 OK
+or010208.msh       len= 29028 parent=  0 id= 34 fvf=0x111A stride=44 infl=3 palette=10 nvert=  592 nidx= 1134 tris=  378 expected= 29028 OK
+or010209.msh       len= 35300 parent=  0 id= 34 fvf=0x111A stride=44 infl=3 palette=10 nvert=  731 nidx= 1212 tris=  404 expected= 35300 OK
+or010210.msh       len= 29292 parent=  0 id= 34 fvf=0x111A stride=44 infl=3 palette=10 nvert=  598 nidx= 1134 tris=  378 expected= 29292 OK
+or010211.msh       len= 60256 parent=  0 id= 34 fvf=0x111C stride=48 infl=4 palette=10 nvert= 1144 nidx= 2316 tris=  772 expected= 60256 OK
+or010213.msh       len= 43804 parent=  0 id= 34 fvf=0x111C stride=48 infl=4 palette=10 nvert=  828 nidx= 1674 tris=  558 expected= 43804 OK
+or010214.msh       len= 16840 parent=  0 id= 34 fvf=0x111A stride=44 infl=3 palette=10 nvert=  318 nidx= 1068 tris=  356 expected= 16840 OK
+or010215.msh       len= 19468 parent=  0 id= 34 fvf=0x111C stride=48 infl=4 palette=10 nvert=  346 nidx= 1074 tris=  358 expected= 19468 OK
+or010216.msh       len= 24748 parent=  0 id= 34 fvf=0x111A stride=44 infl=3 palette=10 nvert=  480 nidx= 1458 tris=  486 expected= 24748 OK
+or010217.msh       len= 19480 parent=  0 id= 34 fvf=0x111A stride=44 infl=3 palette=10 nvert=  360 nidx= 1464 tris=  488 expected= 19480 OK
+or020101.msh       len=142084 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=25 nvert= 2680 nidx= 5856 tris= 1952 expected=142084 OK
+ra010101.msh       len= 60384 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=17 nvert= 1046 nidx= 4494 tris= 1498 expected= 60384 OK
+rc010101.msh       len= 54692 parent=  0 id= 49 fvf=0x111C stride=48 infl=4 palette=18 nvert=  962 nidx= 3630 tris= 1210 expected= 54692 OK
+rc010201.msh       len= 29880 parent=  0 id= 50 fvf=0x111C stride=48 infl=4 palette=20 nvert=  520 nidx= 1764 tris=  588 expected= 29880 OK
+sh010101.msh       len= 38402 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette= 9 nvert=  721 nidx= 1575 tris=  525 expected= 38402 OK
+sh010102.msh       len= 41382 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette= 9 nvert=  842 nidx= 1845 tris=  615 expected= 41382 OK
+sh010103.msh       len= 46520 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette= 9 nvert=  878 nidx= 1866 tris=  622 expected= 46520 OK
+sn010101.msh       len= 28684 parent=  0 id= 17 fvf=0x111C stride=48 infl=4 palette=13 nvert=  513 nidx= 1572 tris=  524 expected= 28684 OK
+sp010101.msh       len= 38888 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=13 nvert=  734 nidx= 2838 tris=  946 expected= 38888 OK
+sp010102.msh       len= 38888 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=13 nvert=  734 nidx= 2838 tris=  946 expected= 38888 OK
+sp010201.msh       len= 15252 parent=  0 id= 56 fvf=0x111A stride=44 infl=3 palette=13 nvert=  280 nidx= 1008 tris=  336 expected= 15252 OK
+sp010202.msh       len= 15320 parent=  0 id= 56 fvf=0x111A stride=44 infl=3 palette=14 nvert=  280 nidx= 1008 tris=  336 expected= 15320 OK
+sp010301.msh       len= 25016 parent=  0 id= 55 fvf=0x111A stride=44 infl=3 palette=22 nvert=  452 nidx= 1800 tris=  600 expected= 25016 OK
+sp010302.msh       len= 25016 parent=  0 id= 55 fvf=0x111A stride=44 infl=3 palette=22 nvert=  452 nidx= 1800 tris=  600 expected= 25016 OK
+sq010101.msh       len= 38312 parent=  0 id= 60 fvf=0x1118 stride=40 infl=2 palette=17 nvert=  818 nidx= 2202 tris=  734 expected= 38312 OK
+sq010102.msh       len= 43252 parent=  0 id= 60 fvf=0x111C stride=48 infl=4 palette=19 nvert=  772 nidx= 2436 tris=  812 expected= 43252 OK
+sq010103.msh       len= 58900 parent=  0 id= 60 fvf=0x1118 stride=40 infl=2 palette= 3 nvert= 1220 nidx= 4932 tris= 1644 expected= 58900 OK
+sq010201.msh       len= 59040 parent=  0 id= 61 fvf=0x1118 stride=40 infl=2 palette=25 nvert= 1202 nidx= 4614 tris= 1538 expected= 59040 OK
+sq010202.msh       len= 61900 parent=  0 id= 61 fvf=0x1118 stride=40 infl=2 palette=23 nvert= 1261 nidx= 4932 tris= 1644 expected= 61900 OK
+sq010203.msh       len= 65920 parent=  0 id= 61 fvf=0x111A stride=44 infl=3 palette=21 nvert= 1252 nidx= 4686 tris= 1562 expected= 65920 OK
+tg010101.msh       len= 37976 parent=  0 id= 35 fvf=0x111C stride=48 infl=4 palette=15 nvert=  695 nidx= 1782 tris=  594 expected= 37976 OK
+tg010201.msh       len= 75060 parent=  0 id= 34 fvf=0x111C stride=48 infl=4 palette=14 nvert= 1383 nidx= 3846 tris= 1282 expected= 75060 OK
+to010101.msh       len=  4560 parent=  0 id=  0 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  102 nidx=  156 tris=   52 expected=  4560 OK
+to010201.msh       len= 43768 parent=  0 id=  2 fvf=0x1116 stride=36 infl=1 palette= 1 nvert= 1037 nidx= 3168 tris= 1056 expected= 43768 OK
+tr010101.msh       len= 60752 parent=  0 id=  4 fvf=0x1118 stride=40 infl=2 palette= 7 nvert= 1426 nidx= 1602 tris=  534 expected= 60752 OK
+tr020101.msh       len= 66516 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=14 nvert= 1368 nidx= 2670 tris=  890 expected= 66516 OK
+tr030101.msh       len= 34760 parent=  0 id=  1 fvf=0x1118 stride=40 infl=2 palette= 7 nvert=  802 nidx= 1086 tris=  362 expected= 34760 OK
+tr040101.msh       len= 78928 parent=  0 id=  1 fvf=0x1116 stride=36 infl=1 palette=10 nvert= 2026 nidx= 2640 tris=  880 expected= 78928 OK
+tr050101.msh       len= 27042 parent=  0 id=  1 fvf=0x1116 stride=36 infl=1 palette= 5 nvert=  695 nidx=  825 tris=  275 expected= 27042 OK
+tr060101.msh       len= 15300 parent=  0 id=  1 fvf=0x1118 stride=40 infl=2 palette= 7 nvert=  332 nidx=  756 tris=  252 expected= 15300 OK
+tr060102.msh       len= 24748 parent=  0 id= 11 fvf=0x1118 stride=40 infl=2 palette= 7 nvert=  564 nidx=  840 tris=  280 expected= 24748 OK
+tr070101.msh       len= 25498 parent=  0 id=  6 fvf=0x1116 stride=36 infl=1 palette= 4 nvert=  631 nidx= 1239 tris=  413 expected= 25498 OK
+tr080101.msh       len= 36940 parent=  0 id=  1 fvf=0x1116 stride=36 infl=1 palette= 4 nvert=  926 nidx= 1650 tris=  550 expected= 36940 OK
+tr090101.msh       len= 27846 parent=  0 id=  1 fvf=0x1116 stride=36 infl=1 palette=11 nvert=  695 nidx= 1023 tris=  341 expected= 27846 OK
+tr100101.msh       len= 46862 parent=  0 id=  1 fvf=0x1116 stride=36 infl=1 palette= 6 nvert= 1138 nidx= 2727 tris=  909 expected= 46862 OK
+tr110101.msh       len= 84310 parent=  0 id=  1 fvf=0x1116 stride=36 infl=1 palette=10 nvert= 2121 nidx= 3621 tris= 1207 expected= 84310 OK
+tr120101.msh       len= 16416 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette= 7 nvert=  340 nidx=  474 tris=  158 expected= 16416 OK
+tr120102.msh       len= 16416 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette= 7 nvert=  340 nidx=  474 tris=  158 expected= 16416 OK
+tr130101.msh       len= 26586 parent=  0 id=  1 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  552 nidx= 2169 tris=  723 expected= 26586 OK
+tr140101.msh       len= 22472 parent=  0 id=  5 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  473 nidx= 1692 tris=  564 expected= 22472 OK
+tr150101.msh       len=  6728 parent=  0 id=  6 fvf=0x1118 stride=40 infl=2 palette= 2 nvert=  137 nidx=  540 tris=  180 expected=  6728 OK
+tr160101.msh       len= 38710 parent=  0 id=  7 fvf=0x1118 stride=40 infl=2 palette= 3 nvert=  863 nidx= 1977 tris=  659 expected= 38710 OK
+tr170101.msh       len=  9150 parent=  0 id=  9 fvf=0x1118 stride=40 infl=2 palette= 3 nvert=  184 nidx=  777 tris=  259 expected=  9150 OK
+tr180101.msh       len= 11020 parent=  0 id= 10 fvf=0x1116 stride=36 infl=1 palette= 7 nvert=  260 nidx=  576 tris=  192 expected= 11020 OK
+tr190101.msh       len=  8336 parent=  0 id=  7 fvf=0x111A stride=44 infl=3 palette= 4 nvert=  164 nidx=  408 tris=  136 expected=  8336 OK
+tr200101.msh       len= 34876 parent=  0 id=  1 fvf=0x1116 stride=36 infl=1 palette= 4 nvert=  872 nidx= 1590 tris=  530 expected= 34876 OK
+tr210101.msh       len= 20974 parent=  0 id=  2 fvf=0x111A stride=44 infl=3 palette= 5 nvert=  401 nidx= 1479 tris=  493 expected= 20974 OK
+tr210201.msh       len= 59988 parent=  0 id=  1 fvf=0x1116 stride=36 infl=1 palette= 5 nvert= 1438 nidx= 3924 tris= 1308 expected= 59988 OK
+tw010101.msh       len= 19256 parent=  0 id=  2 fvf=0x111A stride=44 infl=3 palette=13 nvert=  350 nidx= 1470 tris=  490 expected= 19256 OK
+tw010201.msh       len= 36404 parent=  0 id=  1 fvf=0x111A stride=44 infl=3 palette=13 nvert=  680 nidx= 2784 tris=  928 expected= 36404 OK
+wb010101.msh       len= 44868 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=14 nvert=  800 nidx= 2742 tris=  914 expected= 44868 OK
+wb010102.msh       len= 35412 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=14 nvert=  612 nidx= 2526 tris=  842 expected= 35412 OK
+wb010201.msh       len= 20124 parent=  0 id=  2 fvf=0x111C stride=48 infl=4 palette=11 nvert=  348 nidx= 1320 tris=  440 expected= 20124 OK
+wb010202.msh       len= 21184 parent=  0 id=  2 fvf=0x111C stride=48 infl=4 palette=10 nvert=  368 nidx= 1404 tris=  468 expected= 21184 OK
+wf010101.msh       len= 34524 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=14 nvert=  612 nidx= 2082 tris=  694 expected= 34524 OK
+wf010103.msh       len= 39320 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=15 nvert=  674 nidx= 2958 tris=  986 expected= 39320 OK
+wf010104.msh       len= 79516 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=25 nvert= 1412 nidx= 5004 tris= 1668 expected= 79516 OK
+wf010201.msh       len= 18276 parent=  0 id= 35 fvf=0x111C stride=48 infl=4 palette=14 nvert=  308 nidx= 1254 tris=  418 expected= 18276 OK
+wf010203.msh       len= 25720 parent=  0 id= 35 fvf=0x111C stride=48 infl=4 palette=13 nvert=  438 nidx= 1890 tris=  630 expected= 25720 OK
+wf010204.msh       len=   442 parent=  0 id= 35 fvf=0x111A stride=44 infl=3 palette= 4 nvert=    3 nidx=    3 tris=    1 expected=   442 OK
+wg010101.msh       len=  4528 parent=  0 id=  2 fvf=0x111A stride=44 infl=3 palette= 4 nvert=   84 nidx=  264 tris=   88 expected=  4528 OK
+wg010102.msh       len=  4528 parent=  0 id= 13 fvf=0x111A stride=44 infl=3 palette= 4 nvert=   84 nidx=  264 tris=   88 expected=  4528 OK
+wg010201.msh       len=  4528 parent=  0 id= 13 fvf=0x111A stride=44 infl=3 palette= 4 nvert=   84 nidx=  264 tris=   88 expected=  4528 OK
+wh010101.msh       len= 44940 parent=  0 id=  1 fvf=0x111C stride=48 infl=4 palette=11 nvert=  796 nidx= 2976 tris=  992 expected= 44940 OK
+
+# RESULT: 657 files, 0 mismatches
+# sizeVertex (stride) histogram -> one value per influence count:
+  stride=24  files=1
+  stride=36  files=56
+  stride=40  files=198
+  stride=44  files=162
+  stride=48  files=240
+# numInfluence histogram:
+  infl=0  files=1
+  infl=1  files=56
+  infl=2  files=198
+  infl=3  files=162
+  infl=4  files=240
+# numPalette histogram:
+  palette= 0  files=1
+  palette= 1  files=31
+  palette= 2  files=32
+  palette= 3  files=16
+  palette= 4  files=28
+  palette= 5  files=29
+  palette= 6  files=74
+  palette= 7  files=54
+  palette= 8  files=105
+  palette= 9  files=37
+  palette=10  files=35
+  palette=11  files=18
+  palette=12  files=40
+  palette=13  files=28
+  palette=14  files=40
+  palette=15  files=31
+  palette=16  files=12
+  palette=17  files=16
+  palette=18  files=6
+  palette=19  files=2
+  palette=20  files=1
+  palette=21  files=3
+  palette=22  files=3
+  palette=23  files=5
+  palette=24  files=4
+  palette=25  files=3
+  palette=26  files=3

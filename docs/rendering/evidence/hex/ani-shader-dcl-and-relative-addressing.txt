@@ -1,0 +1,39 @@
+# Robust scan of Shader\skinmesh1..8.bin (D3D9 VS bytecode, version token 0xFFFE0101).
+# For each file: (a) the DCL declarations found by scanning for the 0x0000001F dcl token,
+#                 (b) every constant register that is addressed RELATIVELY (bit 13 set,
+#                     register type 2 = const) - this is how the palette is indexed.
+# The instruction-length nibble is zero in these files, so a linear disassembly is not
+# attempted here; the two facts above do not depend on instruction lengths.
+
+# skinmesh1.bin (468 bytes, 117 dwords)
+#   dcl declarations : POSITION(0), BLENDINDICES(0), NORMAL(0), TEXCOORD(0)
+#   relative const base registers (const index -> hits): c0x7, c1x1, c2x1, c6x1, c7x1, c8x1, c9x2, c95x3
+
+# skinmesh2.bin (616 bytes, 154 dwords)
+#   dcl declarations : POSITION(0), BLENDWEIGHT(0), BLENDINDICES(0), NORMAL(0), TEXCOORD(0)
+#   relative const base registers (const index -> hits): c0x8, c1x1, c2x1, c6x4, c7x1, c8x1, c9x4, c92x1
+
+# skinmesh3.bin (700 bytes, 175 dwords)
+#   dcl declarations : POSITION(0), BLENDWEIGHT(0), BLENDINDICES(0), NORMAL(0), TEXCOORD(0)
+#   relative const base registers (const index -> hits): c0x8, c1x1, c2x1, c6x4, c7x1, c8x1, c9x6, c92x1
+
+# skinmesh4.bin (784 bytes, 196 dwords)
+#   dcl declarations : POSITION(0), BLENDWEIGHT(0), BLENDINDICES(0), NORMAL(0), TEXCOORD(0)
+#   relative const base registers (const index -> hits): c0x8, c1x1, c2x1, c6x4, c7x1, c8x1, c9x8, c92x1
+
+# skinmesh5.bin (464 bytes, 116 dwords)
+#   dcl declarations : POSITION(0), BLENDWEIGHT(0), BLENDINDICES(0), NORMAL(0), TEXCOORD(0)
+#   relative const base registers (const index -> hits): c0x6, c1x1, c2x1, c6x4, c7x1, c8x1, c9x2, c92x1
+
+# skinmesh6.bin (612 bytes, 153 dwords)
+#   dcl declarations : POSITION(0), BLENDWEIGHT(0), BLENDINDICES(0), NORMAL(0), TEXCOORD(0)
+#   relative const base registers (const index -> hits): c0x8, c1x1, c2x1, c6x4, c7x1, c8x1, c9x4, c92x1
+
+# skinmesh7.bin (696 bytes, 174 dwords)
+#   dcl declarations : POSITION(0), BLENDWEIGHT(0), BLENDINDICES(0), NORMAL(0), TEXCOORD(0)
+#   relative const base registers (const index -> hits): c0x8, c1x1, c2x1, c6x4, c7x1, c8x1, c9x6, c92x1
+
+# skinmesh8.bin (780 bytes, 195 dwords)
+#   dcl declarations : POSITION(0), BLENDWEIGHT(0), BLENDINDICES(0), NORMAL(0), TEXCOORD(0)
+#   relative const base registers (const index -> hits): c0x8, c1x1, c2x1, c6x4, c7x1, c8x1, c9x8, c92x1
+

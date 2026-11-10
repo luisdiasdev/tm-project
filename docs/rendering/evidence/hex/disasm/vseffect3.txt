@@ -1,0 +1,10 @@
+; file=E:\wyd\test-setup\client_748\Shader\vseffect3.bin  bytes=252  version=0xFFFE0101 (vs_1_1)
+  ; COMMENT (40 dwords): DBUG(...............P.......T...............D:\Client-ver\run\Shader\vseffect3.vsh..(...................................................D3DX9 Shader Assembler..
+  dcl position v0
+  mov      r1, c0.xxxx
+  m4x3     r4.xyz, v0, c9
+  mov      r4.w, c0.xxxx
+  m4x4     oPos, r4, c2
+  mov      oD0, c88
+  end
+

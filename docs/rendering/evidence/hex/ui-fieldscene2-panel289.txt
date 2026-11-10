@@ -1,0 +1,25 @@
+File: E:/wyd/test-setup/client_748/UI/FieldScene2.bin (size 35404)
+Panel record at file offset 2784 (0xae0), preceding int = 0x00000001 (CTRL_TYPE_PANEL)
+
+[0x0AE0..0x0B0F]
+01 00 00 00 21 01 00 00 00 00 00 00 f5 ff ff ff 7c 02 00 00 00 00 00 00 89 00 00 00 aa 00 00 00 ff ff ff 88 04 00 00 00 00 00 00 00 01 00 00 00
+
+Decoded as BinPanel (int32 LE, beginning after the 4-byte control type):
+  +0x00  nID                =          289  0x00000121
+  +0x04  nParentID          =            0  0x00000000
+  +0x08  nTextureSetIndex   =          -11  0xFFFFFFF5
+  +0x0c  nStartX            =          636  0x0000027C
+  +0x10  nStartY            =            0  0x00000000
+  +0x14  nWidth             =          137  0x00000089
+  +0x18  nHeight            =          170  0x000000AA
+  +0x1c  nColor             =  -1996488705  0x88FFFFFF  A=0x88 R=0xff G=0xff B=0xff
+  +0x20  nFillType          =            4  0x00000004
+  +0x24  nPickable          =            0  0x00000000
+
+Notes:
+  nID 289 = TMP_MINIMAP (ResourceControl.h:587) -> TMFieldScene.cpp:1980
+  nTextureSetIndex -11 -> abs() -> texture set 11 "N_minimap" (ui-uitxtureset-11.txt)
+  nFillType 4 = RENDER_IMAGE_STRETCH (Enums.h:10)
+  nColor 0x88FFFFFF = 53% white modulation of the minimap blit
+Next 4 bytes after the record (offset 2828) = 0x1, which is not a valid CONTROL_TYPE:
+see the chapter text ("open question: 748 panel record length").

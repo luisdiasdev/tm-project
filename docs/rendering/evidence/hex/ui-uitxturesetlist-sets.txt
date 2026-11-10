@@ -1,0 +1,38 @@
+File: E:/wyd/test-setup/client_748/UI/UITextureSetList.txt  (parsed by TextureManager::InitUITextureSetList, TextureManager.cpp:426-464)
+Format per set:  "[Name]" / "SetIndex: N" / "ItemCount: K" / K lines of
+                 texIndex,startX,startY,width,height,destX,destY
+
+--- line 1 ---
+  [Cursor]
+  SetIndex: 0
+  ItemCount: 5
+  0,0,0,32,32,0,0
+  0,32,0,32,32,0,0
+  0,64,0,32,32,0,0
+  0,96,0,32,32,0,0
+  0,128,0,32,32,0,0
+
+--- line 275 ---
+  [N_minimap]
+  SetIndex: 11
+  ItemCount: 1
+  4,0,0,384,384,0,0
+
+--- line 1250 ---
+  [Green_Number]
+  SetIndex: 137
+  ItemCount: 16
+  115,0,0,26,29,0,0
+  115,27,0,14,29,0,0
+  115,41,0,23,29,0,0
+  115,64,0,21,29,0,0
+  115,85,0,22,29,0,0
+  115,107,0,20,29,0,0
+  ... (10 more coord lines)
+
+--- line 2579 ---
+  [event_panel]
+  SetIndex: 291
+  ItemCount: 1
+  130,245,130,10,24,0,0
+

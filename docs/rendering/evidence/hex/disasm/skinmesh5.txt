@@ -1,0 +1,35 @@
+; file=E:\wyd\test-setup\client_748\Shader\skinmesh5.bin  bytes=464  version=0xFFFE0101 (vs_1_1)
+  dcl position v0
+  dcl blendweight v1
+  dcl blendindices v2
+  dcl normal v3
+  dcl texcoord v4
+  mul      r1, v2.zyxw, c0.wwww
+  mov      a0.x, r1.xxxx
+  m4x3     r4.xyz, v0, c[a0.x+9]
+  m3x3     r5.xyz, v3, c[a0.x+9]
+  mov      r4.w, c0.xxxx
+  m4x4     oPos, r4, c2
+  dp3      r5.w, r5, r5
+  rsq      r5.w, r5.wwww
+  mul      r5, r5, r5.wwww
+  m3x3     r2.xyz, r5, c92
+  dp3      r2.w, r2, r2
+  rsq      r2.w, r2.wwww
+  mul      r2, r2, r2.wwww
+  dp3      r1.x, r2, c1
+  lit      r1, r1
+  mov      r0, c7
+  add      r0, r0, c8
+  min      oD0, r0, c0.xxxx
+  mov      oD1, c0.yyyy
+  add      r0.x, r4.zzzz_neg, c6.yyyy
+  mul      r0.x, r0.xxxx, c6.zzzz
+  max      r0.x, r0.xxxx, c6.wwww
+  min      oFog, r0.xxxx, c6.xxxx
+  add      r4.x, r5.xxxx, c0.zzzz
+  add      r4.y, r4.yyyy, c0.zzzz
+  mov      oT0, v4
+  mov      oT1, r4
+  end
+

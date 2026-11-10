@@ -1,0 +1,29 @@
+Field0101.trn  size=49160
+header: nameLen=5 name='Field' posX=1 posY=1
+size math: 8 + 4096*12 = 49160
+
+offset 0x000..0x080:
+000000  05 46 69 65 6C 64 01 01 00 64 02 00 03 80 FB 09 
+000010  00 00 00 00 00 65 04 00 13 00 00 00 00 00 00 00 
+000020  00 65 00 00 00 00 00 00 00 00 00 00 00 64 00 00 
+000030  10 00 00 00 00 00 00 00 00 65 00 00 03 00 00 00 
+000040  00 00 00 00 00 64 02 00 13 00 00 00 00 00 00 00 
+000050  00 65 00 00 00 00 00 00 00 00 00 00 00 64 01 00 
+000060  10 00 00 00 00 00 00 00 00 64 06 00 07 00 00 00 
+000070  00 00 00 00 00 64 03 00 17 00 00 00 00 00 00 00 
+
+tile[0] @0x0008: cHeight=0    byTileIndex=100 byTileCoord=2  byBackTileIndex=0   byBackTileCoord=3  pad=80 FB 09 dwColor=0x00000000
+tile[1] @0x0014: cHeight=0    byTileIndex=101 byTileCoord=4  byBackTileIndex=0   byBackTileCoord=19 pad=00 00 00 dwColor=0x00000000
+tile[2] @0x0020: cHeight=0    byTileIndex=101 byTileCoord=0  byBackTileIndex=0   byBackTileCoord=0  pad=00 00 00 dwColor=0x00000000
+tile[3] @0x002C: cHeight=0    byTileIndex=100 byTileCoord=0  byBackTileIndex=0   byBackTileCoord=16 pad=00 00 00 dwColor=0x00000000
+tile[4] @0x0038: cHeight=0    byTileIndex=101 byTileCoord=0  byBackTileIndex=0   byBackTileCoord=3  pad=00 00 00 dwColor=0x00000000
+tile[5] @0x0044: cHeight=0    byTileIndex=100 byTileCoord=2  byBackTileIndex=0   byBackTileCoord=19 pad=00 00 00 dwColor=0x00000000
+
+tile records block (first 96 bytes after header):
+000008  00 64 02 00 03 80 FB 09 00 00 00 00 00 65 04 00 
+000018  13 00 00 00 00 00 00 00 00 65 00 00 00 00 00 00 
+000028  00 00 00 00 00 64 00 00 10 00 00 00 00 00 00 00 
+000038  00 65 00 00 03 00 00 00 00 00 00 00 00 64 02 00 
+000048  13 00 00 00 00 00 00 00 00 65 00 00 00 00 00 00 
+000058  00 00 00 00 00 64 01 00 10 00 00 00 00 00 00 00 
+

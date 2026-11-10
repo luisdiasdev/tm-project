@@ -1,0 +1,33 @@
+# .wyt census (client_748, recursive). Generated 2026-11-10 with PowerShell.
+# Layout tested: file[0..3]="WT10"; TGA header at file[4]; pixel data at file[22];
+# trailing 8 zero bytes = head of the TGA 2.0 footer. Size test: len-30 == W*H*Bpp/8.
+
+files scanned: 221
+
+## size test len-30 == W*H*Bpp/8
+True : 221
+
+## magic / image type / colour map / ID length
+imageType: 2=221
+colourMapType: 0=221
+idLength: 0=221
+bitsPerPixel: 16=2, 24=180, 32=39
+descriptor: 0x00=180, 0x01=2, 0x08=39
+
+## dimension census (WxH)
+128x128      98
+256x256      71
+256x512      17
+512x256      10
+64x128       9
+800x600      6
+256x128      4
+234x256      2
+512x512      2
+1024x512     1
+128x64       1
+
+## files by folder
+Potal        1
+UI           220
+

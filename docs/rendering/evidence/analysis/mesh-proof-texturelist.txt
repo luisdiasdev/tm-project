@@ -1,0 +1,15 @@
+MeshTextureList.bin size=540672  records=2048  remainder=0
+  rec[0] name='mesh\\bird0101.wys' alpha=b'N' bytes255..263=4e cd cd cd cd cd cd cd cd
+  rec[1] name='mesh\\water5.wys' alpha=b'A' bytes255..263=41 cd cd cd cd cd cd cd cd
+  rec[2] name='mesh\\water1.wys' alpha=b'N' bytes255..263=4e cd cd cd cd cd cd cd cd
+  rec[2046] name='' alpha=b'N' bytes255..263=4e cd cd cd cd cd cd cd cd
+  rec[2047] name='' alpha=b'N' bytes255..263=4e cd cd cd cd cd cd cd cd
+alpha histogram (non-empty records): {'N': 1283, 'A': 218, 'C': 84}
+non-empty records: 1585
+extensions: {'.wys': 1585}
+first 5: ['mesh\\bird0101.wys', 'mesh\\water5.wys', 'mesh\\water1.wys', 'mesh\\water2.wys', 'mesh\\multi01.wys']
+last 5: ['mesh\\mt0101196.wys', 'mesh\\mt0101197.wys', 'mesh\\mt0101198.wys', 'mesh\\mt0101199.wys', 'mesh\\mt0101200.wys']
+duplicate names (count>1): [('mesh\\wh010101.wys', 2), ('mesh\\ch010219.wys', 2), ('mesh\\ag010101.wys', 2)]
+
+.msa texture refs: total=2885 resolved=2819 (97.71%)  unresolved distinct=39
+unresolved samples: ['mesh\\ch010243.wys', 'mesh\\ch010263.wys', 'mesh\\ch010343.wys', 'mesh\\ch010363.wys', 'mesh\\ch010443.wys', 'mesh\\ch010463.wys', 'mesh\\ch010543.wys', 'mesh\\ch010563.wys', 'mesh\\ch010643.wys', 'mesh\\ch010663.wys']

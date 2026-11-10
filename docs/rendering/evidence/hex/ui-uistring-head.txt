@@ -1,0 +1,25 @@
+File: E:/wyd/test-setup/client_748/UI/UIString.txt  (parsed by ReadUIString, Basedef.cpp:1178-1199)
+Format: "<index><TAB><name>" lines; the name is copied into g_UIString[index][64]
+and later copied into .bin controls via binButtonData.nStringIndex.
+
+[0x0000..0x00BF]
+31 09 43 6f 6e 6e 65 63 74 0d 0a 32 09 43 6c 6f 73 65 0d 0a 33 09 53 65 72 76 65 72 0d 0a 34 09 43 68 61 6e 6e 65 6c 0d 0a 35 09 4c 6f 67 69 6e 0d 0a 36 09 43 6c 6f 73 65 0d 0a 37 09 4e 65 77 5f 41 63 63 6f 75 6e 74 0d 0a 38 09 41 63 63 6f 75 6e 74 0d 0a 39 09 50 61 73 73 77 6f 72 64 0d 0a 31 30 09 53 65 6c 65 63 74 5f 43 68 61 72 61 63 74 65 72 0d 0a 31 31 09 43 72 65 61 74 65 0d 0a 31 32 09 43 61 6e 63 65 6c 0d 0a 31 33 09 44 65 6c 65 74 65 0d 0a 31 34 09 45 73 63 0d 0a 31 35 09 43 6f 6e 6e 65 63 74 0d 0a 31 36 09 43 68 61 72 5f 49 6e 66 6f 0d 0a 31 37 09 53 74 61 74
+
+ASCII:
+1	Connect
+2	Close
+3	Server
+4	Channel
+5	Login
+6	Close
+7	New_Account
+8	Account
+9	Password
+10	Select_Character
+11	Create
+12	Cancel
+13	Delete
+14	Esc
+15	Connect
+16	Char_Info
+17	Stat

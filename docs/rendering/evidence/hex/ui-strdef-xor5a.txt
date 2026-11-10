@@ -1,0 +1,18 @@
+File: E:/wyd/test-setup/client_748/UI/strdef.bin
+Size: 56324 bytes  (440 strings * 128 bytes + 4-byte checksum = 56324)
+Obfuscation: every byte XOR 0x5A (BASE_ReadMessageBin, Basedef.cpp:319-324)
+
+[0x0000..0x003F] raw
+e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2 e2
+
+[0x0000..0x003F] after XOR 0x5A
+b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8 b8
+
+Decoded records 0..3 (128 bytes each, ANSI/CP949, NUL padded):
+  [0] "¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸"
+  [1] "Not enough space for items."
+  [2] "Do you want to select other server?"
+  [3] "Your ID is not long enough."
+
+0xE2 filler before XOR becomes 0xB8 after: record 0 is an unused filler record
+in this English 748 build. Later records contain plain ASCII sentences.

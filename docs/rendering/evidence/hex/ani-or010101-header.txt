@@ -1,0 +1,26 @@
+# hexdump: client_748/mesh/or010101.ani  (35848 bytes)  first 0x140 bytes
+# header: dword0 = 0x10 = 16 (frames/cut), dword1 = 0x23 = 35 (bones)
+# then 16*35 = 560 D3DXMATRIX (64 bytes each), row-major, row 3 = translation
+00000000  10 00 00 00 23 00 00 00 00 00 80 3F 00 00 00 00  |....#......?....|
+00000010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F  |...............?|
+00000020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  |................|
+00000030  00 00 80 3F 00 00 00 00 00 00 00 00 00 00 00 00  |...?............|
+00000040  00 00 00 00 00 00 80 3F CD CD CD CD CD CD CD CD  |.......?........|
+00000050  CD CD CD CD CD CD CD CD CD CD CD CD CD CD CD CD  |................|
+00000060  CD CD CD CD CD CD CD CD CD CD CD CD CD CD CD CD  |................|
+00000070  CD CD CD CD CD CD CD CD CD CD CD CD CD CD CD CD  |................|
+00000080  CD CD CD CD CD CD CD CD DD D5 94 BB E8 FE 7F BF  |................|
+00000090  D7 5E 6A BB 00 00 00 00 30 FF 7F 3F 3F 13 95 BB  |.^j.....0..??...|
+000000A0  AE BB 05 3B 00 00 00 00 11 CC 06 BB 98 C2 69 BB  |...;..........i.|
+000000B0  72 FF 7F 3F 00 00 00 00 00 00 00 00 00 00 00 80  |r..?............|
+000000C0  FF BE 73 3F 00 00 80 3F DD D5 94 BB 2F FF 7F 3F  |..s?...?..../..?|
+000000D0  10 CC 06 BB 00 00 00 00 E7 FE 7F BF 3E 13 95 BB  |............>...|
+000000E0  97 C2 69 BB 00 00 00 00 D7 5E 6A BB AD BB 05 3B  |..i......^j....;|
+000000F0  72 FF 7F 3F 00 00 00 00 69 B3 5E 3B 0F 26 FE BA  |r..?....i.^;.&..|
+00000100  57 40 73 BF 00 00 80 3F 29 52 83 B2 22 D3 31 3C  |W@s....?)R..".1<|
+00000110  25 FC 7F 3F 00 00 00 00 00 00 80 3F 38 1E BA 35  |%..?.......?8..5|
+00000120  3F 95 41 AF 00 00 00 00 E2 27 BA B5 24 FC 7F 3F  |?.A......'..$..?|
+00000130  23 D3 31 BC 00 00 00 00 57 A6 7D BC 22 BD 92 2E  |#.1.....W.}."...|
+
+# frame 0, bone 0  @0x0008 .. 0x0047 : identity matrix
+# frame 0, bone 1  @0x0048 .. 0x0087 : all bytes 0xCD (MSVC uninitialised-fill pattern written by the exporter)

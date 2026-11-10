@@ -1,0 +1,28 @@
+; file=E:\wyd\test-setup\client_748\Shader\vseffect1.bin  bytes=644  version=0xFFFE0101 (vs_1_1)
+  ; COMMENT (72 dwords): DBUG(...............P.......T...............D:\Client-ver\run\Shader\vseffect1.vsh..(.......(.......@.......L.......X.......d.......p.......|...............................................................................,.......8.......H.......T.......d.......p...D3DX9 Shader Assembler..
+  op_51    c13, r0.xxxx, a0.xxxz_mod15
+  nop      
+  nop      
+  dcl position v0
+  dcl color v5
+  dcl texcoord v7
+  mov      oD1, v5
+  mov      oD0, v5
+  mov      r1.xyz, v0.xyzz
+  mov      r1.w, c13.yyyy
+  mul      r0, r1.yyyy, c3
+  mad      r0, r1.xxxx, c2, r0
+  mad      r0, r1.zzzz, c4, r0
+  mad      oPos, r1.wwww, c5, r0
+  mul      r0, r1.yyyy, c9
+  mad      r0, r1.xxxx, c8, r0
+  mad      r0, r1.zzzz, c10, r0
+  mad      r1, r1.wwww, c11, r0
+  rcp      r0.x, r1.wwww
+  mul      r1.x, r1.xxxx, r0.xxxx
+  mov      oT1.xzw, r1
+  mul      r0.xzw, r1.yyyy, r0.xxxx
+  mov      oT1.y, r0.xxzw
+  add      oT0, v7, c20
+  end
+

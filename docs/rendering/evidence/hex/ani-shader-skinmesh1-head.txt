@@ -1,0 +1,9 @@
+# hexdump: client_748/Shader/skinmesh1.bin (468 bytes) - D3D9 VS bytecode, version token 0xFFFE0101 = vs_1_1
+# The 4 dcl declarations name the input registers used by the 1-influence variant:
+#   0x80000000 usage 0 = POSITION, 0x80000002 usage 2 = BLENDINDICES,
+#   0x80000003 usage 3 = NORMAL,   0x80000005 usage 5 = TEXCOORD
+# (no BLENDWEIGHT element: with 1 influence the weight is implicit 1.0)
+00000000  01 01 FE FF 1F 00 00 00 00 00 00 80 00 00 0F 90  |................|
+00000010  1F 00 00 00 02 00 00 80 02 00 0F 90 1F 00 00 00  |................|
+00000020  03 00 00 80 03 00 0F 90 1F 00 00 00 05 00 00 80  |................|
+00000030  04 00 0F 90 05 00 00 00 01 00 0F 80 02 00 C6 90  |................|

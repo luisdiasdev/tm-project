@@ -8,6 +8,40 @@ original client, and what is still missing.
 - [`port-748/overview.md`](port-748/overview.md) — goal, branch, commits, method.
 - [`port-748/remaining-work.md`](port-748/remaining-work.md) — what to do next.
 - [`port-748/pitfalls.md`](port-748/pitfalls.md) — mistakes that waste time.
+- [`rendering/README.md`](rendering/README.md) — **complete rendering
+  specification**: how every texture, mesh, animation and world asset is loaded
+  and decoded, the shaders, the render states, the ordered pass list, and a
+  guide to rebuilding it all on OpenGL/Vulkan. ~8 000 lines, every claim tagged
+  OBSERVED / INFERRED / UNKNOWN.
+
+## Rendering
+
+- [`rendering/README.md`](rendering/README.md) — index, evidence-tag rules,
+  the sixteen facts that change a port, corrections to older notes, and the bug
+  list found while documenting.
+- [`rendering/10-reimplementation-guide.md`](rendering/10-reimplementation-guide.md)
+  — start here to *build* it: target architecture, matrix conversion, asset
+  pipeline, per-pass pipeline objects, shader plan, work plan, parity harness.
+- [`rendering/01-overview.md`](rendering/01-overview.md) — architecture, axes,
+  units, resolution policy, camera, timing.
+- [`rendering/02-textures.md`](rendering/02-textures.md) — `.wyt`/`.wys`/DDS/TGA,
+  the proprietary fourCCs, texture lists, mip and eviction policy.
+- [`rendering/03-meshes.md`](rendering/03-meshes.md) — `.msh`, `.msa`, `.bon`,
+  vertex/index formats, mesh registries.
+- [`rendering/04-animations.md`](rendering/04-animations.md) — `.ani` keyframes,
+  sampling, bone palettes, skinning maths, attachments.
+- [`rendering/05-shaders.md`](rendering/05-shaders.md) — every shader asset,
+  bytecode versions, disassembly, constant map, what is dead.
+- [`rendering/06-render-states-and-materials.md`](rendering/06-render-states-and-materials.md)
+  — the four state blocks, lighting, fog, blending, depth, swap chain, gamma.
+- [`rendering/07-pipeline-and-order.md`](rendering/07-pipeline-and-order.md) —
+  the ordered pass list, per-pass states, sorting and culling.
+- [`rendering/08-scene-and-world-assets.md`](rendering/08-scene-and-world-assets.md)
+  — terrain `.trn`/`.dat`, tile lookup, sky, water, decoration, placement.
+- [`rendering/09-ui-and-text.md`](rendering/09-ui-and-text.md) — 2-D projection,
+  quads, control layer, GDI font atlas, overlays, z-order.
+- [`rendering/evidence/`](rendering/evidence/) — 143 raw hexdumps, whole-asset
+  parse proofs, shader disassemblies and the scripts that regenerate them.
 
 ## UI rewrite evaluation
 

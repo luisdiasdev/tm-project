@@ -1,5 +1,10 @@
 # Renderer Notes (D3D9)
 
+> This file records only the D3D9-specific fixes made during the 748 port. The
+> complete rendering specification — asset formats, shaders, states, pass order,
+> UI, and an OpenGL/Vulkan reimplementation guide — now lives in
+> [`../rendering/`](../rendering/README.md).
+
 ## Render-target textures (fixed)
 
 `TextureManager::InitRenderTargetTexture()` used:

@@ -1,0 +1,16 @@
+== MeshList.txt : 1703 lines, 1703 parse as 'idx path', 0 others
+   idx range 1..2887, unique=1701, duplicates=[1710, 1789]
+   gaps in range: 1186 (first 20: [44, 139, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231])
+== CommonMeshList.txt : 887 lines, 887 parse as 'idx path', 0 others
+   idx range 0..1975, unique=887, duplicates=[]
+   gaps in range: 1089 (first 20: [1, 11, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31])
+== MeshTextureList.txt : 1382 lines, 0 parse as 'idx path', 1382 others
+   non-index lines (first 3): [(None, '0 mesh\\bird0101.wys N '), (None, '1 mesh\\water5.wys A '), (None, '2 mesh\\water1.wys N ')]
+
+MeshList.txt extensions: {'.msa': 1703}
+MeshList.txt directories: {'mesh': 1667, 'effect': 36}
+MeshList.txt entries whose file is absent: 28 ; first 10 [(490, 'mesh\\\\abox01.msa'), (491, 'mesh\\\\abox02.msa'), (657, 'mesh\\\\abox01.msa'), (658, 'mesh\\\\abox02.msa'), (1001, 'mesh\\\\ch010201.msa'), (1041, 'mesh\\\\ch010301.msa'), (1059, 'mesh\\\\ch010319.msa'), (1081, 'mesh\\\\ch010401.msa'), (1121, 'mesh\\\\ch010501.msa'), (1139, 'mesh\\\\ch010519.msa')]
+.msa files present but not listed in MeshList.txt: 27 ; first 10 ['mesh\\billow.msa', 'mesh\\ch010243.msa', 'mesh\\ch010263.msa', 'mesh\\ch010343.msa', 'mesh\\ch010363.msa', 'mesh\\ch010443.msa', 'mesh\\ch010463.msa', 'mesh\\ch010543.msa', 'mesh\\ch010563.msa', 'mesh\\ch010643.msa']
+
+CommonMeshList.txt idx range 0..1975, 887 entries
+CommonMeshList entries that differ from MeshList at same index: 64 ; first 5 [(0, 'mesh\\\\box.msa'), (2, 'mesh\\\\sea001.msa'), (3, 'mesh\\\\flower.msa'), (4, 'mesh\\\\drafly.msa'), (5, 'mesh\\\\frog01.msa')]

@@ -1,0 +1,30 @@
+cdata.bin size=8192 (= 64*32*int32, read into TMGround::m_nCheckSum[64][32])
+000000  FF FF FF FF 00 00 00 00 00 00 00 00 00 00 00 00 
+000010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+000020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+000030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+000040  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+000050  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+000060  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+000070  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+nonzero int32 cells: 141 / 2048
+NOTE: none of these equals the byte-sum of the corresponding .trn, so the anti-tamper gate cannot be satisfied by the shipped data.
+
+object.bin size=524292 (= 2048*16*16 + int32 checksum)
+000000  B1 DE B2 B0 BF EF C9 AA C6 CF BA AC CC E7 CE DE 
+000010  C8 C9 D2 DF D7 CA D0 D7 D2 D5 D6 11 D3 EC DC E5 
+000020  D8 C8 D6 07 D4 12 E3 EC E2 1A F1 FA DD E5 E1 D9 
+000030  EF 1D EA E1 E7 DF EC 2A F9 FA FA F5 EF E7 F4 32 
+trailer int32 = -1604083155  (matches the computed checksum over the raw bytes)
+
+mesh\sky001.msa size=4323 (FVF=322 sizeVertex=24 attCount=1, attr{faceCount=180,vertexCount=133}, texture name 'sky04')
+000000  42 01 00 00 18 00 00 00 01 00 00 00 00 00 00 00 
+000010  00 00 00 00 B4 00 00 00 00 00 00 00 85 00 00 00 
+000020  A4 29 5C 73 6B 79 30 34 00 CD CD 38 04 00 00 00 
+000030  00 01 00 02 00 03 00 04 00 00 00 05 00 06 00 07 
+
+Env\Tile00000.wys size=11009 -> 1-byte 'W' + DDS with magic replaced by 'S10 '
+000000  57 53 31 30 20 7C 00 00 00 07 10 02 00 80 00 00 
+000010  00 80 00 00 00 00 00 00 00 00 00 00 00 04 00 00 
+

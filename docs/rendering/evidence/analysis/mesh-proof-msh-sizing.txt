@@ -1,0 +1,687 @@
+MSH files: 657  parsed: 657
+MSH size mismatches: 0
+
+MSH FVF histogram (value, count, decoded):
+   0x012     1  XYZ|NORMAL|TEX0                sizeVertex={24: 1}
+   0x1116    56  XYZB1|NORMAL|TEX1|TEXCOORDSIZE0=1 sizeVertex={36: 56}
+   0x1118   198  XYZB2|NORMAL|TEX1|TEXCOORDSIZE0=1 sizeVertex={40: 198}
+   0x111A   162  XYZB3|NORMAL|TEX1|TEXCOORDSIZE0=1 sizeVertex={44: 162}
+   0x111C   240  XYZB4|NORMAL|TEX1|TEXCOORDSIZE0=1 sizeVertex={48: 240}
+
+MSH (influences, sizeVertex, fvf) histogram:
+    (0, 24, 18) 1
+    (1, 36, 4374) 56
+    (2, 40, 4376) 198
+    (3, 44, 4378) 162
+    (4, 48, 4380) 240
+
+MSA files: 1661 size mismatches: 0
+
+MSA FVF histogram:
+   0x012     1  XYZ|NORMAL|TEX0                sizeVertex={24: 1}
+   0x112  1636  XYZ|NORMAL|TEX1|TEXCOORDSIZE0=1 sizeVertex={32: 1636}
+   0x142    24  XYZ|DIFFUSE|TEX1|TEXCOORDSIZE0=1 sizeVertex={24: 24}
+
+MSA attrib-count histogram: {1: 1259, 3: 94, 2: 152, 4: 47, 5: 31, 6: 21, 7: 18, 17: 2, 15: 1, 12: 4, 10: 1, 11: 7, 16: 1, 30: 1, 22: 1, 8: 14, 18: 2, 9: 5}
+
+MSA texture-name samples: [b'hs0006.tga\x00', b'win001.tga\x00', b'dun002.tga\x00', b'dun001.tga\x00', b'win009.tga\x00', b'cazi01.tga\x00', b'jwal01.tga\x00', b'dun004.tga\x00', b'kswa01.tga\x00', b'dun005.tga\x00', b'hs0231.tga\x00', b'hs0012.tga\x00']
+
+--- per-file size proof (.msh): file, size, numPalette, influences, verts, indices, FVF, sizeVertex, computed, ok
+BL010101.msh           52256  pal=13 infl=2 vc= 1117 ic=  3330 fvf=0x1118 sv=40 calc=  52256 OK
+BL010201.msh           26104  pal=13 infl=4 vc=  470 ic=  1314 fvf=0x111C sv=48 calc=  26104 OK
+BL010301.msh           33308  pal=15 infl=4 vc=  588 ic=  2016 fvf=0x111C sv=48 calc=  33308 OK
+BL010401.msh           23460  pal=11 infl=4 vc=  422 ic=  1212 fvf=0x111C sv=48 calc=  23460 OK
+ag010101.msh           37136  pal=10 infl=3 vc=  722 ic=  2328 fvf=0x111A sv=44 calc=  37136 OK
+ag010102.msh           35436  pal=10 infl=3 vc=  685 ic=  2292 fvf=0x111A sv=44 calc=  35436 OK
+ag010103.msh           35996  pal= 9 infl=4 vc=  677 ic=  1428 fvf=0x111C sv=48 calc=  35996 OK
+ag010104.msh           29692  pal=10 infl=1 vc=  668 ic=  2466 fvf=0x1116 sv=36 calc=  29692 OK
+ag010105.msh           29692  pal=10 infl=1 vc=  668 ic=  2466 fvf=0x1116 sv=36 calc=  29692 OK
+bd010101.msh           14236  pal=16 infl=4 vc=  226 ic=  1134 fvf=0x111C sv=48 calc=  14236 OK
+bd010102.msh            5272  pal=10 infl=4 vc=   82 ic=   312 fvf=0x111C sv=48 calc=   5272 OK
+bd010103.msh            6656  pal= 9 infl=2 vc=  132 ic=   366 fvf=0x1118 sv=40 calc=   6656 OK
+bd020101.msh          106096  pal=24 infl=3 vc= 2182 ic=  4212 fvf=0x111A sv=44 calc= 106096 OK
+bd020201.msh           35872  pal=12 infl=3 vc=  727 ic=  1518 fvf=0x111A sv=44 calc=  35872 OK
+bd020301.msh            7112  pal= 2 infl=2 vc=  158 ic=   312 fvf=0x1118 sv=40 calc=   7112 OK
+bd020302.msh           19684  pal= 8 infl=3 vc=  374 ic=  1326 fvf=0x111A sv=44 calc=  19684 OK
+bd020303.msh           29384  pal= 9 infl=2 vc=  606 ic=  2250 fvf=0x1118 sv=40 calc=  29384 OK
+be010101.msh           24924  pal=17 infl=4 vc=  424 ic=  1692 fvf=0x111C sv=48 calc=  24924 OK
+be010102.msh           39552  pal=17 infl=4 vc=  680 ic=  2862 fvf=0x111C sv=48 calc=  39552 OK
+be010103.msh           24788  pal=15 infl=4 vc=  424 ic=  1692 fvf=0x111C sv=48 calc=  24788 OK
+be010104.msh           43880  pal=15 infl=4 vc=  786 ic=  2550 fvf=0x111C sv=48 calc=  43880 OK
+be010201.msh           15252  pal=11 infl=4 vc=  256 ic=  1092 fvf=0x111C sv=48 calc=  15252 OK
+be010202.msh           19772  pal=12 infl=4 vc=  340 ic=  1302 fvf=0x111C sv=48 calc=  19772 OK
+be010203.msh           20516  pal=11 infl=3 vc=  388 ic=  1332 fvf=0x111A sv=44 calc=  20516 OK
+be010204.msh           22576  pal=12 infl=3 vc=  424 ic=  1536 fvf=0x111A sv=44 calc=  22576 OK
+bf010101.msh             860  pal= 3 infl=1 vc=   16 ic=    24 fvf=0x1116 sv=36 calc=    860 OK
+bm010101.msh           49604  pal=24 infl=4 vc=  856 ic=  3426 fvf=0x111C sv=48 calc=  49604 OK
+bm010102.msh           53636  pal=24 infl=4 vc=  940 ic=  3426 fvf=0x111C sv=48 calc=  53636 OK
+bm010201.msh           22812  pal=11 infl=4 vc=  398 ic=  1464 fvf=0x111C sv=48 calc=  22812 OK
+bm010202.msh           20128  pal=11 infl=3 vc=  374 ic=  1446 fvf=0x111A sv=44 calc=  20128 OK
+bm020101.msh           79792  pal=22 infl=4 vc= 1475 ic=  3732 fvf=0x111C sv=48 calc=  79792 OK
+bm020201.msh           44328  pal=14 infl=3 vc=  888 ic=  2136 fvf=0x111A sv=44 calc=  44328 OK
+bn010101.msh           71816  pal= 8 infl=3 vc= 1480 ic=  3060 fvf=0x111A sv=44 calc=  71816 OK
+bn010201.msh           71816  pal= 8 infl=3 vc= 1480 ic=  3060 fvf=0x111A sv=44 calc=  71816 OK
+bn010301.msh           71816  pal= 8 infl=3 vc= 1480 ic=  3060 fvf=0x111A sv=44 calc=  71816 OK
+bn010401.msh           71816  pal= 8 infl=3 vc= 1480 ic=  3060 fvf=0x111A sv=44 calc=  71816 OK
+bo010101.msh           22928  pal=15 infl=4 vc=  380 ic=  1818 fvf=0x111C sv=48 calc=  22928 OK
+bo010102.msh           27944  pal=15 infl=4 vc=  474 ic=  2070 fvf=0x111C sv=48 calc=  27944 OK
+bo010201.msh           12052  pal=13 infl=4 vc=  193 ic=   936 fvf=0x111C sv=48 calc=  12052 OK
+bo010202.msh           11840  pal=13 infl=3 vc=  206 ic=   930 fvf=0x111A sv=44 calc=  11840 OK
+bt010101.msh          130824  pal=26 infl=4 vc= 2409 ic=  6696 fvf=0x111C sv=48 calc= 130824 OK
+bt010102.msh          107112  pal=23 infl=1 vc= 2612 ic=  5742 fvf=0x1116 sv=36 calc= 107112 OK
+bt010201.msh             296  pal= 0 infl=0 vc=    9 ic=    24 fvf=0x012 sv=24 calc=    296 OK
+cb010101.msh           35064  pal=14 infl=4 vc=  618 ic=  2208 fvf=0x111C sv=48 calc=  35064 OK
+cb010102.msh           42120  pal=14 infl=4 vc=  758 ic=  2376 fvf=0x111C sv=48 calc=  42120 OK
+cb010103.msh           45204  pal=14 infl=4 vc=  799 ic=  2934 fvf=0x111C sv=48 calc=  45204 OK
+cb010201.msh           20712  pal=14 infl=4 vc=  358 ic=  1272 fvf=0x111C sv=48 calc=  20712 OK
+cb010202.msh           20712  pal=14 infl=4 vc=  358 ic=  1272 fvf=0x111C sv=48 calc=  20712 OK
+cb010203.msh           18816  pal=12 infl=3 vc=  344 ic=  1416 fvf=0x111A sv=44 calc=  18816 OK
+ch010101.msh           10668  pal= 5 infl=2 vc=  222 ic=   708 fvf=0x1118 sv=40 calc=  10668 OK
+ch010106.msh            7356  pal= 2 infl=2 vc=  144 ic=   714 fvf=0x1118 sv=40 calc=   7356 OK
+ch010107.msh            6608  pal= 2 infl=2 vc=  128 ic=   660 fvf=0x1118 sv=40 calc=   6608 OK
+ch010108.msh            6608  pal= 2 infl=2 vc=  128 ic=   660 fvf=0x1118 sv=40 calc=   6608 OK
+ch010113.msh           16188  pal= 5 infl=3 vc=  318 ic=   912 fvf=0x111A sv=44 calc=  16188 OK
+ch010114.msh           14916  pal= 5 infl=2 vc=  318 ic=   912 fvf=0x1118 sv=40 calc=  14916 OK
+ch010116.msh            6296  pal= 2 infl=2 vc=  122 ic=   624 fvf=0x1118 sv=40 calc=   6296 OK
+ch010117.msh            7356  pal= 2 infl=2 vc=  144 ic=   714 fvf=0x1118 sv=40 calc=   7356 OK
+ch010119.msh            6696  pal= 2 infl=2 vc=  132 ic=   624 fvf=0x1118 sv=40 calc=   6696 OK
+ch010121.msh            9940  pal= 5 infl=3 vc=  182 ic=   780 fvf=0x111A sv=44 calc=   9940 OK
+ch010128.msh            6296  pal= 2 infl=2 vc=  122 ic=   624 fvf=0x1118 sv=40 calc=   6296 OK
+ch010129.msh            6296  pal= 2 infl=2 vc=  122 ic=   624 fvf=0x1118 sv=40 calc=   6296 OK
+ch010130.msh            7980  pal= 2 infl=2 vc=  168 ic=   546 fvf=0x1118 sv=40 calc=   7980 OK
+ch010134.msh           22252  pal= 3 infl=2 vc=  497 ic=  1068 fvf=0x1118 sv=40 calc=  22252 OK
+ch010135.msh           11848  pal= 2 infl=2 vc=  244 ic=   960 fvf=0x1118 sv=40 calc=  11848 OK
+ch010137.msh           16968  pal= 2 infl=1 vc=  404 ic=  1128 fvf=0x1116 sv=36 calc=  16968 OK
+ch010138.msh           16636  pal= 1 infl=1 vc=  370 ic=  1608 fvf=0x1116 sv=36 calc=  16636 OK
+ch010141.msh            8464  pal= 1 infl=1 vc=  190 ic=   762 fvf=0x1116 sv=36 calc=   8464 OK
+ch010161.msh            7264  pal= 1 infl=1 vc=  159 ic=   720 fvf=0x1116 sv=36 calc=   7264 OK
+ch010164.msh           29944  pal= 1 infl=1 vc=  748 ic=  1458 fvf=0x1116 sv=36 calc=  29944 OK
+ch010181.msh            8464  pal= 1 infl=1 vc=  190 ic=   762 fvf=0x1116 sv=36 calc=   8464 OK
+ch010185.msh            7264  pal= 1 infl=1 vc=  159 ic=   720 fvf=0x1116 sv=36 calc=   7264 OK
+ch010201.msh           21848  pal= 9 infl=4 vc=  412 ic=   714 fvf=0x111C sv=48 calc=  21848 OK
+ch010202.msh            9472  pal= 7 infl=4 vc=  170 ic=   402 fvf=0x111C sv=48 calc=   9472 OK
+ch010203.msh            7264  pal= 7 infl=4 vc=  129 ic=   282 fvf=0x111C sv=48 calc=   7264 OK
+ch010204.msh            7944  pal= 4 infl=3 vc=  151 ic=   498 fvf=0x111A sv=44 calc=   7944 OK
+ch010205.msh            9306  pal= 4 infl=3 vc=  178 ic=   585 fvf=0x111A sv=44 calc=   9306 OK
+ch010207.msh            6284  pal= 6 infl=4 vc=  108 ic=   330 fvf=0x111C sv=48 calc=   6284 OK
+ch010208.msh            9500  pal= 6 infl=4 vc=  170 ic=   450 fvf=0x111C sv=48 calc=   9500 OK
+ch010209.msh            2240  pal= 2 infl=2 vc=   41 ic=   216 fvf=0x1118 sv=40 calc=   2240 OK
+ch010210.msh            4932  pal= 2 infl=2 vc=  105 ic=   282 fvf=0x1118 sv=40 calc=   4932 OK
+ch010211.msh            5080  pal= 1 infl=1 vc=  120 ic=   330 fvf=0x1116 sv=36 calc=   5080 OK
+ch010212.msh            9072  pal= 5 infl=4 vc=  156 ic=   606 fvf=0x111C sv=48 calc=   9072 OK
+ch010215.msh           10376  pal= 3 infl=3 vc=  204 ic=   582 fvf=0x111A sv=44 calc=  10376 OK
+ch010216.msh            6530  pal= 5 infl=3 vc=  127 ic=   285 fvf=0x111A sv=44 calc=   6530 OK
+ch010217.msh           10912  pal= 1 infl=1 vc=  265 ic=   636 fvf=0x1116 sv=36 calc=  10912 OK
+ch010218.msh            3784  pal= 1 infl=1 vc=   88 ic=   258 fvf=0x1116 sv=36 calc=   3784 OK
+ch010219.msh           72164  pal= 4 infl=2 vc= 1636 ic=  3210 fvf=0x1118 sv=40 calc=  72164 OK
+ch010220.msh            4792  pal= 1 infl=1 vc=  114 ic=   294 fvf=0x1116 sv=36 calc=   4792 OK
+ch010221.msh           22696  pal=10 infl=4 vc=  422 ic=   864 fvf=0x111C sv=48 calc=  22696 OK
+ch010222.msh            5108  pal= 6 infl=4 vc=   87 ic=   246 fvf=0x111C sv=48 calc=   5108 OK
+ch010223.msh            8528  pal= 4 infl=3 vc=  167 ic=   438 fvf=0x111A sv=44 calc=   8528 OK
+ch010224.msh            5288  pal= 3 infl=3 vc=   96 ic=   414 fvf=0x111A sv=44 calc=   5288 OK
+ch010225.msh            6828  pal= 5 infl=4 vc=  116 ic=   444 fvf=0x111C sv=48 calc=   6828 OK
+ch010226.msh           10790  pal= 6 infl=4 vc=  192 ic=   567 fvf=0x111C sv=48 calc=  10790 OK
+ch010227.msh            3844  pal= 1 infl=1 vc=   88 ic=   288 fvf=0x1116 sv=36 calc=   3844 OK
+ch010228.msh           10104  pal= 5 infl=4 vc=  174 ic=   690 fvf=0x111C sv=48 calc=  10104 OK
+ch010229.msh            5124  pal= 5 infl=4 vc=   88 ic=   264 fvf=0x111C sv=48 calc=   5124 OK
+ch010231.msh            7670  pal= 3 infl=2 vc=  165 ic=   417 fvf=0x1118 sv=40 calc=   7670 OK
+ch010232.msh            6352  pal= 7 infl=4 vc=  102 ic=   474 fvf=0x111C sv=48 calc=   6352 OK
+ch010233.msh            9704  pal= 2 infl=2 vc=  206 ic=   648 fvf=0x1118 sv=40 calc=   9704 OK
+ch010236.msh           18860  pal= 2 infl=2 vc=  398 ic=  1386 fvf=0x1118 sv=40 calc=  18860 OK
+ch010237.msh            4102  pal= 1 infl=1 vc=   99 ic=   219 fvf=0x1116 sv=36 calc=   4102 OK
+ch010238.msh             214  pal= 1 infl=1 vc=    3 ic=     3 fvf=0x1116 sv=36 calc=    214 OK
+ch010239.msh           78456  pal= 4 infl=3 vc= 1630 ic=  3216 fvf=0x111A sv=44 calc=  78456 OK
+ch010240.msh            9376  pal= 1 infl=1 vc=  214 ic=   786 fvf=0x1116 sv=36 calc=   9376 OK
+ch010241.msh            9232  pal= 1 infl=1 vc=  217 ic=   660 fvf=0x1116 sv=36 calc=   9232 OK
+ch010243.msh            4792  pal= 1 infl=1 vc=  114 ic=   294 fvf=0x1116 sv=36 calc=   4792 OK
+ch010261.msh           17116  pal= 1 infl=1 vc=  406 ic=  1200 fvf=0x1116 sv=36 calc=  17116 OK
+ch010263.msh            9376  pal= 1 infl=1 vc=  214 ic=   786 fvf=0x1116 sv=36 calc=   9376 OK
+ch010264.msh             214  pal= 1 infl=1 vc=    3 ic=     3 fvf=0x1116 sv=36 calc=    214 OK
+ch010281.msh            9232  pal= 1 infl=1 vc=  217 ic=   660 fvf=0x1116 sv=36 calc=   9232 OK
+ch010285.msh           17116  pal= 1 infl=1 vc=  406 ic=  1200 fvf=0x1116 sv=36 calc=  17116 OK
+ch010301.msh           15440  pal=15 infl=4 vc=  260 ic=   954 fvf=0x111C sv=48 calc=  15440 OK
+ch010302.msh           20900  pal=15 infl=4 vc=  370 ic=  1044 fvf=0x111C sv=48 calc=  20900 OK
+ch010303.msh           24656  pal=15 infl=4 vc=  429 ic=  1506 fvf=0x111C sv=48 calc=  24656 OK
+ch010304.msh           21456  pal=14 infl=4 vc=  377 ic=  1188 fvf=0x111C sv=48 calc=  21456 OK
+ch010305.msh           16448  pal=15 infl=4 vc=  276 ic=  1074 fvf=0x111C sv=48 calc=  16448 OK
+ch010306.msh           18840  pal=14 infl=4 vc=  332 ic=   960 fvf=0x111C sv=48 calc=  18840 OK
+ch010307.msh           15680  pal=15 infl=4 vc=  260 ic=  1074 fvf=0x111C sv=48 calc=  15680 OK
+ch010308.msh           16340  pal=12 infl=4 vc=  282 ic=   978 fvf=0x111C sv=48 calc=  16340 OK
+ch010309.msh           18360  pal=14 infl=4 vc=  318 ic=  1056 fvf=0x111C sv=48 calc=  18360 OK
+ch010310.msh           21468  pal=14 infl=4 vc=  384 ic=  1026 fvf=0x111C sv=48 calc=  21468 OK
+ch010311.msh           21336  pal=14 infl=4 vc=  375 ic=  1176 fvf=0x111C sv=48 calc=  21336 OK
+ch010312.msh           25050  pal=14 infl=4 vc=  448 ic=  1281 fvf=0x111C sv=48 calc=  25050 OK
+ch010313.msh           21992  pal=12 infl=4 vc=  403 ic=   900 fvf=0x111C sv=48 calc=  21992 OK
+ch010314.msh           17936  pal=12 infl=4 vc=  324 ic=   768 fvf=0x111C sv=48 calc=  17936 OK
+ch010315.msh           28704  pal=14 infl=4 vc=  512 ic=  1572 fvf=0x111C sv=48 calc=  28704 OK
+ch010316.msh           32532  pal=14 infl=4 vc=  604 ic=  1278 fvf=0x111C sv=48 calc=  32532 OK
+ch010317.msh           24852  pal=14 infl=4 vc=  444 ic=  1278 fvf=0x111C sv=48 calc=  24852 OK
+ch010318.msh           30896  pal=12 infl=3 vc=  606 ic=  1692 fvf=0x111A sv=44 calc=  30896 OK
+ch010320.msh           27692  pal=12 infl=4 vc=  488 ic=  1710 fvf=0x111C sv=48 calc=  27692 OK
+ch010321.msh           15176  pal=12 infl=4 vc=  258 ic=   972 fvf=0x111C sv=48 calc=  15176 OK
+ch010322.msh           16256  pal=12 infl=4 vc=  282 ic=   936 fvf=0x111C sv=48 calc=  16256 OK
+ch010323.msh           18800  pal=12 infl=4 vc=  322 ic=  1248 fvf=0x111C sv=48 calc=  18800 OK
+ch010324.msh           20180  pal=12 infl=4 vc=  356 ic=  1122 fvf=0x111C sv=48 calc=  20180 OK
+ch010325.msh           20132  pal=12 infl=4 vc=  354 ic=  1146 fvf=0x111C sv=48 calc=  20132 OK
+ch010326.msh           19784  pal=12 infl=4 vc=  348 ic=  1116 fvf=0x111C sv=48 calc=  19784 OK
+ch010327.msh           16784  pal=12 infl=4 vc=  292 ic=   960 fvf=0x111C sv=48 calc=  16784 OK
+ch010328.msh           21740  pal=12 infl=4 vc=  382 ic=  1278 fvf=0x111C sv=48 calc=  21740 OK
+ch010330.msh           27452  pal=10 infl=2 vc=  565 ic=  2070 fvf=0x1118 sv=40 calc=  27452 OK
+ch010331.msh           19396  pal=10 infl=4 vc=  350 ic=   942 fvf=0x111C sv=48 calc=  19396 OK
+ch010332.msh           10900  pal=13 infl=4 vc=  178 ic=   720 fvf=0x111C sv=48 calc=  10900 OK
+ch010333.msh           29264  pal=12 infl=3 vc=  576 ic=  1536 fvf=0x111A sv=44 calc=  29264 OK
+ch010334.msh           26712  pal=11 infl=4 vc=  492 ic=  1158 fvf=0x111C sv=48 calc=  26712 OK
+ch010335.msh           34788  pal= 8 infl=3 vc=  678 ic=  2190 fvf=0x111A sv=44 calc=  34788 OK
+ch010336.msh           35552  pal=12 infl=3 vc=  696 ic=  2040 fvf=0x111A sv=44 calc=  35552 OK
+ch010337.msh           15452  pal=11 infl=2 vc=  308 ic=  1176 fvf=0x1118 sv=40 calc=  15452 OK
+ch010338.msh           29898  pal=14 infl=4 vc=  520 ic=  1977 fvf=0x111C sv=48 calc=  29898 OK
+ch010340.msh           35288  pal=12 infl=4 vc=  634 ic=  2004 fvf=0x111C sv=48 calc=  35288 OK
+ch010341.msh           25784  pal=15 infl=4 vc=  461 ic=  1302 fvf=0x111C sv=48 calc=  25784 OK
+ch010342.msh           29016  pal=12 infl=3 vc=  566 ic=  1632 fvf=0x111A sv=44 calc=  29016 OK
+ch010343.msh           27692  pal=12 infl=4 vc=  488 ic=  1710 fvf=0x111C sv=48 calc=  27692 OK
+ch010361.msh           22900  pal=16 infl=4 vc=  408 ic=  1098 fvf=0x111C sv=48 calc=  22900 OK
+ch010362.msh           27348  pal=12 infl=3 vc=  518 ic=  1854 fvf=0x111A sv=44 calc=  27348 OK
+ch010363.msh           35288  pal=12 infl=4 vc=  634 ic=  2004 fvf=0x111C sv=48 calc=  35288 OK
+ch010364.msh           51116  pal=15 infl=4 vc=  941 ic=  2448 fvf=0x111C sv=48 calc=  51116 OK
+ch010401.msh           13444  pal= 7 infl=4 vc=  242 ic=   660 fvf=0x111C sv=48 calc=  13444 OK
+ch010402.msh           13140  pal= 8 infl=4 vc=  232 ic=   714 fvf=0x111C sv=48 calc=  13140 OK
+ch010403.msh           20428  pal= 7 infl=4 vc=  384 ic=   744 fvf=0x111C sv=48 calc=  20428 OK
+ch010404.msh           10072  pal= 7 infl=4 vc=  170 ic=   702 fvf=0x111C sv=48 calc=  10072 OK
+ch010405.msh           11920  pal= 7 infl=4 vc=  205 ic=   786 fvf=0x111C sv=48 calc=  11920 OK
+ch010406.msh           10026  pal= 8 infl=4 vc=  170 ic=   645 fvf=0x111C sv=48 calc=  10026 OK
+ch010407.msh           10952  pal= 6 infl=4 vc=  190 ic=   696 fvf=0x111C sv=48 calc=  10952 OK
+ch010408.msh            9792  pal= 8 infl=4 vc=  168 ic=   576 fvf=0x111C sv=48 calc=   9792 OK
+ch010410.msh           12240  pal= 8 infl=4 vc=  214 ic=   696 fvf=0x111C sv=48 calc=  12240 OK
+ch010411.msh           11196  pal= 8 infl=4 vc=  194 ic=   654 fvf=0x111C sv=48 calc=  11196 OK
+ch010412.msh           12660  pal= 8 infl=4 vc=  220 ic=   762 fvf=0x111C sv=48 calc=  12660 OK
+ch010413.msh           10544  pal= 6 infl=4 vc=  192 ic=   444 fvf=0x111C sv=48 calc=  10544 OK
+ch010414.msh           10544  pal= 6 infl=4 vc=  192 ic=   444 fvf=0x111C sv=48 calc=  10544 OK
+ch010415.msh           12288  pal= 8 infl=4 vc=  210 ic=   816 fvf=0x111C sv=48 calc=  12288 OK
+ch010416.msh           12236  pal= 6 infl=4 vc=  217 ic=   690 fvf=0x111C sv=48 calc=  12236 OK
+ch010417.msh            9828  pal= 6 infl=3 vc=  182 ic=   690 fvf=0x111A sv=44 calc=   9828 OK
+ch010418.msh           14356  pal= 7 infl=4 vc=  255 ic=   804 fvf=0x111C sv=48 calc=  14356 OK
+ch010419.msh           14356  pal= 7 infl=4 vc=  255 ic=   804 fvf=0x111C sv=48 calc=  14356 OK
+ch010420.msh           24108  pal= 8 infl=3 vc=  456 ic=  1734 fvf=0x111A sv=44 calc=  24108 OK
+ch010421.msh            9268  pal= 7 infl=4 vc=  156 ic=   636 fvf=0x111C sv=48 calc=   9268 OK
+ch010422.msh            9076  pal= 7 infl=4 vc=  152 ic=   636 fvf=0x111C sv=48 calc=   9076 OK
+ch010423.msh            9190  pal= 7 infl=4 vc=  158 ic=   549 fvf=0x111C sv=48 calc=   9190 OK
+ch010424.msh           10364  pal= 6 infl=4 vc=  178 ic=   690 fvf=0x111C sv=48 calc=  10364 OK
+ch010425.msh           12484  pal= 7 infl=4 vc=  218 ic=   756 fvf=0x111C sv=48 calc=  12484 OK
+ch010426.msh            9088  pal= 7 infl=4 vc=  154 ic=   594 fvf=0x111C sv=48 calc=   9088 OK
+ch010427.msh            9332  pal= 6 infl=4 vc=  162 ic=   558 fvf=0x111C sv=48 calc=   9332 OK
+ch010428.msh            9824  pal= 6 infl=4 vc=  169 ic=   636 fvf=0x111C sv=48 calc=   9824 OK
+ch010429.msh            9512  pal= 6 infl=4 vc=  164 ic=   600 fvf=0x111C sv=48 calc=   9512 OK
+ch010430.msh           15364  pal= 4 infl=2 vc=  336 ic=   810 fvf=0x1118 sv=40 calc=  15364 OK
+ch010431.msh           11832  pal= 5 infl=4 vc=  212 ic=   642 fvf=0x111C sv=48 calc=  11832 OK
+ch010432.msh           11384  pal= 6 infl=4 vc=  197 ic=   744 fvf=0x111C sv=48 calc=  11384 OK
+ch010433.msh           14356  pal= 7 infl=4 vc=  255 ic=   804 fvf=0x111C sv=48 calc=  14356 OK
+ch010434.msh           12692  pal= 6 infl=4 vc=  234 ic=   510 fvf=0x111C sv=48 calc=  12692 OK
+ch010435.msh            3720  pal= 2 infl=1 vc=   80 ic=   336 fvf=0x1116 sv=36 calc=   3720 OK
+ch010436.msh           14180  pal= 6 infl=4 vc=  254 ic=   774 fvf=0x111C sv=48 calc=  14180 OK
+ch010437.msh           16744  pal= 5 infl=2 vc=  346 ic=  1266 fvf=0x1118 sv=40 calc=  16744 OK
+ch010438.msh           18590  pal= 6 infl=4 vc=  326 ic=  1251 fvf=0x111C sv=48 calc=  18590 OK
+ch010440.msh           18400  pal= 7 infl=4 vc=  324 ic=  1170 fvf=0x111C sv=48 calc=  18400 OK
+ch010441.msh           14356  pal= 7 infl=4 vc=  259 ic=   708 fvf=0x111C sv=48 calc=  14356 OK
+ch010442.msh           16664  pal= 7 infl=3 vc=  320 ic=  1038 fvf=0x111A sv=44 calc=  16664 OK
+ch010443.msh           24108  pal= 8 infl=3 vc=  456 ic=  1734 fvf=0x111A sv=44 calc=  24108 OK
+ch010461.msh           14332  pal= 7 infl=4 vc=  258 ic=   720 fvf=0x111C sv=48 calc=  14332 OK
+ch010462.msh           13944  pal= 6 infl=3 vc=  266 ic=   900 fvf=0x111A sv=44 calc=  13944 OK
+ch010463.msh           18400  pal= 7 infl=4 vc=  324 ic=  1170 fvf=0x111C sv=48 calc=  18400 OK
+ch010464.msh           31340  pal= 6 infl=4 vc=  594 ic=  1194 fvf=0x111C sv=48 calc=  31340 OK
+ch010501.msh           11332  pal= 8 infl=3 vc=  218 ic=   582 fvf=0x111A sv=44 calc=  11332 OK
+ch010502.msh           18528  pal= 9 infl=3 vc=  380 ic=   582 fvf=0x111A sv=44 calc=  18528 OK
+ch010503.msh           18616  pal= 9 infl=3 vc=  382 ic=   582 fvf=0x111A sv=44 calc=  18616 OK
+ch010504.msh            9800  pal= 7 infl=3 vc=  182 ic=   642 fvf=0x111A sv=44 calc=   9800 OK
+ch010505.msh            9512  pal= 7 infl=3 vc=  176 ic=   630 fvf=0x111A sv=44 calc=   9512 OK
+ch010506.msh            7764  pal= 6 infl=2 vc=  154 ic=   582 fvf=0x1118 sv=40 calc=   7764 OK
+ch010507.msh            8448  pal= 7 infl=3 vc=  154 ic=   582 fvf=0x111A sv=44 calc=   8448 OK
+ch010508.msh            9576  pal= 7 infl=3 vc=  178 ic=   618 fvf=0x111A sv=44 calc=   9576 OK
+ch010510.msh            7996  pal= 6 infl=2 vc=  158 ic=   618 fvf=0x1118 sv=40 calc=   7996 OK
+ch010511.msh            8852  pal= 6 infl=2 vc=  180 ic=   606 fvf=0x1118 sv=40 calc=   8852 OK
+ch010512.msh            9776  pal= 9 infl=3 vc=  180 ic=   606 fvf=0x111A sv=44 calc=   9776 OK
+ch010513.msh           34532  pal= 8 infl=3 vc=  712 ic=  1314 fvf=0x111A sv=44 calc=  34532 OK
+ch010514.msh           31548  pal= 6 infl=2 vc=  712 ic=  1314 fvf=0x1118 sv=40 calc=  31548 OK
+ch010515.msh            8644  pal= 8 infl=2 vc=  172 ic=   594 fvf=0x1118 sv=40 calc=   8644 OK
+ch010516.msh           13828  pal= 6 infl=2 vc=  302 ic=   654 fvf=0x1118 sv=40 calc=  13828 OK
+ch010517.msh            8868  pal= 6 infl=2 vc=  178 ic=   654 fvf=0x1118 sv=40 calc=   8868 OK
+ch010518.msh            9052  pal= 8 infl=2 vc=  184 ic=   558 fvf=0x1118 sv=40 calc=   9052 OK
+ch010520.msh           10172  pal= 6 infl=2 vc=  210 ic=   666 fvf=0x1118 sv=40 calc=  10172 OK
+ch010521.msh            7852  pal= 6 infl=2 vc=  158 ic=   546 fvf=0x1118 sv=40 calc=   7852 OK
+ch010522.msh            7852  pal= 6 infl=2 vc=  158 ic=   546 fvf=0x1118 sv=40 calc=   7852 OK
+ch010523.msh            8220  pal= 6 infl=2 vc=  166 ic=   570 fvf=0x1118 sv=40 calc=   8220 OK
+ch010524.msh            7852  pal= 6 infl=2 vc=  158 ic=   546 fvf=0x1118 sv=40 calc=   7852 OK
+ch010525.msh            8420  pal= 6 infl=2 vc=  174 ic=   510 fvf=0x1118 sv=40 calc=   8420 OK
+ch010526.msh            8244  pal= 6 infl=2 vc=  166 ic=   582 fvf=0x1118 sv=40 calc=   8244 OK
+ch010527.msh            8756  pal= 6 infl=2 vc=  180 ic=   558 fvf=0x1118 sv=40 calc=   8756 OK
+ch010528.msh            7852  pal= 6 infl=2 vc=  158 ic=   546 fvf=0x1118 sv=40 calc=   7852 OK
+ch010530.msh           19960  pal= 6 infl=2 vc=  434 ic=  1080 fvf=0x1118 sv=40 calc=  19960 OK
+ch010531.msh           16424  pal= 6 infl=2 vc=  348 ic=  1032 fvf=0x1118 sv=40 calc=  16424 OK
+ch010532.msh           15712  pal= 8 infl=2 vc=  334 ic=   888 fvf=0x1118 sv=40 calc=  15712 OK
+ch010533.msh            9052  pal= 8 infl=2 vc=  184 ic=   558 fvf=0x1118 sv=40 calc=   9052 OK
+ch010534.msh           30908  pal= 7 infl=2 vc=  706 ic=  1080 fvf=0x1118 sv=40 calc=  30908 OK
+ch010535.msh           12120  pal= 4 infl=2 vc=  254 ic=   828 fvf=0x1118 sv=40 calc=  12120 OK
+ch010536.msh           22104  pal= 6 infl=2 vc=  478 ic=  1272 fvf=0x1118 sv=40 calc=  22104 OK
+ch010537.msh           20192  pal= 6 infl=2 vc=  432 ic=  1236 fvf=0x1118 sv=40 calc=  20192 OK
+ch010538.msh           16068  pal= 4 infl=2 vc=  350 ic=   882 fvf=0x1118 sv=40 calc=  16068 OK
+ch010540.msh           13920  pal= 7 infl=2 vc=  296 ic=   786 fvf=0x1118 sv=40 calc=  13920 OK
+ch010541.msh           21992  pal= 9 infl=3 vc=  444 ic=   906 fvf=0x111A sv=44 calc=  21992 OK
+ch010542.msh           12492  pal= 6 infl=2 vc=  262 ic=   786 fvf=0x1118 sv=40 calc=  12492 OK
+ch010543.msh           10172  pal= 6 infl=2 vc=  210 ic=   666 fvf=0x1118 sv=40 calc=  10172 OK
+ch010561.msh           22624  pal= 9 infl=3 vc=  460 ic=   870 fvf=0x111A sv=44 calc=  22624 OK
+ch010562.msh           14068  pal= 8 infl=2 vc=  298 ic=   786 fvf=0x1118 sv=40 calc=  14068 OK
+ch010563.msh           13920  pal= 7 infl=2 vc=  296 ic=   786 fvf=0x1118 sv=40 calc=  13920 OK
+ch010564.msh           43000  pal= 6 infl=2 vc=  968 ic=  1920 fvf=0x1118 sv=40 calc=  43000 OK
+ch010601.msh           23044  pal= 9 infl=3 vc=  472 ic=   816 fvf=0x111A sv=44 calc=  23044 OK
+ch010602.msh           22500  pal= 9 infl=3 vc=  458 ic=   852 fvf=0x111A sv=44 calc=  22500 OK
+ch010603.msh           25916  pal= 9 infl=3 vc=  534 ic=   888 fvf=0x111A sv=44 calc=  25916 OK
+ch010604.msh           14248  pal= 8 infl=2 vc=  298 ic=   876 fvf=0x1118 sv=40 calc=  14248 OK
+ch010605.msh           11320  pal= 8 infl=2 vc=  226 ic=   852 fvf=0x1118 sv=40 calc=  11320 OK
+ch010606.msh            8576  pal= 8 infl=2 vc=  164 ic=   720 fvf=0x1118 sv=40 calc=   8576 OK
+ch010607.msh           11712  pal= 8 infl=2 vc=  234 ic=   888 fvf=0x1118 sv=40 calc=  11712 OK
+ch010608.msh            9368  pal= 8 infl=2 vc=  182 ic=   756 fvf=0x1118 sv=40 calc=   9368 OK
+ch010610.msh            9536  pal= 8 infl=2 vc=  182 ic=   840 fvf=0x1118 sv=40 calc=   9536 OK
+ch010611.msh           11720  pal= 8 infl=2 vc=  236 ic=   852 fvf=0x1118 sv=40 calc=  11720 OK
+ch010612.msh            9784  pal= 8 infl=2 vc=  190 ic=   804 fvf=0x1118 sv=40 calc=   9784 OK
+ch010613.msh           19856  pal= 8 infl=2 vc=  446 ic=   720 fvf=0x1118 sv=40 calc=  19856 OK
+ch010614.msh           18096  pal= 8 infl=2 vc=  402 ic=   720 fvf=0x1118 sv=40 calc=  18096 OK
+ch010615.msh           12112  pal= 8 infl=2 vc=  250 ic=   768 fvf=0x1118 sv=40 calc=  12112 OK
+ch010616.msh           20860  pal= 8 infl=2 vc=  466 ic=   822 fvf=0x1118 sv=40 calc=  20860 OK
+ch010617.msh           13500  pal= 8 infl=2 vc=  282 ic=   822 fvf=0x1118 sv=40 calc=  13500 OK
+ch010618.msh            9768  pal= 8 infl=2 vc=  192 ic=   756 fvf=0x1118 sv=40 calc=   9768 OK
+ch010620.msh           12504  pal= 8 infl=2 vc=  252 ic=   924 fvf=0x1118 sv=40 calc=  12504 OK
+ch010621.msh            7328  pal= 8 infl=2 vc=  140 ic=   576 fvf=0x1118 sv=40 calc=   7328 OK
+ch010622.msh            7328  pal= 8 infl=2 vc=  140 ic=   576 fvf=0x1118 sv=40 calc=   7328 OK
+ch010623.msh            9224  pal= 8 infl=2 vc=  182 ic=   684 fvf=0x1118 sv=40 calc=   9224 OK
+ch010624.msh            9456  pal= 8 infl=2 vc=  186 ic=   720 fvf=0x1118 sv=40 calc=   9456 OK
+ch010625.msh            9560  pal= 8 infl=2 vc=  188 ic=   732 fvf=0x1118 sv=40 calc=   9560 OK
+ch010626.msh            9120  pal= 8 infl=2 vc=  180 ic=   672 fvf=0x1118 sv=40 calc=   9120 OK
+ch010627.msh           11592  pal= 8 infl=2 vc=  234 ic=   828 fvf=0x1118 sv=40 calc=  11592 OK
+ch010628.msh            9264  pal= 8 infl=2 vc=  186 ic=   624 fvf=0x1118 sv=40 calc=   9264 OK
+ch010630.msh           26984  pal= 6 infl=2 vc=  588 ic=  1512 fvf=0x1118 sv=40 calc=  26984 OK
+ch010631.msh           15700  pal= 7 infl=2 vc=  324 ic=  1116 fvf=0x1118 sv=40 calc=  15700 OK
+ch010632.msh           12492  pal= 8 infl=4 vc=  218 ic=   726 fvf=0x111C sv=48 calc=  12492 OK
+ch010633.msh           13504  pal= 8 infl=2 vc=  280 ic=   864 fvf=0x1118 sv=40 calc=  13504 OK
+ch010634.msh           27288  pal= 8 infl=2 vc=  618 ic=   996 fvf=0x1118 sv=40 calc=  27288 OK
+ch010635.msh           10840  pal= 4 infl=1 vc=  252 ic=   732 fvf=0x1116 sv=36 calc=  10840 OK
+ch010636.msh           14424  pal= 8 infl=2 vc=  294 ic=  1044 fvf=0x1118 sv=40 calc=  14424 OK
+ch010637.msh            9720  pal= 8 infl=2 vc=  192 ic=   732 fvf=0x1118 sv=40 calc=   9720 OK
+ch010638.msh           14064  pal= 5 infl=2 vc=  300 ic=   846 fvf=0x1118 sv=40 calc=  14064 OK
+ch010640.msh           16088  pal= 6 infl=2 vc=  342 ic=   984 fvf=0x1118 sv=40 calc=  16088 OK
+ch010641.msh           19124  pal= 7 infl=3 vc=  386 ic=   816 fvf=0x111A sv=44 calc=  19124 OK
+ch010642.msh           13200  pal= 8 infl=2 vc=  270 ic=   912 fvf=0x1118 sv=40 calc=  13200 OK
+ch010643.msh           12504  pal= 8 infl=2 vc=  252 ic=   924 fvf=0x1118 sv=40 calc=  12504 OK
+ch010661.msh           15340  pal= 7 infl=3 vc=  306 ic=   684 fvf=0x111A sv=44 calc=  15340 OK
+ch010662.msh           12328  pal= 8 infl=2 vc=  250 ic=   876 fvf=0x1118 sv=40 calc=  12328 OK
+ch010663.msh           16088  pal= 6 infl=2 vc=  342 ic=   984 fvf=0x1118 sv=40 calc=  16088 OK
+ch010664.msh           39080  pal= 6 infl=2 vc=  870 ic=  1920 fvf=0x1118 sv=40 calc=  39080 OK
+ch020101.msh            8088  pal= 2 infl=2 vc=  165 ic=   660 fvf=0x1118 sv=40 calc=   8088 OK
+ch020108.msh            6088  pal= 1 infl=1 vc=  132 ic=   618 fvf=0x1116 sv=36 calc=   6088 OK
+ch020109.msh            6536  pal= 2 infl=2 vc=  128 ic=   624 fvf=0x1118 sv=40 calc=   6536 OK
+ch020110.msh            6888  pal= 2 infl=2 vc=  138 ic=   600 fvf=0x1118 sv=40 calc=   6888 OK
+ch020111.msh            6888  pal= 2 infl=2 vc=  138 ic=   600 fvf=0x1118 sv=40 calc=   6888 OK
+ch020113.msh            7980  pal= 2 infl=2 vc=  168 ic=   546 fvf=0x1118 sv=40 calc=   7980 OK
+ch020114.msh            6820  pal= 2 infl=2 vc=  136 ic=   606 fvf=0x1118 sv=40 calc=   6820 OK
+ch020117.msh            9588  pal= 2 infl=1 vc=  228 ic=   606 fvf=0x1116 sv=36 calc=   9588 OK
+ch020121.msh            8740  pal= 2 infl=2 vc=  181 ic=   666 fvf=0x1118 sv=40 calc=   8740 OK
+ch020141.msh            7828  pal= 1 infl=1 vc=  174 ic=   732 fvf=0x1116 sv=36 calc=   7828 OK
+ch020161.msh            8164  pal= 1 infl=1 vc=  182 ic=   756 fvf=0x1116 sv=36 calc=   8164 OK
+ch020181.msh            7828  pal= 1 infl=1 vc=  174 ic=   732 fvf=0x1116 sv=36 calc=   7828 OK
+ch020185.msh            8164  pal= 1 infl=1 vc=  182 ic=   756 fvf=0x1116 sv=36 calc=   8164 OK
+ch020191.msh           41840  pal=15 infl=4 vc=  737 ic=  2706 fvf=0x111C sv=48 calc=  41840 OK
+ch020192.msh           22350  pal= 5 infl=3 vc=  414 ic=  1881 fvf=0x111A sv=44 calc=  22350 OK
+ch020193.msh           19994  pal= 2 infl=2 vc=  410 ic=  1713 fvf=0x1118 sv=40 calc=  19994 OK
+ch020201.msh           25556  pal= 6 infl=4 vc=  479 ic=  1062 fvf=0x111C sv=48 calc=  25556 OK
+ch020202.msh           14556  pal= 8 infl=4 vc=  267 ic=   582 fvf=0x111C sv=48 calc=  14556 OK
+ch020203.msh           14892  pal= 8 infl=4 vc=  271 ic=   654 fvf=0x111C sv=48 calc=  14892 OK
+ch020204.msh            8950  pal= 7 infl=4 vc=  161 ic=   357 fvf=0x111C sv=48 calc=   8950 OK
+ch020205.msh            7060  pal= 8 infl=3 vc=  134 ic=   294 fvf=0x111A sv=44 calc=   7060 OK
+ch020206.msh            8594  pal= 6 infl=4 vc=  154 ic=   381 fvf=0x111C sv=48 calc=   8594 OK
+ch020207.msh            6100  pal= 3 infl=3 vc=  115 ic=   402 fvf=0x111A sv=44 calc=   6100 OK
+ch020208.msh            8688  pal= 5 infl=4 vc=  146 ic=   654 fvf=0x111C sv=48 calc=   8688 OK
+ch020209.msh            8644  pal= 4 infl=3 vc=  168 ic=   474 fvf=0x111A sv=44 calc=   8644 OK
+ch020210.msh            7740  pal= 5 infl=3 vc=  150 ic=   384 fvf=0x111A sv=44 calc=   7740 OK
+ch020211.msh           10088  pal= 6 infl=4 vc=  184 ic=   408 fvf=0x111C sv=48 calc=  10088 OK
+ch020212.msh           13152  pal= 5 infl=4 vc=  236 ic=   726 fvf=0x111C sv=48 calc=  13152 OK
+ch020213.msh            6480  pal= 3 infl=3 vc=  122 ic=   438 fvf=0x111A sv=44 calc=   6480 OK
+ch020214.msh           12000  pal= 5 infl=4 vc=  222 ic=   486 fvf=0x111C sv=48 calc=  12000 OK
+ch020217.msh           22030  pal= 1 infl=1 vc=  564 ic=   813 fvf=0x1116 sv=36 calc=  22030 OK
+ch020219.msh           81136  pal= 4 infl=3 vc= 1686 ic=  3324 fvf=0x111A sv=44 calc=  81136 OK
+ch020220.msh            7424  pal= 3 infl=2 vc=  150 ic=   594 fvf=0x1118 sv=40 calc=   7424 OK
+ch020221.msh           14762  pal= 6 infl=4 vc=  269 ic=   705 fvf=0x111C sv=48 calc=  14762 OK
+ch020222.msh           11316  pal= 5 infl=3 vc=  225 ic=   522 fvf=0x111A sv=44 calc=  11316 OK
+ch020223.msh           11736  pal= 5 infl=3 vc=  231 ic=   600 fvf=0x111A sv=44 calc=  11736 OK
+ch020224.msh           15072  pal= 5 infl=3 vc=  303 ic=   684 fvf=0x111A sv=44 calc=  15072 OK
+ch020225.msh           10216  pal= 5 infl=3 vc=  200 ic=   522 fvf=0x111A sv=44 calc=  10216 OK
+ch020226.msh           15736  pal= 4 infl=3 vc=  318 ic=   720 fvf=0x111A sv=44 calc=  15736 OK
+ch020227.msh           15176  pal= 5 infl=2 vc=  332 ic=   762 fvf=0x1118 sv=40 calc=  15176 OK
+ch020228.msh           12696  pal= 5 infl=2 vc=  276 ic=   642 fvf=0x1118 sv=40 calc=  12696 OK
+ch020239.msh           77976  pal= 3 infl=3 vc= 1619 ic=  3252 fvf=0x111A sv=44 calc=  77976 OK
+ch020240.msh           12156  pal= 3 infl=2 vc=  259 ic=   780 fvf=0x1118 sv=40 calc=  12156 OK
+ch020241.msh           13756  pal= 3 infl=2 vc=  281 ic=  1140 fvf=0x1118 sv=40 calc=  13756 OK
+ch020243.msh            7424  pal= 3 infl=2 vc=  150 ic=   594 fvf=0x1118 sv=40 calc=   7424 OK
+ch020261.msh            7012  pal= 1 infl=1 vc=  157 ic=   630 fvf=0x1116 sv=36 calc=   7012 OK
+ch020263.msh           12156  pal= 3 infl=2 vc=  259 ic=   780 fvf=0x1118 sv=40 calc=  12156 OK
+ch020281.msh            9424  pal= 1 infl=1 vc=  209 ic=   900 fvf=0x1116 sv=36 calc=   9424 OK
+ch020285.msh            7012  pal= 1 infl=1 vc=  157 ic=   630 fvf=0x1116 sv=36 calc=   7012 OK
+ch020301.msh           17784  pal=17 infl=4 vc=  307 ic=   930 fvf=0x111C sv=48 calc=  17784 OK
+ch020302.msh           27076  pal=19 infl=4 vc=  487 ic=  1188 fvf=0x111C sv=48 calc=  27076 OK
+ch020303.msh           26958  pal=17 infl=4 vc=  484 ic=  1269 fvf=0x111C sv=48 calc=  26958 OK
+ch020304.msh           22160  pal=15 infl=4 vc=  389 ic=  1218 fvf=0x111C sv=48 calc=  22160 OK
+ch020305.msh           19256  pal=15 infl=4 vc=  330 ic=  1182 fvf=0x111C sv=48 calc=  19256 OK
+ch020306.msh           25984  pal=13 infl=4 vc=  468 ic=  1302 fvf=0x111C sv=48 calc=  25984 OK
+ch020307.msh           27812  pal=15 infl=4 vc=  496 ic=  1476 fvf=0x111C sv=48 calc=  27812 OK
+ch020309.msh           15332  pal=15 infl=4 vc=  260 ic=   900 fvf=0x111C sv=48 calc=  15332 OK
+ch020310.msh           17900  pal=15 infl=4 vc=  304 ic=  1128 fvf=0x111C sv=48 calc=  17900 OK
+ch020311.msh           19094  pal=15 infl=4 vc=  331 ic=  1077 fvf=0x111C sv=48 calc=  19094 OK
+ch020312.msh           28544  pal=15 infl=4 vc=  512 ic=  1458 fvf=0x111C sv=48 calc=  28544 OK
+ch020313.msh           41544  pal=10 infl=3 vc=  823 ic=  2310 fvf=0x111A sv=44 calc=  41544 OK
+ch020314.msh           36220  pal=13 infl=4 vc=  663 ic=  1740 fvf=0x111C sv=48 calc=  36220 OK
+ch020315.msh           19684  pal=13 infl=4 vc=  338 ic=  1272 fvf=0x111C sv=48 calc=  19684 OK
+ch020317.msh           27408  pal=14 infl=4 vc=  480 ic=  1692 fvf=0x111C sv=48 calc=  27408 OK
+ch020319.msh           56988  pal=26 infl=4 vc= 1008 ic=  3402 fvf=0x111C sv=48 calc=  56988 OK
+ch020320.msh           26508  pal=15 infl=3 vc=  500 ic=  1728 fvf=0x111A sv=44 calc=  26508 OK
+ch020321.msh           18696  pal=11 infl=4 vc=  329 ic=  1062 fvf=0x111C sv=48 calc=  18696 OK
+ch020322.msh           28312  pal=13 infl=4 vc=  515 ic=  1338 fvf=0x111C sv=48 calc=  28312 OK
+ch020323.msh           21664  pal=13 infl=4 vc=  387 ic=  1086 fvf=0x111C sv=48 calc=  21664 OK
+ch020324.msh           28204  pal=10 infl=4 vc=  523 ic=  1194 fvf=0x111C sv=48 calc=  28204 OK
+ch020325.msh           33004  pal=10 infl=4 vc=  618 ic=  1314 fvf=0x111C sv=48 calc=  33004 OK
+ch020326.msh           30174  pal=12 infl=3 vc=  605 ic=  1353 fvf=0x111A sv=44 calc=  30174 OK
+ch020327.msh           40024  pal=11 infl=3 vc=  815 ic=  1692 fvf=0x111A sv=44 calc=  40024 OK
+ch020328.msh           39476  pal=15 infl=4 vc=  734 ic=  1596 fvf=0x111C sv=48 calc=  39476 OK
+ch020337.msh           30316  pal=10 infl=2 vc=  624 ic=  2322 fvf=0x1118 sv=40 calc=  30316 OK
+ch020340.msh           26484  pal=13 infl=3 vc=  502 ic=  1740 fvf=0x111A sv=44 calc=  26484 OK
+ch020341.msh           26248  pal=16 infl=4 vc=  478 ic=  1092 fvf=0x111C sv=48 calc=  26248 OK
+ch020342.msh           25056  pal=13 infl=3 vc=  472 ic=  1686 fvf=0x111A sv=44 calc=  25056 OK
+ch020343.msh           26508  pal=15 infl=3 vc=  500 ic=  1728 fvf=0x111A sv=44 calc=  26508 OK
+ch020357.msh           30316  pal=10 infl=2 vc=  624 ic=  2322 fvf=0x1118 sv=40 calc=  30316 OK
+ch020361.msh           24308  pal=15 infl=4 vc=  432 ic=  1260 fvf=0x111C sv=48 calc=  24308 OK
+ch020362.msh           27296  pal=13 infl=3 vc=  512 ic=  1926 fvf=0x111A sv=44 calc=  27296 OK
+ch020363.msh           26484  pal=13 infl=3 vc=  502 ic=  1740 fvf=0x111A sv=44 calc=  26484 OK
+ch020391.msh           56988  pal=26 infl=4 vc= 1008 ic=  3402 fvf=0x111C sv=48 calc=  56988 OK
+ch020392.msh           60760  pal=16 infl=4 vc= 1096 ic=  3516 fvf=0x111C sv=48 calc=  60760 OK
+ch020401.msh           15168  pal= 8 infl=4 vc=  268 ic=   864 fvf=0x111C sv=48 calc=  15168 OK
+ch020402.msh           14304  pal= 8 infl=4 vc=  251 ic=   840 fvf=0x111C sv=48 calc=  14304 OK
+ch020403.msh           19164  pal= 8 infl=4 vc=  347 ic=   966 fvf=0x111C sv=48 calc=  19164 OK
+ch020404.msh           15096  pal= 8 infl=4 vc=  262 ic=   972 fvf=0x111C sv=48 calc=  15096 OK
+ch020405.msh           12414  pal= 8 infl=4 vc=  213 ic=   807 fvf=0x111C sv=48 calc=  12414 OK
+ch020406.msh           14880  pal= 8 infl=4 vc=  258 ic=   960 fvf=0x111C sv=48 calc=  14880 OK
+ch020407.msh           13380  pal= 8 infl=4 vc=  228 ic=   930 fvf=0x111C sv=48 calc=  13380 OK
+ch020409.msh           12668  pal= 6 infl=4 vc=  218 ic=   882 fvf=0x111C sv=48 calc=  12668 OK
+ch020410.msh           11840  pal= 6 infl=4 vc=  206 ic=   756 fvf=0x111C sv=48 calc=  11840 OK
+ch020411.msh           15764  pal= 6 infl=4 vc=  280 ic=   942 fvf=0x111C sv=48 calc=  15764 OK
+ch020412.msh           18396  pal= 8 infl=4 vc=  328 ic=  1038 fvf=0x111C sv=48 calc=  18396 OK
+ch020413.msh           15364  pal= 4 infl=2 vc=  336 ic=   810 fvf=0x1118 sv=40 calc=  15364 OK
+ch020414.msh           18816  pal= 8 infl=3 vc=  354 ic=  1332 fvf=0x111A sv=44 calc=  18816 OK
+ch020417.msh           19704  pal= 8 infl=4 vc=  352 ic=  1116 fvf=0x111C sv=48 calc=  19704 OK
+ch020420.msh           17252  pal= 7 infl=3 vc=  326 ic=  1200 fvf=0x111A sv=44 calc=  17252 OK
+ch020421.msh           16576  pal= 7 infl=4 vc=  296 ic=   930 fvf=0x111C sv=48 calc=  16576 OK
+ch020422.msh           14116  pal= 7 infl=4 vc=  251 ic=   780 fvf=0x111C sv=48 calc=  14116 OK
+ch020423.msh           18412  pal= 7 infl=4 vc=  337 ic=   864 fvf=0x111C sv=48 calc=  18412 OK
+ch020424.msh           21280  pal= 7 infl=4 vc=  390 ic=  1026 fvf=0x111C sv=48 calc=  21280 OK
+ch020425.msh           18936  pal= 8 infl=4 vc=  343 ic=   948 fvf=0x111C sv=48 calc=  18936 OK
+ch020426.msh           33640  pal= 7 infl=4 vc=  642 ic=  1158 fvf=0x111C sv=48 calc=  33640 OK
+ch020427.msh           29568  pal= 8 infl=4 vc=  561 ic=  1032 fvf=0x111C sv=48 calc=  29568 OK
+ch020428.msh           22120  pal= 7 infl=3 vc=  441 ic=  1104 fvf=0x111A sv=44 calc=  22120 OK
+ch020437.msh           14760  pal= 7 infl=3 vc=  274 ic=  1098 fvf=0x111A sv=44 calc=  14760 OK
+ch020440.msh           17028  pal= 8 infl=3 vc=  324 ic=  1098 fvf=0x111A sv=44 calc=  17028 OK
+ch020441.msh           15124  pal= 7 infl=4 vc=  267 ic=   900 fvf=0x111C sv=48 calc=  15124 OK
+ch020442.msh           15188  pal= 7 infl=3 vc=  284 ic=  1092 fvf=0x111A sv=44 calc=  15188 OK
+ch020443.msh           17252  pal= 7 infl=3 vc=  326 ic=  1200 fvf=0x111A sv=44 calc=  17252 OK
+ch020457.msh           14760  pal= 7 infl=3 vc=  274 ic=  1098 fvf=0x111A sv=44 calc=  14760 OK
+ch020461.msh           17392  pal= 7 infl=4 vc=  310 ic=  1002 fvf=0x111C sv=48 calc=  17392 OK
+ch020462.msh           18580  pal= 7 infl=3 vc=  354 ic=  1248 fvf=0x111A sv=44 calc=  18580 OK
+ch020463.msh           17028  pal= 8 infl=3 vc=  324 ic=  1098 fvf=0x111A sv=44 calc=  17028 OK
+ch020501.msh           11772  pal= 8 infl=2 vc=  258 ic=   438 fvf=0x1118 sv=40 calc=  11772 OK
+ch020502.msh           14908  pal= 8 infl=2 vc=  334 ic=   486 fvf=0x1118 sv=40 calc=  14908 OK
+ch020503.msh           14028  pal= 8 infl=2 vc=  312 ic=   486 fvf=0x1118 sv=40 calc=  14028 OK
+ch020504.msh            8844  pal= 8 infl=2 vc=  180 ic=   534 fvf=0x1118 sv=40 calc=   8844 OK
+ch020505.msh            7356  pal= 8 infl=2 vc=  144 ic=   510 fvf=0x1118 sv=40 calc=   7356 OK
+ch020506.msh            9696  pal= 9 infl=2 vc=  202 ic=   486 fvf=0x1118 sv=40 calc=   9696 OK
+ch020507.msh            7852  pal= 8 infl=2 vc=  154 ic=   558 fvf=0x1118 sv=40 calc=   7852 OK
+ch020509.msh            8652  pal= 8 infl=2 vc=  174 ic=   558 fvf=0x1118 sv=40 calc=   8652 OK
+ch020510.msh            9696  pal= 9 infl=2 vc=  202 ic=   486 fvf=0x1118 sv=40 calc=   9696 OK
+ch020511.msh            8844  pal= 8 infl=2 vc=  180 ic=   534 fvf=0x1118 sv=40 calc=   8844 OK
+ch020512.msh            9528  pal= 9 infl=3 vc=  176 ic=   570 fvf=0x111A sv=44 calc=   9528 OK
+ch020513.msh           14200  pal= 6 infl=2 vc=  302 ic=   840 fvf=0x1118 sv=40 calc=  14200 OK
+ch020514.msh           11812  pal= 8 infl=2 vc=  244 ic=   738 fvf=0x1118 sv=40 calc=  11812 OK
+ch020517.msh           25528  pal= 8 infl=2 vc=  562 ic=  1236 fvf=0x1118 sv=40 calc=  25528 OK
+ch020520.msh            9940  pal= 8 infl=2 vc=  202 ic=   642 fvf=0x1118 sv=40 calc=   9940 OK
+ch020521.msh           11296  pal= 9 infl=3 vc=  220 ic=   486 fvf=0x111A sv=44 calc=  11296 OK
+ch020522.msh           11736  pal= 9 infl=3 vc=  230 ic=   486 fvf=0x111A sv=44 calc=  11736 OK
+ch020523.msh           12352  pal= 9 infl=3 vc=  244 ic=   486 fvf=0x111A sv=44 calc=  12352 OK
+ch020524.msh           15756  pal= 8 infl=2 vc=  348 ic=   630 fvf=0x1118 sv=40 calc=  15756 OK
+ch020525.msh           13832  pal= 9 infl=3 vc=  276 ic=   522 fvf=0x111A sv=44 calc=  13832 OK
+ch020526.msh           17388  pal= 8 infl=2 vc=  390 ic=   606 fvf=0x1118 sv=40 calc=  17388 OK
+ch020527.msh           12472  pal= 9 infl=2 vc=  272 ic=   474 fvf=0x1118 sv=40 calc=  12472 OK
+ch020528.msh           21032  pal= 9 infl=3 vc=  432 ic=   690 fvf=0x111A sv=44 calc=  21032 OK
+ch020537.msh           21416  pal= 6 infl=2 vc=  444 ic=  1608 fvf=0x1118 sv=40 calc=  21416 OK
+ch020540.msh           11732  pal= 8 infl=2 vc=  242 ic=   738 fvf=0x1118 sv=40 calc=  11732 OK
+ch020541.msh           19612  pal= 8 infl=3 vc=  398 ic=   762 fvf=0x111A sv=44 calc=  19612 OK
+ch020542.msh           10660  pal= 8 infl=2 vc=  220 ic=   642 fvf=0x1118 sv=40 calc=  10660 OK
+ch020543.msh            9940  pal= 8 infl=2 vc=  202 ic=   642 fvf=0x1118 sv=40 calc=   9940 OK
+ch020557.msh           21416  pal= 6 infl=2 vc=  444 ic=  1608 fvf=0x1118 sv=40 calc=  21416 OK
+ch020561.msh           22048  pal= 9 infl=3 vc=  448 ic=   846 fvf=0x111A sv=44 calc=  22048 OK
+ch020562.msh           11084  pal= 8 infl=2 vc=  230 ic=   654 fvf=0x1118 sv=40 calc=  11084 OK
+ch020563.msh           11732  pal= 8 infl=2 vc=  242 ic=   738 fvf=0x1118 sv=40 calc=  11732 OK
+ch020601.msh           14768  pal= 8 infl=2 vc=  326 ic=   576 fvf=0x1118 sv=40 calc=  14768 OK
+ch020602.msh           17352  pal= 6 infl=2 vc=  391 ic=   636 fvf=0x1118 sv=40 calc=  17352 OK
+ch020603.msh           14688  pal= 8 infl=2 vc=  324 ic=   576 fvf=0x1118 sv=40 calc=  14688 OK
+ch020604.msh           11976  pal= 8 infl=2 vc=  246 ic=   780 fvf=0x1118 sv=40 calc=  11976 OK
+ch020605.msh            9312  pal= 8 infl=2 vc=  186 ic=   648 fvf=0x1118 sv=40 calc=   9312 OK
+ch020606.msh           12072  pal= 6 infl=2 vc=  250 ic=   816 fvf=0x1118 sv=40 calc=  12072 OK
+ch020607.msh            9328  pal= 8 infl=2 vc=  184 ic=   696 fvf=0x1118 sv=40 calc=   9328 OK
+ch020608.msh            8328  pal= 6 infl=2 vc=  166 ic=   624 fvf=0x1118 sv=40 calc=   8328 OK
+ch020609.msh            8328  pal= 6 infl=2 vc=  166 ic=   624 fvf=0x1118 sv=40 calc=   8328 OK
+ch020610.msh            9448  pal= 6 infl=2 vc=  194 ic=   624 fvf=0x1118 sv=40 calc=   9448 OK
+ch020611.msh           10408  pal= 6 infl=2 vc=  212 ic=   744 fvf=0x1118 sv=40 calc=  10408 OK
+ch020612.msh            9440  pal= 8 infl=2 vc=  188 ic=   672 fvf=0x1118 sv=40 calc=   9440 OK
+ch020613.msh           15632  pal= 6 infl=2 vc=  324 ic=  1116 fvf=0x1118 sv=40 calc=  15632 OK
+ch020614.msh           11432  pal= 8 infl=2 vc=  236 ic=   708 fvf=0x1118 sv=40 calc=  11432 OK
+ch020617.msh           11552  pal= 6 infl=1 vc=  268 ic=   732 fvf=0x1116 sv=36 calc=  11552 OK
+ch020620.msh           10512  pal= 6 infl=2 vc=  214 ic=   756 fvf=0x1118 sv=40 calc=  10512 OK
+ch020621.msh            8512  pal= 8 infl=2 vc=  172 ic=   528 fvf=0x1118 sv=40 calc=   8512 OK
+ch020622.msh           13680  pal= 8 infl=2 vc=  294 ic=   672 fvf=0x1118 sv=40 calc=  13680 OK
+ch020623.msh           12600  pal= 8 infl=2 vc=  270 ic=   612 fvf=0x1118 sv=40 calc=  12600 OK
+ch020624.msh           14264  pal= 8 infl=2 vc=  308 ic=   684 fvf=0x1118 sv=40 calc=  14264 OK
+ch020625.msh           14424  pal= 8 infl=2 vc=  312 ic=   684 fvf=0x1118 sv=40 calc=  14424 OK
+ch020626.msh           17200  pal= 8 infl=2 vc=  382 ic=   672 fvf=0x1118 sv=40 calc=  17200 OK
+ch020627.msh           23448  pal= 8 infl=2 vc=  534 ic=   756 fvf=0x1118 sv=40 calc=  23448 OK
+ch020628.msh           19616  pal= 7 infl=2 vc=  442 ic=   714 fvf=0x1118 sv=40 calc=  19616 OK
+ch020637.msh            7960  pal= 4 infl=1 vc=  176 ic=   660 fvf=0x1116 sv=36 calc=   7960 OK
+ch020640.msh           12544  pal= 6 infl=2 vc=  260 ic=   852 fvf=0x1118 sv=40 calc=  12544 OK
+ch020641.msh           15024  pal= 6 infl=2 vc=  334 ic=   612 fvf=0x1118 sv=40 calc=  15024 OK
+ch020642.msh           10408  pal= 6 infl=2 vc=  212 ic=   744 fvf=0x1118 sv=40 calc=  10408 OK
+ch020643.msh           10512  pal= 6 infl=2 vc=  214 ic=   756 fvf=0x1118 sv=40 calc=  10512 OK
+ch020657.msh            7960  pal= 4 infl=1 vc=  176 ic=   660 fvf=0x1116 sv=36 calc=   7960 OK
+ch020661.msh           14072  pal= 6 infl=2 vc=  312 ic=   576 fvf=0x1118 sv=40 calc=  14072 OK
+ch020662.msh           12664  pal= 6 infl=2 vc=  260 ic=   912 fvf=0x1118 sv=40 calc=  12664 OK
+ch020663.msh           12544  pal= 6 infl=2 vc=  260 ic=   852 fvf=0x1118 sv=40 calc=  12544 OK
+cr010101.msh           51364  pal=15 infl=3 vc= 1042 ic=  2232 fvf=0x111A sv=44 calc=  51364 OK
+cr010201.msh           30924  pal=11 infl=4 vc=  578 ic=  1200 fvf=0x111C sv=48 calc=  30924 OK
+dr010101.msh           62460  pal=23 infl=3 vc= 1164 ic=  4824 fvf=0x111A sv=44 calc=  62460 OK
+dr010103.msh           11292  pal=12 infl=3 vc=  206 ic=   690 fvf=0x111A sv=44 calc=  11292 OK
+dr010105.msh           14668  pal=12 infl=3 vc=  268 ic=  1014 fvf=0x111A sv=44 calc=  14668 OK
+dr010107.msh           36972  pal= 9 infl=2 vc=  790 ic=  2364 fvf=0x1118 sv=40 calc=  36972 OK
+dr010108.msh           11908  pal=12 infl=3 vc=  220 ic=   690 fvf=0x111A sv=44 calc=  11908 OK
+dr010201.msh           14948  pal=12 infl=3 vc=  264 ic=  1242 fvf=0x111A sv=44 calc=  14948 OK
+dr010203.msh           17604  pal=14 infl=4 vc=  295 ic=  1230 fvf=0x111C sv=48 calc=  17604 OK
+dr010205.msh           24208  pal=17 infl=3 vc=  440 ic=  1830 fvf=0x111A sv=44 calc=  24208 OK
+dr010207.msh           69960  pal=10 infl=2 vc= 1469 ic=  5244 fvf=0x1118 sv=40 calc=  69960 OK
+dr010208.msh           16812  pal=13 infl=3 vc=  304 ic=  1260 fvf=0x111A sv=44 calc=  16812 OK
+dr020101.msh           47128  pal=16 infl=4 vc=  798 ic=  3852 fvf=0x111C sv=48 calc=  47128 OK
+dr020201.msh           34084  pal=18 infl=3 vc=  622 ic=  2730 fvf=0x111A sv=44 calc=  34084 OK
+dr020301.msh            5824  pal= 2 infl=2 vc=  124 ic=   348 fvf=0x1118 sv=40 calc=   5824 OK
+et010101.msh           21504  pal=11 infl=4 vc=  368 ic=  1530 fvf=0x111C sv=48 calc=  21504 OK
+et010102.msh           21572  pal=12 infl=4 vc=  368 ic=  1530 fvf=0x111C sv=48 calc=  21572 OK
+et010201.msh           40476  pal=14 infl=3 vc=  804 ic=  2058 fvf=0x111A sv=44 calc=  40476 OK
+et010202.msh           43692  pal=14 infl=4 vc=  804 ic=  2058 fvf=0x111C sv=48 calc=  43692 OK
+et010301.msh           16540  pal=10 infl=3 vc=  306 ic=  1182 fvf=0x111A sv=44 calc=  16540 OK
+et010302.msh           19956  pal= 8 infl=3 vc=  378 ic=  1374 fvf=0x111A sv=44 calc=  19956 OK
+et010401.msh           34108  pal= 7 infl=4 vc=  630 ic=  1680 fvf=0x111C sv=48 calc=  34108 OK
+et010402.msh           24104  pal= 6 infl=2 vc=  522 ic=  1392 fvf=0x1118 sv=40 calc=  24104 OK
+et010501.msh           13076  pal= 9 infl=3 vc=  252 ic=   672 fvf=0x111A sv=44 calc=  13076 OK
+et010502.msh           14036  pal= 9 infl=1 vc=  324 ic=   864 fvf=0x1116 sv=36 calc=  14036 OK
+fl010101.msh           33716  pal= 9 infl=1 vc=  843 ic=  1362 fvf=0x1116 sv=36 calc=  33716 OK
+fn010101.msh          134228  pal=24 infl=3 vc= 2742 ic=  5958 fvf=0x111A sv=44 calc= 134228 OK
+fn010102.msh           53296  pal=14 infl=2 vc= 1141 ic=  3336 fvf=0x1118 sv=40 calc=  53296 OK
+fs010101.msh            4088  pal= 4 infl=2 vc=   82 ic=   252 fvf=0x1118 sv=40 calc=   4088 OK
+fs010102.msh            2912  pal= 4 infl=2 vc=   55 ic=   204 fvf=0x1118 sv=40 calc=   2912 OK
+fs010103.msh            2676  pal= 4 infl=2 vc=   50 ic=   186 fvf=0x1118 sv=40 calc=   2676 OK
+gb010101.msh           86440  pal=16 infl=4 vc= 1570 ic=  4980 fvf=0x111C sv=48 calc=  86440 OK
+gb010201.msh           16552  pal= 4 infl=3 vc=  318 ic=  1128 fvf=0x111A sv=44 calc=  16552 OK
+gg010101.msh           68080  pal=14 infl=3 vc= 1364 ic=  3540 fvf=0x111A sv=44 calc=  68080 OK
+gg010102.msh           11608  pal=16 infl=3 vc=  216 ic=   492 fvf=0x111A sv=44 calc=  11608 OK
+gg010201.msh           54252  pal=18 infl=3 vc= 1046 ic=  3486 fvf=0x111A sv=44 calc=  54252 OK
+gg010202.msh           13580  pal=18 infl=4 vc=  236 ic=   498 fvf=0x111C sv=48 calc=  13580 OK
+gr010101.msh           64404  pal=23 infl=3 vc= 1308 ic=  2628 fvf=0x111A sv=44 calc=  64404 OK
+gr010102.msh           64404  pal=23 infl=3 vc= 1308 ic=  2628 fvf=0x111A sv=44 calc=  64404 OK
+gr010103.msh           38516  pal=21 infl=4 vc=  664 ic=  2592 fvf=0x111C sv=48 calc=  38516 OK
+gr010104.msh           38516  pal=21 infl=4 vc=  664 ic=  2592 fvf=0x111C sv=48 calc=  38516 OK
+gr010201.msh           30352  pal=13 infl=2 vc=  672 ic=  1278 fvf=0x1118 sv=40 calc=  30352 OK
+gr010202.msh           30352  pal=13 infl=2 vc=  672 ic=  1278 fvf=0x1118 sv=40 calc=  30352 OK
+gr010203.msh           25096  pal=13 infl=4 vc=  442 ic=  1482 fvf=0x111C sv=48 calc=  25096 OK
+gr010204.msh           26260  pal=13 infl=4 vc=  464 ic=  1536 fvf=0x111C sv=48 calc=  26260 OK
+hs010101.msh           29544  pal=14 infl=4 vc=  502 ic=  2232 fvf=0x111C sv=48 calc=  29544 OK
+hs010107.msh           35892  pal=14 infl=3 vc=  672 ic=  2670 fvf=0x111A sv=44 calc=  35892 OK
+hs010108.msh           33396  pal=14 infl=4 vc=  572 ic=  2478 fvf=0x111C sv=48 calc=  33396 OK
+hs010201.msh           24176  pal=15 infl=4 vc=  408 ic=  1770 fvf=0x111C sv=48 calc=  24176 OK
+hs010207.msh           23860  pal=14 infl=3 vc=  440 ic=  1758 fvf=0x111A sv=44 calc=  23860 OK
+hs010208.msh           22164  pal=14 infl=3 vc=  408 ic=  1614 fvf=0x111A sv=44 calc=  22164 OK
+hs010302.msh            4696  pal= 2 infl=2 vc=  100 ic=   264 fvf=0x1118 sv=40 calc=   4696 OK
+hs010303.msh           10920  pal= 6 infl=3 vc=  212 ic=   576 fvf=0x111A sv=44 calc=  10920 OK
+hs010304.msh           20312  pal= 5 infl=2 vc=  446 ic=  1050 fvf=0x1118 sv=40 calc=  20312 OK
+hs010305.msh           18228  pal= 9 infl=3 vc=  350 ic=  1092 fvf=0x111A sv=44 calc=  18228 OK
+hs010306.msh           26368  pal=11 infl=3 vc=  512 ic=  1530 fvf=0x111A sv=44 calc=  26368 OK
+hs010307.msh            6208  pal= 4 infl=3 vc=  120 ic=   312 fvf=0x111A sv=44 calc=   6208 OK
+hs010308.msh           23748  pal=12 infl=3 vc=  446 ic=  1638 fvf=0x111A sv=44 calc=  23748 OK
+hs010309.msh           16148  pal= 9 infl=3 vc=  300 ic=  1152 fvf=0x111A sv=44 calc=  16148 OK
+hs010310.msh           30652  pal=13 infl=3 vc=  576 ic=  2196 fvf=0x111A sv=44 calc=  30652 OK
+hs010311.msh           25236  pal=12 infl=3 vc=  470 ic=  1854 fvf=0x111A sv=44 calc=  25236 OK
+hs010312.msh           27384  pal=11 infl=3 vc=  516 ic=  1950 fvf=0x111A sv=44 calc=  27384 OK
+hy010101.msh           16308  pal= 8 infl=3 vc=  312 ic=  1002 fvf=0x111A sv=44 calc=  16308 OK
+hy010201.msh           33140  pal=12 infl=4 vc=  596 ic=  1842 fvf=0x111C sv=48 calc=  33140 OK
+hy010301.msh           35732  pal=14 infl=3 vc=  694 ic=  2106 fvf=0x111A sv=44 calc=  35732 OK
+lf010101.msh            3108  pal= 5 infl=1 vc=   72 ic=    72 fvf=0x1116 sv=36 calc=   3108 OK
+lf010103.msh            3108  pal= 5 infl=1 vc=   72 ic=    72 fvf=0x1116 sv=36 calc=   3108 OK
+mi010101.msh           29700  pal=17 infl=4 vc=  512 ic=  1968 fvf=0x111C sv=48 calc=  29700 OK
+mi010102.msh           33072  pal=17 infl=4 vc=  575 ic=  2142 fvf=0x111C sv=48 calc=  33072 OK
+mi010103.msh           37176  pal=17 infl=4 vc=  650 ic=  2394 fvf=0x111C sv=48 calc=  37176 OK
+mi010104.msh           31104  pal=14 infl=4 vc=  536 ic=  2196 fvf=0x111C sv=48 calc=  31104 OK
+mi010105.msh           31832  pal=17 infl=3 vc=  598 ic=  2166 fvf=0x111A sv=44 calc=  31832 OK
+mi010201.msh           18080  pal=12 infl=4 vc=  317 ic=  1008 fvf=0x111C sv=48 calc=  18080 OK
+mi010202.msh           24008  pal=12 infl=4 vc=  427 ic=  1332 fvf=0x111C sv=48 calc=  24008 OK
+mi010203.msh           17900  pal=12 infl=4 vc=  312 ic=  1038 fvf=0x111C sv=48 calc=  17900 OK
+mi010204.msh           18392  pal=12 infl=4 vc=  316 ic=  1188 fvf=0x111C sv=48 calc=  18392 OK
+mi010205.msh           17504  pal=12 infl=3 vc=  324 ic=  1200 fvf=0x111A sv=44 calc=  17504 OK
+mo010101.msh           37500  pal=14 infl=4 vc=  650 ic=  2658 fvf=0x111C sv=48 calc=  37500 OK
+mo010102.msh           73784  pal=12 infl=2 vc= 1641 ic=  3648 fvf=0x1118 sv=40 calc=  73784 OK
+mo010103.msh           81336  pal=12 infl=2 vc= 1825 ic=  3744 fvf=0x1118 sv=40 calc=  81336 OK
+mo010105.msh           42432  pal=14 infl=4 vc=  734 ic=  3108 fvf=0x111C sv=48 calc=  42432 OK
+mo010106.msh           43104  pal=14 infl=4 vc=  748 ic=  3108 fvf=0x111C sv=48 calc=  43104 OK
+mo010107.msh           53916  pal=14 infl=4 vc=  952 ic=  3618 fvf=0x111C sv=48 calc=  53916 OK
+mo010201.msh           20628  pal=10 infl=3 vc=  388 ic=  1422 fvf=0x111A sv=44 calc=  20628 OK
+mo010202.msh           39522  pal= 9 infl=2 vc=  895 ic=  1539 fvf=0x1118 sv=40 calc=  39522 OK
+mo010203.msh           37984  pal= 9 infl=2 vc=  854 ic=  1590 fvf=0x1118 sv=40 calc=  37984 OK
+mo010205.msh           26516  pal= 9 infl=3 vc=  498 ic=  1980 fvf=0x111A sv=44 calc=  26516 OK
+mo010206.msh           27532  pal=11 infl=3 vc=  518 ic=  1980 fvf=0x111A sv=44 calc=  27532 OK
+mo010207.msh           23308  pal=11 infl=3 vc=  434 ic=  1716 fvf=0x111A sv=44 calc=  23308 OK
+mt010101.msh            7760  pal= 9 infl=4 vc=  130 ic=   438 fvf=0x111C sv=48 calc=   7760 OK
+mt010124.msh            8320  pal= 9 infl=2 vc=  164 ic=   558 fvf=0x1118 sv=40 calc=   8320 OK
+mt010131.msh           39392  pal= 9 infl=4 vc=  682 ic=  3006 fvf=0x111C sv=48 calc=  39392 OK
+or010101.msh           65804  pal=17 infl=3 vc= 1336 ic=  2916 fvf=0x111A sv=44 calc=  65804 OK
+or010102.msh           94924  pal=16 infl=4 vc= 1807 ic=  3534 fvf=0x111C sv=48 calc=  94924 OK
+or010103.msh           68552  pal=18 infl=4 vc= 1252 ic=  3600 fvf=0x111C sv=48 calc=  68552 OK
+or010104.msh           57012  pal=17 infl=4 vc= 1056 ic=  2568 fvf=0x111C sv=48 calc=  57012 OK
+or010105.msh           45880  pal=16 infl=4 vc=  810 ic=  2940 fvf=0x111C sv=48 calc=  45880 OK
+or010106.msh           45396  pal=17 infl=4 vc=  810 ic=  2664 fvf=0x111C sv=48 calc=  45396 OK
+or010107.msh           52428  pal=17 infl=4 vc=  943 ic=  2988 fvf=0x111C sv=48 calc=  52428 OK
+or010108.msh           82588  pal=16 infl=4 vc= 1566 ic=  3150 fvf=0x111C sv=48 calc=  82588 OK
+or010109.msh           75688  pal=16 infl=4 vc= 1429 ic=  2988 fvf=0x111C sv=48 calc=  75688 OK
+or010110.msh           63544  pal=16 infl=4 vc= 1190 ic=  2652 fvf=0x111C sv=48 calc=  63544 OK
+or010111.msh           71480  pal=13 infl=3 vc= 1472 ic=  2898 fvf=0x111A sv=44 calc=  71480 OK
+or010113.msh          101384  pal=15 infl=4 vc= 1926 ic=  3942 fvf=0x111C sv=48 calc= 101384 OK
+or010114.msh           57860  pal=18 infl=3 vc= 1122 ic=  3618 fvf=0x111A sv=44 calc=  57860 OK
+or010115.msh           63262  pal=15 infl=3 vc= 1252 ic=  3561 fvf=0x111A sv=44 calc=  63262 OK
+or010116.msh           58852  pal=15 infl=3 vc= 1168 ic=  3204 fvf=0x111A sv=44 calc=  58852 OK
+or010117.msh           70528  pal=17 infl=3 vc= 1364 ic=  4662 fvf=0x111A sv=44 calc=  70528 OK
+or010201.msh           25366  pal=10 infl=4 vc=  467 ic=  1119 fvf=0x111C sv=48 calc=  25366 OK
+or010202.msh           25366  pal=10 infl=4 vc=  467 ic=  1119 fvf=0x111C sv=48 calc=  25366 OK
+or010203.msh           16804  pal=10 infl=4 vc=  300 ic=   846 fvf=0x111C sv=48 calc=  16804 OK
+or010204.msh           20476  pal=10 infl=4 vc=  366 ic=  1098 fvf=0x111C sv=48 calc=  20476 OK
+or010205.msh           18640  pal=10 infl=4 vc=  331 ic=  1020 fvf=0x111C sv=48 calc=  18640 OK
+or010206.msh           17836  pal=10 infl=4 vc=  310 ic=  1122 fvf=0x111C sv=48 calc=  17836 OK
+or010207.msh           20464  pal=10 infl=4 vc=  360 ic=  1236 fvf=0x111C sv=48 calc=  20464 OK
+or010208.msh           29028  pal=10 infl=3 vc=  592 ic=  1134 fvf=0x111A sv=44 calc=  29028 OK
+or010209.msh           35300  pal=10 infl=3 vc=  731 ic=  1212 fvf=0x111A sv=44 calc=  35300 OK
+or010210.msh           29292  pal=10 infl=3 vc=  598 ic=  1134 fvf=0x111A sv=44 calc=  29292 OK
+or010211.msh           60256  pal=10 infl=4 vc= 1144 ic=  2316 fvf=0x111C sv=48 calc=  60256 OK
+or010213.msh           43804  pal=10 infl=4 vc=  828 ic=  1674 fvf=0x111C sv=48 calc=  43804 OK
+or010214.msh           16840  pal=10 infl=3 vc=  318 ic=  1068 fvf=0x111A sv=44 calc=  16840 OK
+or010215.msh           19468  pal=10 infl=4 vc=  346 ic=  1074 fvf=0x111C sv=48 calc=  19468 OK
+or010216.msh           24748  pal=10 infl=3 vc=  480 ic=  1458 fvf=0x111A sv=44 calc=  24748 OK
+or010217.msh           19480  pal=10 infl=3 vc=  360 ic=  1464 fvf=0x111A sv=44 calc=  19480 OK
+or020101.msh          142084  pal=25 infl=4 vc= 2680 ic=  5856 fvf=0x111C sv=48 calc= 142084 OK
+ra010101.msh           60384  pal=17 infl=4 vc= 1046 ic=  4494 fvf=0x111C sv=48 calc=  60384 OK
+rc010101.msh           54692  pal=18 infl=4 vc=  962 ic=  3630 fvf=0x111C sv=48 calc=  54692 OK
+rc010201.msh           29880  pal=20 infl=4 vc=  520 ic=  1764 fvf=0x111C sv=48 calc=  29880 OK
+sh010101.msh           38402  pal= 9 infl=4 vc=  721 ic=  1575 fvf=0x111C sv=48 calc=  38402 OK
+sh010102.msh           41382  pal= 9 infl=3 vc=  842 ic=  1845 fvf=0x111A sv=44 calc=  41382 OK
+sh010103.msh           46520  pal= 9 infl=4 vc=  878 ic=  1866 fvf=0x111C sv=48 calc=  46520 OK
+sn010101.msh           28684  pal=13 infl=4 vc=  513 ic=  1572 fvf=0x111C sv=48 calc=  28684 OK
+sp010101.msh           38888  pal=13 infl=3 vc=  734 ic=  2838 fvf=0x111A sv=44 calc=  38888 OK
+sp010102.msh           38888  pal=13 infl=3 vc=  734 ic=  2838 fvf=0x111A sv=44 calc=  38888 OK
+sp010201.msh           15252  pal=13 infl=3 vc=  280 ic=  1008 fvf=0x111A sv=44 calc=  15252 OK
+sp010202.msh           15320  pal=14 infl=3 vc=  280 ic=  1008 fvf=0x111A sv=44 calc=  15320 OK
+sp010301.msh           25016  pal=22 infl=3 vc=  452 ic=  1800 fvf=0x111A sv=44 calc=  25016 OK
+sp010302.msh           25016  pal=22 infl=3 vc=  452 ic=  1800 fvf=0x111A sv=44 calc=  25016 OK
+sq010101.msh           38312  pal=17 infl=2 vc=  818 ic=  2202 fvf=0x1118 sv=40 calc=  38312 OK
+sq010102.msh           43252  pal=19 infl=4 vc=  772 ic=  2436 fvf=0x111C sv=48 calc=  43252 OK
+sq010103.msh           58900  pal= 3 infl=2 vc= 1220 ic=  4932 fvf=0x1118 sv=40 calc=  58900 OK
+sq010201.msh           59040  pal=25 infl=2 vc= 1202 ic=  4614 fvf=0x1118 sv=40 calc=  59040 OK
+sq010202.msh           61900  pal=23 infl=2 vc= 1261 ic=  4932 fvf=0x1118 sv=40 calc=  61900 OK
+sq010203.msh           65920  pal=21 infl=3 vc= 1252 ic=  4686 fvf=0x111A sv=44 calc=  65920 OK
+tg010101.msh           37976  pal=15 infl=4 vc=  695 ic=  1782 fvf=0x111C sv=48 calc=  37976 OK
+tg010201.msh           75060  pal=14 infl=4 vc= 1383 ic=  3846 fvf=0x111C sv=48 calc=  75060 OK
+to010101.msh            4560  pal= 2 infl=2 vc=  102 ic=   156 fvf=0x1118 sv=40 calc=   4560 OK
+to010201.msh           43768  pal= 1 infl=1 vc= 1037 ic=  3168 fvf=0x1116 sv=36 calc=  43768 OK
+tr010101.msh           60752  pal= 7 infl=2 vc= 1426 ic=  1602 fvf=0x1118 sv=40 calc=  60752 OK
+tr020101.msh           66516  pal=14 infl=3 vc= 1368 ic=  2670 fvf=0x111A sv=44 calc=  66516 OK
+tr030101.msh           34760  pal= 7 infl=2 vc=  802 ic=  1086 fvf=0x1118 sv=40 calc=  34760 OK
+tr040101.msh           78928  pal=10 infl=1 vc= 2026 ic=  2640 fvf=0x1116 sv=36 calc=  78928 OK
+tr050101.msh           27042  pal= 5 infl=1 vc=  695 ic=   825 fvf=0x1116 sv=36 calc=  27042 OK
+tr060101.msh           15300  pal= 7 infl=2 vc=  332 ic=   756 fvf=0x1118 sv=40 calc=  15300 OK
+tr060102.msh           24748  pal= 7 infl=2 vc=  564 ic=   840 fvf=0x1118 sv=40 calc=  24748 OK
+tr070101.msh           25498  pal= 4 infl=1 vc=  631 ic=  1239 fvf=0x1116 sv=36 calc=  25498 OK
+tr080101.msh           36940  pal= 4 infl=1 vc=  926 ic=  1650 fvf=0x1116 sv=36 calc=  36940 OK
+tr090101.msh           27846  pal=11 infl=1 vc=  695 ic=  1023 fvf=0x1116 sv=36 calc=  27846 OK
+tr100101.msh           46862  pal= 6 infl=1 vc= 1138 ic=  2727 fvf=0x1116 sv=36 calc=  46862 OK
+tr110101.msh           84310  pal=10 infl=1 vc= 2121 ic=  3621 fvf=0x1116 sv=36 calc=  84310 OK
+tr120101.msh           16416  pal= 7 infl=3 vc=  340 ic=   474 fvf=0x111A sv=44 calc=  16416 OK
+tr120102.msh           16416  pal= 7 infl=3 vc=  340 ic=   474 fvf=0x111A sv=44 calc=  16416 OK
+tr130101.msh           26586  pal= 2 infl=2 vc=  552 ic=  2169 fvf=0x1118 sv=40 calc=  26586 OK
+tr140101.msh           22472  pal= 2 infl=2 vc=  473 ic=  1692 fvf=0x1118 sv=40 calc=  22472 OK
+tr150101.msh            6728  pal= 2 infl=2 vc=  137 ic=   540 fvf=0x1118 sv=40 calc=   6728 OK
+tr160101.msh           38710  pal= 3 infl=2 vc=  863 ic=  1977 fvf=0x1118 sv=40 calc=  38710 OK
+tr170101.msh            9150  pal= 3 infl=2 vc=  184 ic=   777 fvf=0x1118 sv=40 calc=   9150 OK
+tr180101.msh           11020  pal= 7 infl=1 vc=  260 ic=   576 fvf=0x1116 sv=36 calc=  11020 OK
+tr190101.msh            8336  pal= 4 infl=3 vc=  164 ic=   408 fvf=0x111A sv=44 calc=   8336 OK
+tr200101.msh           34876  pal= 4 infl=1 vc=  872 ic=  1590 fvf=0x1116 sv=36 calc=  34876 OK
+tr210101.msh           20974  pal= 5 infl=3 vc=  401 ic=  1479 fvf=0x111A sv=44 calc=  20974 OK
+tr210201.msh           59988  pal= 5 infl=1 vc= 1438 ic=  3924 fvf=0x1116 sv=36 calc=  59988 OK
+tw010101.msh           19256  pal=13 infl=3 vc=  350 ic=  1470 fvf=0x111A sv=44 calc=  19256 OK
+tw010201.msh           36404  pal=13 infl=3 vc=  680 ic=  2784 fvf=0x111A sv=44 calc=  36404 OK
+wb010101.msh           44868  pal=14 infl=4 vc=  800 ic=  2742 fvf=0x111C sv=48 calc=  44868 OK
+wb010102.msh           35412  pal=14 infl=4 vc=  612 ic=  2526 fvf=0x111C sv=48 calc=  35412 OK
+wb010201.msh           20124  pal=11 infl=4 vc=  348 ic=  1320 fvf=0x111C sv=48 calc=  20124 OK
+wb010202.msh           21184  pal=10 infl=4 vc=  368 ic=  1404 fvf=0x111C sv=48 calc=  21184 OK
+wf010101.msh           34524  pal=14 infl=4 vc=  612 ic=  2082 fvf=0x111C sv=48 calc=  34524 OK
+wf010103.msh           39320  pal=15 infl=4 vc=  674 ic=  2958 fvf=0x111C sv=48 calc=  39320 OK
+wf010104.msh           79516  pal=25 infl=4 vc= 1412 ic=  5004 fvf=0x111C sv=48 calc=  79516 OK
+wf010201.msh           18276  pal=14 infl=4 vc=  308 ic=  1254 fvf=0x111C sv=48 calc=  18276 OK
+wf010203.msh           25720  pal=13 infl=4 vc=  438 ic=  1890 fvf=0x111C sv=48 calc=  25720 OK
+wf010204.msh             442  pal= 4 infl=3 vc=    3 ic=     3 fvf=0x111A sv=44 calc=    442 OK
+wg010101.msh            4528  pal= 4 infl=3 vc=   84 ic=   264 fvf=0x111A sv=44 calc=   4528 OK
+wg010102.msh            4528  pal= 4 infl=3 vc=   84 ic=   264 fvf=0x111A sv=44 calc=   4528 OK
+wg010201.msh            4528  pal= 4 infl=3 vc=   84 ic=   264 fvf=0x111A sv=44 calc=   4528 OK
+wh010101.msh           44940  pal=11 infl=4 vc=  796 ic=  2976 fvf=0x111C sv=48 calc=  44940 OK
+files with exact size match: 657 / 657

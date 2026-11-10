@@ -1,0 +1,51 @@
+# .wys container proof: 1 byte 'W' + stock DDS_HEADER with (a) magic 'DDS ' -> 'S10 ' and (b) ddspf.dwFourCC scrambled
+# unscrambling (TextureManager.cpp:1050-1066): drop 1 byte, write 'DDS' over bytes 0..2, then fourCC[0]=='2' -> DXT1 else DXT3
+
+=== Env\Tile00000.wys (size 11009) ===
+000  57 53 31 30 20 7C 00 00 00 07 10 02 00 80 00 00 
+010  00 80 00 00 00 00 00 00 00 00 00 00 00 04 00 00 
+020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+040  00 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 
+050  00 04 00 00 00 32 7A 37 33 00 00 00 00 00 00 00 
+060  00 00 00 00 00 00 00 00 00 00 00 00 00 08 10 40 
+070  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+=== mesh\water3.wys (size 21889) ===
+000  57 53 31 30 20 7C 00 00 00 07 10 02 00 80 00 00 
+010  00 80 00 00 00 00 00 00 00 00 00 00 00 04 00 00 
+020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+040  00 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 
+050  00 04 00 00 00 37 78 30 73 00 00 00 00 00 00 00 
+060  00 00 00 00 00 00 00 00 00 00 00 00 00 08 10 40 
+070  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+=== mesh\sky01.wys (size 131201) ===
+000  57 53 31 30 20 7C 00 00 00 07 10 00 00 00 01 00 
+010  00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 00 
+020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+040  00 00 00 00 00 00 00 00 00 00 00 00 00 20 00 00 
+050  00 04 00 00 00 32 7A 37 33 00 00 00 00 00 00 00 
+060  00 00 00 00 00 00 00 00 00 00 00 00 00 00 10 00 
+070  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+# field map after unscrambling (offset in the unwrapped DDS):
+#   0 magic 'DDS ' | 4 dwSize=124 | 8 dwFlags=0x00021007 | 12 dwHeight | 16 dwWidth | 20 dwPitch
+#   24 dwDepth | 28 dwMipMapCount | 76 ddspf.dwSize=32 | 80 ddspf.dwFlags=4 (FOURCC) | 84 fourCC
+#   108 dwCaps=0x00401008 (TEXTURE|COMPLEX|MIPMAP)
+
+# size verification table
+# file                      fourCC format w    h   mips pixelBytes mipChainSum
+Env\Tile00000.wys          2z73 DXT1  128  128 4    10880      10880 EXACT
+Env\MTile00010.wys         2z73 DXT1  128  128 4    10880      10880 EXACT
+mesh\water1.wys            2z73 DXT1  64   64  4    2720       2720 EXACT
+mesh\water3.wys            7x0s DXT3  128  128 4    21760      21760 EXACT
+mesh\sky01.wys             2z73 DXT1  1024 256 0    131072     131072 EXACT
+mesh\sky04.wys             2z73 DXT1  1024 256 0    131072     131072 EXACT
+Effect\flare.wys           2z73 DXT1  128  128 4    10880      10880 EXACT
+Effect\moon.wys            7x0s DXT3  256  256 4    87040      87040 EXACT
+Effect\efksob32.wys        7x0s DXT3  256  256 4    87040      87040 EXACT
+mesh\aef001.wys            2z73 DXT1  128  256 4    21760      21760 EXACT
+

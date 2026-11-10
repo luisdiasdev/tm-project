@@ -1,0 +1,12 @@
+1 mesh\\sky001.msa
+2 mesh\\even01.msa
+3 mesh\\bnsh01.msa
+4 mesh\\bnsh02.msa
+5 mesh\\bnsh03.msa
+6 mesh\\bnsh04.msa
+7 mesh\\bnsh05.msa
+8 effect\\fireeagle.msa
+9 mesh\\ag010102.msa
+10 effect\\levelup3.msa
+11 effect\\sphere.msa
+12 effect\\sphere2.msa

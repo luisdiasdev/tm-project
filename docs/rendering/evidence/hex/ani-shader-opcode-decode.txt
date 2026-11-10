@@ -1,0 +1,73 @@
+# skinmesh1.bin  (468 bytes)  version=0xFFFE0101
+# NOTE: the D3D9 instruction-length nibble (bits 24-27) is ZERO in these files; instruction
+# sizes are taken from the D3D opcode table (mov=2 dwords, mad=4, m4x3/m3x3/dp3=3, dcl=2).
+0x004  dcl    usage=0 index=0
+0x00C  nop    
+0x010  dcl    usage=2 index=0
+0x018  add    r31, r3
+0x024  sub    r31, r5
+0x030  mad    r5, r1, v2
+0x040  nop    
+0x044  mov    a0
+0x04C  mov    r21
+0x054  mad    v0, c9[a0], r23
+0x064  mul    v3, c9[a0]
+0x070  mov    r4
+0x078  nop    
+0x07C  m4x4   0, r4
+0x088  add    r8, r5
+0x094  mul    r5, r7
+0x0A0  mul    r5, r5
+0x0AC  mul    r5, r5
+0x0B8  dp3    r1, r5
+0x0C4  mov    r16
+0x0CC  mov    r1
+0x0D4  mul    r0, r1
+0x0E0  dp3    r2, r0
+0x0EC  nop    
+0x0F0  rsq    r10
+0x0F8  nop    
+0x0FC  nop    
+0x100  nop    
+0x104  mov    1
+0x10C  nop    
+0x110  add    r6, c6[a0]
+0x11C  mad    r8, r6, r6
+0x12C  rcp    r7
+0x134  rcp    r6
+0x13C  mul    r6, r6
+0x148  rcp    r2
+0x150  rcp    c95[a0]
+0x158  rcp    r5
+0x160  rcp    r6
+0x168  ?? opcode 0x5F (stop)
+
+# skinmesh4.bin  (784 bytes)  version=0xFFFE0101
+# NOTE: the D3D9 instruction-length nibble (bits 24-27) is ZERO in these files; instruction
+# sizes are taken from the D3D opcode table (mov=2 dwords, mad=4, m4x3/m3x3/dp3=3, dcl=2).
+0x004  dcl    usage=0 index=0
+0x00C  nop    
+0x010  dcl    usage=1 index=0
+0x018  mov    r31
+0x020  add    v2, r31
+0x02C  sub    v3, r31
+0x038  mul    v4, r5
+0x044  mov    v2
+0x04C  nop    
+0x050  dp3    r0, v1
+0x05C  nop    
+0x060  add    r0, r0
+0x06C  nop    
+0x070  mov    a0
+0x078  mov    r21
+0x080  mad    v0, c9[a0], r23
+0x090  mul    v3, c9[a0]
+0x09C  mul    r4, r4
+0x0A8  mov    r5
+0x0B0  mul    r5, v1
+0x0BC  mov    a0
+0x0C4  mov    r21
+0x0CC  add    v0, c9[a0]
+0x0D8  m3x3   r3, v3
+0x0E4  ?? opcode 0x2009 (stop)
+

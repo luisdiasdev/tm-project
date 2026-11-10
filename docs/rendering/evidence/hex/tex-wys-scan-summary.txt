@@ -1,0 +1,63 @@
+# .wys census (client_748, recursive). Generated 2026-11-10 with PowerShell.
+# Reconstruction used: dds = b"DDS " + file[5:]; fourCC tag at dds[0x54] == file[85].
+# Expected data size: sum over mip levels of ceil(w/4)*ceil(h/4)*blocksize,
+# blocksize 8 for tag "2z73", 16 for tag "7x0s"; pixel data starts at file[129].
+
+files scanned: 2336
+
+## size validation by tag
+2z73 -> DXT1(8/block)            1980
+7x0s -> DXT3(16/block)           356
+
+## tag by folder
+Effect/2z73                      344
+Effect/7x0s                      69
+Env/2z73                         305
+mesh/2z73                        1331
+mesh/7x0s                        287
+
+## mip count census
+mips=0      1085
+mips=3      146
+mips=4      1105
+
+## dimension census (WxH)
+8x8          864
+64x64        397
+32x32        237
+4x8          152
+16x16        129
+32x64        104
+128x64       86
+64x32        78
+4x4          66
+128x128      62
+16x32        36
+32x16        34
+16x8         20
+8x16         14
+16x64        8
+64x128       8
+256x128      6
+2x2          5
+512x128      4
+256x256      4
+8x4          4
+8x64         4
+2x4          3
+2x8          2
+128x256      2
+18x32        1
+4x2          1
+1x4          1
+62x32        1
+128x32       1
+8x2          1
+32x128       1
+
+## header field census (all files)
+dwSize: 124=2336
+dwFlags: 0x1007=1085, 0x21007=1251
+ddspf.dwFlags: 4=2336
+dwCaps: 0x1000=1085, 0x401008=1251
+
