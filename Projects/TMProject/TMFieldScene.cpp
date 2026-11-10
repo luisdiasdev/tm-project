@@ -70,6 +70,17 @@ int TMFieldScene::m_bPK = 0;
 unsigned short TMFieldScene::m_usProgress = 0;
 unsigned int TMFieldScene::m_dwCargoID = 0;
 
+// 748 affect HUD. FieldScene2.bin only contains the 16 name/time rows of
+// TMP_AFFECT_PANEL: the ability names are TMT_AFFECT1..16 (1328..1343) and
+// the remaining times are 1344..1359 (the 755 header calls those
+// TMT_AFFECT17..32). There are no icon/target/party affect strips in the
+// .bin; the 748 client creates the 16 icon panels at runtime with ids
+// 12806..12821 (0x3206..0x3215 in WYD.exe 748, TMFieldScene::InitializeScene).
+constexpr int AFFECT_UI_SLOT_COUNT = 16;
+constexpr int TMT_AFFECT_748_NAME = TMT_AFFECT1;  // 1328 + slot
+constexpr int TMT_AFFECT_748_TIME = 1344;         // 1344 + slot
+constexpr int TMP_AFFECT_748_ICON = 12806;        // 12806 + slot
+
 TMFieldScene::TMFieldScene()
 	: TMScene()
 {
@@ -469,6 +480,8 @@ TMFieldScene::TMFieldScene()
 
 	for (int i = 0; i < 32; ++i)
 	{
+		m_pAffect[i] = 0;
+		m_pAffectL[i] = 0;
 		m_pAffectIcon[i] = 0;
 		m_pTargetAffectIcon[i] = 0;
 		m_dwAffectBlinkTime[i] = 0;
@@ -1102,10 +1115,22 @@ int TMFieldScene::InitializeScene()
 	m_pSkillMSec2 = (SText*)m_pControlContainer->FindControl(TMT_SKILLM_SEC2_C);
 	m_pSkillMSec3 = (SText*)m_pControlContainer->FindControl(TMT_SKILLM_SEC3_C);
 
+	// 748 new UI: TMP_AFFECT_PANEL has 16 rows, so only 16 name/time pairs
+	// exist. Binding 90432+ (the 755 time texts) leaves m_pAffect null and
+	// makes the 1328+ loop read the time texts as names, which crashes as
+	// soon as the character has an active affect.
 	for (int id = 0; id < 32; ++id)
 	{
-		m_pAffectL[id] = (SText*)m_pControlContainer->FindControl(id + 1328);
-		m_pAffect[id] = (SText*)m_pControlContainer->FindControl(id + 90432);
+		if (id < AFFECT_UI_SLOT_COUNT)
+		{
+			m_pAffectL[id] = (SText*)m_pControlContainer->FindControl(TMT_AFFECT_748_NAME + id);
+			m_pAffect[id] = (SText*)m_pControlContainer->FindControl(TMT_AFFECT_748_TIME + id);
+		}
+		else
+		{
+			m_pAffectL[id] = nullptr;
+			m_pAffect[id] = nullptr;
+		}
 	}
 
 	m_pCargoCoin = (SText*)m_pControlContainer->FindControl(TMT_CMONEY_TEXT);
@@ -2220,10 +2245,30 @@ int TMFieldScene::InitializeScene()
 	if (m_pPartyPanel)
 		m_pPartyPanel->SetVisible(0);
 
+	// 748 has no affect icon strip or target-affect strip in FieldScene2.bin.
+	// The original client creates 16 icon panels at runtime (texture set 200,
+	// 23x23, ids 12806..12821) placed in a row next to the main info panel.
+	// Do the same here; Affect_Main positions and fills them later.
 	for (int ih = 0; ih < 32; ++ih)
 	{
 		m_pAffectIcon[ih] = (SPanel*)m_pControlContainer->FindControl(ih + 90400);
 		m_pTargetAffectIcon[ih] = (SPanel*)m_pControlContainer->FindControl(ih + 90369);
+	}
+
+	if (m_pAffectIcon[0] == nullptr && m_pControlContainer != nullptr)
+	{
+		for (int ih = 0; ih < AFFECT_UI_SLOT_COUNT; ++ih)
+		{
+			SPanel* pAffectIcon = new SPanel(200, 0.0f, 0.0f, 23.0f, 23.0f,
+				0x77777777, RENDERCTRLTYPE::RENDER_IMAGE_STRETCH);
+			if (pAffectIcon == nullptr)
+				continue;
+
+			pAffectIcon->SetControlID(TMP_AFFECT_748_ICON + ih);
+			pAffectIcon->SetVisible(0);
+			m_pControlContainer->AddItem(pAffectIcon);
+			m_pAffectIcon[ih] = pAffectIcon;
+		}
 	}
 
 	m_pAffectDesc = (SText*)m_pControlContainer->FindControl(TMT_AFFECT_DESC);
@@ -7283,7 +7328,9 @@ int TMFieldScene::FrameMove(unsigned int dwServerTime)
 		}
 	}
 
-	for (int i = 0; i < 32; ++i)
+	// 748 only has 16 affect UI slots (see AFFECT_UI_SLOT_COUNT). Affects in
+	// slots 16..31 stay active but have no controls to draw.
+	for (int i = 0; i < AFFECT_UI_SLOT_COUNT; ++i)
 	{
 		if ((unsigned char)m_pMyHuman->m_stAffect[i].Type > 0)
 		{
@@ -7293,10 +7340,11 @@ int TMFieldScene::FrameMove(unsigned int dwServerTime)
 			{
 				if (m_pAffectL[i])
 				{
-					if (!i)
+					if (!i && m_pAffect[0])
 						m_pAffect[0]->SetTextColor(0xFF000000);
 
-					m_pAffect[i]->SetText((char*)"    0", 0);
+					if (m_pAffect[i])
+						m_pAffect[i]->SetText((char*)"    0", 0);
 					m_pAffectL[i]->SetVisible(0);
 				}
 
@@ -7351,7 +7399,7 @@ int TMFieldScene::FrameMove(unsigned int dwServerTime)
 				sprintf(szVal, "%5d", sTime);
 			}
 
-			if (m_pAffectL[i])
+			if (m_pAffectL[i] && m_pAffect[i])
 			{
 				if (!i)
 				{
@@ -7374,7 +7422,10 @@ int TMFieldScene::FrameMove(unsigned int dwServerTime)
 
 			if (m_pAffectL[i])
 				m_pAffectL[i]->SetVisible(0);
-			if (m_pMiniPanel)
+			// 748 new UI: the icon replaces the numeric timer text.
+			if (m_pAffect[i] && m_pAffectIcon[i])
+				m_pAffect[i]->SetVisible(0);
+			if (m_pMiniPanel && m_pAffectIcon[i])
 			{
 				if ((unsigned char)m_pMyHuman->m_stAffect[i].Type < 50)
 					m_pAffectIcon[i]->m_GCPanel.nTextureIndex = g_AffectSkillType[(unsigned char)m_pMyHuman->m_stAffect[i].Type];
@@ -7387,6 +7438,10 @@ int TMFieldScene::FrameMove(unsigned int dwServerTime)
 		{
 			if (m_pAffectL[i])
 				m_pAffectL[i]->SetVisible(0);
+			if (m_pAffect[i])
+				m_pAffect[i]->SetVisible(0);
+			if (m_pAffectIcon[i])
+				m_pAffectIcon[i]->SetVisible(0);
 			m_dwAffectBlinkTime[i] = 0;
 		}
 	}
@@ -14087,7 +14142,8 @@ void TMFieldScene::UpdateScoreUI(unsigned int unFlag)
 
 		char szVal[32]{};
 
-		for (int i = 0; i < 32; ++i)
+		// 748 only has 16 affect UI slots; later slots have no controls.
+		for (int i = 0; i < AFFECT_UI_SLOT_COUNT; ++i)
 		{
 			if (m_pMyHuman->m_stAffect[i].Type > 0)
 			{
@@ -14123,7 +14179,7 @@ void TMFieldScene::UpdateScoreUI(unsigned int unFlag)
 						sprintf(szVal, g_pMessageStringTable[291], freeDay);
 					}
 				}
-				if (m_pAffectL[i] && !i)
+				if (m_pAffectL[i] && m_pAffect[i] && !i)
 				{
 					int sTime = m_pMyHuman->m_stAffect[0].Time;
 					if (sTime >= 7375)
@@ -14142,7 +14198,7 @@ void TMFieldScene::UpdateScoreUI(unsigned int unFlag)
 						}
 					}
 				}
-				if (m_pMiniPanel)
+				if (m_pMiniPanel && m_pAffectIcon[i])
 				{
 					if (m_pMyHuman->m_stAffect[i].Type < 50)
 						m_pAffectIcon[i]->m_GCPanel.nTextureIndex = g_AffectSkillType[m_pMyHuman->m_stAffect[i].Type];
@@ -17511,7 +17567,7 @@ int TMFieldScene::OnKeyGuildOnOff(char iCharCode, int lParam)
 int TMFieldScene::OnKeyShortSkill(char iCharCode, int lParam)
 {
 	if ((iCharCode < '0' || iCharCode > '9') && iCharCode != '!' && iCharCode != '@' && 
-		iCharCode != '#' && iCharCode != '$' && iCharCode != '%' && iCharCode != '¨' && 
+		iCharCode != '#' && iCharCode != '$' && iCharCode != '%' && iCharCode != 'ï¿½' && 
 		iCharCode != '&' && iCharCode != '*' && iCharCode != '(' && iCharCode != ')')
 	{
 		return 0;
@@ -17548,7 +17604,7 @@ int TMFieldScene::OnKeyShortSkill(char iCharCode, int lParam)
 		case '%':
 			g_pObjectManager->m_cSelectShortSkill = 4;
 			break;
-		case '¨':
+		case 'ï¿½':
 			g_pObjectManager->m_cSelectShortSkill = 5;
 			break;
 		case '&':
@@ -20463,7 +20519,7 @@ int TMFieldScene::OnPacketAttack(MSG_STANDARD* pStd)
 		if (pAttacker != m_pMyHuman || pAttack->FlagLocal == 1 && pAttacker == m_pMyHuman || !pAttack->FlagLocal && 
 			pAttacker == m_pMyHuman && (unsigned char)pAttack->Motion == 254)
 		{
-			if (pAttack->SkillIndex == 4) // Possuído
+			if (pAttack->SkillIndex == 4) // Possuï¿½do
 			{
 				pAttacker->m_cPunish = 1;
 				pAttacker->m_dwPunishedTime = g_pTimerManager->GetServerTime();
@@ -20486,7 +20542,7 @@ int TMFieldScene::OnPacketAttack(MSG_STANDARD* pStd)
 					fAngle = atan2f(pTarget->m_vecPosition.x - pAttacker->m_vecPosition.x, pTarget->m_vecPosition.y - pAttacker->m_vecPosition.y) + D3DXToRadian(90);
 			}
 
-			if (pAttack->SkillIndex == 98) // Canhão Superior
+			if (pAttack->SkillIndex == 98) // Canhï¿½o Superior
 				fAngle = atan2f((float)pAttack->TargetX - pAttacker->m_vecPosition.x, (float)pAttack->TargetY - pAttacker->m_vecPosition.y) + D3DXToRadian(90);
 			if (pAttack->DoubleCritical & 1)
 				pAttacker->m_bDoubleAttack = 1;
@@ -20556,7 +20612,7 @@ int TMFieldScene::OnPacketAttack(MSG_STANDARD* pStd)
 				if (pEffect && m_pEffectContainer)
 					m_pEffectContainer->AddChild(pEffect);
 			}
-			else if (pAttack->SkillIndex == 3) // Perseguição
+			else if (pAttack->SkillIndex == 3) // Perseguiï¿½ï¿½o
 			{
 				if (pAttacker)
 				{
@@ -20583,7 +20639,7 @@ int TMFieldScene::OnPacketAttack(MSG_STANDARD* pStd)
 					GetSoundAndPlay(151, 0, 0);
 				}
 			}
-			else if (pAttack->SkillIndex == 45) // Arma Mágica
+			else if (pAttack->SkillIndex == 45) // Arma Mï¿½gica
 			{
 				float fY = (float)pAttack->TargetY + 0.5f;
 				TMVector3 vecTarget{ (float)pAttack->TargetX + 0.5f, (float)GroundGetMask(TMVector2((float)pAttack->TargetX + 0.5f, fY)) * 0.1f, fY };
@@ -20841,7 +20897,7 @@ int TMFieldScene::OnPacketAttack(MSG_STANDARD* pStd)
 			{
 				GetSoundAndPlay(34, 0, 0);
 			}
-			else if (pAttack->SkillIndex == 77) // Meditação
+			else if (pAttack->SkillIndex == 77) // Meditaï¿½ï¿½o
 			{
 				GetSoundAndPlay(36, 0, 0);
 			}
@@ -20881,7 +20937,7 @@ int TMFieldScene::OnPacketAttack(MSG_STANDARD* pStd)
 					}
 				}
 			}
-			else if (pAttack->SkillIndex == 86) // Explosão Etérea
+			else if (pAttack->SkillIndex == 86) // Explosï¿½o Etï¿½rea
 			{
 				if (pAttacker)
 				{
@@ -21061,7 +21117,7 @@ int TMFieldScene::OnPacketAttack(MSG_STANDARD* pStd)
 
 				GetSoundAndPlay(1, 0, 0);
 			}
-			else if (pAttack->SkillIndex == 100) // Ressureição
+			else if (pAttack->SkillIndex == 100) // Ressureiï¿½ï¿½o
 			{
 				GetSoundAndPlay(156, 0, 0);
 			}
@@ -23511,7 +23567,7 @@ int TMFieldScene::AirMove_ShowUI(bool bShow)
 
 int TMFieldScene::Affect_Main(unsigned int dwServerTime)
 {
-	if (!m_pMyHuman || !m_pMiniPanel)
+	if (!m_pMyHuman || !m_pMiniPanel || !m_pAffectDesc)
 		return 0;
 
 	int i = 0;
@@ -23519,18 +23575,21 @@ int TMFieldScene::Affect_Main(unsigned int dwServerTime)
 	m_pAffectDesc->SetVisible(0);
 	m_pAffectDesc->SetText((char*)"", 0);
 
-	// 748 has no affect icon strips (90400/90369/475152), target-affect strip
-	// or party affect grid; the 755-only display code below would dereference
-	// null controls. Keep the description reset above and stop here.
+	// 748 creates its 16 affect icons at runtime (InitializeScene) and has no
+	// target-affect or party-affect strips. If the icons were not created
+	// there is nothing to lay out or describe; keep the description reset above
+	// and stop.
 	if (m_pAffectIcon[0] == nullptr)
 		return 1;
 
-	bool bomb = false;
-	for (int i = 0; i < 32; ++i)
+	for (i = 0; i < AFFECT_UI_SLOT_COUNT; ++i)
 	{
-		if ((unsigned char)m_pMyHuman->m_stAffect[i].Type <= 50)
+		if (m_pAffectIcon[i] == nullptr)
+			continue;
+
+		if ((unsigned char)m_pMyHuman->m_stAffect[i].Type < MAX_EFFECT_STRING_TABLE)
 		{
-			if (!m_pAffectIcon[i]->IsVisible())
+			if (!m_pAffectIcon[i]->IsVisible() && m_pAffect[i])
 				m_pAffect[i]->SetVisible(0);
 
 			int sTime = 8 * m_pMyHuman->m_stAffect[i].Time - (dwServerTime - m_dwStartAffectTime[i]) / 1000;
@@ -23541,16 +23600,27 @@ int TMFieldScene::Affect_Main(unsigned int dwServerTime)
 
 			if (m_pAffectIcon[i] && i && (unsigned char)m_pMyHuman->m_stAffect[i].Type > 0 || !i && nTime > 0)
 			{
-				m_pAffectIcon[i]->m_nPosX = BASE_ScreenResize(30.0f);
-				m_pAffectIcon[i]->m_nPosX = ((float)(BASE_ScreenResize(1.0f) + m_pAffectIcon[i]->m_nWidth) * (float)(nAvailCount + 1))
-					+ m_pAffectIcon[i]->m_nPosX;
-				m_pAffectIcon[i]->m_nPosY = BASE_ScreenResize(80.0f);
+				// 748 anchors the affect strip to the right edge of the main
+				// info panel (TMP_MAIN_INFO2), one 23 px icon per duration.
+				if (m_pMainInfo2)
+				{
+					m_pAffectIcon[i]->m_nPosX = m_pMainInfo2->m_nPosX + m_pMainInfo2->m_nWidth
+						+ BASE_ScreenResize(3.0f) + (float)nAvailCount * m_pAffectIcon[i]->m_nWidth;
+					m_pAffectIcon[i]->m_nPosY = BASE_ScreenResize(5.0f);
+				}
+				else
+				{
+					m_pAffectIcon[i]->m_nPosX = BASE_ScreenResize(30.0f)
+						+ (float)nAvailCount * (BASE_ScreenResize(1.0f) + m_pAffectIcon[i]->m_nWidth);
+					m_pAffectIcon[i]->m_nPosY = BASE_ScreenResize(80.0f);
+				}
 
 				if (m_pAffectIcon[i]->m_bOver == 1)
 				{
 					if (m_pAffectL[i])
 					{
-						m_pAffect[i]->SetVisible(0);
+						if (m_pAffect[i])
+							m_pAffect[i]->SetVisible(0);
 						m_pAffectL[i]->SetVisible(0);
 					}
 
@@ -23594,20 +23664,10 @@ int TMFieldScene::Affect_Main(unsigned int dwServerTime)
 				}
 				else
 				{
-					int len = strlen(m_pAffect[i]->m_Font.m_szString);
-					int test = 1;
-					for (int l = 0; l < len; ++l)
-					{
-						if (!isdigit(m_pAffect[i]->m_Font.m_szString[l]) && m_pAffect[i]->m_Font.m_szString[l] != ' ')
-							test = 0;
-					}
-
-					m_pAffect[i]->m_nPosX = m_pAffectIcon[i]->m_nPosX + (test ? -8.0f : 3.0f);
-					if ((float)(m_pAffect[i]->m_nWidth + 60.0f) + m_pAffect[i]->m_nPosX > (float)g_pDevice->m_dwScreenWidth)
-						m_pAffect[i]->m_nPosX = (float)g_pDevice->m_dwScreenWidth - (float)(m_pAffect[i]->m_nWidth + 60.0f);
-
-					m_pAffect[i]->m_nPosY = m_pAffectIcon[i]->m_nPosY + 24.0f;
-					m_pAffect[i]->SetVisible(1);
+					// 748 new UI shows the icon instead of the numeric timer;
+					// both affect texts stay hidden (WYD.exe 0044??, UIVer 2).
+					if (m_pAffect[i])
+						m_pAffect[i]->SetVisible(0);
 				}
 
 				++nAvailCount;
@@ -23637,7 +23697,7 @@ int TMFieldScene::Affect_Main(unsigned int dwServerTime)
 	int YnAvailCount = 0;
 	int index = 0;
 
-	if (m_pMyHuman->m_pTitleProgressBar)
+	if (m_pMyHuman->m_pTitleProgressBar && m_pTargetAffectIcon[0])
 	{
 		for (int i = 0; i < 32; ++i)
 		{
@@ -23673,6 +23733,11 @@ int TMFieldScene::Affect_Main(unsigned int dwServerTime)
 			m_pTargetAffectIcon[i]->m_GCPanel.nLayer = 29;
 		}
 	}
+
+	// 748 has no party affect strip (475152/7602193); the 755 block below
+	// would dereference null controls.
+	if (m_pPartyAffectText == nullptr || m_pPartyAffectIcon[0][0] == nullptr)
+		return 1;
 
 	int j = 0;
 	index = 0;
