@@ -20,6 +20,7 @@
 #include "TMHuman.h"
 #include "TMFieldScene.h"
 #include "SControlContainer.h"
+#include "UIInspector.h"
 
 const char ClassName[4] = "WYD";
 
@@ -162,6 +163,8 @@ void InitServerName2()
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
+	if (UIInspector::HandleInput(hWnd, message, wParam, lParam))
+		return true;
 	return g_pApp->MsgProc(hWnd, message, wParam, lParam);
 }
 
@@ -438,6 +441,11 @@ HRESULT NewApp::InitDevice()
 		return 0;
 	}
 
+	if (!UIInspector::Initialize(m_hWnd, m_pRenderDevice->m_pd3dDevice))
+	{
+		LOG_WRITELOGSTRING("Initialize UI Inspector Failed\r\n");
+	}
+
 	if (m_nSound > 0)
 	{
 		InitMusicList();
@@ -588,6 +596,8 @@ HRESULT NewApp::Finalize()
 		free(MeshManager::m_BoneAnimationList[nCount].matAnimation);
 		free(MeshManager::m_BoneAnimationList[nCount].matQuaternion);
 	}
+
+	UIInspector::Shutdown();
 	
 	SAFE_DELETE(g_pObjectManager);
 	SAFE_DELETE(m_pTimerManager);
@@ -731,6 +741,9 @@ HRESULT NewApp::RenderScene()
 	m_pObjectManager->RenderObject();
 	m_pRenderDevice->SetRenderStateBlock(3);
 	m_pObjectManager->RenderControl();
+
+	UIInspector::Render();
+
 	m_pRenderDevice->Unlock(1);
 
 	if (g_pTextureManager)
@@ -941,7 +954,7 @@ HRESULT NewApp::MsgProc(HWND hWnd, DWORD uMsg, DWORD wParam, int lParam)
 					}
 				}
 
-				if (!strcmp(static_cast<TMFieldScene*>(g_pCurrentScene)->m_pTextIMEDesc->GetText(), "Î"))
+				if (!strcmp(static_cast<TMFieldScene*>(g_pCurrentScene)->m_pTextIMEDesc->GetText(), "ï¿½"))
 					SendMessage(hWnd, 0x281, 0, -1073741809);
 				else
 					SendMessage(hWnd, 0x281u, 0, -1);
@@ -951,6 +964,18 @@ HRESULT NewApp::MsgProc(HWND hWnd, DWORD uMsg, DWORD wParam, int lParam)
 	break;
 	case WM_KEYDOWN:
 	{
+		if (wParam == VK_F11)
+		{
+			UIInspector::ToggleShowAll();
+			break;
+		}
+
+		if (wParam == VK_F12)
+		{
+			UIInspector::ToggleFreeze();
+			break;
+		}
+
 		if (m_pAviPlayer != nullptr && m_pAviPlayer->m_psCurrent == PLAYSTATE::Running)
 		{
 			m_pAviPlayer->CloseClip();
@@ -1027,9 +1052,11 @@ HRESULT NewApp::MsgProc(HWND hWnd, DWORD uMsg, DWORD wParam, int lParam)
 			if (!g_nKeyType && m_pEventTranslator != nullptr)
 				m_pEventTranslator->m_bAlt = 1;
 		}
-		else if (wParam == VK_F10 && m_pEventTranslator != nullptr)
+		else if (wParam == VK_F10)
 		{
-			m_pEventTranslator->OnKeyDown(VK_F10);
+			UIInspector::Toggle();
+			if (m_pEventTranslator != nullptr)
+				m_pEventTranslator->OnKeyDown(VK_F10);
 		}
 	}
 	break;

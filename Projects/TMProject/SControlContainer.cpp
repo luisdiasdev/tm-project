@@ -3,6 +3,11 @@
 #include "SControlContainer.h"
 #include "SControl.h"
 #include "TMGlobal.h"
+#include "TMLog.h"
+
+#ifdef _DEBUG
+#include <unordered_set>
+#endif
 
 SControlContainer::SControlContainer(TMScene* pScene) 
 	: TreeNode(0)
@@ -343,6 +348,14 @@ SControl* SControlContainer::FindControl(unsigned int dwID)
 			pCurrentControl = static_cast<SControl*>(pCurrentControl->m_pTop);
 		} while (pCurrentControl != pRootControl && pCurrentControl != nullptr);
 	} while (pCurrentControl != pRootControl && pCurrentControl != nullptr);
+
+#ifdef _DEBUG
+	static std::unordered_set<unsigned int> s_MissingIDs;
+	if (s_MissingIDs.insert(dwID).second)
+	{
+		LOG_WRITELOG("[FindControl] Missing control ID: %u (0x%X)\r\n", dwID, dwID);
+	}
+#endif
 
 	return nullptr;
 }

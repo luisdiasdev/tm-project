@@ -1643,10 +1643,10 @@ int TMFieldScene::InitializeScene()
 	m_pGridSkillBelt3->SetVisible(0);
 	m_pShortSkillTglBtn1 = (SButton*)m_pControlContainer->FindControl(TMB_SHORTSKILL_TGL1);
 	m_pShortSkillTglBtn2 = (SButton*)m_pControlContainer->FindControl(TMB_SHORTSKILL_TGL2);
-	m_pQuick_Sloat[0] = (SGridControl*)m_pControlContainer->FindControl(66560);
+	m_pQuick_Sloat[0] = (SGridControl*)m_pControlContainer->FindControl(1042); // 755 -> 66560 
 	if (m_pQuick_Sloat[0])
 		m_pQuick_Sloat[0]->m_eGridType = TMEGRIDTYPE::GRID_QUICKSLOAT1;
-	m_pQuick_Sloat[1] = (SGridControl*)m_pControlContainer->FindControl(66561);
+	m_pQuick_Sloat[1] = (SGridControl*)m_pControlContainer->FindControl(1043); // 755 -> 66561
 	if (m_pQuick_Sloat[1])
 		m_pQuick_Sloat[1]->m_eGridType = TMEGRIDTYPE::GRID_QUICKSLOAT2;
 	m_pQuick_Sloat[2] = (SGridControl*)m_pControlContainer->FindControl(66562);
@@ -16131,7 +16131,9 @@ char TMFieldScene::UseQuickSloat(char key)
 	{
 		pItemFind = m_pQuick_Sloat[1]->GetAtItem(0, 0);
 		pGridSloat = m_pQuick_Sloat[1];
-	}
+    }
+	
+	/* 755 only has 2 quick slots for potions.
 	else if (key == 'E' || key == 'e')
 	{
 		pItemFind = m_pQuick_Sloat[2]->GetAtItem(0, 0);
@@ -16146,7 +16148,7 @@ char TMFieldScene::UseQuickSloat(char key)
 	{
 		pItemFind = m_pQuick_Sloat[4]->GetAtItem(0, 0);
 		pGridSloat = m_pQuick_Sloat[4];
-	}
+	} */
 
 	if (!pItemFind)
 		return 0;
@@ -17813,7 +17815,7 @@ int TMFieldScene::OnKeyReturn(char iCharCode, int lParam)
 	auto Button7 = (SButton*)m_pControlContainer->FindControl(90135u);
 	auto Button8 = (SButton*)m_pControlContainer->FindControl(90136u);
 
-	if (!strcmp(Button1->m_GCPanel.strString, Button2->m_GCPanel.strString))
+	/*if (!strcmp(Button1->m_GCPanel.strString, Button2->m_GCPanel.strString))
 	{
 		pEdit->SetText((char*)"");
 	}
@@ -17849,7 +17851,7 @@ int TMFieldScene::OnKeyReturn(char iCharCode, int lParam)
 		char temp[32]{};
 		sprintf(temp, "/%s ", m_cWhisperName);
 		pEdit->SetText(temp);
-	}
+	}*/
 
 	return 1;
 }

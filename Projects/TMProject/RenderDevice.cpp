@@ -11,6 +11,7 @@
 #include "TMCamera.h"
 #include "TMMesh.h"
 #include "Basedef.h"
+#include "UIInspector.h"
 #include <io.h>
 #include <fcntl.h>
 #include <winnt.h>
@@ -526,6 +527,8 @@ HRESULT RenderDevice::ConfirmDevice(D3DCAPS9* pCaps, DWORD dwBehavior, D3DFORMAT
 
 HRESULT RenderDevice::RestoreDeviceObjects()
 {
+	UIInspector::OnDeviceReset(m_pd3dDevice);
+
 	D3DCAPS9 d3dCaps{};
 	m_pd3dDevice->GetDeviceCaps(&d3dCaps);
 	if (d3dCaps.PixelShaderVersion >= 0xFFFF0101)
@@ -627,6 +630,8 @@ HRESULT RenderDevice::RestoreDeviceObjects()
 
 HRESULT RenderDevice::InvalidateDeviceObjects()
 {
+	UIInspector::OnDeviceLost();
+
 	if (m_pTextureManager != nullptr)
 		m_pTextureManager->ReleaseTexture();
 	if (m_pMeshManager != nullptr)
